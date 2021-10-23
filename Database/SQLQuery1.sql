@@ -1,0 +1,225 @@
+CREATE DATABASE [QuanLyDoXe]
+
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[LoaiTaiKhoan]    Script Date: 10/23/2021 3:21:14 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[LoaiTaiKhoan](
+	[IDLoai] [int] IDENTITY(1,1) NOT NULL,
+	[TenLoai] [nvarchar](50) NULL,
+ CONSTRAINT [PK_LoaiTaiKhoan] PRIMARY KEY CLUSTERED 
+(
+	[IDLoai] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 10/23/2021 3:21:20 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TaiKhoan](
+	[IDTaiKhoan] [int] IDENTITY(1,1) NOT NULL,
+	[TenDangNhap] [nvarchar](50) NULL,
+	[MatKhau] [nvarchar](50) NULL,
+	[TenThat] [nvarchar](50) NULL,
+	[SDT] [nchar](10) NULL,
+	[CMND] [nchar](10) NULL,
+	[LoaiTaiKhoan] [int] NULL,
+ CONSTRAINT [PK_TaiKhoan] PRIMARY KEY CLUSTERED 
+(
+	[IDTaiKhoan] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[TaiKhoan]  WITH CHECK ADD  CONSTRAINT [FK_TaiKhoan_LoaiTaiKhoan] FOREIGN KEY([LoaiTaiKhoan])
+REFERENCES [dbo].[LoaiTaiKhoan] ([IDLoai])
+GO
+
+ALTER TABLE [dbo].[TaiKhoan] CHECK CONSTRAINT [FK_TaiKhoan_LoaiTaiKhoan]
+GO
+
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[TheXe]    Script Date: 10/23/2021 3:21:29 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TheXe](
+	[IDThe] [int] IDENTITY(1,1) NOT NULL,
+	[ChuSoHuu] [nvarchar](50) NULL,
+	[NgayTao] [smalldatetime] NULL,
+	[TenXe] [nvarchar](50) NULL,
+	[BienSoXe] [nvarchar](50) NULL,
+	[ThoiGianGui] [smalldatetime] NULL,
+	[LoaiThe] [int] NULL,
+ CONSTRAINT [PK_TheXe] PRIMARY KEY CLUSTERED 
+(
+	[IDThe] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[ThamSo]    Script Date: 10/23/2021 3:21:44 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[ThamSo](
+	[TenThamSo] [nvarchar](50) NULL,
+	[GiaTri] [int] NULL,
+	[IDThamSo] [int] IDENTITY(1,1) NOT NULL,
+ CONSTRAINT [PK_ThamSo] PRIMARY KEY CLUSTERED 
+(
+	[IDThamSo] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[BaoCaoMatDoGuiXe]    Script Date: 10/23/2021 3:21:54 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[BaoCaoMatDoGuiXe](
+	[IDBaoCao] [int] IDENTITY(1,1) NOT NULL,
+	[Ngay] [smalldatetime] NULL,
+	[Gio] [int] NULL,
+	[TongXeVao] [int] NULL,
+	[TongXeRa] [int] NULL,
+	[ChenhLech] [int] NULL,
+ CONSTRAINT [PK_BaoCaoMatDoGuiXe] PRIMARY KEY CLUSTERED 
+(
+	[IDBaoCao] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[BaoCaoDoanhThuThang]    Script Date: 10/23/2021 3:22:04 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[BaoCaoDoanhThuThang](
+	[IDBaoCao] [int] IDENTITY(1,1) NOT NULL,
+	[Nam] [int] NULL,
+	[LoaiThe] [int] NULL,
+ CONSTRAINT [PK_BaoCaoDoanhThuThang] PRIMARY KEY CLUSTERED 
+(
+	[IDBaoCao] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[BaoCaoLichSuHoatDong]    Script Date: 10/23/2021 3:22:09 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[BaoCaoLichSuHoatDong](
+	[IDBaoCao] [int] IDENTITY(1,1) NOT NULL,
+	[Ngay] [smalldatetime] NULL,
+	[HoatDong] [int] NULL,
+ CONSTRAINT [PK_BaoCaoLichSuHoatDong] PRIMARY KEY CLUSTERED 
+(
+	[IDBaoCao] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[CT_BaoCaoDoanhThuThang]    Script Date: 10/23/2021 3:22:19 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CT_BaoCaoDoanhThuThang](
+	[IDCTBaoCao] [int] IDENTITY(1,1) NOT NULL,
+	[IDBaoCao] [int] NULL,
+	[Thang] [int] NULL,
+	[TongThu] [int] NULL,
+	[TongChi] [int] NULL,
+	[ChenhLech] [int] NULL,
+ CONSTRAINT [PK_CT_BaoCaoDoanhThuThang] PRIMARY KEY CLUSTERED 
+(
+	[IDCTBaoCao] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[CT_BaoCaoDoanhThuThang]  WITH CHECK ADD  CONSTRAINT [FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang] FOREIGN KEY([IDBaoCao])
+REFERENCES [dbo].[BaoCaoDoanhThuThang] ([IDBaoCao])
+GO
+
+ALTER TABLE [dbo].[CT_BaoCaoDoanhThuThang] CHECK CONSTRAINT [FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang]
+GO
+
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[CT_BaoCaoLichSuHoatDong]    Script Date: 10/23/2021 3:22:24 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CT_BaoCaoLichSuHoatDong](
+	[IDCTBaoCao] [int] IDENTITY(1,1) NOT NULL,
+	[IDBaoCao] [int] NOT NULL,
+	[ThoiGian] [smalldatetime] NULL,
+ CONSTRAINT [PK_Table_1] PRIMARY KEY CLUSTERED 
+(
+	[IDCTBaoCao] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[CT_BaoCaoLichSuHoatDong]  WITH CHECK ADD  CONSTRAINT [FK_Table_1_Table_1] FOREIGN KEY([IDBaoCao])
+REFERENCES [dbo].[BaoCaoLichSuHoatDong] ([IDBaoCao])
+GO
+
+ALTER TABLE [dbo].[CT_BaoCaoLichSuHoatDong] CHECK CONSTRAINT [FK_Table_1_Table_1]
+GO
+
