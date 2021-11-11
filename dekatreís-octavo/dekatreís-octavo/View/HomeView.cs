@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dekatreís_octavo
+namespace dekatreís_octavo.View
 {
     public partial class HomeView : Form
     {

@@ -8,25 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace dekatreís_octavo
+namespace dekatreís_octavo.View
 {
     public partial class LoginView : Form
     {
         public LoginView()
         {
             InitializeComponent();
-        }
-
-        private void materialButton1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void containedButton1_Click(object sender, EventArgs e)
-        {
-            HomeView homeView = new HomeView();
-            homeView.Show();
-            this.Hide();
         }
     }
 }
