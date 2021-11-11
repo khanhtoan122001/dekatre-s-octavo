@@ -39,14 +39,17 @@ namespace dekatreís_octavo.DataAccess
         {
             string EncryptedPass = Encrypt(Password);
             //if (DisplayName == null) DisplayName = Username;
-            return ExecuteQuery.Instance.ExecuteNoneQuery(String.Format("INSERT INTO [dbo].[TaiKhoan]([TenDangNhap],[MatKhau],[TenThat],[LoaiTaiKhoan],[SDT],[CMND])VALUES ('{0}','{1}','{2}',{3},{4},{5})", 
+            return ExecuteQuery.Instance.ExecuteNoneQuery(String.Format("INSERT INTO [dbo].[TaiKhoan]([TenDangNhap],[MatKhau],[TenThat],[LoaiTaiKhoan],[SDT],[CMND])VALUES ('{0}','{1}','{2}',{3},'{4}','{5}')", 
                                                                                                         Username, EncryptedPass, Name, Type, Sdt, Cmnd)) > 0;
         }
         
         public void CheckAccount()
         {
             if (0 == (int)ExecuteQuery.Instance.ExecuteScalar(string.Format("select count(*) from TaiKhoan")))
-                InsertAccount("admin", "admin", 0, "admin", "", "");
+            {
+                InsertAccount("admin", "admin", 1, "admin", "", "");
+                InsertAccount("staff", "staff", 2, "staff", "", "");
+            }
             return;
         }
     }

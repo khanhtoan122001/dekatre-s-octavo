@@ -12,9 +12,15 @@ namespace dekatreís_octavo.View
 {
     public partial class HomeView : Form
     {
+        public Model.TaiKhoan taiKhoan = new Model.TaiKhoan();
         public HomeView()
         {
             InitializeComponent();
+        }
+
+        private void HomeView_Load(object sender, EventArgs e)
+        {
+            materialLabel1.Text = taiKhoan.TenDangNhap;
         }
     }
 }
