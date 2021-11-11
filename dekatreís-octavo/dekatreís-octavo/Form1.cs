@@ -14,6 +14,7 @@ namespace dekatreís_octavo
 {
     public partial class Form1 : MaterialForm
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -33,7 +34,7 @@ namespace dekatreís_octavo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            _ = DataAccess.ExecuteQuery.Instance;
         }
     }
 }

@@ -54,7 +54,7 @@ namespace dekatreís_octavo
             // 
             this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox2.LeadingIcon = null;
             this.materialTextBox2.Location = new System.Drawing.Point(156, 187);
             this.materialTextBox2.MaxLength = 50;
@@ -96,6 +96,7 @@ namespace dekatreís_octavo
             this.Name = "Form1";
             this.Sizable = false;
             this.Text = "Đăng nhập";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
