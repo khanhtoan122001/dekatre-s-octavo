@@ -31,7 +31,7 @@ namespace dekatreís_octavo.View
                 if(DataAccess.Account.Instance.Login(tb_TenDangNhap.Text, tb_MatKhau.Text))
                 {
                     HomeView home = new HomeView();
-                    home.taiKhoan = new Model.TaiKhoan(DataAccess.Account.Instance.GetInfoAcc(tb_TenDangNhap.Text));
+                    //home.taiKhoan = new Model.TaiKhoan(DataAccess.Account.Instance.GetInfoAcc(tb_TenDangNhap.Text));
                     home.Show();
                     this.Hide();
                 }
