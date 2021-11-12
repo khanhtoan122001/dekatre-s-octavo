@@ -12,7 +12,8 @@ namespace dekatreís_octavo
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
+
+
     public partial class QuanLyDoXeEntities : DbContext
     {
         public QuanLyDoXeEntities()

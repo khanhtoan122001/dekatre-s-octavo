@@ -12,9 +12,11 @@ namespace dekatreís_octavo.View
 {
     public partial class HomeView : Form
     {
+        public TaiKhoan TaiKhoan;
         public HomeView()
         {
             InitializeComponent();
+            
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
@@ -24,18 +26,18 @@ namespace dekatreís_octavo.View
             else materialCard1.Visible = false;
         }
 
-        private void textButton1_Click(object sender, EventArgs e)
+        private void bt_info_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textButton2_Click(object sender, EventArgs e)
+        private void bt_ChangePass_Click(object sender, EventArgs e)
         {
             ChangePass changePass = new ChangePass();
             changePass.Show();
         }
 
-        private void textButton3_Click(object sender, EventArgs e)
+        private void bt_LogOut_Click(object sender, EventArgs e)
         {
             this.Close();
             LoginView loginView = new LoginView();
@@ -45,6 +47,11 @@ namespace dekatreís_octavo.View
         private void HomeView_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void HomeView_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

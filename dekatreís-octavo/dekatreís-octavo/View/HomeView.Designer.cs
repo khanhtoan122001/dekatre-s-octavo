@@ -34,15 +34,15 @@ namespace dekatreís_octavo.View
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.textButton1 = new MaterialSurface.TextButton();
-            this.textButton2 = new MaterialSurface.TextButton();
-            this.textButton3 = new MaterialSurface.TextButton();
+            this.bt_info = new MaterialSurface.TextButton();
+            this.bt_ChangePass = new MaterialSurface.TextButton();
+            this.bt_LogOut = new MaterialSurface.TextButton();
             this.materialCard1 = new MaterialSurface.MaterialCard();
             this.materialTabControl1.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // materialLabel1
+            // materialDrawer1
             // 
             this.materialDrawer1.AutoHide = false;
             this.materialDrawer1.AutoShow = false;
@@ -114,67 +114,67 @@ namespace dekatreís_octavo.View
             this.materialButton1.UseVisualStyleBackColor = true;
             this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
-            // textButton1
+            // bt_info
             // 
-            this.textButton1.EffectType = MaterialSurface.ET.Custom;
-            this.textButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textButton1.ForeColor = System.Drawing.Color.Black;
-            this.textButton1.Icon = null;
-            this.textButton1.Location = new System.Drawing.Point(11, 10);
-            this.textButton1.MouseState = MaterialSurface.MouseState.OUT;
-            this.textButton1.Name = "textButton1";
-            this.textButton1.PrimaryColor = System.Drawing.Color.Black;
-            this.textButton1.Radius = 6;
-            this.textButton1.Size = new System.Drawing.Size(162, 40);
-            this.textButton1.TabIndex = 0;
-            this.textButton1.Text = "Thông tin";
-            this.textButton1.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.textButton1.UseVisualStyleBackColor = true;
-            this.textButton1.Click += new System.EventHandler(this.textButton1_Click);
+            this.bt_info.EffectType = MaterialSurface.ET.Custom;
+            this.bt_info.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_info.ForeColor = System.Drawing.Color.Black;
+            this.bt_info.Icon = null;
+            this.bt_info.Location = new System.Drawing.Point(11, 10);
+            this.bt_info.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_info.Name = "bt_info";
+            this.bt_info.PrimaryColor = System.Drawing.Color.Black;
+            this.bt_info.Radius = 6;
+            this.bt_info.Size = new System.Drawing.Size(162, 40);
+            this.bt_info.TabIndex = 0;
+            this.bt_info.Text = "Thông tin";
+            this.bt_info.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_info.UseVisualStyleBackColor = true;
+            this.bt_info.Click += new System.EventHandler(this.bt_info_Click);
             // 
-            // textButton2
+            // bt_ChangePass
             // 
-            this.textButton2.EffectType = MaterialSurface.ET.Custom;
-            this.textButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textButton2.ForeColor = System.Drawing.Color.Black;
-            this.textButton2.Icon = null;
-            this.textButton2.Location = new System.Drawing.Point(11, 56);
-            this.textButton2.MouseState = MaterialSurface.MouseState.OUT;
-            this.textButton2.Name = "textButton2";
-            this.textButton2.PrimaryColor = System.Drawing.Color.Black;
-            this.textButton2.Radius = 6;
-            this.textButton2.Size = new System.Drawing.Size(162, 40);
-            this.textButton2.TabIndex = 1;
-            this.textButton2.Text = "Đổi mật khẩu";
-            this.textButton2.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.textButton2.UseVisualStyleBackColor = true;
-            this.textButton2.Click += new System.EventHandler(this.textButton2_Click);
+            this.bt_ChangePass.EffectType = MaterialSurface.ET.Custom;
+            this.bt_ChangePass.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_ChangePass.ForeColor = System.Drawing.Color.Black;
+            this.bt_ChangePass.Icon = null;
+            this.bt_ChangePass.Location = new System.Drawing.Point(11, 56);
+            this.bt_ChangePass.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_ChangePass.Name = "bt_ChangePass";
+            this.bt_ChangePass.PrimaryColor = System.Drawing.Color.Black;
+            this.bt_ChangePass.Radius = 6;
+            this.bt_ChangePass.Size = new System.Drawing.Size(162, 40);
+            this.bt_ChangePass.TabIndex = 1;
+            this.bt_ChangePass.Text = "Đổi mật khẩu";
+            this.bt_ChangePass.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_ChangePass.UseVisualStyleBackColor = true;
+            this.bt_ChangePass.Click += new System.EventHandler(this.bt_ChangePass_Click);
             // 
-            // textButton3
+            // bt_LogOut
             // 
-            this.textButton3.EffectType = MaterialSurface.ET.Custom;
-            this.textButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textButton3.ForeColor = System.Drawing.Color.Crimson;
-            this.textButton3.Icon = null;
-            this.textButton3.Location = new System.Drawing.Point(11, 101);
-            this.textButton3.MouseState = MaterialSurface.MouseState.OUT;
-            this.textButton3.Name = "textButton3";
-            this.textButton3.PrimaryColor = System.Drawing.Color.Crimson;
-            this.textButton3.Radius = 6;
-            this.textButton3.Size = new System.Drawing.Size(162, 40);
-            this.textButton3.TabIndex = 2;
-            this.textButton3.Text = "Đăng xuất";
-            this.textButton3.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.textButton3.UseVisualStyleBackColor = true;
-            this.textButton3.Click += new System.EventHandler(this.textButton3_Click);
+            this.bt_LogOut.EffectType = MaterialSurface.ET.Custom;
+            this.bt_LogOut.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_LogOut.ForeColor = System.Drawing.Color.Crimson;
+            this.bt_LogOut.Icon = null;
+            this.bt_LogOut.Location = new System.Drawing.Point(11, 101);
+            this.bt_LogOut.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_LogOut.Name = "bt_LogOut";
+            this.bt_LogOut.PrimaryColor = System.Drawing.Color.Crimson;
+            this.bt_LogOut.Radius = 6;
+            this.bt_LogOut.Size = new System.Drawing.Size(162, 40);
+            this.bt_LogOut.TabIndex = 2;
+            this.bt_LogOut.Text = "Đăng xuất";
+            this.bt_LogOut.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_LogOut.UseVisualStyleBackColor = true;
+            this.bt_LogOut.Click += new System.EventHandler(this.bt_LogOut_Click);
             // 
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.SystemColors.Control;
             this.materialCard1.CardColor = System.Drawing.Color.White;
-            this.materialCard1.Controls.Add(this.textButton3);
-            this.materialCard1.Controls.Add(this.textButton2);
-            this.materialCard1.Controls.Add(this.textButton1);
+            this.materialCard1.Controls.Add(this.bt_LogOut);
+            this.materialCard1.Controls.Add(this.bt_ChangePass);
+            this.materialCard1.Controls.Add(this.bt_info);
             this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialCard1.Location = new System.Drawing.Point(622, 34);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
@@ -201,10 +201,10 @@ namespace dekatreís_octavo.View
             this.Name = "HomeView";
             this.Text = "HomeView";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeView_FormClosed);
+            this.Load += new System.EventHandler(this.HomeView_Load);
             this.materialTabControl1.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -215,9 +215,9 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSurface.TextButton textButton1;
-        private MaterialSurface.TextButton textButton2;
-        private MaterialSurface.TextButton textButton3;
+        private MaterialSurface.TextButton bt_info;
+        private MaterialSurface.TextButton bt_ChangePass;
+        private MaterialSurface.TextButton bt_LogOut;
         private MaterialSurface.MaterialCard materialCard1;
     }
 }
