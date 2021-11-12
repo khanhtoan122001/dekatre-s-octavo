@@ -30,9 +30,9 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tb_TenDangNhap = new MaterialSurface.MaterialTextfield();
-            this.tb_MatKhau = new MaterialSurface.MaterialTextfield();
-            this.bt_DangNhap = new MaterialSurface.ContainedButton();
+            this.tb_Username = new MaterialSurface.MaterialTextfield();
+            this.tb_Password = new MaterialSurface.MaterialTextfield();
+            this.bt_Login = new MaterialSurface.ContainedButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -45,79 +45,79 @@ namespace dekatreís_octavo.View
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // tb_TenDangNhap
+            // tb_Username
             // 
-            this.tb_TenDangNhap.AutoScaleColor = true;
-            this.tb_TenDangNhap.BackColor = System.Drawing.SystemColors.Control;
-            this.tb_TenDangNhap.CountText = false;
-            this.tb_TenDangNhap.FieldType = MaterialSurface.BoxType.Normal;
-            this.tb_TenDangNhap.FloatingLabelText = "FloatingLabel";
-            this.tb_TenDangNhap.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.tb_TenDangNhap.HandleError = false;
-            this.tb_TenDangNhap.HelperText = "";
-            this.tb_TenDangNhap.HideSelection = true;
-            this.tb_TenDangNhap.HintText = "TĐN";
-            this.tb_TenDangNhap.Location = new System.Drawing.Point(488, 141);
-            this.tb_TenDangNhap.MaxLength = 32767;
-            this.tb_TenDangNhap.MouseState = MaterialSurface.MouseState.OUT;
-            this.tb_TenDangNhap.Multiline = false;
-            this.tb_TenDangNhap.Name = "tb_TenDangNhap";
-            this.tb_TenDangNhap.PasswordChar = '\0';
-            this.tb_TenDangNhap.PrimaryColor = System.Drawing.Color.SteelBlue;
-            this.tb_TenDangNhap.ReadOnly = false;
-            this.tb_TenDangNhap.ShortcutsEnable = true;
-            this.tb_TenDangNhap.ShowCaret = true;
-            this.tb_TenDangNhap.Size = new System.Drawing.Size(216, 49);
-            this.tb_TenDangNhap.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_TenDangNhap.TabIndex = 1;
-            this.tb_TenDangNhap.UseSystemPasswordChar = false;
+            this.tb_Username.AutoScaleColor = true;
+            this.tb_Username.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_Username.CountText = false;
+            this.tb_Username.FieldType = MaterialSurface.BoxType.Normal;
+            this.tb_Username.FloatingLabelText = "FloatingLabel";
+            this.tb_Username.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_Username.HandleError = false;
+            this.tb_Username.HelperText = "";
+            this.tb_Username.HideSelection = true;
+            this.tb_Username.HintText = "TĐN";
+            this.tb_Username.Location = new System.Drawing.Point(488, 141);
+            this.tb_Username.MaxLength = 32767;
+            this.tb_Username.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_Username.Multiline = false;
+            this.tb_Username.Name = "tb_Username";
+            this.tb_Username.PasswordChar = '\0';
+            this.tb_Username.PrimaryColor = System.Drawing.Color.SteelBlue;
+            this.tb_Username.ReadOnly = false;
+            this.tb_Username.ShortcutsEnable = true;
+            this.tb_Username.ShowCaret = true;
+            this.tb_Username.Size = new System.Drawing.Size(216, 49);
+            this.tb_Username.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_Username.TabIndex = 1;
+            this.tb_Username.UseSystemPasswordChar = false;
             // 
-            // tb_MatKhau
+            // tb_Password
             // 
-            this.tb_MatKhau.AutoScaleColor = true;
-            this.tb_MatKhau.BackColor = System.Drawing.SystemColors.Control;
-            this.tb_MatKhau.CountText = false;
-            this.tb_MatKhau.FieldType = MaterialSurface.BoxType.Normal;
-            this.tb_MatKhau.FloatingLabelText = "FloatingLabel";
-            this.tb_MatKhau.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.tb_MatKhau.HandleError = false;
-            this.tb_MatKhau.HelperText = "";
-            this.tb_MatKhau.HideSelection = true;
-            this.tb_MatKhau.HintText = "MK";
-            this.tb_MatKhau.Location = new System.Drawing.Point(488, 209);
-            this.tb_MatKhau.MaxLength = 32767;
-            this.tb_MatKhau.MouseState = MaterialSurface.MouseState.OUT;
-            this.tb_MatKhau.Multiline = false;
-            this.tb_MatKhau.Name = "tb_MatKhau";
-            this.tb_MatKhau.PasswordChar = '●';
-            this.tb_MatKhau.PrimaryColor = System.Drawing.Color.SteelBlue;
-            this.tb_MatKhau.ReadOnly = false;
-            this.tb_MatKhau.ShortcutsEnable = true;
-            this.tb_MatKhau.ShowCaret = true;
-            this.tb_MatKhau.Size = new System.Drawing.Size(216, 49);
-            this.tb_MatKhau.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_MatKhau.TabIndex = 2;
-            this.tb_MatKhau.UseSystemPasswordChar = true;
+            this.tb_Password.AutoScaleColor = true;
+            this.tb_Password.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_Password.CountText = false;
+            this.tb_Password.FieldType = MaterialSurface.BoxType.Normal;
+            this.tb_Password.FloatingLabelText = "FloatingLabel";
+            this.tb_Password.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_Password.HandleError = false;
+            this.tb_Password.HelperText = "";
+            this.tb_Password.HideSelection = true;
+            this.tb_Password.HintText = "MK";
+            this.tb_Password.Location = new System.Drawing.Point(488, 209);
+            this.tb_Password.MaxLength = 32767;
+            this.tb_Password.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_Password.Multiline = false;
+            this.tb_Password.Name = "tb_Password";
+            this.tb_Password.PasswordChar = '●';
+            this.tb_Password.PrimaryColor = System.Drawing.Color.SteelBlue;
+            this.tb_Password.ReadOnly = false;
+            this.tb_Password.ShortcutsEnable = true;
+            this.tb_Password.ShowCaret = true;
+            this.tb_Password.Size = new System.Drawing.Size(216, 49);
+            this.tb_Password.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_Password.TabIndex = 2;
+            this.tb_Password.UseSystemPasswordChar = true;
             // 
-            // bt_DangNhap
+            // bt_Login
             // 
-            this.bt_DangNhap.EffectType = MaterialSurface.ET.Custom;
-            this.bt_DangNhap.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_DangNhap.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bt_DangNhap.Icon = null;
-            this.bt_DangNhap.Location = new System.Drawing.Point(488, 293);
-            this.bt_DangNhap.MouseState = MaterialSurface.MouseState.OUT;
-            this.bt_DangNhap.Name = "bt_DangNhap";
-            this.bt_DangNhap.PrimaryColor = System.Drawing.Color.SteelBlue;
-            this.bt_DangNhap.Radius = 6;
-            this.bt_DangNhap.ShawdowDepth = 3;
-            this.bt_DangNhap.ShawdowOpacity = 50;
-            this.bt_DangNhap.Size = new System.Drawing.Size(216, 51);
-            this.bt_DangNhap.TabIndex = 3;
-            this.bt_DangNhap.Text = "Đăng nhập";
-            this.bt_DangNhap.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.bt_DangNhap.UseVisualStyleBackColor = true;
-            this.bt_DangNhap.Click += new System.EventHandler(this.bt_DangNhap_Click);
+            this.bt_Login.EffectType = MaterialSurface.ET.Custom;
+            this.bt_Login.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Login.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_Login.Icon = null;
+            this.bt_Login.Location = new System.Drawing.Point(488, 293);
+            this.bt_Login.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_Login.Name = "bt_Login";
+            this.bt_Login.PrimaryColor = System.Drawing.Color.SteelBlue;
+            this.bt_Login.Radius = 6;
+            this.bt_Login.ShawdowDepth = 3;
+            this.bt_Login.ShawdowOpacity = 50;
+            this.bt_Login.Size = new System.Drawing.Size(216, 51);
+            this.bt_Login.TabIndex = 3;
+            this.bt_Login.Text = "Đăng nhập";
+            this.bt_Login.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_Login.UseVisualStyleBackColor = true;
+            this.bt_Login.Click += new System.EventHandler(this.containedButton1_Click);
             // 
             // materialButton1
             // 
@@ -140,6 +140,7 @@ namespace dekatreís_octavo.View
             this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = false;
+            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             // 
             // LoginView
             // 
@@ -147,9 +148,9 @@ namespace dekatreís_octavo.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.materialButton1);
-            this.Controls.Add(this.bt_DangNhap);
-            this.Controls.Add(this.tb_MatKhau);
-            this.Controls.Add(this.tb_TenDangNhap);
+            this.Controls.Add(this.bt_Login);
+            this.Controls.Add(this.tb_Password);
+            this.Controls.Add(this.tb_Username);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginView";
@@ -162,9 +163,9 @@ namespace dekatreís_octavo.View
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MaterialSurface.MaterialTextfield tb_TenDangNhap;
-        private MaterialSurface.MaterialTextfield tb_MatKhau;
-        private MaterialSurface.ContainedButton bt_DangNhap;
+        private MaterialSurface.MaterialTextfield tb_Username;
+        private MaterialSurface.MaterialTextfield tb_Password;
+        private MaterialSurface.ContainedButton bt_Login;
         private MaterialSkin.Controls.MaterialButton materialButton1;
     }
 }
