@@ -5,11 +5,16 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dekatreís_octavo
+namespace dekatreís_octavo.Bus
 {
-    public class Encrypt
+    public class DataProvider
     {
-        public static string EncryptString(string text)
+        private static DataProvider instance;
+        public QuanLyDoXeEntities db;
+        public static DataProvider Instance { get { if (instance == null) instance = new DataProvider(); return instance; } set => instance = value; }
+
+        public TaiKhoan TaiKhoan;
+        public string Encrypt(string text)
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
             {

@@ -12,7 +12,6 @@ namespace dekatreís_octavo.View
 {
     public partial class ChangePass : Form
     {
-        TaiKhoan TaiKhoan = LoginView.TaiKhoan;
         public ChangePass()
         {
             InitializeComponent();
@@ -20,23 +19,19 @@ namespace dekatreís_octavo.View
 
         private void Confirm_Change_Click(object sender, EventArgs e)
         {
-            if(Encrypt.EncryptString(tb_OldPass.Text) == TaiKhoan.MatKhau)
+            switch (Bus.ChangePassBus.Instance.ChangePassword(tb_OldPass.Text, tb_NewPass.Text, tb_ConfirmPass.Text))
             {
-                if(tb_NewPass.Text == tb_ConfirmPass.Text)
-                {
-                    TaiKhoan.MatKhau = Encrypt.EncryptString(tb_NewPass.Text);
-                    LoginView.db.SaveChanges();
-                }
-                else
-                {
+                case 0:
                     MessageBox.Show("Xác nhận mật khẩu không chính xác!");
-                }
+                    break;
+                case 1:
+                    MessageBox.Show("Đổi mật khẩu thành công!");
+                    this.Close();
+                    break;
+                case 2:
+                    MessageBox.Show("Sai mật khẩu!");
+                    break;
             }
-            else
-            {
-                MessageBox.Show("Sai mật khẩu!");
-            }
-            this.Close();
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
