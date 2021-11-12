@@ -34,7 +34,7 @@ namespace dekatreís_octavo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _ = DataAccess.ExecuteQuery.Instance;
+           
         }
     }
 }

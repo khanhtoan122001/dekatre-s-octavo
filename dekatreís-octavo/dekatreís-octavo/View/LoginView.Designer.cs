@@ -34,14 +34,17 @@ namespace dekatreís_octavo.View
             this.tb_MatKhau = new MaterialSurface.MaterialTextfield();
             this.bt_DangNhap = new MaterialSurface.ContainedButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(-1, 0);
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pictureBox1.Location = new System.Drawing.Point(-1, 250);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(401, 450);
+            this.pictureBox1.Size = new System.Drawing.Size(401, 200);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -56,7 +59,7 @@ namespace dekatreís_octavo.View
             this.tb_TenDangNhap.HandleError = false;
             this.tb_TenDangNhap.HelperText = "";
             this.tb_TenDangNhap.HideSelection = true;
-            this.tb_TenDangNhap.HintText = "TĐN";
+            this.tb_TenDangNhap.HintText = "TĐNNNN";
             this.tb_TenDangNhap.Location = new System.Drawing.Point(488, 141);
             this.tb_TenDangNhap.MaxLength = 32767;
             this.tb_TenDangNhap.MouseState = MaterialSurface.MouseState.OUT;
@@ -83,7 +86,7 @@ namespace dekatreís_octavo.View
             this.tb_MatKhau.HandleError = false;
             this.tb_MatKhau.HelperText = "";
             this.tb_MatKhau.HideSelection = true;
-            this.tb_MatKhau.HintText = "MK";
+            this.tb_MatKhau.HintText = "MKKKK";
             this.tb_MatKhau.Location = new System.Drawing.Point(488, 209);
             this.tb_MatKhau.MaxLength = 32767;
             this.tb_MatKhau.MouseState = MaterialSurface.MouseState.OUT;
@@ -141,11 +144,22 @@ namespace dekatreís_octavo.View
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(83, 40);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 5;
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.bt_DangNhap);
             this.Controls.Add(this.tb_MatKhau);
@@ -155,6 +169,7 @@ namespace dekatreís_octavo.View
             this.Name = "LoginView";
             this.Text = "LoginView";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -166,5 +181,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialTextfield tb_MatKhau;
         private MaterialSurface.ContainedButton bt_DangNhap;
         private MaterialSkin.Controls.MaterialButton materialButton1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

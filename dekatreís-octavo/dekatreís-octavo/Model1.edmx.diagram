@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a4ef8dbd2b644996a609e3df7f857886" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyDoXeModel.BaoCaoDoanhThuThang" Width="1.5" PointX="5.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.BaoCaoLichSuHoatDong" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.BaoCaoMatDoGuiXe" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.CT_BaoCaoDoanhThuThang" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.CT_BaoCaoLichSuHoatDong" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.LoaiTaiKhoan" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.sysdiagram" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.TaiKhoan" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.ThamSo" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.TheXe" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyDoXeModel.FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDoXeModel.FK_Table_1_Table_1" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyDoXeModel.FK_TaiKhoan_LoaiTaiKhoan" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
