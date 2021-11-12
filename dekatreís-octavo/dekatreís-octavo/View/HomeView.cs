@@ -16,5 +16,29 @@ namespace dekatreís_octavo.View
         {
             InitializeComponent();
         }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            if (materialCard1.Visible == false)
+                materialCard1.Visible = true;
+            else materialCard1.Visible = false;
+        }
+
+        private void textButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginView loginView = new LoginView();
+            loginView.Show();
+        }
     }
 }
