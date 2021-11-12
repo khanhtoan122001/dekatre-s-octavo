@@ -31,7 +31,8 @@ namespace dekatreís_octavo.View
 
         private void textButton2_Click(object sender, EventArgs e)
         {
-
+            ChangePass changePass = new ChangePass();
+            changePass.Show();
         }
 
         private void textButton3_Click(object sender, EventArgs e)
@@ -39,6 +40,11 @@ namespace dekatreís_octavo.View
             this.Close();
             LoginView loginView = new LoginView();
             loginView.Show();
+        }
+
+        private void HomeView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

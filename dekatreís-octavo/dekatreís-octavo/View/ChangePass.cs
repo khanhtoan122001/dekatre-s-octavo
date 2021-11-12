@@ -10,23 +10,21 @@ using System.Windows.Forms;
 
 namespace dekatreís_octavo.View
 {
-    public partial class LoginView : Form
+    public partial class ChangePass : Form
     {
-        public LoginView()
+        public ChangePass()
         {
             InitializeComponent();
         }
 
-        private void containedButton1_Click(object sender, EventArgs e)
+        private void materialButton2_Click(object sender, EventArgs e)
         {
-            HomeView homeView = new HomeView();
-            homeView.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

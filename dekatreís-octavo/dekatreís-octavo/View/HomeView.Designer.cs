@@ -200,6 +200,7 @@ namespace dekatreís_octavo.View
             this.Controls.Add(this.materialDrawer1);
             this.Name = "HomeView";
             this.Text = "HomeView";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeView_FormClosed);
             this.materialTabControl1.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
