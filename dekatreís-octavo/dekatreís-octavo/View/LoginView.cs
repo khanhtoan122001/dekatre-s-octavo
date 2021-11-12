@@ -16,5 +16,12 @@ namespace dekatreís_octavo.View
         {
             InitializeComponent();
         }
+
+        private void containedButton1_Click(object sender, EventArgs e)
+        {
+            HomeView homeView = new HomeView();
+            homeView.Show();
+            this.Hide();
+        }
     }
 }
