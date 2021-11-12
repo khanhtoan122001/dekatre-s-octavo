@@ -35,7 +35,6 @@ namespace dekatreís_octavo.View
             this.containedButton1 = new MaterialSurface.ContainedButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -157,7 +156,6 @@ namespace dekatreís_octavo.View
             this.Name = "LoginView";
             this.Text = "LoginView";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

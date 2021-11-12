@@ -18,7 +18,6 @@ namespace dekatreís_octavo.View
         public LoginView()
         {
             InitializeComponent();
-            dataGridView1.DataSource = db.TaiKhoans.ToList();
         }
         public string Encrypt(string text)
         {
@@ -33,13 +32,13 @@ namespace dekatreís_octavo.View
         private void containedButton1_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(tb_TenDangNhap.Text) || string.IsNullOrEmpty(tb_MatKhau.Text))
+            if (string.IsNullOrEmpty(materialTextfield1.Text) || string.IsNullOrEmpty(materialTextfield2.Text))
             {
                 return;
             }
             else
             {
-                var result = db.TaiKhoans.Where(p => p.TenDangNhap == tb_TenDangNhap.Text && p.MatKhau == Encrypt(tb_MatKhau.Text));
+                var result = db.TaiKhoans.Where(p => p.TenDangNhap == materialTextfield1.Text && p.MatKhau == Encrypt(materialTextfield2.Text));
                 if (result != null)
                 {
                     HomeView home = new HomeView();
