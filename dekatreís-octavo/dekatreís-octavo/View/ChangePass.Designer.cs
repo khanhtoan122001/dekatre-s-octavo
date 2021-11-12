@@ -29,146 +29,146 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.materialTextfield2 = new MaterialSurface.MaterialTextfield();
-            this.materialTextfield3 = new MaterialSurface.MaterialTextfield();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            this.materialTextfield1 = new MaterialSurface.MaterialTextfield();
+            this.bt_Exit = new MaterialSkin.Controls.MaterialButton();
+            this.tb_NewPass = new MaterialSurface.MaterialTextfield();
+            this.tb_ConfirmPass = new MaterialSurface.MaterialTextfield();
+            this.bt_Confirm = new MaterialSkin.Controls.MaterialButton();
+            this.tb_OldPass = new MaterialSurface.MaterialTextfield();
             this.SuspendLayout();
             // 
-            // materialButton1
+            // bt_Exit
             // 
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(386, -1);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(39, 36);
-            this.materialButton1.TabIndex = 0;
-            this.materialButton1.Text = "X";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
-            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            this.bt_Exit.AutoSize = false;
+            this.bt_Exit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bt_Exit.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.bt_Exit.Depth = 0;
+            this.bt_Exit.HighEmphasis = true;
+            this.bt_Exit.Icon = null;
+            this.bt_Exit.Location = new System.Drawing.Point(386, -1);
+            this.bt_Exit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bt_Exit.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bt_Exit.Name = "bt_Exit";
+            this.bt_Exit.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.bt_Exit.Size = new System.Drawing.Size(39, 36);
+            this.bt_Exit.TabIndex = 0;
+            this.bt_Exit.Text = "X";
+            this.bt_Exit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.bt_Exit.UseAccentColor = false;
+            this.bt_Exit.UseVisualStyleBackColor = true;
+            this.bt_Exit.Click += new System.EventHandler(this.materialButton1_Click);
             // 
-            // materialTextfield2
+            // tb_NewPass
             // 
-            this.materialTextfield2.AutoScaleColor = true;
-            this.materialTextfield2.BackColor = System.Drawing.SystemColors.Control;
-            this.materialTextfield2.CountText = false;
-            this.materialTextfield2.FieldType = MaterialSurface.BoxType.Normal;
-            this.materialTextfield2.FloatingLabelText = "FloatingLabel";
-            this.materialTextfield2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.materialTextfield2.HandleError = false;
-            this.materialTextfield2.HelperText = "";
-            this.materialTextfield2.HideSelection = true;
-            this.materialTextfield2.HintText = "Mật khẩu mới";
-            this.materialTextfield2.Location = new System.Drawing.Point(115, 112);
-            this.materialTextfield2.MaxLength = 32767;
-            this.materialTextfield2.MouseState = MaterialSurface.MouseState.OUT;
-            this.materialTextfield2.Multiline = false;
-            this.materialTextfield2.Name = "materialTextfield2";
-            this.materialTextfield2.PasswordChar = '\0';
-            this.materialTextfield2.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.materialTextfield2.ReadOnly = false;
-            this.materialTextfield2.ShortcutsEnable = true;
-            this.materialTextfield2.ShowCaret = true;
-            this.materialTextfield2.Size = new System.Drawing.Size(200, 49);
-            this.materialTextfield2.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.materialTextfield2.TabIndex = 2;
-            this.materialTextfield2.UseSystemPasswordChar = false;
+            this.tb_NewPass.AutoScaleColor = true;
+            this.tb_NewPass.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_NewPass.CountText = false;
+            this.tb_NewPass.FieldType = MaterialSurface.BoxType.Normal;
+            this.tb_NewPass.FloatingLabelText = "FloatingLabel";
+            this.tb_NewPass.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_NewPass.HandleError = false;
+            this.tb_NewPass.HelperText = "";
+            this.tb_NewPass.HideSelection = true;
+            this.tb_NewPass.HintText = "Mật khẩu mới";
+            this.tb_NewPass.Location = new System.Drawing.Point(115, 112);
+            this.tb_NewPass.MaxLength = 32767;
+            this.tb_NewPass.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_NewPass.Multiline = false;
+            this.tb_NewPass.Name = "tb_NewPass";
+            this.tb_NewPass.PasswordChar = '\0';
+            this.tb_NewPass.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.tb_NewPass.ReadOnly = false;
+            this.tb_NewPass.ShortcutsEnable = true;
+            this.tb_NewPass.ShowCaret = true;
+            this.tb_NewPass.Size = new System.Drawing.Size(200, 49);
+            this.tb_NewPass.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_NewPass.TabIndex = 2;
+            this.tb_NewPass.UseSystemPasswordChar = false;
             // 
-            // materialTextfield3
+            // tb_ConfirmPass
             // 
-            this.materialTextfield3.AutoScaleColor = true;
-            this.materialTextfield3.BackColor = System.Drawing.SystemColors.Control;
-            this.materialTextfield3.CountText = false;
-            this.materialTextfield3.FieldType = MaterialSurface.BoxType.Normal;
-            this.materialTextfield3.FloatingLabelText = "FloatingLabel";
-            this.materialTextfield3.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.materialTextfield3.HandleError = false;
-            this.materialTextfield3.HelperText = "";
-            this.materialTextfield3.HideSelection = true;
-            this.materialTextfield3.HintText = "Xác nhận mật khẩu";
-            this.materialTextfield3.Location = new System.Drawing.Point(115, 167);
-            this.materialTextfield3.MaxLength = 32767;
-            this.materialTextfield3.MouseState = MaterialSurface.MouseState.OUT;
-            this.materialTextfield3.Multiline = false;
-            this.materialTextfield3.Name = "materialTextfield3";
-            this.materialTextfield3.PasswordChar = '\0';
-            this.materialTextfield3.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.materialTextfield3.ReadOnly = false;
-            this.materialTextfield3.ShortcutsEnable = true;
-            this.materialTextfield3.ShowCaret = true;
-            this.materialTextfield3.Size = new System.Drawing.Size(200, 49);
-            this.materialTextfield3.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.materialTextfield3.TabIndex = 3;
-            this.materialTextfield3.UseSystemPasswordChar = false;
+            this.tb_ConfirmPass.AutoScaleColor = true;
+            this.tb_ConfirmPass.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_ConfirmPass.CountText = false;
+            this.tb_ConfirmPass.FieldType = MaterialSurface.BoxType.Normal;
+            this.tb_ConfirmPass.FloatingLabelText = "FloatingLabel";
+            this.tb_ConfirmPass.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_ConfirmPass.HandleError = false;
+            this.tb_ConfirmPass.HelperText = "";
+            this.tb_ConfirmPass.HideSelection = true;
+            this.tb_ConfirmPass.HintText = "Xác nhận mật khẩu";
+            this.tb_ConfirmPass.Location = new System.Drawing.Point(115, 167);
+            this.tb_ConfirmPass.MaxLength = 32767;
+            this.tb_ConfirmPass.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_ConfirmPass.Multiline = false;
+            this.tb_ConfirmPass.Name = "tb_ConfirmPass";
+            this.tb_ConfirmPass.PasswordChar = '\0';
+            this.tb_ConfirmPass.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.tb_ConfirmPass.ReadOnly = false;
+            this.tb_ConfirmPass.ShortcutsEnable = true;
+            this.tb_ConfirmPass.ShowCaret = true;
+            this.tb_ConfirmPass.Size = new System.Drawing.Size(200, 49);
+            this.tb_ConfirmPass.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_ConfirmPass.TabIndex = 3;
+            this.tb_ConfirmPass.UseSystemPasswordChar = false;
             // 
-            // materialButton2
+            // bt_Confirm
             // 
-            this.materialButton2.AutoSize = false;
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(115, 271);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(200, 36);
-            this.materialButton2.TabIndex = 4;
-            this.materialButton2.Text = "Xác nhận";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = false;
-            this.materialButton2.UseVisualStyleBackColor = true;
-            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
+            this.bt_Confirm.AutoSize = false;
+            this.bt_Confirm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bt_Confirm.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.bt_Confirm.Depth = 0;
+            this.bt_Confirm.HighEmphasis = true;
+            this.bt_Confirm.Icon = null;
+            this.bt_Confirm.Location = new System.Drawing.Point(115, 271);
+            this.bt_Confirm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bt_Confirm.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bt_Confirm.Name = "bt_Confirm";
+            this.bt_Confirm.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.bt_Confirm.Size = new System.Drawing.Size(200, 36);
+            this.bt_Confirm.TabIndex = 4;
+            this.bt_Confirm.Text = "Xác nhận";
+            this.bt_Confirm.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.bt_Confirm.UseAccentColor = false;
+            this.bt_Confirm.UseVisualStyleBackColor = true;
+            this.bt_Confirm.Click += new System.EventHandler(this.Confirm_Change_Click);
             // 
-            // materialTextfield1
+            // tb_OldPass
             // 
-            this.materialTextfield1.AutoScaleColor = true;
-            this.materialTextfield1.BackColor = System.Drawing.SystemColors.Control;
-            this.materialTextfield1.CountText = false;
-            this.materialTextfield1.FieldType = MaterialSurface.BoxType.Normal;
-            this.materialTextfield1.FloatingLabelText = "FloatingLabel";
-            this.materialTextfield1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.materialTextfield1.HandleError = false;
-            this.materialTextfield1.HelperText = "";
-            this.materialTextfield1.HideSelection = true;
-            this.materialTextfield1.HintText = "Mật khẩu cũ";
-            this.materialTextfield1.Location = new System.Drawing.Point(115, 57);
-            this.materialTextfield1.MaxLength = 32767;
-            this.materialTextfield1.MouseState = MaterialSurface.MouseState.OUT;
-            this.materialTextfield1.Multiline = false;
-            this.materialTextfield1.Name = "materialTextfield1";
-            this.materialTextfield1.PasswordChar = '\0';
-            this.materialTextfield1.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.materialTextfield1.ReadOnly = false;
-            this.materialTextfield1.ShortcutsEnable = true;
-            this.materialTextfield1.ShowCaret = true;
-            this.materialTextfield1.Size = new System.Drawing.Size(200, 49);
-            this.materialTextfield1.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.materialTextfield1.TabIndex = 5;
-            this.materialTextfield1.UseSystemPasswordChar = false;
+            this.tb_OldPass.AutoScaleColor = true;
+            this.tb_OldPass.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_OldPass.CountText = false;
+            this.tb_OldPass.FieldType = MaterialSurface.BoxType.Normal;
+            this.tb_OldPass.FloatingLabelText = "FloatingLabel";
+            this.tb_OldPass.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_OldPass.HandleError = false;
+            this.tb_OldPass.HelperText = "";
+            this.tb_OldPass.HideSelection = true;
+            this.tb_OldPass.HintText = "Mật khẩu cũ";
+            this.tb_OldPass.Location = new System.Drawing.Point(115, 57);
+            this.tb_OldPass.MaxLength = 32767;
+            this.tb_OldPass.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_OldPass.Multiline = false;
+            this.tb_OldPass.Name = "tb_OldPass";
+            this.tb_OldPass.PasswordChar = '\0';
+            this.tb_OldPass.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.tb_OldPass.ReadOnly = false;
+            this.tb_OldPass.ShortcutsEnable = true;
+            this.tb_OldPass.ShowCaret = true;
+            this.tb_OldPass.Size = new System.Drawing.Size(200, 49);
+            this.tb_OldPass.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_OldPass.TabIndex = 5;
+            this.tb_OldPass.UseSystemPasswordChar = false;
             // 
             // ChangePass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(425, 384);
-            this.Controls.Add(this.materialTextfield1);
-            this.Controls.Add(this.materialButton2);
-            this.Controls.Add(this.materialTextfield3);
-            this.Controls.Add(this.materialTextfield2);
-            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.tb_OldPass);
+            this.Controls.Add(this.bt_Confirm);
+            this.Controls.Add(this.tb_ConfirmPass);
+            this.Controls.Add(this.tb_NewPass);
+            this.Controls.Add(this.bt_Exit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePass";
             this.Text = "ChangePass";
@@ -178,10 +178,10 @@ namespace dekatreís_octavo.View
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSurface.MaterialTextfield materialTextfield2;
-        private MaterialSurface.MaterialTextfield materialTextfield3;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
-        private MaterialSurface.MaterialTextfield materialTextfield1;
+        private MaterialSkin.Controls.MaterialButton bt_Exit;
+        private MaterialSurface.MaterialTextfield tb_NewPass;
+        private MaterialSurface.MaterialTextfield tb_ConfirmPass;
+        private MaterialSkin.Controls.MaterialButton bt_Confirm;
+        private MaterialSurface.MaterialTextfield tb_OldPass;
     }
 }

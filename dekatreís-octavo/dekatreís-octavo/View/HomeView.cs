@@ -12,11 +12,10 @@ namespace dekatreís_octavo.View
 {
     public partial class HomeView : Form
     {
-        public TaiKhoan TaiKhoan;
+        TaiKhoan TaiKhoan = LoginView.TaiKhoan;
         public HomeView()
         {
             InitializeComponent();
-            
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
@@ -28,7 +27,7 @@ namespace dekatreís_octavo.View
 
         private void bt_info_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void bt_ChangePass_Click(object sender, EventArgs e)

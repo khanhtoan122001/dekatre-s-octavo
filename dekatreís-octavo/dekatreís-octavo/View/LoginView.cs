@@ -15,19 +15,11 @@ namespace dekatreís_octavo.View
     public partial class LoginView : Form
     {
         public static QuanLyDoXeEntities db = new QuanLyDoXeEntities();
+        public static TaiKhoan TaiKhoan;
         public LoginView()
         {
             InitializeComponent();
             CheckDataAccount();
-        }
-        public string Encrypt(string text)
-        {
-            using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())
-            {
-                UTF8Encoding utf8 = new UTF8Encoding();
-                byte[] data = md5.ComputeHash(utf8.GetBytes(text));
-                return Convert.ToBase64String(data);
-            }
         }
 
         private void CheckDataAccount()
@@ -40,8 +32,8 @@ namespace dekatreís_octavo.View
             }
             if (db.TaiKhoans.Count() == 0)
             {
-                db.TaiKhoans.Add(new TaiKhoan() { TenDangNhap = "admin", MatKhau = Encrypt("admin"), LoaiTaiKhoan = db.LoaiTaiKhoans.Where(p => p.TenLoai == "admin").SingleOrDefault().IDLoai});
-                db.TaiKhoans.Add(new TaiKhoan() { TenDangNhap = "staff", MatKhau = Encrypt("staff"), LoaiTaiKhoan = db.LoaiTaiKhoans.Where(p => p.TenLoai == "staff").SingleOrDefault().IDLoai });
+                db.TaiKhoans.Add(new TaiKhoan() { TenDangNhap = "admin", MatKhau = Encrypt.EncryptString("admin"), LoaiTaiKhoan = db.LoaiTaiKhoans.Where(p => p.TenLoai == "admin").SingleOrDefault().IDLoai});
+                db.TaiKhoans.Add(new TaiKhoan() { TenDangNhap = "staff", MatKhau = Encrypt.EncryptString("staff"), LoaiTaiKhoan = db.LoaiTaiKhoans.Where(p => p.TenLoai == "staff").SingleOrDefault().IDLoai });
                 db.SaveChanges();
             }
 
@@ -56,12 +48,11 @@ namespace dekatreís_octavo.View
             }
             else
             {
-                string pass = Encrypt(tb_Password.Text);
-                var result = db.TaiKhoans.Where(p => p.TenDangNhap == tb_Username.Text && p.MatKhau == pass).SingleOrDefault();
-                if (result != null)
+                string pass = Encrypt.EncryptString(tb_Password.Text);
+                TaiKhoan = db.TaiKhoans.Where(p => p.TenDangNhap == tb_Username.Text && p.MatKhau == pass).SingleOrDefault();
+                if (TaiKhoan != null)
                 {
                     HomeView home = new HomeView();
-                    home.TaiKhoan = result;
                     home.Show();
                     this.Hide();
                 }
