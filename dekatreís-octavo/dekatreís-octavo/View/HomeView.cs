@@ -17,9 +17,34 @@ namespace dekatreís_octavo.View
             InitializeComponent();
         }
 
-        private void HomeView_Load(object sender, EventArgs e)
+        private void materialButton1_Click(object sender, EventArgs e)
         {
-            //materialLabel1.Text = taiKhoan.TenDangNhap;
+            if (materialCard1.Visible == false)
+                materialCard1.Visible = true;
+            else materialCard1.Visible = false;
+        }
+
+        private void textButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textButton2_Click(object sender, EventArgs e)
+        {
+            ChangePass changePass = new ChangePass();
+            changePass.Show();
+        }
+
+        private void textButton3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginView loginView = new LoginView();
+            loginView.Show();
+        }
+
+        private void HomeView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

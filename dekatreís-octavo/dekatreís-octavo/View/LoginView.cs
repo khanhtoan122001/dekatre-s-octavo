@@ -29,7 +29,8 @@ namespace dekatreís_octavo.View
                 return Convert.ToBase64String(data);
             }
         }
-        private void bt_DangNhap_Click(object sender, EventArgs e)
+
+        private void containedButton1_Click(object sender, EventArgs e)
         {
 
             if (string.IsNullOrEmpty(tb_TenDangNhap.Text) || string.IsNullOrEmpty(tb_MatKhau.Text))
@@ -46,6 +47,11 @@ namespace dekatreís_octavo.View
                     this.Hide();
                 }
             }
+        }
+
+        private void materialButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
