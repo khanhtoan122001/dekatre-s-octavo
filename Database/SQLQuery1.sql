@@ -60,7 +60,7 @@ GO
 USE [QuanLyDoXe]
 GO
 
-/****** Object:  Table [dbo].[TheXe]    Script Date: 10/23/2021 3:21:29 PM ******/
+/****** Object:  Table [dbo].[TheXe]    Script Date: 11/13/2021 8:06:48 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -75,12 +75,22 @@ CREATE TABLE [dbo].[TheXe](
 	[BienSoXe] [nvarchar](50) NULL,
 	[ThoiGianGui] [smalldatetime] NULL,
 	[LoaiThe] [int] NULL,
+	[Status] [bit] NULL,
  CONSTRAINT [PK_TheXe] PRIMARY KEY CLUSTERED 
 (
 	[IDThe] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
+ALTER TABLE [dbo].[TheXe]  WITH CHECK ADD  CONSTRAINT [FK_TheXe_LoaiThe] FOREIGN KEY([LoaiThe])
+REFERENCES [dbo].[LoaiThe] ([IDLoai])
+GO
+
+ALTER TABLE [dbo].[TheXe] CHECK CONSTRAINT [FK_TheXe_LoaiThe]
+GO
+
+
 
 USE [QuanLyDoXe]
 GO
@@ -130,7 +140,7 @@ GO
 USE [QuanLyDoXe]
 GO
 
-/****** Object:  Table [dbo].[BaoCaoDoanhThuThang]    Script Date: 10/23/2021 3:22:04 PM ******/
+/****** Object:  Table [dbo].[BaoCaoDoanhThuThang]    Script Date: 11/13/2021 8:06:15 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -147,6 +157,15 @@ CREATE TABLE [dbo].[BaoCaoDoanhThuThang](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
+ALTER TABLE [dbo].[BaoCaoDoanhThuThang]  WITH CHECK ADD  CONSTRAINT [FK_BaoCaoDoanhThuThang_LoaiThe] FOREIGN KEY([LoaiThe])
+REFERENCES [dbo].[LoaiThe] ([IDLoai])
+GO
+
+ALTER TABLE [dbo].[BaoCaoDoanhThuThang] CHECK CONSTRAINT [FK_BaoCaoDoanhThuThang_LoaiThe]
+GO
+
+
 
 USE [QuanLyDoXe]
 GO

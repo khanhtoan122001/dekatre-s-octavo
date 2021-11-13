@@ -18,6 +18,9 @@
         <AssociationConnector Association="QuanLyDoXeModel.FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyDoXeModel.FK_Table_1_Table_1" ManuallyRouted="false" />
         <AssociationConnector Association="QuanLyDoXeModel.FK_TaiKhoan_LoaiTaiKhoan" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.LoaiThe" Width="1.5" PointX="0.75" PointY="0.75" />
+        <AssociationConnector Association="QuanLyDoXeModel.FK_BaoCaoDoanhThuThang_LoaiThe" />
+        <AssociationConnector Association="QuanLyDoXeModel.FK_TheXe_LoaiThe" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

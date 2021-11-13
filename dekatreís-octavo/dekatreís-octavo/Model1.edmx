@@ -59,6 +59,14 @@
           <Property Name="IDLoai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenLoai" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="LoaiThe">
+          <Key>
+            <PropertyRef Name="IDLoai" />
+          </Key>
+          <Property Name="IDLoai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenLoai" Type="nvarchar" MaxLength="50" />
+          <Property Name="Gia" Type="int" />
+        </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
             <PropertyRef Name="diagram_id" />
@@ -101,6 +109,18 @@
           <Property Name="LoaiThe" Type="int" />
           <Property Name="Status" Type="bit" />
         </EntityType>
+        <Association Name="FK_BaoCaoDoanhThuThang_LoaiThe">
+          <End Role="LoaiThe" Type="Self.LoaiThe" Multiplicity="0..1" />
+          <End Role="BaoCaoDoanhThuThang" Type="Self.BaoCaoDoanhThuThang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiThe">
+              <PropertyRef Name="IDLoai" />
+            </Principal>
+            <Dependent Role="BaoCaoDoanhThuThang">
+              <PropertyRef Name="LoaiThe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang">
           <End Role="BaoCaoDoanhThuThang" Type="Self.BaoCaoDoanhThuThang" Multiplicity="0..1" />
           <End Role="CT_BaoCaoDoanhThuThang" Type="Self.CT_BaoCaoDoanhThuThang" Multiplicity="*" />
@@ -137,6 +157,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_TheXe_LoaiThe">
+          <End Role="LoaiThe" Type="Self.LoaiThe" Multiplicity="0..1" />
+          <End Role="TheXe" Type="Self.TheXe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiThe">
+              <PropertyRef Name="IDLoai" />
+            </Principal>
+            <Dependent Role="TheXe">
+              <PropertyRef Name="LoaiThe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="QuanLyDoXeModelStoreContainer">
           <EntitySet Name="BaoCaoDoanhThuThang" EntityType="Self.BaoCaoDoanhThuThang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BaoCaoLichSuHoatDong" EntityType="Self.BaoCaoLichSuHoatDong" Schema="dbo" store:Type="Tables" />
@@ -144,10 +176,15 @@
           <EntitySet Name="CT_BaoCaoDoanhThuThang" EntityType="Self.CT_BaoCaoDoanhThuThang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CT_BaoCaoLichSuHoatDong" EntityType="Self.CT_BaoCaoLichSuHoatDong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiTaiKhoan" EntityType="Self.LoaiTaiKhoan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LoaiThe" EntityType="Self.LoaiThe" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThamSo" EntityType="Self.ThamSo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TheXe" EntityType="Self.TheXe" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_BaoCaoDoanhThuThang_LoaiThe" Association="Self.FK_BaoCaoDoanhThuThang_LoaiThe">
+            <End Role="LoaiThe" EntitySet="LoaiThe" />
+            <End Role="BaoCaoDoanhThuThang" EntitySet="BaoCaoDoanhThuThang" />
+          </AssociationSet>
           <AssociationSet Name="FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang" Association="Self.FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang">
             <End Role="BaoCaoDoanhThuThang" EntitySet="BaoCaoDoanhThuThang" />
             <End Role="CT_BaoCaoDoanhThuThang" EntitySet="CT_BaoCaoDoanhThuThang" />
@@ -159,6 +196,10 @@
           <AssociationSet Name="FK_TaiKhoan_LoaiTaiKhoan" Association="Self.FK_TaiKhoan_LoaiTaiKhoan">
             <End Role="LoaiTaiKhoan" EntitySet="LoaiTaiKhoan" />
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TheXe_LoaiThe" Association="Self.FK_TheXe_LoaiThe">
+            <End Role="LoaiThe" EntitySet="LoaiThe" />
+            <End Role="TheXe" EntitySet="TheXe" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -173,6 +214,7 @@
           <Property Name="Nam" Type="Int32" />
           <Property Name="LoaiThe" Type="Int32" />
           <NavigationProperty Name="CT_BaoCaoDoanhThuThang" Relationship="Self.FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang" FromRole="BaoCaoDoanhThuThang" ToRole="CT_BaoCaoDoanhThuThang" />
+          <NavigationProperty Name="LoaiThe1" Relationship="QuanLyDoXeModel.FK_BaoCaoDoanhThuThang_LoaiThe" FromRole="BaoCaoDoanhThuThang" ToRole="LoaiThe" />
         </EntityType>
         <EntityType Name="BaoCaoLichSuHoatDong">
           <Key>
@@ -266,6 +308,7 @@
           <Property Name="ThoiGianGui" Type="DateTime" Precision="0" />
           <Property Name="LoaiThe" Type="Int32" />
           <Property Name="Status" Type="Boolean" />
+          <NavigationProperty Name="LoaiThe1" Relationship="QuanLyDoXeModel.FK_TheXe_LoaiThe" FromRole="TheXe" ToRole="LoaiThe" />
         </EntityType>
         <Association Name="FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang">
           <End Role="BaoCaoDoanhThuThang" Type="Self.BaoCaoDoanhThuThang" Multiplicity="0..1" />
@@ -326,7 +369,50 @@
             <End Role="LoaiTaiKhoan" EntitySet="LoaiTaiKhoans" />
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
           </AssociationSet>
+          <EntitySet Name="LoaiThes" EntityType="QuanLyDoXeModel.LoaiThe" />
+          <AssociationSet Name="FK_BaoCaoDoanhThuThang_LoaiThe" Association="QuanLyDoXeModel.FK_BaoCaoDoanhThuThang_LoaiThe">
+            <End Role="LoaiThe" EntitySet="LoaiThes" />
+            <End Role="BaoCaoDoanhThuThang" EntitySet="BaoCaoDoanhThuThangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TheXe_LoaiThe" Association="QuanLyDoXeModel.FK_TheXe_LoaiThe">
+            <End Role="LoaiThe" EntitySet="LoaiThes" />
+            <End Role="TheXe" EntitySet="TheXes" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="LoaiThe">
+          <Key>
+            <PropertyRef Name="IDLoai" />
+          </Key>
+          <Property Name="IDLoai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Gia" Type="Int32" />
+          <NavigationProperty Name="BaoCaoDoanhThuThangs" Relationship="QuanLyDoXeModel.FK_BaoCaoDoanhThuThang_LoaiThe" FromRole="LoaiThe" ToRole="BaoCaoDoanhThuThang" />
+          <NavigationProperty Name="TheXes" Relationship="QuanLyDoXeModel.FK_TheXe_LoaiThe" FromRole="LoaiThe" ToRole="TheXe" />
+        </EntityType>
+        <Association Name="FK_BaoCaoDoanhThuThang_LoaiThe">
+          <End Type="QuanLyDoXeModel.LoaiThe" Role="LoaiThe" Multiplicity="0..1" />
+          <End Type="QuanLyDoXeModel.BaoCaoDoanhThuThang" Role="BaoCaoDoanhThuThang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiThe">
+              <PropertyRef Name="IDLoai" />
+            </Principal>
+            <Dependent Role="BaoCaoDoanhThuThang">
+              <PropertyRef Name="LoaiThe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TheXe_LoaiThe">
+          <End Type="QuanLyDoXeModel.LoaiThe" Role="LoaiThe" Multiplicity="0..1" />
+          <End Type="QuanLyDoXeModel.TheXe" Role="TheXe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiThe">
+              <PropertyRef Name="IDLoai" />
+            </Principal>
+            <Dependent Role="TheXe">
+              <PropertyRef Name="LoaiThe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -436,6 +522,15 @@
                 <ScalarProperty Name="BienSoXe" ColumnName="BienSoXe" />
                 <ScalarProperty Name="ThoiGianGui" ColumnName="ThoiGianGui" />
                 <ScalarProperty Name="LoaiThe" ColumnName="LoaiThe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LoaiThes">
+            <EntityTypeMapping TypeName="QuanLyDoXeModel.LoaiThe">
+              <MappingFragment StoreEntitySet="LoaiThe">
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+                <ScalarProperty Name="IDLoai" ColumnName="IDLoai" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
