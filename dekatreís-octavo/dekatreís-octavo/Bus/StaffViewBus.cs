@@ -10,7 +10,7 @@ namespace dekatreís_octavo.Bus
 {
     public class StaffViewBus
     {
-        public static QuanLyDoXeEntities db = new QuanLyDoXeEntities();
+        public static QuanLyDoXeEntities1 db = DataProvider.Instance.db;
         public List<ListViewItem> SelectTaiKhoanListViewItem()
         {
             List<ListViewItem> itemList = new List<ListViewItem>();
@@ -36,7 +36,8 @@ namespace dekatreís_octavo.Bus
         }
         public TaiKhoan SelectTaiKhoan(string TenDangNhap)
         {
-            return db.TaiKhoans.Where((p) => p.TenDangNhap == TenDangNhap).FirstOrDefault();
+            TaiKhoan test = db.TaiKhoans.Where((p) => p.TenDangNhap == TenDangNhap).FirstOrDefault();
+            return test;
         }
     }
 }

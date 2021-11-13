@@ -12,8 +12,7 @@ using dekatreís_octavo.Bus;
 namespace dekatreís_octavo.View
 {
     public partial class StaffView : UserControl
-    {
-        public static QuanLyDoXeEntities db = new QuanLyDoXeEntities();
+    {        
         public static TaiKhoan selectedTaiKhoan;
         StaffViewBus staffViewBus = new StaffViewBus();
         public StaffView()
@@ -36,6 +35,7 @@ namespace dekatreís_octavo.View
             {
                 materialListView1.Items.Add(item);
             }
+            
         }
 
         private void containedButton3_Click(object sender, EventArgs e)
@@ -55,6 +55,13 @@ namespace dekatreís_octavo.View
                 return;
             //Select an account
             selectedTaiKhoan = staffViewBus.SelectTaiKhoan(materialListView1.SelectedItems[0].SubItems[4].Text);
+        }
+
+        private void containedButton2_Click(object sender, EventArgs e)
+        {
+            EditStaffView editStaffForm = new EditStaffView(selectedTaiKhoan);
+            if (editStaffForm.ShowDialog() == DialogResult.OK)
+                LoadStaffList();            
         }
     }
 }
