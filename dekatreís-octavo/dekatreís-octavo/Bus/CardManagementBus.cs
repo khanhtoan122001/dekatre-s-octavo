@@ -8,6 +8,10 @@ namespace dekatreís_octavo.Bus
 {
     public class CardManagementBus
     {
+        private static CardManagementBus instance;
+
+        public static CardManagementBus Instance { get { if (instance == null) instance = new CardManagementBus(); return instance; } set => instance = value; }
+
         public bool AddCard(string ChuSoHuu, string TenXe, string BienSo, int LoaiThe)
         {
             TheXe the = new TheXe();
@@ -79,6 +83,13 @@ namespace dekatreís_octavo.Bus
                          where c.BienSoXe.Contains(BienSo)
                          select c;
             return result;
+        }
+
+        public IQueryable<TheXe> GetTheXes()
+        {
+            QuanLyDoXeEntities1 db = DataProvider.Instance.db;
+            return from c in db.TheXes
+                   select c;
         }
     }
 }

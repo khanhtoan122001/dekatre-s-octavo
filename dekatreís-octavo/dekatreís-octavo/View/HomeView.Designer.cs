@@ -38,7 +38,9 @@ namespace dekatreís_octavo.View
             this.bt_ChangePass = new MaterialSurface.TextButton();
             this.bt_LogOut = new MaterialSurface.TextButton();
             this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.materialTabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +65,9 @@ namespace dekatreís_octavo.View
             // 
             // materialTabControl1
             // 
+            this.materialTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialTabControl1.Controls.Add(this.tabPage1);
             this.materialTabControl1.Controls.Add(this.tabPage2);
             this.materialTabControl1.Depth = 0;
@@ -71,15 +76,16 @@ namespace dekatreís_octavo.View
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(645, 398);
+            this.materialTabControl1.Size = new System.Drawing.Size(955, 563);
             this.materialTabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cardManagement1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(637, 369);
+            this.tabPage1.Size = new System.Drawing.Size(947, 534);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -96,13 +102,14 @@ namespace dekatreís_octavo.View
             // 
             // materialButton1
             // 
+            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialButton1.AutoSize = false;
             this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(762, -1);
+            this.materialButton1.Location = new System.Drawing.Point(1072, -1);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -170,13 +177,14 @@ namespace dekatreís_octavo.View
             // 
             // materialCard1
             // 
+            this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialCard1.BackColor = System.Drawing.SystemColors.Control;
             this.materialCard1.CardColor = System.Drawing.Color.White;
             this.materialCard1.Controls.Add(this.bt_LogOut);
             this.materialCard1.Controls.Add(this.bt_ChangePass);
             this.materialCard1.Controls.Add(this.bt_info);
             this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialCard1.Location = new System.Drawing.Point(622, 34);
+            this.materialCard1.Location = new System.Drawing.Point(932, 34);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
             this.materialCard1.MouseInteract = false;
             this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
@@ -189,11 +197,18 @@ namespace dekatreís_octavo.View
             this.materialCard1.TabIndex = 5;
             this.materialCard1.Visible = false;
             // 
+            // cardManagement1
+            // 
+            this.cardManagement1.Location = new System.Drawing.Point(2, 3);
+            this.cardManagement1.Name = "cardManagement1";
+            this.cardManagement1.Size = new System.Drawing.Size(939, 536);
+            this.cardManagement1.TabIndex = 0;
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1110, 615);
             this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.materialTabControl1);
@@ -203,6 +218,7 @@ namespace dekatreís_octavo.View
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeView_FormClosed);
             this.Load += new System.EventHandler(this.HomeView_Load);
             this.materialTabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -219,5 +235,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.TextButton bt_ChangePass;
         private MaterialSurface.TextButton bt_LogOut;
         private MaterialSurface.MaterialCard materialCard1;
+        private CardManagement cardManagement1;
     }
 }
