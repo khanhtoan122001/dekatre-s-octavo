@@ -97,7 +97,7 @@ namespace dekatreís_octavo.View
             this.tb_BienSo.AnimateReadOnly = false;
             this.tb_BienSo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_BienSo.Depth = 0;
-            this.tb_BienSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_BienSo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tb_BienSo.LeadingIcon = null;
             this.tb_BienSo.Location = new System.Drawing.Point(179, 219);
             this.tb_BienSo.MaxLength = 50;
@@ -122,10 +122,8 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.HintText = "";
             this.cb_LoaiThe.ItemHeight = 47;
             this.cb_LoaiThe.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
+            "Thẻ thường",
+            "Thẻ tháng"});
             this.cb_LoaiThe.Location = new System.Drawing.Point(179, 285);
             this.cb_LoaiThe.MaxDropDownItems = 4;
             this.cb_LoaiThe.MouseState = MaterialSurface.MouseState.OUT;

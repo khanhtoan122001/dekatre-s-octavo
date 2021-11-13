@@ -48,10 +48,8 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.HintText = "";
             this.cb_LoaiThe.ItemHeight = 47;
             this.cb_LoaiThe.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4"});
+            "Thẻ thường",
+            "Thẻ tháng"});
             this.cb_LoaiThe.Location = new System.Drawing.Point(228, 271);
             this.cb_LoaiThe.MaxDropDownItems = 4;
             this.cb_LoaiThe.MouseState = MaterialSurface.MouseState.OUT;

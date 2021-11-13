@@ -17,6 +17,7 @@ namespace dekatreís_octavo
         public int IDCTBaoCao { get; set; }
         public int IDBaoCao { get; set; }
         public Nullable<System.DateTime> ThoiGian { get; set; }
+        public string BienSo { get; set; }
     
         public virtual BaoCaoLichSuHoatDong BaoCaoLichSuHoatDong { get; set; }
     }

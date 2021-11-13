@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="QuanLyDoXeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="QuanLyDoXeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="BaoCaoDoanhThuThang">
           <Key>
             <PropertyRef Name="IDBaoCao" />
@@ -50,6 +50,7 @@
           <Property Name="IDCTBaoCao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IDBaoCao" Type="int" Nullable="false" />
           <Property Name="ThoiGian" Type="smalldatetime" />
+          <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="LoaiTaiKhoan">
           <Key>
@@ -159,8 +160,7 @@
             <End Role="TaiKhoan" EntitySet="TaiKhoan" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="QuanLyDoXeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -213,6 +213,7 @@
           <Property Name="IDBaoCao" Type="Int32" Nullable="false" />
           <Property Name="ThoiGian" Type="DateTime" Precision="0" />
           <NavigationProperty Name="BaoCaoLichSuHoatDong" Relationship="Self.FK_Table_1_Table_1" FromRole="CT_BaoCaoLichSuHoatDong" ToRole="BaoCaoLichSuHoatDong" />
+          <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="LoaiTaiKhoan">
           <Key>
@@ -375,6 +376,7 @@
           <EntitySetMapping Name="CT_BaoCaoLichSuHoatDong">
             <EntityTypeMapping TypeName="QuanLyDoXeModel.CT_BaoCaoLichSuHoatDong">
               <MappingFragment StoreEntitySet="CT_BaoCaoLichSuHoatDong">
+                <ScalarProperty Name="BienSo" ColumnName="BienSo" />
                 <ScalarProperty Name="IDCTBaoCao" ColumnName="IDCTBaoCao" />
                 <ScalarProperty Name="IDBaoCao" ColumnName="IDBaoCao" />
                 <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
