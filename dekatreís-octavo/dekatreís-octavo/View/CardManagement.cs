@@ -16,5 +16,10 @@ namespace dekatreís_octavo.View
         {
             InitializeComponent();
         }
+
+        private void CardManagement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
