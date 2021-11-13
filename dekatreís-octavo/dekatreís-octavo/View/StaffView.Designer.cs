@@ -30,13 +30,16 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.staffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.staffCMND = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.staffPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.staffType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.containedButton1 = new MaterialSurface.ContainedButton();
             this.containedButton2 = new MaterialSurface.ContainedButton();
             this.containedButton3 = new MaterialSurface.ContainedButton();
-            this.staffID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.staffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.materialTextfield1 = new MaterialSurface.MaterialTextfield();
             this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
+            this.staffUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // materialListView1
@@ -45,8 +48,11 @@ namespace dekatreís_octavo.View
             this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.materialListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.staffID,
-            this.staffName});
+            this.staffName,
+            this.staffCMND,
+            this.staffPhoneNumber,
+            this.staffType,
+            this.staffUsername});
             this.materialListView1.Depth = 0;
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HideSelection = false;
@@ -60,6 +66,25 @@ namespace dekatreís_octavo.View
             this.materialListView1.TabIndex = 0;
             this.materialListView1.UseCompatibleStateImageBehavior = false;
             this.materialListView1.View = System.Windows.Forms.View.Details;
+            this.materialListView1.SelectedIndexChanged += new System.EventHandler(this.materialListView1_SelectedIndexChanged);
+            // 
+            // staffName
+            // 
+            this.staffName.Text = "Tên";
+            // 
+            // staffCMND
+            // 
+            this.staffCMND.Text = "CMND";
+            this.staffCMND.Width = 86;
+            // 
+            // staffPhoneNumber
+            // 
+            this.staffPhoneNumber.Text = "SĐT";
+            // 
+            // staffType
+            // 
+            this.staffType.Text = "Loại Tài Khoản";
+            this.staffType.Width = 143;
             // 
             // containedButton1
             // 
@@ -83,6 +108,7 @@ namespace dekatreís_octavo.View
             // containedButton2
             // 
             this.containedButton2.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton2.Enabled = false;
             this.containedButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton2.Icon = null;
@@ -102,6 +128,7 @@ namespace dekatreís_octavo.View
             // containedButton3
             // 
             this.containedButton3.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton3.Enabled = false;
             this.containedButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton3.Icon = null;
@@ -117,14 +144,7 @@ namespace dekatreís_octavo.View
             this.containedButton3.Text = "Xóa";
             this.containedButton3.TextAlignment = System.Drawing.StringAlignment.Center;
             this.containedButton3.UseVisualStyleBackColor = true;
-            // 
-            // staffID
-            // 
-            this.staffID.Text = "ID";
-            // 
-            // staffName
-            // 
-            this.staffName.Text = "Tên";
+            this.containedButton3.Click += new System.EventHandler(this.containedButton3_Click);
             // 
             // materialTextfield1
             // 
@@ -162,7 +182,7 @@ namespace dekatreís_octavo.View
             this.materialComboBox1.DropDownHeight = 174;
             this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.materialComboBox1.DropDownWidth = 121;
-            this.materialComboBox1.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialComboBox1.FormattingEnabled = true;
             this.materialComboBox1.Hint = "Sort by";
@@ -176,6 +196,11 @@ namespace dekatreís_octavo.View
             this.materialComboBox1.StartIndex = 0;
             this.materialComboBox1.TabIndex = 5;
             // 
+            // staffUsername
+            // 
+            this.staffUsername.Text = "Tên Đăng Nhập";
+            this.staffUsername.Width = 0;
+            // 
             // StaffView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -188,6 +213,7 @@ namespace dekatreís_octavo.View
             this.Controls.Add(this.materialListView1);
             this.Name = "StaffView";
             this.Size = new System.Drawing.Size(963, 523);
+            this.Load += new System.EventHandler(this.StaffView_Load);
             this.ResumeLayout(false);
 
         }
@@ -195,12 +221,15 @@ namespace dekatreís_octavo.View
         #endregion
 
         private MaterialSkin.Controls.MaterialListView materialListView1;
-        private System.Windows.Forms.ColumnHeader staffID;
         private System.Windows.Forms.ColumnHeader staffName;
         private MaterialSurface.ContainedButton containedButton1;
         private MaterialSurface.ContainedButton containedButton2;
         private MaterialSurface.ContainedButton containedButton3;
         private MaterialSurface.MaterialTextfield materialTextfield1;
         private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
+        private System.Windows.Forms.ColumnHeader staffCMND;
+        private System.Windows.Forms.ColumnHeader staffPhoneNumber;
+        private System.Windows.Forms.ColumnHeader staffType;
+        private System.Windows.Forms.ColumnHeader staffUsername;
     }
 }
