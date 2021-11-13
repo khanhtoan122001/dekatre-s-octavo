@@ -1,5 +1,6 @@
 ﻿using dekatreís_octavo.Bus;
 using System;
+using MaterialSurface;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,9 @@ namespace dekatreís_octavo.View
         public HomeView()
         {
             InitializeComponent();
+           
+            tabPage1.Controls.Add(new CardManagement());
+            //tabPage1.BackColor = Color.White;
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
@@ -52,6 +56,20 @@ namespace dekatreís_octavo.View
         private void HomeView_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void AddTab()
+        {
+            tabControl.TabPages.Clear();
+            if (TaiKhoan.LoaiTaiKhoan == 1)
+            {
+
+            }
+        }
+
+        private void cardManagement1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
