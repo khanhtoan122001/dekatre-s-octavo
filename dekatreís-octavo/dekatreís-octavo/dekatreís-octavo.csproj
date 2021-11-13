@@ -159,6 +159,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\CardManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\CardManagement.Designer.cs">
+      <DependentUpon>CardManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +196,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\CardManagement.resx">
+      <DependentUpon>CardManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\ChangePass.resx">
       <DependentUpon>ChangePass.cs</DependentUpon>
     </EmbeddedResource>
