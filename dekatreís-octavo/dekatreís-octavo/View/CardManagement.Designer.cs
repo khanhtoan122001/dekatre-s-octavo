@@ -29,37 +29,17 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.cardList = new MaterialSkin.Controls.MaterialListView();
             this.statusComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.addButton = new MaterialSurface.ContainedButton();
             this.delButton = new MaterialSurface.ContainedButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cardList = new MaterialSkin.Controls.MaterialListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Chusohuu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cardList
-            // 
-            this.cardList.AutoSizeTable = false;
-            this.cardList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cardList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cardList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.Type,
-            this.Status});
-            this.cardList.Depth = 0;
-            this.cardList.FullRowSelect = true;
-            this.cardList.HideSelection = false;
-            this.cardList.Location = new System.Drawing.Point(0, 134);
-            this.cardList.MinimumSize = new System.Drawing.Size(200, 100);
-            this.cardList.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.cardList.MouseState = MaterialSkin.MouseState.OUT;
-            this.cardList.Name = "cardList";
-            this.cardList.OwnerDraw = true;
-            this.cardList.Size = new System.Drawing.Size(936, 399);
-            this.cardList.TabIndex = 0;
-            this.cardList.UseCompatibleStateImageBehavior = false;
-            this.cardList.View = System.Windows.Forms.View.Details;
             // 
             // statusComboBox
             // 
@@ -70,7 +50,7 @@ namespace dekatreís_octavo.View
             this.statusComboBox.DropDownHeight = 174;
             this.statusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.statusComboBox.DropDownWidth = 121;
-            this.statusComboBox.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.statusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.statusComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.statusComboBox.FormattingEnabled = true;
             this.statusComboBox.Hint = "Status";
@@ -102,6 +82,7 @@ namespace dekatreís_octavo.View
             this.addButton.Text = "Thêm";
             this.addButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // delButton
             // 
@@ -121,43 +102,94 @@ namespace dekatreís_octavo.View
             this.delButton.Text = "Xóa";
             this.delButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.delButton.UseVisualStyleBackColor = true;
+            this.delButton.Click += new System.EventHandler(this.delButton_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.cardList);
+            this.panel1.Location = new System.Drawing.Point(3, 134);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(933, 399);
+            this.panel1.TabIndex = 4;
+            // 
+            // cardList
+            // 
+            this.cardList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cardList.AutoSizeTable = false;
+            this.cardList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cardList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cardList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.Chusohuu,
+            this.Type,
+            this.Status});
+            this.cardList.Depth = 0;
+            this.cardList.FullRowSelect = true;
+            this.cardList.HideSelection = false;
+            this.cardList.Location = new System.Drawing.Point(-2, 0);
+            this.cardList.MinimumSize = new System.Drawing.Size(200, 100);
+            this.cardList.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.cardList.MouseState = MaterialSkin.MouseState.OUT;
+            this.cardList.Name = "cardList";
+            this.cardList.OwnerDraw = true;
+            this.cardList.Size = new System.Drawing.Size(936, 399);
+            this.cardList.TabIndex = 1;
+            this.cardList.UseCompatibleStateImageBehavior = false;
+            this.cardList.View = System.Windows.Forms.View.Details;
+            this.cardList.DoubleClick += new System.EventHandler(this.cardList_DoubleClick);
             // 
             // ID
             // 
             this.ID.Text = "ID";
+            this.ID.Width = 67;
+            // 
+            // Chusohuu
+            // 
+            this.Chusohuu.DisplayIndex = 3;
+            this.Chusohuu.Text = "Chủ sở hữu";
+            this.Chusohuu.Width = 185;
             // 
             // Type
             // 
+            this.Type.DisplayIndex = 1;
             this.Type.Text = "Loại";
             // 
             // Status
             // 
+            this.Status.DisplayIndex = 2;
             this.Status.Text = "Trạng thái";
-            this.Status.Width = 129;
+            this.Status.Width = 252;
             // 
             // CardManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.delButton);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.statusComboBox);
-            this.Controls.Add(this.cardList);
             this.Name = "CardManagement";
             this.Size = new System.Drawing.Size(939, 536);
             this.Load += new System.EventHandler(this.CardManagement_Load);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialListView cardList;
-        private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader Type;
-        private System.Windows.Forms.ColumnHeader Status;
         private MaterialSkin.Controls.MaterialComboBox statusComboBox;
         private MaterialSurface.ContainedButton addButton;
         private MaterialSurface.ContainedButton delButton;
+        private System.Windows.Forms.Panel panel1;
+        private MaterialSkin.Controls.MaterialListView cardList;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader Chusohuu;
+        private System.Windows.Forms.ColumnHeader Type;
+        private System.Windows.Forms.ColumnHeader Status;
     }
 }

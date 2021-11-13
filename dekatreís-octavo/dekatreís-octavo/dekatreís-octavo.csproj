@@ -162,6 +162,12 @@
     <Compile Include="TheXe.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\AddCardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddCardForm.Designer.cs">
+      <DependentUpon>AddCardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CardManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,12 @@
     </Compile>
     <Compile Include="View\ChangePass.Designer.cs">
       <DependentUpon>ChangePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditCard.Designer.cs">
+      <DependentUpon>EditCard.cs</DependentUpon>
     </Compile>
     <Compile Include="View\HomeView.cs">
       <SubType>Form</SubType>
@@ -199,11 +211,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\AddCardForm.resx">
+      <DependentUpon>AddCardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CardManagement.resx">
       <DependentUpon>CardManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ChangePass.resx">
       <DependentUpon>ChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditCard.resx">
+      <DependentUpon>EditCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\HomeView.resx">
       <DependentUpon>HomeView.cs</DependentUpon>

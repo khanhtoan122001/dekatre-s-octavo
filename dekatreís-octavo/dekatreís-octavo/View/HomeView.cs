@@ -46,7 +46,7 @@ namespace dekatreís_octavo.View
 
         private void HomeView_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void HomeView_Load(object sender, EventArgs e)

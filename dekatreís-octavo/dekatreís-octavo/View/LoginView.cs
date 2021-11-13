@@ -35,8 +35,9 @@ namespace dekatreís_octavo.View
                 if (TaiKhoan != null)
                 {
                     HomeView home = new HomeView();
-                    home.Show();
                     this.Hide();
+                    home.ShowDialog();
+                    this.Show();
                 }
             }
         }
