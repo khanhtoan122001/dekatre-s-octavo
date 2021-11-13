@@ -17,6 +17,7 @@ namespace dekatreís_octavo.View
         public HomeView()
         {
             InitializeComponent();
+            tabPage1.Controls.Add(new CardManagement());
         }
 
         private void materialButton1_Click(object sender, EventArgs e)

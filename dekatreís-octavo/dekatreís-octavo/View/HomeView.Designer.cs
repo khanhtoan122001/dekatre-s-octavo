@@ -31,16 +31,14 @@ namespace dekatreís_octavo.View
         {
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.bt_info = new MaterialSurface.TextButton();
             this.bt_ChangePass = new MaterialSurface.TextButton();
             this.bt_LogOut = new MaterialSurface.TextButton();
             this.materialCard1 = new MaterialSurface.MaterialCard();
-            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.materialTabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,23 +77,12 @@ namespace dekatreís_octavo.View
             this.materialTabControl1.Size = new System.Drawing.Size(955, 563);
             this.materialTabControl1.TabIndex = 1;
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.cardManagement1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(947, 534);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(637, 369);
+            this.tabPage2.Size = new System.Drawing.Size(947, 534);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -197,12 +184,15 @@ namespace dekatreís_octavo.View
             this.materialCard1.TabIndex = 5;
             this.materialCard1.Visible = false;
             // 
-            // cardManagement1
+            // tabPage1
             // 
-            this.cardManagement1.Location = new System.Drawing.Point(2, 3);
-            this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(939, 536);
-            this.cardManagement1.TabIndex = 0;
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(947, 534);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // HomeView
             // 
@@ -218,7 +208,6 @@ namespace dekatreís_octavo.View
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeView_FormClosed);
             this.Load += new System.EventHandler(this.HomeView_Load);
             this.materialTabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -228,13 +217,12 @@ namespace dekatreís_octavo.View
 
         private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
         private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private MaterialSurface.TextButton bt_info;
         private MaterialSurface.TextButton bt_ChangePass;
         private MaterialSurface.TextButton bt_LogOut;
         private MaterialSurface.MaterialCard materialCard1;
-        private CardManagement cardManagement1;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }
