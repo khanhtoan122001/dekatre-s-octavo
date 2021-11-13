@@ -13,7 +13,7 @@ namespace dekatreís_octavo.Bus
         static LoginViewBus instance;
         public static LoginViewBus Instance { get { if (instance == null) instance = new LoginViewBus(); return instance; } set { instance = value; } }
 
-        QuanLyDoXeEntities db = DataProvider.Instance.db;
+        QuanLyDoXeEntities1 db = DataProvider.Instance.db;
 
         public TaiKhoan Login(string username, string password)
         {
@@ -23,13 +23,13 @@ namespace dekatreís_octavo.Bus
         }
         public void CheckDataAccount()
         {
-            if (db.LoaiTaiKhoans.Count() == 0)
+            if (db.LoaiTaiKhoans.Count(p => true) == 0)
             {
                 db.LoaiTaiKhoans.Add(new LoaiTaiKhoan() { TenLoai = "admin" });
                 db.LoaiTaiKhoans.Add(new LoaiTaiKhoan() { TenLoai = "staff" });
                 db.SaveChanges();
             }
-            if (db.TaiKhoans.Count() == 0)
+            if (db.TaiKhoans.Count(p => true) == 0)
             {
                 db.TaiKhoans.Add(new TaiKhoan() { TenDangNhap = "admin", MatKhau = DataProvider.Instance.Encrypt("admin"), LoaiTaiKhoan = db.LoaiTaiKhoans.Where(p => p.TenLoai == "admin").SingleOrDefault().IDLoai });
                 db.TaiKhoans.Add(new TaiKhoan() { TenDangNhap = "staff", MatKhau = DataProvider.Instance.Encrypt("staff"), LoaiTaiKhoan = db.LoaiTaiKhoans.Where(p => p.TenLoai == "staff").SingleOrDefault().IDLoai });

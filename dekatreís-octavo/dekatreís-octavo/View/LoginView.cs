@@ -15,7 +15,7 @@ namespace dekatreís_octavo.View
 {
     public partial class LoginView : Form
     {
-        TaiKhoan TaiKhoan = DataProvider.Instance.TaiKhoan;
+        public TaiKhoan TaiKhoan = DataProvider.Instance.TaiKhoan;
         public LoginView()
         {
             InitializeComponent();

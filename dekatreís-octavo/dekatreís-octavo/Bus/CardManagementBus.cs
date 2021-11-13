@@ -42,7 +42,7 @@ namespace dekatreís_octavo.Bus
         }
         public TheXe GetTheXeWithID(int id)
         {
-            QuanLyDoXeEntities db = DataProvider.Instance.db;
+            QuanLyDoXeEntities1 db = DataProvider.Instance.db;
             var result = from c in db.TheXes
                          where c.IDThe == id
                          select c;
@@ -50,7 +50,7 @@ namespace dekatreís_octavo.Bus
         }
         public IQueryable<TheXe> FindByChuSoHuu(string ChuSoHuu)
         {
-            QuanLyDoXeEntities db = DataProvider.Instance.db;
+            QuanLyDoXeEntities1 db = DataProvider.Instance.db;
             var result = from c in db.TheXes
                          where c.ChuSoHuu.Contains(ChuSoHuu)
                          select c;
@@ -58,7 +58,7 @@ namespace dekatreís_octavo.Bus
         }
         public IQueryable<TheXe> FindByNgayTao(DateTime NgayTao)
         {
-            QuanLyDoXeEntities db = DataProvider.Instance.db;
+            QuanLyDoXeEntities1 db = DataProvider.Instance.db;
             var result = from c in db.TheXes
                          where c.NgayTao == NgayTao
                          select c;
@@ -66,7 +66,7 @@ namespace dekatreís_octavo.Bus
         }
         public IQueryable<TheXe> FindByTenXe(string TenXe)
         {
-            QuanLyDoXeEntities db = DataProvider.Instance.db;
+            QuanLyDoXeEntities1 db = DataProvider.Instance.db;
             var result = from c in db.TheXes
                          where c.TenXe.Contains(TenXe)
                          select c;
@@ -74,7 +74,7 @@ namespace dekatreís_octavo.Bus
         }
         public IQueryable<TheXe> FindByBienSo(string BienSo)
         {
-            QuanLyDoXeEntities db = DataProvider.Instance.db;
+            QuanLyDoXeEntities1 db = DataProvider.Instance.db;
             var result = from c in db.TheXes
                          where c.BienSoXe.Contains(BienSo)
                          select c;

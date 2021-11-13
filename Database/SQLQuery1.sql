@@ -23,7 +23,10 @@ GO
 USE [QuanLyDoXe]
 GO
 
-/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 10/23/2021 3:21:20 PM ******/
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 11/13/2021 11:11:41 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -31,8 +34,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[TaiKhoan](
-	[IDTaiKhoan] [int] IDENTITY(1,1) NOT NULL,
-	[TenDangNhap] [nvarchar](50) NULL,
+	[TenDangNhap] [nvarchar](50) NOT NULL,
 	[MatKhau] [nvarchar](50) NULL,
 	[TenThat] [nvarchar](50) NULL,
 	[SDT] [nchar](10) NULL,
@@ -40,7 +42,7 @@ CREATE TABLE [dbo].[TaiKhoan](
 	[LoaiTaiKhoan] [int] NULL,
  CONSTRAINT [PK_TaiKhoan] PRIMARY KEY CLUSTERED 
 (
-	[IDTaiKhoan] ASC
+	[TenDangNhap] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
@@ -51,6 +53,8 @@ GO
 
 ALTER TABLE [dbo].[TaiKhoan] CHECK CONSTRAINT [FK_TaiKhoan_LoaiTaiKhoan]
 GO
+
+
 
 USE [QuanLyDoXe]
 GO
