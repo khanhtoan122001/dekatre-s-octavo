@@ -1,4 +1,5 @@
 CREATE DATABASE [QuanLyDoXe]
+GO
 
 USE [QuanLyDoXe]
 GO
