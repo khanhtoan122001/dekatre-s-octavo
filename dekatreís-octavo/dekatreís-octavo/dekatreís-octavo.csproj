@@ -163,6 +163,12 @@
     <Compile Include="TheXe.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="View\AddStaffView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddStaffView.Designer.cs">
+      <DependentUpon>AddStaffView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CardManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,7 +199,9 @@
     <Compile Include="View\LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\StaffView.cs" />
+    <Compile Include="View\StaffView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="View\StaffView.Designer.cs">
       <DependentUpon>StaffView.cs</DependentUpon>
     </Compile>
@@ -214,6 +222,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\AddStaffView.resx">
+      <DependentUpon>AddStaffView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CardManagement.resx">
       <DependentUpon>CardManagement.cs</DependentUpon>
     </EmbeddedResource>

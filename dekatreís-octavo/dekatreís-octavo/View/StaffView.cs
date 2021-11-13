@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using dekatreís_octavo.Bus;
 
@@ -61,7 +55,16 @@ namespace dekatreís_octavo.View
         {
             EditStaffView editStaffForm = new EditStaffView(selectedTaiKhoan);
             if (editStaffForm.ShowDialog() == DialogResult.OK)
-                LoadStaffList();            
+                LoadStaffList();
+            editStaffForm.Dispose();
+        }
+
+        private void containedButton1_Click(object sender, EventArgs e)
+        {
+            AddStaffView addStaffView = new AddStaffView();
+            if (addStaffView.ShowDialog() == DialogResult.OK)
+                LoadStaffList();
+            addStaffView.Dispose();
         }
     }
 }

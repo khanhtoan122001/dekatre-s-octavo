@@ -109,6 +109,7 @@ namespace dekatreís_octavo.View
             this.containedButton1.Text = "Thêm";
             this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
             this.containedButton1.UseVisualStyleBackColor = true;
+            this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
             // 
             // containedButton2
             // 
