@@ -114,6 +114,7 @@
     <Compile Include="Bus\LoginViewBus.cs" />
     <Compile Include="Bus\ReportBus.cs" />
     <Compile Include="Bus\ThamSoBus.cs" />
+    <Compile Include="Bus\LoaiTheBus.cs" />
     <Compile Include="CT_BaoCaoDoanhThuThang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -204,6 +205,12 @@
     <Compile Include="View\LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

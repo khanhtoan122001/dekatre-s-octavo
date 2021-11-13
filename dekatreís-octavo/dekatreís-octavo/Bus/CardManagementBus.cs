@@ -22,11 +22,10 @@ namespace dekatreís_octavo.Bus
             the.NgayTao = DateTime.Now;
             the.Status = true;
             TheXe result = DataProvider.Instance.db.TheXes.Add(the);
-            DataProvider.Instance.db.SaveChanges();
             if (result == null)
                 return false;
-            else
-                return true;
+            DataProvider.Instance.db.SaveChanges();
+            return true;
         }
         public bool EditCard(int IDthe, string ChuSoHuu, string TenXe, string BienSo, int LoaiThe)
         {

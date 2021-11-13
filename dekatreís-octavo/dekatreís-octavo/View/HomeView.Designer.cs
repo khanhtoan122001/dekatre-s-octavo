@@ -31,13 +31,13 @@ namespace dekatreís_octavo.View
         {
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.bt_info = new MaterialSurface.TextButton();
             this.bt_ChangePass = new MaterialSurface.TextButton();
             this.bt_LogOut = new MaterialSurface.TextButton();
             this.materialCard1 = new MaterialSurface.MaterialCard();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.materialTabControl1.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,16 @@ namespace dekatreís_octavo.View
             this.materialTabControl1.SelectedIndex = 0;
             this.materialTabControl1.Size = new System.Drawing.Size(955, 563);
             this.materialTabControl1.TabIndex = 1;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(947, 534);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
             // 
             // tabPage2
             // 
@@ -184,16 +194,6 @@ namespace dekatreís_octavo.View
             this.materialCard1.TabIndex = 5;
             this.materialCard1.Visible = false;
             // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(947, 534);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -203,6 +203,7 @@ namespace dekatreís_octavo.View
             this.Controls.Add(this.materialButton1);
             this.Controls.Add(this.materialTabControl1);
             this.Controls.Add(this.materialDrawer1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "HomeView";
             this.Text = "HomeView";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeView_FormClosed);

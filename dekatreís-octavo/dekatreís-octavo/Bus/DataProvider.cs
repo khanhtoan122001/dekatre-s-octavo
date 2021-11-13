@@ -19,6 +19,13 @@ namespace dekatreís_octavo.Bus
             if (db == null)
                 db = new QuanLyDoXeEntities1();
         }
+
+        public void CreateDataDefault()
+        {
+            LoginViewBus.Instance.CheckDataAccount();
+            LoaiTheBus.Instance.CheckLoaiThe();
+        }
+
         public string Encrypt(string text)
         {
             using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())

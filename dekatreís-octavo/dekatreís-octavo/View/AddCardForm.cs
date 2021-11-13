@@ -21,7 +21,10 @@ namespace dekatreís_octavo.View
 
         private void bt_Confirm_Click(object sender, EventArgs e)
         {
-            var result = CardManagementBus.Instance.AddCard(tb_TenChuSoHuu.Text, tb_TenXe.Text, tb_BienSo.Text, cb_LoaiThe.SelectedIndex);
+            if (cb_LoaiThe.SelectedIndex == -1)
+                return;
+            int idLoai = LoaiTheBus.Instance.GetIDTheByTen(cb_LoaiThe.SelectedItem.ToString());
+            var result = CardManagementBus.Instance.AddCard(tb_TenChuSoHuu.Text, tb_TenXe.Text, tb_BienSo.Text, idLoai);
             if(result)
             {
                 MessageBox.Show("Thành công");
@@ -32,6 +35,15 @@ namespace dekatreís_octavo.View
                 MessageBox.Show("Thất bại");
             }
         }
+        private void LoadLoaiThe()
+        {
+            foreach (LoaiThe i in LoaiTheBus.Instance.GetLoaiThes().ToList())
+            {
+                cb_LoaiThe.Items.Add(i.TenLoai);
+            }
+            //cb_LoaiThe.DisplayMember = "TenLoai";
+        }
+
 
         private void tb_BienSo_TextChanged(object sender, EventArgs e)
         {
@@ -51,6 +63,11 @@ namespace dekatreís_octavo.View
         private void tb_TenChuSoHuu_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AddCardForm_Load(object sender, EventArgs e)
+        {
+            LoadLoaiThe();
         }
     }
 }

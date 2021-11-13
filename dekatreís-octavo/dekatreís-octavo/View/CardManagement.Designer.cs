@@ -66,6 +66,7 @@ namespace dekatreís_octavo.View
             // 
             // addButton
             // 
+            this.addButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.addButton.EffectType = MaterialSurface.ET.Custom;
             this.addButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -81,11 +82,12 @@ namespace dekatreís_octavo.View
             this.addButton.TabIndex = 2;
             this.addButton.Text = "Thêm";
             this.addButton.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.UseVisualStyleBackColor = false;
             this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
             // delButton
             // 
+            this.delButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.delButton.EffectType = MaterialSurface.ET.Custom;
             this.delButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delButton.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -101,7 +103,7 @@ namespace dekatreís_octavo.View
             this.delButton.TabIndex = 3;
             this.delButton.Text = "Xóa";
             this.delButton.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.delButton.UseVisualStyleBackColor = true;
+            this.delButton.UseVisualStyleBackColor = false;
             this.delButton.Click += new System.EventHandler(this.delButton_Click);
             // 
             // panel1
