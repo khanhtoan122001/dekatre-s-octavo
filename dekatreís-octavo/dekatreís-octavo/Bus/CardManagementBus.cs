@@ -20,6 +20,7 @@ namespace dekatreís_octavo.Bus
             the.BienSoXe = BienSo;
             the.LoaiThe = LoaiThe;
             the.NgayTao = DateTime.Now;
+            the.Status = true;
             TheXe result = DataProvider.Instance.db.TheXes.Add(the);
             DataProvider.Instance.db.SaveChanges();
             if (result == null)
@@ -86,7 +87,6 @@ namespace dekatreís_octavo.Bus
                          select c;
             return result;
         }
-
         public IQueryable<TheXe> GetTheXes()
         {
             QuanLyDoXeEntities1 db = DataProvider.Instance.db;

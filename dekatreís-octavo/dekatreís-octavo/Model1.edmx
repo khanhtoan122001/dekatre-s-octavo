@@ -99,6 +99,7 @@
           <Property Name="BienSoXe" Type="nvarchar" MaxLength="50" />
           <Property Name="ThoiGianGui" Type="smalldatetime" />
           <Property Name="LoaiThe" Type="int" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <Association Name="FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang">
           <End Role="BaoCaoDoanhThuThang" Type="Self.BaoCaoDoanhThuThang" Multiplicity="0..1" />
@@ -264,6 +265,7 @@
           <Property Name="BienSoXe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ThoiGianGui" Type="DateTime" Precision="0" />
           <Property Name="LoaiThe" Type="Int32" />
+          <Property Name="Status" Type="Boolean" />
         </EntityType>
         <Association Name="FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang">
           <End Role="BaoCaoDoanhThuThang" Type="Self.BaoCaoDoanhThuThang" Multiplicity="0..1" />
@@ -426,6 +428,7 @@
           <EntitySetMapping Name="TheXes">
             <EntityTypeMapping TypeName="QuanLyDoXeModel.TheXe">
               <MappingFragment StoreEntitySet="TheXe">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="IDThe" ColumnName="IDThe" />
                 <ScalarProperty Name="ChuSoHuu" ColumnName="ChuSoHuu" />
                 <ScalarProperty Name="NgayTao" ColumnName="NgayTao" />
