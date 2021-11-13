@@ -14,7 +14,6 @@ namespace dekatreís_octavo
     
     public partial class TaiKhoan
     {
-        public int IDTaiKhoan { get; set; }
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
         public string TenThat { get; set; }

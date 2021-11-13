@@ -12,12 +12,11 @@ namespace dekatreís_octavo
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-
-
-    public partial class QuanLyDoXeEntities : DbContext
+    
+    public partial class QuanLyDoXeEntities1 : DbContext
     {
-        public QuanLyDoXeEntities()
-            : base("name=QuanLyDoXeEntities")
+        public QuanLyDoXeEntities1()
+            : base("name=QuanLyDoXeEntities1")
         {
         }
     

@@ -70,10 +70,9 @@
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
-            <PropertyRef Name="IDTaiKhoan" />
+            <PropertyRef Name="TenDangNhap" />
           </Key>
-          <Property Name="IDTaiKhoan" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TenDangNhap" Type="nvarchar" MaxLength="50" />
+          <Property Name="TenDangNhap" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MatKhau" Type="nvarchar" MaxLength="50" />
           <Property Name="TenThat" Type="nvarchar" MaxLength="50" />
           <Property Name="SDT" Type="nchar" MaxLength="10" />
@@ -235,10 +234,9 @@
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
-            <PropertyRef Name="IDTaiKhoan" />
+            <PropertyRef Name="TenDangNhap" />
           </Key>
-          <Property Name="IDTaiKhoan" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="TenThat" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
@@ -302,7 +300,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="QuanLyDoXeEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="QuanLyDoXeEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="BaoCaoDoanhThuThangs" EntityType="Self.BaoCaoDoanhThuThang" />
           <EntitySet Name="BaoCaoLichSuHoatDongs" EntityType="Self.BaoCaoLichSuHoatDong" />
           <EntitySet Name="BaoCaoMatDoGuiXes" EntityType="Self.BaoCaoMatDoGuiXe" />
@@ -331,7 +329,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="QuanLyDoXeModelStoreContainer" CdmEntityContainer="QuanLyDoXeEntities">
+        <EntityContainerMapping StorageEntityContainer="QuanLyDoXeModelStoreContainer" CdmEntityContainer="QuanLyDoXeEntities1">
           <EntitySetMapping Name="BaoCaoDoanhThuThangs">
             <EntityTypeMapping TypeName="QuanLyDoXeModel.BaoCaoDoanhThuThang">
               <MappingFragment StoreEntitySet="BaoCaoDoanhThuThang">
@@ -405,7 +403,6 @@
           <EntitySetMapping Name="TaiKhoans">
             <EntityTypeMapping TypeName="QuanLyDoXeModel.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
-                <ScalarProperty Name="IDTaiKhoan" ColumnName="IDTaiKhoan" />
                 <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
                 <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
                 <ScalarProperty Name="TenThat" ColumnName="TenThat" />

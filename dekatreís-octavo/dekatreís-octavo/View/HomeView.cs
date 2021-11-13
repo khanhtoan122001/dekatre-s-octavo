@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dekatreís_octavo.Bus;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace dekatreís_octavo.View
 {
     public partial class HomeView : Form
     {
-        TaiKhoan TaiKhoan = LoginView.TaiKhoan;
+        TaiKhoan TaiKhoan = DataProvider.Instance.TaiKhoan;
         public HomeView()
         {
             InitializeComponent();
