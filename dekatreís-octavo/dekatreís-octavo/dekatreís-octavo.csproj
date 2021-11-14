@@ -175,6 +175,7 @@
     </Compile>
     <Compile Include="View\AddCardForm.Designer.cs">
       <DependentUpon>AddCardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\AddStaffView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +199,7 @@
     </Compile>
     <Compile Include="View\EditCard.Designer.cs">
       <DependentUpon>EditCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EditStaffView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +229,7 @@
     </Compile>
     <Compile Include="View\UserControl_Test.Designer.cs">
       <DependentUpon>UserControl_Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StaffView.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -248,6 +251,7 @@
     </Compile>
     <EmbeddedResource Include="View\AddCardForm.resx">
       <DependentUpon>AddCardForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\AddStaffView.resx">
       <DependentUpon>AddStaffView.cs</DependentUpon>
     </EmbeddedResource>
@@ -259,6 +263,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditCard.resx">
       <DependentUpon>EditCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\EditStaffView.resx">
       <DependentUpon>EditStaffView.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +278,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl_Test.resx">
       <DependentUpon>UserControl_Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\StaffView.resx">
       <DependentUpon>StaffView.cs</DependentUpon>
     </EmbeddedResource>
@@ -300,6 +306,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
@@ -312,6 +319,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  
   <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
