@@ -75,11 +75,12 @@ namespace dekatreís_octavo.View
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1110, 615);
+            this.panel1.Size = new System.Drawing.Size(1241, 693);
             this.panel1.TabIndex = 1;
             // 
             // tabDrawer
             // 
+            this.tabDrawer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.tabDrawer.AutoHide = false;
             this.tabDrawer.AutoShow = false;
             this.tabDrawer.BackgroundWithAccent = false;
@@ -92,9 +93,8 @@ namespace dekatreís_octavo.View
             this.tabDrawer.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabDrawer.Name = "tabDrawer";
             this.tabDrawer.ShowIconsWhenHidden = false;
-            this.tabDrawer.Size = new System.Drawing.Size(184, 464);
+            this.tabDrawer.Size = new System.Drawing.Size(233, 545);
             this.tabDrawer.TabIndex = 6;
-            this.tabDrawer.Text = "materialDrawer2";
             this.tabDrawer.UseColors = false;
             // 
             // tabControl
@@ -107,12 +107,12 @@ namespace dekatreís_octavo.View
             this.tabControl.Controls.Add(this.tabPage3);
             this.tabControl.Controls.Add(this.tabPage4);
             this.tabControl.Depth = 0;
-            this.tabControl.Location = new System.Drawing.Point(186, 122);
+            this.tabControl.Location = new System.Drawing.Point(235, 122);
             this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(925, 493);
+            this.tabControl.Size = new System.Drawing.Size(1007, 571);
             this.tabControl.TabIndex = 7;
             // 
             // tabPage1
@@ -143,7 +143,7 @@ namespace dekatreís_octavo.View
             this.materialCard1.Controls.Add(this.bt_ChangePass);
             this.materialCard1.Controls.Add(this.bt_info);
             this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialCard1.Location = new System.Drawing.Point(931, 33);
+            this.materialCard1.Location = new System.Drawing.Point(1062, 33);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
             this.materialCard1.MouseInteract = false;
             this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
@@ -216,7 +216,7 @@ namespace dekatreís_octavo.View
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1071, -2);
+            this.materialButton1.Location = new System.Drawing.Point(1202, -2);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -240,7 +240,7 @@ namespace dekatreís_octavo.View
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(917, 464);
+            this.tabPage4.Size = new System.Drawing.Size(999, 542);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Parking";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -249,7 +249,7 @@ namespace dekatreís_octavo.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 615);
+            this.ClientSize = new System.Drawing.Size(1241, 693);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.materialDrawer1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
