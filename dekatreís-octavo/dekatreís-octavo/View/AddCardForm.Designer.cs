@@ -121,15 +121,12 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.FormattingEnabled = true;
             this.cb_LoaiThe.HintText = "";
             this.cb_LoaiThe.ItemHeight = 47;
-            this.cb_LoaiThe.Items.AddRange(new object[] {
-            "Thẻ thường",
-            "Thẻ tháng"});
             this.cb_LoaiThe.Location = new System.Drawing.Point(179, 285);
             this.cb_LoaiThe.MaxDropDownItems = 4;
             this.cb_LoaiThe.MouseState = MaterialSurface.MouseState.OUT;
             this.cb_LoaiThe.Name = "cb_LoaiThe";
             this.cb_LoaiThe.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.cb_LoaiThe.Size = new System.Drawing.Size(121, 53);
+            this.cb_LoaiThe.Size = new System.Drawing.Size(397, 53);
             this.cb_LoaiThe.TabIndex = 4;
             this.cb_LoaiThe.SelectedIndexChanged += new System.EventHandler(this.cb_LoaiThe_SelectedIndexChanged);
             // 
@@ -145,6 +142,7 @@ namespace dekatreís_octavo.View
             this.Controls.Add(this.tb_TenChuSoHuu);
             this.Name = "AddCardForm";
             this.Text = "AddCardForm";
+            this.Load += new System.EventHandler(this.AddCardForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

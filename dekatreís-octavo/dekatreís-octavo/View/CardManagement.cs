@@ -17,12 +17,11 @@ namespace dekatreís_octavo.View
         public CardManagement()
         {
             InitializeComponent();
-            
         }
 
         private void CardManagement_Load(object sender, EventArgs e)
         {
-            this.LoadData();
+            //this.LoadData();
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -32,7 +31,7 @@ namespace dekatreís_octavo.View
             this.LoadData();
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             cardList.Items.Clear();
             var result = CardManagementBus.Instance.GetTheXes().ToList();

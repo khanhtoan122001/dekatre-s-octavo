@@ -110,7 +110,12 @@
     <Compile Include="Bus\CardManagementBus.cs" />
     <Compile Include="Bus\ChangePassBus.cs" />
     <Compile Include="Bus\DataProvider.cs" />
+    <Compile Include="Bus\GuiNhanXeBus.cs" />
     <Compile Include="Bus\LoginViewBus.cs" />
+    <Compile Include="Bus\ReportBus.cs" />
+    <Compile Include="Bus\ThamSoBus.cs" />
+    <Compile Include="Bus\LoaiTheBus.cs" />
+    <Compile Include="Bus\StaffViewBus.cs" />
     <Compile Include="CT_BaoCaoDoanhThuThang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -124,6 +129,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="LoaiTaiKhoan.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiThe.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
@@ -168,6 +176,12 @@
     <Compile Include="View\AddCardForm.Designer.cs">
       <DependentUpon>AddCardForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\AddStaffView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AddStaffView.Designer.cs">
+      <DependentUpon>AddStaffView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\CardManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +200,12 @@
     <Compile Include="View\EditCard.Designer.cs">
       <DependentUpon>EditCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EditStaffView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditStaffView.Designer.cs">
+      <DependentUpon>EditStaffView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HomeView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,11 +218,23 @@
     <Compile Include="View\LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ParkingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ParkingView.Designer.cs">
+      <DependentUpon>ParkingView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControl_Test.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\UserControl_Test.Designer.cs">
       <DependentUpon>UserControl_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StaffView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\StaffView.Designer.cs">
+      <DependentUpon>StaffView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -220,6 +252,9 @@
     <EmbeddedResource Include="View\AddCardForm.resx">
       <DependentUpon>AddCardForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\AddStaffView.resx">
+      <DependentUpon>AddStaffView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\CardManagement.resx">
       <DependentUpon>CardManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,14 +264,23 @@
     <EmbeddedResource Include="View\EditCard.resx">
       <DependentUpon>EditCard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\EditStaffView.resx">
+      <DependentUpon>EditStaffView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\HomeView.resx">
       <DependentUpon>HomeView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\ParkingView.resx">
+      <DependentUpon>ParkingView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl_Test.resx">
       <DependentUpon>UserControl_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StaffView.resx">
+      <DependentUpon>StaffView.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -262,6 +306,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
@@ -274,6 +319,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  
   <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

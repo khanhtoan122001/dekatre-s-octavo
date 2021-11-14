@@ -21,5 +21,8 @@ namespace dekatreís_octavo
         public string BienSoXe { get; set; }
         public Nullable<System.DateTime> ThoiGianGui { get; set; }
         public Nullable<int> LoaiThe { get; set; }
+        public Nullable<bool> Status { get; set; }
+    
+        public virtual LoaiThe LoaiThe1 { get; set; }
     }
 }

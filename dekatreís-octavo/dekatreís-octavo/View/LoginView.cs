@@ -15,11 +15,11 @@ namespace dekatreís_octavo.View
 {
     public partial class LoginView : Form
     {
-        public TaiKhoan TaiKhoan = DataProvider.Instance.TaiKhoan;
+        public TaiKhoan TaiKhoan;
         public LoginView()
         {
             InitializeComponent();
-            LoginViewBus.Instance.CheckDataAccount();
+            DataProvider.Instance.CreateDataDefault();
         }        
 
         private void containedButton1_Click(object sender, EventArgs e)

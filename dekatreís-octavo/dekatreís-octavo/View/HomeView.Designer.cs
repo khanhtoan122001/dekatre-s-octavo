@@ -90,7 +90,7 @@ namespace dekatreís_octavo.View
             this.tabDrawer.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabDrawer.Name = "tabDrawer";
             this.tabDrawer.ShowIconsWhenHidden = false;
-            this.tabDrawer.Size = new System.Drawing.Size(153, 464);
+            this.tabDrawer.Size = new System.Drawing.Size(184, 464);
             this.tabDrawer.TabIndex = 6;
             this.tabDrawer.Text = "materialDrawer2";
             this.tabDrawer.UseColors = false;
@@ -103,12 +103,12 @@ namespace dekatreís_octavo.View
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Depth = 0;
-            this.tabControl.Location = new System.Drawing.Point(156, 123);
+            this.tabControl.Location = new System.Drawing.Point(186, 122);
             this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(955, 493);
+            this.tabControl.Size = new System.Drawing.Size(925, 493);
             this.tabControl.TabIndex = 7;
             // 
             // tabPage1
@@ -116,10 +116,9 @@ namespace dekatreís_octavo.View
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(947, 464);
+            this.tabPage1.Size = new System.Drawing.Size(917, 464);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -231,6 +230,7 @@ namespace dekatreís_octavo.View
             this.ClientSize = new System.Drawing.Size(1110, 615);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.materialDrawer1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "HomeView";
             this.Text = "HomeView";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeView_FormClosed);
@@ -248,12 +248,12 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialDrawer tabDrawer;
         private MaterialSkin.Controls.MaterialTabControl tabControl;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private MaterialSurface.MaterialCard materialCard1;
         private MaterialSurface.TextButton bt_LogOut;
         private MaterialSurface.TextButton bt_ChangePass;
         private MaterialSurface.TextButton bt_info;
         private MaterialSkin.Controls.MaterialButton materialButton1;
+        private System.Windows.Forms.TabPage tabPage1;
     }
 }

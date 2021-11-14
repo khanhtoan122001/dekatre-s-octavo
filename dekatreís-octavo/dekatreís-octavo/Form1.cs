@@ -1,4 +1,5 @@
-﻿using MaterialSkin;
+﻿using dekatreís_octavo.Bus;
+using MaterialSkin;
 using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
@@ -34,7 +35,8 @@ namespace dekatreís_octavo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            DataProvider.Instance.CreateDataDefault();
+            parkingView1.LoadData();
         }
     }
 }

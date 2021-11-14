@@ -12,20 +12,22 @@ namespace dekatreís_octavo
     using System;
     using System.Collections.Generic;
     
-    public partial class BaoCaoDoanhThuThang
+    public partial class LoaiThe
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public BaoCaoDoanhThuThang()
+        public LoaiThe()
         {
-            this.CT_BaoCaoDoanhThuThang = new HashSet<CT_BaoCaoDoanhThuThang>();
+            this.BaoCaoDoanhThuThangs = new HashSet<BaoCaoDoanhThuThang>();
+            this.TheXes = new HashSet<TheXe>();
         }
     
-        public int IDBaoCao { get; set; }
-        public Nullable<int> Nam { get; set; }
-        public Nullable<int> LoaiThe { get; set; }
+        public int IDLoai { get; set; }
+        public string TenLoai { get; set; }
+        public Nullable<int> Gia { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CT_BaoCaoDoanhThuThang> CT_BaoCaoDoanhThuThang { get; set; }
-        public virtual LoaiThe LoaiThe1 { get; set; }
+        public virtual ICollection<BaoCaoDoanhThuThang> BaoCaoDoanhThuThangs { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TheXe> TheXes { get; set; }
     }
 }

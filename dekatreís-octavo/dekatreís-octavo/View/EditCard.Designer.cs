@@ -47,9 +47,6 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.FormattingEnabled = true;
             this.cb_LoaiThe.HintText = "";
             this.cb_LoaiThe.ItemHeight = 47;
-            this.cb_LoaiThe.Items.AddRange(new object[] {
-            "Thẻ thường",
-            "Thẻ tháng"});
             this.cb_LoaiThe.Location = new System.Drawing.Point(228, 271);
             this.cb_LoaiThe.MaxDropDownItems = 4;
             this.cb_LoaiThe.MouseState = MaterialSurface.MouseState.OUT;
@@ -63,7 +60,7 @@ namespace dekatreís_octavo.View
             this.tb_BienSo.AnimateReadOnly = false;
             this.tb_BienSo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_BienSo.Depth = 0;
-            this.tb_BienSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_BienSo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tb_BienSo.LeadingIcon = null;
             this.tb_BienSo.Location = new System.Drawing.Point(228, 205);
             this.tb_BienSo.MaxLength = 50;
@@ -100,7 +97,7 @@ namespace dekatreís_octavo.View
             this.tb_TenXe.AnimateReadOnly = false;
             this.tb_TenXe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_TenXe.Depth = 0;
-            this.tb_TenXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_TenXe.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tb_TenXe.LeadingIcon = null;
             this.tb_TenXe.Location = new System.Drawing.Point(228, 132);
             this.tb_TenXe.MaxLength = 50;
@@ -117,7 +114,7 @@ namespace dekatreís_octavo.View
             this.tb_TenChuSoHuu.AnimateReadOnly = false;
             this.tb_TenChuSoHuu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tb_TenChuSoHuu.Depth = 0;
-            this.tb_TenChuSoHuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.tb_TenChuSoHuu.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tb_TenChuSoHuu.LeadingIcon = null;
             this.tb_TenChuSoHuu.Location = new System.Drawing.Point(228, 57);
             this.tb_TenChuSoHuu.MaxLength = 50;

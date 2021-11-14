@@ -20,12 +20,12 @@ namespace dekatreís_octavo.Bus
             the.BienSoXe = BienSo;
             the.LoaiThe = LoaiThe;
             the.NgayTao = DateTime.Now;
+            the.Status = true;
             TheXe result = DataProvider.Instance.db.TheXes.Add(the);
-            DataProvider.Instance.db.SaveChanges();
             if (result == null)
                 return false;
-            else
-                return true;
+            DataProvider.Instance.db.SaveChanges();
+            return true;
         }
         public bool EditCard(int IDthe, string ChuSoHuu, string TenXe, string BienSo, int LoaiThe)
         {
@@ -86,7 +86,6 @@ namespace dekatreís_octavo.Bus
                          select c;
             return result;
         }
-
         public IQueryable<TheXe> GetTheXes()
         {
             QuanLyDoXeEntities1 db = DataProvider.Instance.db;
