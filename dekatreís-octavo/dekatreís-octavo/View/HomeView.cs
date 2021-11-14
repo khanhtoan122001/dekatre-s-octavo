@@ -19,7 +19,7 @@ namespace dekatreís_octavo.View
         {
             InitializeComponent();
            
-            tabPage1.Controls.Add(new CardManagement());
+            //tabPage1.Controls.Add(new CardManagement());
             //tabPage1.BackColor = Color.White;
         }
 
@@ -55,7 +55,7 @@ namespace dekatreís_octavo.View
 
         private void HomeView_Load(object sender, EventArgs e)
         {
-            
+            cardManagement1.LoadData();
         }
 
         private void AddTab()

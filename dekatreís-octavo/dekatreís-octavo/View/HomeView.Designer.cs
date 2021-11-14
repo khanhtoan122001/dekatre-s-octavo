@@ -40,8 +40,10 @@ namespace dekatreís_octavo.View
             this.bt_ChangePass = new MaterialSurface.TextButton();
             this.bt_info = new MaterialSurface.TextButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -113,6 +115,7 @@ namespace dekatreís_octavo.View
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cardManagement1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -223,6 +226,16 @@ namespace dekatreís_octavo.View
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
             // 
+            // cardManagement1
+            // 
+            this.cardManagement1.AutoSize = true;
+            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cardManagement1.BackColor = System.Drawing.Color.White;
+            this.cardManagement1.Location = new System.Drawing.Point(48, 33);
+            this.cardManagement1.Name = "cardManagement1";
+            this.cardManagement1.Size = new System.Drawing.Size(733, 368);
+            this.cardManagement1.TabIndex = 0;
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,6 +250,8 @@ namespace dekatreís_octavo.View
             this.Load += new System.EventHandler(this.HomeView_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -248,12 +263,13 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialDrawer tabDrawer;
         private MaterialSkin.Controls.MaterialTabControl tabControl;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private MaterialSurface.MaterialCard materialCard1;
         private MaterialSurface.TextButton bt_LogOut;
         private MaterialSurface.TextButton bt_ChangePass;
         private MaterialSurface.TextButton bt_info;
         private MaterialSkin.Controls.MaterialButton materialButton1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private CardManagement cardManagement1;
     }
 }
