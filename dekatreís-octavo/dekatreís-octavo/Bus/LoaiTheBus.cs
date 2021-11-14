@@ -14,7 +14,7 @@ namespace dekatreís_octavo.Bus
 
         QuanLyDoXeEntities1 db = DataProvider.Instance.db;
 
-        public bool AddLoaiThe(string ten, int gia)
+        private bool AddLoaiThe(string ten, int gia)
         {
             if (db.LoaiThes.Where(p => p.TenLoai == ten).SingleOrDefault() != null)
                 return false;
@@ -28,6 +28,9 @@ namespace dekatreís_octavo.Bus
         public bool EditLoaiThe(int idLoaiThe, string ten, int gia)
         {
             LoaiThe loai = db.LoaiThes.Find(idLoaiThe);
+            int check = GetIDTheByTen(ten);
+            if (check == -1)
+                return false;
             if (loai == null)
                 return false;
             loai.TenLoai = ten;
@@ -36,7 +39,7 @@ namespace dekatreís_octavo.Bus
             db.SaveChanges();
             return true;
         }
-        public bool RemoveLoaiThe(int idLoaiThe)
+        private bool RemoveLoaiThe(int idLoaiThe)
         {
             LoaiThe loai = db.LoaiThes.Find(idLoaiThe);
             if (loai == null)
