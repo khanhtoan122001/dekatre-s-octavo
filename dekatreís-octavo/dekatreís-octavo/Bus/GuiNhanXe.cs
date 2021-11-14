@@ -22,7 +22,11 @@ namespace dekatreís_octavo.Bus
             the.ThoiGianGui = DateTime.Now;
             the.Status = false;
             // report
-
+            if(ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now, ThamSoBus.Instance.GetGiaTriByTen("Gửi xe")))
+            {
+                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now, ThamSoBus.Instance.GetGiaTriByTen("Gửi xe"));
+                ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, BienSo);
+            }
             //
             db.SaveChanges();
             return true;
@@ -31,7 +35,11 @@ namespace dekatreís_octavo.Bus
         {
             TheXe the = db.TheXes.Find(IDThe);
             // report
-            
+            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now, ThamSoBus.Instance.GetGiaTriByTen("Nhận xe")))
+            {
+                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now, ThamSoBus.Instance.GetGiaTriByTen("Nhận xe"));
+                ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
+            }
             //
             the.BienSoXe = "";
             the.TenXe = "";
@@ -47,7 +55,11 @@ namespace dekatreís_octavo.Bus
 
             the.Status = false;
             // report
-
+            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now, ThamSoBus.Instance.GetGiaTriByTen("Gửi xe")))
+            {
+                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now, ThamSoBus.Instance.GetGiaTriByTen("Gửi xe"));
+                ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
+            }
             //
             db.SaveChanges();
             return true;
@@ -56,7 +68,11 @@ namespace dekatreís_octavo.Bus
         {
             TheXe the = db.TheXes.Find(IDThe);
             // report
-
+            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now, ThamSoBus.Instance.GetGiaTriByTen("Nhận xe")))
+            {
+                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now, ThamSoBus.Instance.GetGiaTriByTen("Nhận xe"));
+                ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
+            }
             //
             the.Status = false;
             the.ThoiGianGui = null;
