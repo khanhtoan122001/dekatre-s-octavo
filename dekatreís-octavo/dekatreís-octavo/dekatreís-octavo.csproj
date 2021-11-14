@@ -205,6 +205,12 @@
     <Compile Include="View\LoginView.Designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ParkingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ParkingView.Designer.cs">
+      <DependentUpon>ParkingView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControl_Test.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -241,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ParkingView.resx">
+      <DependentUpon>ParkingView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl_Test.resx">
       <DependentUpon>UserControl_Test.cs</DependentUpon>

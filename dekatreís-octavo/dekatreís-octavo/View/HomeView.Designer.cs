@@ -40,10 +40,8 @@ namespace dekatreís_octavo.View
             this.bt_ChangePass = new MaterialSurface.TextButton();
             this.bt_info = new MaterialSurface.TextButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,7 +90,7 @@ namespace dekatreís_octavo.View
             this.tabDrawer.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabDrawer.Name = "tabDrawer";
             this.tabDrawer.ShowIconsWhenHidden = false;
-            this.tabDrawer.Size = new System.Drawing.Size(153, 464);
+            this.tabDrawer.Size = new System.Drawing.Size(184, 464);
             this.tabDrawer.TabIndex = 6;
             this.tabDrawer.Text = "materialDrawer2";
             this.tabDrawer.UseColors = false;
@@ -105,21 +103,20 @@ namespace dekatreís_octavo.View
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Depth = 0;
-            this.tabControl.Location = new System.Drawing.Point(156, 123);
+            this.tabControl.Location = new System.Drawing.Point(186, 122);
             this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(955, 493);
+            this.tabControl.Size = new System.Drawing.Size(925, 493);
             this.tabControl.TabIndex = 7;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.cardManagement1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(947, 464);
+            this.tabPage1.Size = new System.Drawing.Size(917, 464);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -226,16 +223,6 @@ namespace dekatreís_octavo.View
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
             // 
-            // cardManagement1
-            // 
-            this.cardManagement1.AutoSize = true;
-            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cardManagement1.BackColor = System.Drawing.Color.White;
-            this.cardManagement1.Location = new System.Drawing.Point(48, 33);
-            this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(733, 368);
-            this.cardManagement1.TabIndex = 0;
-            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -250,8 +237,6 @@ namespace dekatreís_octavo.View
             this.Load += new System.EventHandler(this.HomeView_Load);
             this.panel1.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -270,6 +255,5 @@ namespace dekatreís_octavo.View
         private MaterialSurface.TextButton bt_info;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private System.Windows.Forms.TabPage tabPage1;
-        private CardManagement cardManagement1;
     }
 }
