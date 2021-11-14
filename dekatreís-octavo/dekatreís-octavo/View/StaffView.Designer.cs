@@ -34,12 +34,12 @@ namespace dekatreís_octavo.View
             this.staffCMND = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.staffUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.containedButton1 = new MaterialSurface.ContainedButton();
             this.containedButton2 = new MaterialSurface.ContainedButton();
             this.containedButton3 = new MaterialSurface.ContainedButton();
             this.materialTextfield1 = new MaterialSurface.MaterialTextfield();
             this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
-            this.staffUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // materialListView1
@@ -86,6 +86,11 @@ namespace dekatreís_octavo.View
             this.staffType.Text = "Loại Tài Khoản";
             this.staffType.Width = 143;
             // 
+            // staffUsername
+            // 
+            this.staffUsername.Text = "Tên Đăng Nhập";
+            this.staffUsername.Width = 0;
+            // 
             // containedButton1
             // 
             this.containedButton1.EffectType = MaterialSurface.ET.Custom;
@@ -104,6 +109,7 @@ namespace dekatreís_octavo.View
             this.containedButton1.Text = "Thêm";
             this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
             this.containedButton1.UseVisualStyleBackColor = true;
+            this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
             // 
             // containedButton2
             // 
@@ -124,6 +130,7 @@ namespace dekatreís_octavo.View
             this.containedButton2.Text = "Sửa";
             this.containedButton2.TextAlignment = System.Drawing.StringAlignment.Center;
             this.containedButton2.UseVisualStyleBackColor = true;
+            this.containedButton2.Click += new System.EventHandler(this.containedButton2_Click);
             // 
             // containedButton3
             // 
@@ -195,11 +202,6 @@ namespace dekatreís_octavo.View
             this.materialComboBox1.Size = new System.Drawing.Size(126, 49);
             this.materialComboBox1.StartIndex = 0;
             this.materialComboBox1.TabIndex = 5;
-            // 
-            // staffUsername
-            // 
-            this.staffUsername.Text = "Tên Đăng Nhập";
-            this.staffUsername.Width = 0;
             // 
             // StaffView
             // 
