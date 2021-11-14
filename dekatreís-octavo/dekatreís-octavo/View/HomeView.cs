@@ -55,7 +55,7 @@ namespace dekatreís_octavo.View
 
         private void HomeView_Load(object sender, EventArgs e)
         {
-            cardManagement1.LoadData();
+            //cardManagement1.LoadData();
         }
 
         private void AddTab()

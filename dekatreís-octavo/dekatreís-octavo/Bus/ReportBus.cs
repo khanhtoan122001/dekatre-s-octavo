@@ -16,7 +16,7 @@ namespace dekatreís_octavo.Bus
 
         public bool AddBaoCaoLichSuHoatDong(DateTime date, int HoatDong)
         {
-            var list = db.BaoCaoLichSuHoatDongs.Where(p => p.Ngay.Value.Date == date.Date && p.HoatDong == HoatDong).ToList();
+            var list = db.BaoCaoLichSuHoatDongs.Where(p => p.Ngay == date && p.HoatDong == HoatDong).ToList();
             if (list.Count != 0)
                 return true;
             BaoCaoLichSuHoatDong report = new BaoCaoLichSuHoatDong();
@@ -40,7 +40,7 @@ namespace dekatreís_octavo.Bus
         }
         public bool AddBaoCaoMatDoGuiXe(DateTime time, int XeVao, int XeRa)
         {
-            var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay.Value.Date == time.Date).ToList();
+            var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay == time).ToList();
             if (list.Count != 0)
                 return true;
             BaoCaoMatDoGuiXe report = new BaoCaoMatDoGuiXe();
@@ -55,6 +55,8 @@ namespace dekatreís_octavo.Bus
         }
         public bool AddCT_BaoCaoDoanhThuThang(int idBaoCao, int Thang, int TongChi, int TongThu)
         {
+            if (idBaoCao == -1)
+                return false;
             CT_BaoCaoDoanhThuThang report = new CT_BaoCaoDoanhThuThang();
             report.IDBaoCao = idBaoCao;
             report.TongChi = TongChi;
@@ -67,6 +69,8 @@ namespace dekatreís_octavo.Bus
         }
         public bool AddCT_BaoCaoLichSuHoatDong(int idBaoCao, DateTime Time, string BienSo)
         {
+            if (idBaoCao == -1)
+                return false;
             CT_BaoCaoLichSuHoatDong report = new CT_BaoCaoLichSuHoatDong();
             report.IDBaoCao = idBaoCao;
             report.BienSo = BienSo;
@@ -78,9 +82,7 @@ namespace dekatreís_octavo.Bus
 
         public int GetIdBaoCaoLichSuHoatDong(DateTime time, int hoatDong)
         {
-            var list = (from c in db.BaoCaoLichSuHoatDongs
-                       where c.Ngay.Value.Date == time.Date && hoatDong == c.HoatDong
-                       select c).ToList();
+            var list = db.BaoCaoLichSuHoatDongs.Where(c => c.Ngay == time && hoatDong == c.HoatDong).ToList();
             if (list.Count == 0)
                 return -1;
             return list[0].IDBaoCao;

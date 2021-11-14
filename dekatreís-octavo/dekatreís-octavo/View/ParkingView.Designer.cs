@@ -29,57 +29,57 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialComboBox1 = new MaterialSurface.MaterialComboBox();
-            this.materialTextfield1 = new MaterialSurface.MaterialTextfield();
+            this.cb_ListTheXe = new MaterialSurface.MaterialComboBox();
+            this.tb_BienSo = new MaterialSurface.MaterialTextfield();
             this.containedButton1 = new MaterialSurface.ContainedButton();
             this.SuspendLayout();
             // 
-            // materialComboBox1
+            // cb_ListTheXe
             // 
-            this.materialComboBox1.AutoSizing = false;
-            this.materialComboBox1.ComboBoxType = MaterialSurface.BoxType.Normal;
-            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox1.DropDownWidth = 121;
-            this.materialComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.materialComboBox1.FormattingEnabled = true;
-            this.materialComboBox1.HintText = "";
-            this.materialComboBox1.ItemHeight = 47;
-            this.materialComboBox1.Location = new System.Drawing.Point(234, 97);
-            this.materialComboBox1.MaxDropDownItems = 4;
-            this.materialComboBox1.MouseState = MaterialSurface.MouseState.OUT;
-            this.materialComboBox1.Name = "materialComboBox1";
-            this.materialComboBox1.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.materialComboBox1.Size = new System.Drawing.Size(121, 53);
-            this.materialComboBox1.TabIndex = 0;
+            this.cb_ListTheXe.AutoSizing = false;
+            this.cb_ListTheXe.ComboBoxType = MaterialSurface.BoxType.Normal;
+            this.cb_ListTheXe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cb_ListTheXe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_ListTheXe.DropDownWidth = 121;
+            this.cb_ListTheXe.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cb_ListTheXe.FormattingEnabled = true;
+            this.cb_ListTheXe.HintText = "";
+            this.cb_ListTheXe.ItemHeight = 47;
+            this.cb_ListTheXe.Location = new System.Drawing.Point(234, 97);
+            this.cb_ListTheXe.MaxDropDownItems = 4;
+            this.cb_ListTheXe.MouseState = MaterialSurface.MouseState.OUT;
+            this.cb_ListTheXe.Name = "cb_ListTheXe";
+            this.cb_ListTheXe.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.cb_ListTheXe.Size = new System.Drawing.Size(121, 53);
+            this.cb_ListTheXe.TabIndex = 0;
             // 
-            // materialTextfield1
+            // tb_BienSo
             // 
-            this.materialTextfield1.AutoScaleColor = true;
-            this.materialTextfield1.BackColor = System.Drawing.SystemColors.Control;
-            this.materialTextfield1.CountText = false;
-            this.materialTextfield1.FieldType = MaterialSurface.BoxType.Normal;
-            this.materialTextfield1.FloatingLabelText = "FloatingLabel";
-            this.materialTextfield1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.materialTextfield1.HandleError = false;
-            this.materialTextfield1.HelperText = "";
-            this.materialTextfield1.HideSelection = true;
-            this.materialTextfield1.HintText = "Biển số xe";
-            this.materialTextfield1.Location = new System.Drawing.Point(234, 172);
-            this.materialTextfield1.MaxLength = 32767;
-            this.materialTextfield1.MouseState = MaterialSurface.MouseState.OUT;
-            this.materialTextfield1.Multiline = false;
-            this.materialTextfield1.Name = "materialTextfield1";
-            this.materialTextfield1.PasswordChar = '\0';
-            this.materialTextfield1.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.materialTextfield1.ReadOnly = false;
-            this.materialTextfield1.ShortcutsEnable = true;
-            this.materialTextfield1.ShowCaret = true;
-            this.materialTextfield1.Size = new System.Drawing.Size(200, 46);
-            this.materialTextfield1.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.materialTextfield1.TabIndex = 1;
-            this.materialTextfield1.UseSystemPasswordChar = false;
-            this.materialTextfield1.TextChanged += new System.EventHandler(this.materialTextfield1_TextChanged);
+            this.tb_BienSo.AutoScaleColor = true;
+            this.tb_BienSo.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_BienSo.CountText = false;
+            this.tb_BienSo.FieldType = MaterialSurface.BoxType.Normal;
+            this.tb_BienSo.FloatingLabelText = "FloatingLabel";
+            this.tb_BienSo.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_BienSo.HandleError = false;
+            this.tb_BienSo.HelperText = "";
+            this.tb_BienSo.HideSelection = true;
+            this.tb_BienSo.HintText = "Biển số xe";
+            this.tb_BienSo.Location = new System.Drawing.Point(234, 172);
+            this.tb_BienSo.MaxLength = 32767;
+            this.tb_BienSo.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_BienSo.Multiline = false;
+            this.tb_BienSo.Name = "tb_BienSo";
+            this.tb_BienSo.PasswordChar = '\0';
+            this.tb_BienSo.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.tb_BienSo.ReadOnly = false;
+            this.tb_BienSo.ShortcutsEnable = true;
+            this.tb_BienSo.ShowCaret = true;
+            this.tb_BienSo.Size = new System.Drawing.Size(200, 49);
+            this.tb_BienSo.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_BienSo.TabIndex = 1;
+            this.tb_BienSo.UseSystemPasswordChar = false;
+            this.tb_BienSo.TextChanged += new System.EventHandler(this.materialTextfield1_TextChanged);
             // 
             // containedButton1
             // 
@@ -99,14 +99,15 @@ namespace dekatreís_octavo.View
             this.containedButton1.Text = "Xác nhận";
             this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
             this.containedButton1.UseVisualStyleBackColor = true;
+            this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
             // 
             // ParkingView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.containedButton1);
-            this.Controls.Add(this.materialTextfield1);
-            this.Controls.Add(this.materialComboBox1);
+            this.Controls.Add(this.tb_BienSo);
+            this.Controls.Add(this.cb_ListTheXe);
             this.Name = "ParkingView";
             this.Size = new System.Drawing.Size(791, 483);
             this.ResumeLayout(false);
@@ -115,8 +116,8 @@ namespace dekatreís_octavo.View
 
         #endregion
 
-        private MaterialSurface.MaterialComboBox materialComboBox1;
-        private MaterialSurface.MaterialTextfield materialTextfield1;
+        private MaterialSurface.MaterialComboBox cb_ListTheXe;
+        private MaterialSurface.MaterialTextfield tb_BienSo;
         private MaterialSurface.ContainedButton containedButton1;
     }
 }

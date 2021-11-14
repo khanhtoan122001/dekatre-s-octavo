@@ -110,7 +110,7 @@
     <Compile Include="Bus\CardManagementBus.cs" />
     <Compile Include="Bus\ChangePassBus.cs" />
     <Compile Include="Bus\DataProvider.cs" />
-    <Compile Include="Bus\GuiNhanXe.cs" />
+    <Compile Include="Bus\GuiNhanXeBus.cs" />
     <Compile Include="Bus\LoginViewBus.cs" />
     <Compile Include="Bus\ReportBus.cs" />
     <Compile Include="Bus\ThamSoBus.cs" />
