@@ -68,5 +68,10 @@ namespace dekatreís_octavo.View
             edit.ShowDialog();
             this.LoadData();
         }
+
+        private void cardList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

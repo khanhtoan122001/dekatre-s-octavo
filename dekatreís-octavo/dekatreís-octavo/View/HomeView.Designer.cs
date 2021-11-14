@@ -30,15 +30,18 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
-            this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
+            this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.bt_info = new MaterialSurface.TextButton();
-            this.bt_ChangePass = new MaterialSurface.TextButton();
-            this.bt_LogOut = new MaterialSurface.TextButton();
             this.materialCard1 = new MaterialSurface.MaterialCard();
-            this.materialTabControl1.SuspendLayout();
+            this.bt_LogOut = new MaterialSurface.TextButton();
+            this.bt_ChangePass = new MaterialSurface.TextButton();
+            this.bt_info = new MaterialSurface.TextButton();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.panel1.SuspendLayout();
+            this.tabControl.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,29 +64,59 @@ namespace dekatreís_octavo.View
             this.materialDrawer1.Text = "materialDrawer1";
             this.materialDrawer1.UseColors = false;
             // 
-            // materialTabControl1
+            // panel1
             // 
-            this.materialTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel1.Controls.Add(this.tabDrawer);
+            this.panel1.Controls.Add(this.materialCard1);
+            this.panel1.Controls.Add(this.materialButton1);
+            this.panel1.Controls.Add(this.tabControl);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1110, 615);
+            this.panel1.TabIndex = 1;
+            // 
+            // tabDrawer
+            // 
+            this.tabDrawer.AutoHide = false;
+            this.tabDrawer.AutoShow = false;
+            this.tabDrawer.BackgroundWithAccent = false;
+            this.tabDrawer.BaseTabControl = this.tabControl;
+            this.tabDrawer.Depth = 0;
+            this.tabDrawer.HighlightWithAccent = true;
+            this.tabDrawer.IndicatorWidth = 0;
+            this.tabDrawer.IsOpen = true;
+            this.tabDrawer.Location = new System.Drawing.Point(0, 148);
+            this.tabDrawer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabDrawer.Name = "tabDrawer";
+            this.tabDrawer.ShowIconsWhenHidden = false;
+            this.tabDrawer.Size = new System.Drawing.Size(153, 464);
+            this.tabDrawer.TabIndex = 6;
+            this.tabDrawer.Text = "materialDrawer2";
+            this.tabDrawer.UseColors = false;
+            // 
+            // tabControl
+            // 
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialTabControl1.Controls.Add(this.tabPage1);
-            this.materialTabControl1.Controls.Add(this.tabPage2);
-            this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Location = new System.Drawing.Point(157, 54);
-            this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabControl1.Multiline = true;
-            this.materialTabControl1.Name = "materialTabControl1";
-            this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(955, 563);
-            this.materialTabControl1.TabIndex = 1;
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Depth = 0;
+            this.tabControl.Location = new System.Drawing.Point(156, 123);
+            this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabControl.Multiline = true;
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(955, 493);
+            this.tabControl.TabIndex = 7;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(947, 534);
+            this.tabPage1.Size = new System.Drawing.Size(947, 464);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -92,67 +125,32 @@ namespace dekatreís_octavo.View
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(947, 534);
+            this.tabPage2.Size = new System.Drawing.Size(947, 464);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // materialButton1
+            // materialCard1
             // 
-            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1072, -1);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(36, 36);
-            this.materialButton1.TabIndex = 4;
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
-            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
-            // 
-            // bt_info
-            // 
-            this.bt_info.EffectType = MaterialSurface.ET.Custom;
-            this.bt_info.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_info.ForeColor = System.Drawing.Color.Black;
-            this.bt_info.Icon = null;
-            this.bt_info.Location = new System.Drawing.Point(11, 10);
-            this.bt_info.MouseState = MaterialSurface.MouseState.OUT;
-            this.bt_info.Name = "bt_info";
-            this.bt_info.PrimaryColor = System.Drawing.Color.Black;
-            this.bt_info.Radius = 6;
-            this.bt_info.Size = new System.Drawing.Size(162, 40);
-            this.bt_info.TabIndex = 0;
-            this.bt_info.Text = "Thông tin";
-            this.bt_info.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.bt_info.UseVisualStyleBackColor = true;
-            this.bt_info.Click += new System.EventHandler(this.bt_info_Click);
-            // 
-            // bt_ChangePass
-            // 
-            this.bt_ChangePass.EffectType = MaterialSurface.ET.Custom;
-            this.bt_ChangePass.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_ChangePass.ForeColor = System.Drawing.Color.Black;
-            this.bt_ChangePass.Icon = null;
-            this.bt_ChangePass.Location = new System.Drawing.Point(11, 56);
-            this.bt_ChangePass.MouseState = MaterialSurface.MouseState.OUT;
-            this.bt_ChangePass.Name = "bt_ChangePass";
-            this.bt_ChangePass.PrimaryColor = System.Drawing.Color.Black;
-            this.bt_ChangePass.Radius = 6;
-            this.bt_ChangePass.Size = new System.Drawing.Size(162, 40);
-            this.bt_ChangePass.TabIndex = 1;
-            this.bt_ChangePass.Text = "Đổi mật khẩu";
-            this.bt_ChangePass.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.bt_ChangePass.UseVisualStyleBackColor = true;
-            this.bt_ChangePass.Click += new System.EventHandler(this.bt_ChangePass_Click);
+            this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialCard1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialCard1.CardColor = System.Drawing.Color.White;
+            this.materialCard1.Controls.Add(this.bt_LogOut);
+            this.materialCard1.Controls.Add(this.bt_ChangePass);
+            this.materialCard1.Controls.Add(this.bt_info);
+            this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialCard1.Location = new System.Drawing.Point(931, 33);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
+            this.materialCard1.MouseInteract = false;
+            this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Radius = 8;
+            this.materialCard1.ShawdowDepth = 2;
+            this.materialCard1.ShawdowOpacity = 50;
+            this.materialCard1.Size = new System.Drawing.Size(180, 150);
+            this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
+            this.materialCard1.TabIndex = 9;
+            this.materialCard1.Visible = false;
             // 
             // bt_LogOut
             // 
@@ -170,45 +168,75 @@ namespace dekatreís_octavo.View
             this.bt_LogOut.Text = "Đăng xuất";
             this.bt_LogOut.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_LogOut.UseVisualStyleBackColor = true;
-            this.bt_LogOut.Click += new System.EventHandler(this.bt_LogOut_Click);
             // 
-            // materialCard1
+            // bt_ChangePass
             // 
-            this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialCard1.BackColor = System.Drawing.SystemColors.Control;
-            this.materialCard1.CardColor = System.Drawing.Color.White;
-            this.materialCard1.Controls.Add(this.bt_LogOut);
-            this.materialCard1.Controls.Add(this.bt_ChangePass);
-            this.materialCard1.Controls.Add(this.bt_info);
-            this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialCard1.Location = new System.Drawing.Point(932, 34);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
-            this.materialCard1.MouseInteract = false;
-            this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Radius = 8;
-            this.materialCard1.ShawdowDepth = 2;
-            this.materialCard1.ShawdowOpacity = 50;
-            this.materialCard1.Size = new System.Drawing.Size(180, 150);
-            this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
-            this.materialCard1.TabIndex = 5;
-            this.materialCard1.Visible = false;
+            this.bt_ChangePass.EffectType = MaterialSurface.ET.Custom;
+            this.bt_ChangePass.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_ChangePass.ForeColor = System.Drawing.Color.Black;
+            this.bt_ChangePass.Icon = null;
+            this.bt_ChangePass.Location = new System.Drawing.Point(11, 56);
+            this.bt_ChangePass.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_ChangePass.Name = "bt_ChangePass";
+            this.bt_ChangePass.PrimaryColor = System.Drawing.Color.Black;
+            this.bt_ChangePass.Radius = 6;
+            this.bt_ChangePass.Size = new System.Drawing.Size(162, 40);
+            this.bt_ChangePass.TabIndex = 1;
+            this.bt_ChangePass.Text = "Đổi mật khẩu";
+            this.bt_ChangePass.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_ChangePass.UseVisualStyleBackColor = true;
+            // 
+            // bt_info
+            // 
+            this.bt_info.EffectType = MaterialSurface.ET.Custom;
+            this.bt_info.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_info.ForeColor = System.Drawing.Color.Black;
+            this.bt_info.Icon = null;
+            this.bt_info.Location = new System.Drawing.Point(11, 10);
+            this.bt_info.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_info.Name = "bt_info";
+            this.bt_info.PrimaryColor = System.Drawing.Color.Black;
+            this.bt_info.Radius = 6;
+            this.bt_info.Size = new System.Drawing.Size(162, 40);
+            this.bt_info.TabIndex = 0;
+            this.bt_info.Text = "Thông tin";
+            this.bt_info.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_info.UseVisualStyleBackColor = true;
+            // 
+            // materialButton1
+            // 
+            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialButton1.AutoSize = false;
+            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.materialButton1.Depth = 0;
+            this.materialButton1.HighEmphasis = true;
+            this.materialButton1.Icon = null;
+            this.materialButton1.Location = new System.Drawing.Point(1071, -2);
+            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton1.Name = "materialButton1";
+            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton1.Size = new System.Drawing.Size(36, 36);
+            this.materialButton1.TabIndex = 8;
+            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton1.UseAccentColor = false;
+            this.materialButton1.UseVisualStyleBackColor = true;
             // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1110, 615);
-            this.Controls.Add(this.materialCard1);
-            this.Controls.Add(this.materialButton1);
-            this.Controls.Add(this.materialTabControl1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.materialDrawer1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "HomeView";
             this.Text = "HomeView";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeView_FormClosed);
             this.Load += new System.EventHandler(this.HomeView_Load);
-            this.materialTabControl1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -217,13 +245,15 @@ namespace dekatreís_octavo.View
         #endregion
 
         private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
-        private MaterialSkin.Controls.MaterialTabControl materialTabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSurface.TextButton bt_info;
-        private MaterialSurface.TextButton bt_ChangePass;
-        private MaterialSurface.TextButton bt_LogOut;
-        private MaterialSurface.MaterialCard materialCard1;
+        private System.Windows.Forms.Panel panel1;
+        private MaterialSkin.Controls.MaterialDrawer tabDrawer;
+        private MaterialSkin.Controls.MaterialTabControl tabControl;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private MaterialSurface.MaterialCard materialCard1;
+        private MaterialSurface.TextButton bt_LogOut;
+        private MaterialSurface.TextButton bt_ChangePass;
+        private MaterialSurface.TextButton bt_info;
+        private MaterialSkin.Controls.MaterialButton materialButton1;
     }
 }

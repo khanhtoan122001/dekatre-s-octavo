@@ -43,6 +43,7 @@ namespace dekatreís_octavo.View
             // 
             // statusComboBox
             // 
+            this.statusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.statusComboBox.AutoResize = false;
             this.statusComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.statusComboBox.Depth = 0;
@@ -51,12 +52,12 @@ namespace dekatreís_octavo.View
             this.statusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.statusComboBox.DropDownWidth = 121;
             this.statusComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.statusComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.statusComboBox.ForeColor = System.Drawing.Color.White;
             this.statusComboBox.FormattingEnabled = true;
             this.statusComboBox.Hint = "Status";
             this.statusComboBox.IntegralHeight = false;
             this.statusComboBox.ItemHeight = 43;
-            this.statusComboBox.Location = new System.Drawing.Point(796, 79);
+            this.statusComboBox.Location = new System.Drawing.Point(799, 47);
             this.statusComboBox.MaxDropDownItems = 4;
             this.statusComboBox.MouseState = MaterialSkin.MouseState.OUT;
             this.statusComboBox.Name = "statusComboBox";
@@ -66,12 +67,12 @@ namespace dekatreís_octavo.View
             // 
             // addButton
             // 
-            this.addButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.addButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.addButton.EffectType = MaterialSurface.ET.Custom;
             this.addButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.addButton.Icon = null;
-            this.addButton.Location = new System.Drawing.Point(3, 78);
+            this.addButton.Location = new System.Drawing.Point(132, 47);
             this.addButton.MouseState = MaterialSurface.MouseState.OUT;
             this.addButton.Name = "addButton";
             this.addButton.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -92,7 +93,7 @@ namespace dekatreís_octavo.View
             this.delButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.delButton.Icon = null;
-            this.delButton.Location = new System.Drawing.Point(135, 79);
+            this.delButton.Location = new System.Drawing.Point(0, 47);
             this.delButton.MouseState = MaterialSurface.MouseState.OUT;
             this.delButton.Name = "delButton";
             this.delButton.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -114,7 +115,7 @@ namespace dekatreís_octavo.View
             this.panel1.Controls.Add(this.cardList);
             this.panel1.Location = new System.Drawing.Point(3, 134);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(933, 399);
+            this.panel1.Size = new System.Drawing.Size(936, 399);
             this.panel1.TabIndex = 4;
             // 
             // cardList
@@ -133,16 +134,17 @@ namespace dekatreís_octavo.View
             this.cardList.Depth = 0;
             this.cardList.FullRowSelect = true;
             this.cardList.HideSelection = false;
-            this.cardList.Location = new System.Drawing.Point(-2, 0);
+            this.cardList.Location = new System.Drawing.Point(-3, 0);
             this.cardList.MinimumSize = new System.Drawing.Size(200, 100);
             this.cardList.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cardList.MouseState = MaterialSkin.MouseState.OUT;
             this.cardList.Name = "cardList";
             this.cardList.OwnerDraw = true;
-            this.cardList.Size = new System.Drawing.Size(936, 399);
+            this.cardList.Size = new System.Drawing.Size(939, 399);
             this.cardList.TabIndex = 1;
             this.cardList.UseCompatibleStateImageBehavior = false;
             this.cardList.View = System.Windows.Forms.View.Details;
+            this.cardList.SelectedIndexChanged += new System.EventHandler(this.cardList_SelectedIndexChanged);
             this.cardList.DoubleClick += new System.EventHandler(this.cardList_DoubleClick);
             // 
             // ID
@@ -171,12 +173,15 @@ namespace dekatreís_octavo.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.delButton);
             this.Controls.Add(this.addButton);
+            this.Controls.Add(this.delButton);
             this.Controls.Add(this.statusComboBox);
             this.Name = "CardManagement";
-            this.Size = new System.Drawing.Size(939, 536);
+            this.Size = new System.Drawing.Size(942, 536);
             this.Load += new System.EventHandler(this.CardManagement_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
