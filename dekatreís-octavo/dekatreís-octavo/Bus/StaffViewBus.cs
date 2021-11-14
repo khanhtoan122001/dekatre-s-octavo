@@ -10,7 +10,11 @@ namespace dekatreís_octavo.Bus
 {
     public class StaffViewBus
     {
-        public static QuanLyDoXeEntities1 db = DataProvider.Instance.db;
+        private static StaffViewBus instance;
+
+        public static StaffViewBus Instance { get { if (instance == null) instance = new StaffViewBus(); return instance; } set => instance = value; }
+
+        QuanLyDoXeEntities1 db = DataProvider.Instance.db;
         public List<ListViewItem> SelectTaiKhoanListViewItem()
         {
             List<ListViewItem> itemList = new List<ListViewItem>();
@@ -20,7 +24,7 @@ namespace dekatreís_octavo.Bus
                 ListViewItem lvi = new ListViewItem(TaiKhoan.TenThat);
                 lvi.SubItems.Add(TaiKhoan.CMND);
                 lvi.SubItems.Add(TaiKhoan.SDT);
-                if (TaiKhoan.LoaiTaiKhoan == 1)
+                if (TaiKhoan.LoaiTaiKhoan == LoaiTaiKhoanBus.Instance.GetIdByTen("admin"))
                     lvi.SubItems.Add("Admin");
                 else
                     lvi.SubItems.Add("Nhân Viên");

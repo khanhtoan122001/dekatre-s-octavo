@@ -93,11 +93,12 @@ namespace dekatreís_octavo.View
             // 
             // containedButton1
             // 
+            this.containedButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.containedButton1.EffectType = MaterialSurface.ET.Custom;
             this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton1.Icon = null;
-            this.containedButton1.Location = new System.Drawing.Point(59, 473);
+            this.containedButton1.Location = new System.Drawing.Point(59, 470);
             this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton1.Name = "containedButton1";
             this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -113,6 +114,7 @@ namespace dekatreís_octavo.View
             // 
             // containedButton2
             // 
+            this.containedButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.containedButton2.EffectType = MaterialSurface.ET.Custom;
             this.containedButton2.Enabled = false;
             this.containedButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,6 +136,7 @@ namespace dekatreís_octavo.View
             // 
             // containedButton3
             // 
+            this.containedButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.containedButton3.EffectType = MaterialSurface.ET.Custom;
             this.containedButton3.Enabled = false;
             this.containedButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -182,6 +185,7 @@ namespace dekatreís_octavo.View
             // 
             // materialComboBox1
             // 
+            this.materialComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialComboBox1.AutoResize = false;
             this.materialComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialComboBox1.Depth = 0;

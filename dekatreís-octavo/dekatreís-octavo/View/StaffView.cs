@@ -7,8 +7,8 @@ namespace dekatreís_octavo.View
 {
     public partial class StaffView : UserControl
     {        
-        public static TaiKhoan selectedTaiKhoan;
-        StaffViewBus staffViewBus = new StaffViewBus();
+        public TaiKhoan selectedTaiKhoan;
+        
         public StaffView()
         {
             InitializeComponent();
@@ -17,14 +17,14 @@ namespace dekatreís_octavo.View
         private void StaffView_Load(object sender, EventArgs e)
         {
             //Load from Database
-            LoadStaffList();
+            //LoadStaffList();
             //
         }
 
-        private void LoadStaffList()
+        public void LoadStaffList()
         {
             materialListView1.Items.Clear();
-            List<ListViewItem> itemList = staffViewBus.SelectTaiKhoanListViewItem();
+            List<ListViewItem> itemList = StaffViewBus.Instance.SelectTaiKhoanListViewItem();
             foreach (var item in itemList)
             {
                 materialListView1.Items.Add(item);
@@ -36,7 +36,7 @@ namespace dekatreís_octavo.View
         {
             if (MessageBox.Show("Bạn chắc chắn muốn xóa?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                staffViewBus.DeleteTaiKhoan(selectedTaiKhoan);                
+                StaffViewBus.Instance.DeleteTaiKhoan(selectedTaiKhoan);                
                 LoadStaffList();
             }
         }
@@ -48,7 +48,7 @@ namespace dekatreís_octavo.View
             if (materialListView1.SelectedItems.Count == 0)
                 return;
             //Select an account
-            selectedTaiKhoan = staffViewBus.SelectTaiKhoan(materialListView1.SelectedItems[0].SubItems[4].Text);
+            selectedTaiKhoan = StaffViewBus.Instance.SelectTaiKhoan(materialListView1.SelectedItems[0].SubItems[4].Text);
         }
 
         private void containedButton2_Click(object sender, EventArgs e)

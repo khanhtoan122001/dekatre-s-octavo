@@ -95,7 +95,7 @@ namespace dekatreís_octavo.Bus
         public void SetDefault()
         {
             QuanLyDoXeEntities1 db = DataProvider.Instance.db;
-            if (db.TheXes.Count() < 20)
+            if (db.TheXes.Count() < 19)
             {
                 for (int i = 0; i < 10; i++)
                 {
