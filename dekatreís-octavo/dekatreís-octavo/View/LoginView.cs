@@ -46,5 +46,20 @@ namespace dekatreís_octavo.View
         {
             Application.Exit();
         }
+
+        private void LoginView_Load(object sender, EventArgs e)
+        {
+            //materialButton1.BackgroundImage = Image.FromFile(@"C:\Users\ADMIN\OneDrive\Documents\GitHub\dekatre-s-octavo\dekatreís-octavo\dekatreís-octavo\Resources\close.png");
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
