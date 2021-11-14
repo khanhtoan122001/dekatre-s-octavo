@@ -40,6 +40,8 @@ namespace dekatreís_octavo.View
             this.bt_ChangePass = new MaterialSurface.TextButton();
             this.bt_info = new MaterialSurface.TextButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.materialCard1.SuspendLayout();
@@ -102,6 +104,8 @@ namespace dekatreís_octavo.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Controls.Add(this.tabPage4);
             this.tabControl.Depth = 0;
             this.tabControl.Location = new System.Drawing.Point(186, 122);
             this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
@@ -118,16 +122,16 @@ namespace dekatreís_octavo.View
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(917, 464);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "HomePage";
             // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(947, 464);
+            this.tabPage2.Size = new System.Drawing.Size(917, 464);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "CardManage";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // materialCard1
@@ -223,6 +227,24 @@ namespace dekatreís_octavo.View
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(917, 464);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "StaffManage";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(917, 464);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Parking";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -255,5 +277,7 @@ namespace dekatreís_octavo.View
         private MaterialSurface.TextButton bt_info;
         private MaterialSkin.Controls.MaterialButton materialButton1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }

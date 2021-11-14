@@ -87,7 +87,7 @@ namespace dekatreís_octavo.View
             this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton1.Icon = null;
-            this.containedButton1.Location = new System.Drawing.Point(234, 279);
+            this.containedButton1.Location = new System.Drawing.Point(234, 254);
             this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton1.Name = "containedButton1";
             this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
