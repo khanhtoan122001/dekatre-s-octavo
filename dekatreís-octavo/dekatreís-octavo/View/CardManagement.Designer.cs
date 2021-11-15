@@ -38,6 +38,7 @@ namespace dekatreís_octavo.View
             this.Chusohuu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Start_date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,7 +130,8 @@ namespace dekatreís_octavo.View
             this.ID,
             this.Chusohuu,
             this.Type,
-            this.Status});
+            this.Status,
+            this.Start_date});
             this.cardList.Depth = 0;
             this.cardList.FullRowSelect = true;
             this.cardList.HideSelection = false;
@@ -153,20 +155,21 @@ namespace dekatreís_octavo.View
             // 
             // Chusohuu
             // 
-            this.Chusohuu.DisplayIndex = 3;
             this.Chusohuu.Text = "Chủ sở hữu";
             this.Chusohuu.Width = 185;
             // 
             // Type
             // 
-            this.Type.DisplayIndex = 1;
             this.Type.Text = "Loại";
             // 
             // Status
             // 
-            this.Status.DisplayIndex = 2;
             this.Status.Text = "Trạng thái";
             this.Status.Width = 252;
+            // 
+            // Start_date
+            // 
+            this.Start_date.Text = "Ngày bắt đầu";
             // 
             // CardManagement
             // 
@@ -197,5 +200,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.ColumnHeader Chusohuu;
         private System.Windows.Forms.ColumnHeader Type;
         private System.Windows.Forms.ColumnHeader Status;
+        private System.Windows.Forms.ColumnHeader Start_date;
     }
 }
