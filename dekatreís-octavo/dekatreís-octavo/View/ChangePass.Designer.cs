@@ -172,6 +172,7 @@ namespace dekatreís_octavo.View
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePass";
             this.Text = "ChangePass";
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblMoveForm_MouseDown);
             this.ResumeLayout(false);
 
         }

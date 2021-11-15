@@ -35,16 +35,16 @@ namespace dekatreís_octavo.View
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.staffView1 = new dekatreís_octavo.View.StaffView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.parkingView1 = new dekatreís_octavo.View.ParkingView();
             this.materialCard1 = new MaterialSurface.MaterialCard();
             this.bt_LogOut = new MaterialSurface.TextButton();
             this.bt_ChangePass = new MaterialSurface.TextButton();
             this.bt_info = new MaterialSurface.TextButton();
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
+            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
+            this.staffView1 = new dekatreís_octavo.View.StaffView();
+            this.parkingView1 = new dekatreís_octavo.View.ParkingView();
             this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -144,17 +144,6 @@ namespace dekatreís_octavo.View
             this.tabPage2.Text = "Thẻ";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // cardManagement1
-            // 
-            this.cardManagement1.AutoSize = true;
-            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cardManagement1.BackColor = System.Drawing.Color.White;
-            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardManagement1.Location = new System.Drawing.Point(3, 3);
-            this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(979, 568);
-            this.cardManagement1.TabIndex = 0;
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.White;
@@ -165,14 +154,6 @@ namespace dekatreís_octavo.View
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Nhân viên";
             // 
-            // staffView1
-            // 
-            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffView1.Location = new System.Drawing.Point(0, 0);
-            this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(985, 574);
-            this.staffView1.TabIndex = 0;
-            // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.White;
@@ -182,14 +163,6 @@ namespace dekatreís_octavo.View
             this.tabPage4.Size = new System.Drawing.Size(985, 574);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Parking";
-            // 
-            // parkingView1
-            // 
-            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parkingView1.Location = new System.Drawing.Point(0, 0);
-            this.parkingView1.Name = "parkingView1";
-            this.parkingView1.Size = new System.Drawing.Size(985, 574);
-            this.parkingView1.TabIndex = 0;
             // 
             // materialCard1
             // 
@@ -229,6 +202,7 @@ namespace dekatreís_octavo.View
             this.bt_LogOut.Text = "Đăng xuất";
             this.bt_LogOut.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_LogOut.UseVisualStyleBackColor = true;
+            this.bt_LogOut.Click += new System.EventHandler(this.bt_LogOut_Click);
             // 
             // bt_ChangePass
             // 
@@ -246,6 +220,7 @@ namespace dekatreís_octavo.View
             this.bt_ChangePass.Text = "Đổi mật khẩu";
             this.bt_ChangePass.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_ChangePass.UseVisualStyleBackColor = true;
+            this.bt_ChangePass.Click += new System.EventHandler(this.bt_ChangePass_Click);
             // 
             // bt_info
             // 
@@ -284,6 +259,33 @@ namespace dekatreís_octavo.View
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
             this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            // 
+            // cardManagement1
+            // 
+            this.cardManagement1.AutoSize = true;
+            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cardManagement1.BackColor = System.Drawing.Color.White;
+            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardManagement1.Location = new System.Drawing.Point(3, 3);
+            this.cardManagement1.Name = "cardManagement1";
+            this.cardManagement1.Size = new System.Drawing.Size(979, 568);
+            this.cardManagement1.TabIndex = 0;
+            // 
+            // staffView1
+            // 
+            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffView1.Location = new System.Drawing.Point(0, 0);
+            this.staffView1.Name = "staffView1";
+            this.staffView1.Size = new System.Drawing.Size(985, 574);
+            this.staffView1.TabIndex = 0;
+            // 
+            // parkingView1
+            // 
+            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.parkingView1.Location = new System.Drawing.Point(0, 0);
+            this.parkingView1.Name = "parkingView1";
+            this.parkingView1.Size = new System.Drawing.Size(985, 574);
+            this.parkingView1.TabIndex = 0;
             // 
             // HomeView
             // 

@@ -16,8 +16,7 @@ namespace dekatreís_octavo.View
 {
     public partial class LoginView : Form
     {
-        const int WS_MINIMIZEBOX = 0x20000;
-        const int CS_DBLCLKS = 0x8;
+        
 
         public TaiKhoan TaiKhoan;
         public LoginView()
@@ -45,6 +44,8 @@ namespace dekatreís_octavo.View
                 }
             }
         }
+        const int WS_MINIMIZEBOX = 0x20000;
+        const int CS_DBLCLKS = 0x8;
         protected override CreateParams CreateParams
         {
             get

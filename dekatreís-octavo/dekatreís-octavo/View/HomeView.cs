@@ -43,14 +43,16 @@ namespace dekatreís_octavo.View
 
         private void bt_LogOut_Click(object sender, EventArgs e)
         {
+            DataProvider.Instance.TaiKhoan = null;
             this.Close();
-            LoginView loginView = new LoginView();
-            loginView.Show();
+            ////LoginView loginView = new LoginView();
+            //loginView.Show();
         }
 
         private void HomeView_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Close();
+            if(DataProvider.Instance.TaiKhoan != null)
+                Application.Exit();
         }
 
         private void HomeView_Load(object sender, EventArgs e)
