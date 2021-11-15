@@ -44,6 +44,9 @@ namespace dekatreís_octavo.View
             // 
             // materialListView1
             // 
+            this.materialListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialListView1.AutoSizeTable = false;
             this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;

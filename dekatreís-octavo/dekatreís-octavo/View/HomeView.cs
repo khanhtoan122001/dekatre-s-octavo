@@ -68,10 +68,5 @@ namespace dekatreís_octavo.View
 
             }
         }
-
-        private void cardManagement1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
