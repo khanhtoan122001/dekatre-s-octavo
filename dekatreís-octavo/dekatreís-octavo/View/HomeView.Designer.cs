@@ -71,6 +71,7 @@ namespace dekatreís_octavo.View
             this.materialDrawer1.TabIndex = 0;
             this.materialDrawer1.Text = "materialDrawer1";
             this.materialDrawer1.UseColors = false;
+            this.materialDrawer1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // panel1
             // 
@@ -83,6 +84,7 @@ namespace dekatreís_octavo.View
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1225, 725);
             this.panel1.TabIndex = 1;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // tabDrawer
             // 
@@ -104,6 +106,7 @@ namespace dekatreís_octavo.View
             this.tabDrawer.TabIndex = 6;
             this.tabDrawer.Text = "materialDrawer2";
             this.tabDrawer.UseColors = false;
+            this.tabDrawer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // tabControl
             // 
@@ -122,6 +125,8 @@ namespace dekatreís_octavo.View
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(993, 603);
             this.tabControl.TabIndex = 7;
+            this.tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl_Selected);
+            this.tabControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // tabPage1
             // 
@@ -132,6 +137,7 @@ namespace dekatreís_octavo.View
             this.tabPage1.Size = new System.Drawing.Size(985, 574);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Trang chính";
+            this.tabPage1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // tabPage2
             // 
@@ -143,6 +149,7 @@ namespace dekatreís_octavo.View
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thẻ";
             this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // tabPage3
             // 
@@ -153,6 +160,7 @@ namespace dekatreís_octavo.View
             this.tabPage3.Size = new System.Drawing.Size(985, 574);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Nhân viên";
+            this.tabPage3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // tabPage4
             // 
@@ -163,6 +171,7 @@ namespace dekatreís_octavo.View
             this.tabPage4.Size = new System.Drawing.Size(985, 574);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Parking";
+            this.tabPage4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // materialCard1
             // 
@@ -185,6 +194,7 @@ namespace dekatreís_octavo.View
             this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.materialCard1.TabIndex = 9;
             this.materialCard1.Visible = false;
+            this.materialCard1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // bt_LogOut
             // 
@@ -203,6 +213,7 @@ namespace dekatreís_octavo.View
             this.bt_LogOut.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_LogOut.UseVisualStyleBackColor = true;
             this.bt_LogOut.Click += new System.EventHandler(this.bt_LogOut_Click);
+            this.bt_LogOut.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // bt_ChangePass
             // 
@@ -221,6 +232,7 @@ namespace dekatreís_octavo.View
             this.bt_ChangePass.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_ChangePass.UseVisualStyleBackColor = true;
             this.bt_ChangePass.Click += new System.EventHandler(this.bt_ChangePass_Click);
+            this.bt_ChangePass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // bt_info
             // 
@@ -238,6 +250,7 @@ namespace dekatreís_octavo.View
             this.bt_info.Text = "Thông tin";
             this.bt_info.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_info.UseVisualStyleBackColor = true;
+            this.bt_info.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // materialButton1
             // 
@@ -259,6 +272,7 @@ namespace dekatreís_octavo.View
             this.materialButton1.UseAccentColor = false;
             this.materialButton1.UseVisualStyleBackColor = true;
             this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            this.materialButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // cardManagement1
             // 
@@ -270,6 +284,7 @@ namespace dekatreís_octavo.View
             this.cardManagement1.Name = "cardManagement1";
             this.cardManagement1.Size = new System.Drawing.Size(979, 568);
             this.cardManagement1.TabIndex = 0;
+            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // staffView1
             // 
@@ -278,6 +293,7 @@ namespace dekatreís_octavo.View
             this.staffView1.Name = "staffView1";
             this.staffView1.Size = new System.Drawing.Size(985, 574);
             this.staffView1.TabIndex = 0;
+            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // parkingView1
             // 
@@ -286,6 +302,7 @@ namespace dekatreís_octavo.View
             this.parkingView1.Name = "parkingView1";
             this.parkingView1.Size = new System.Drawing.Size(985, 574);
             this.parkingView1.TabIndex = 0;
+            this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // HomeView
             // 

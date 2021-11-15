@@ -18,7 +18,7 @@ namespace dekatreís_octavo.View
         public HomeView()
         {
             InitializeComponent();
-           
+
             //tabPage1.Controls.Add(new CardManagement());
             //tabPage1.BackColor = Color.White;
         }
@@ -30,13 +30,9 @@ namespace dekatreís_octavo.View
             else materialCard1.Visible = false;
         }
 
-        private void bt_info_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void bt_ChangePass_Click(object sender, EventArgs e)
         {
+            materialCard1.Visible = false;
             ChangePass changePass = new ChangePass();
             changePass.Show();
         }
@@ -69,6 +65,25 @@ namespace dekatreís_octavo.View
             {
 
             }
+        }
+
+        private void Refresh(Point e)
+        {
+            if (!materialCard1.DisplayRectangle.Contains(e))
+            {
+                if (materialCard1.Visible == true)
+                    materialCard1.Visible = false;
+            }
+        }
+
+        private void materialDrawer1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Refresh(e.Location);
+        }
+
+        private void tabControl_Selected(object sender, TabControlEventArgs e)
+        {
+            Refresh(Control.MousePosition);
         }
     }
 }
