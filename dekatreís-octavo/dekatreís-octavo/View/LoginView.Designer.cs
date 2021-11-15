@@ -180,6 +180,7 @@ namespace dekatreís_octavo.View
             this.Name = "LoginView";
             this.Text = "LoginView";
             this.Load += new System.EventHandler(this.LoginView_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblMoveForm_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.CloseBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPictureBox)).EndInit();
             this.ResumeLayout(false);
