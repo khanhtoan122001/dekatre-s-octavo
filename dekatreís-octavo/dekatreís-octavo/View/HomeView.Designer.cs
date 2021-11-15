@@ -42,9 +42,11 @@ namespace dekatreís_octavo.View
             this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.parkingView1 = new dekatreís_octavo.View.ParkingView();
             this.panel1.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.materialCard1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -120,7 +122,7 @@ namespace dekatreís_octavo.View
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(917, 464);
+            this.tabPage1.Size = new System.Drawing.Size(999, 542);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "HomePage";
             // 
@@ -129,7 +131,7 @@ namespace dekatreís_octavo.View
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(917, 464);
+            this.tabPage2.Size = new System.Drawing.Size(999, 542);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "CardManage";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -231,19 +233,27 @@ namespace dekatreís_octavo.View
             // 
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(917, 464);
+            this.tabPage3.Size = new System.Drawing.Size(999, 542);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "StaffManage";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
+            this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.parkingView1);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(999, 542);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Parking";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // parkingView1
+            // 
+            this.parkingView1.Location = new System.Drawing.Point(3, 0);
+            this.parkingView1.Name = "parkingView1";
+            this.parkingView1.Size = new System.Drawing.Size(791, 483);
+            this.parkingView1.TabIndex = 0;
             // 
             // HomeView
             // 
@@ -260,6 +270,7 @@ namespace dekatreís_octavo.View
             this.panel1.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -279,5 +290,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
+        private ParkingView parkingView1;
     }
 }

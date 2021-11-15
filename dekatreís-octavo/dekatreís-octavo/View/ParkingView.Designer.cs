@@ -56,7 +56,7 @@ namespace dekatreís_octavo.View
             // tb_BienSo
             // 
             this.tb_BienSo.AutoScaleColor = true;
-            this.tb_BienSo.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_BienSo.BackColor = System.Drawing.Color.White;
             this.tb_BienSo.CountText = false;
             this.tb_BienSo.FieldType = MaterialSurface.BoxType.Normal;
             this.tb_BienSo.FloatingLabelText = "FloatingLabel";
@@ -105,6 +105,7 @@ namespace dekatreís_octavo.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.containedButton1);
             this.Controls.Add(this.tb_BienSo);
             this.Controls.Add(this.cb_ListTheXe);
