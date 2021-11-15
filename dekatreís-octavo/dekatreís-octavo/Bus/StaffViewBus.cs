@@ -21,6 +21,8 @@ namespace dekatreís_octavo.Bus
             var listTaiKhoan = (from p in db.TaiKhoans select p).ToList();
             foreach (var TaiKhoan in listTaiKhoan)
             {
+                if (TaiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
+                    continue;
                 ListViewItem lvi = new ListViewItem(TaiKhoan.TenThat);
                 lvi.SubItems.Add(TaiKhoan.CMND);
                 lvi.SubItems.Add(TaiKhoan.SDT);

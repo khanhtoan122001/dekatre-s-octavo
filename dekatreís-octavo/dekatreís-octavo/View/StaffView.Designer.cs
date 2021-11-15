@@ -71,15 +71,17 @@ namespace dekatreís_octavo.View
             // staffName
             // 
             this.staffName.Text = "Tên";
+            this.staffName.Width = 209;
             // 
             // staffCMND
             // 
             this.staffCMND.Text = "CMND";
-            this.staffCMND.Width = 86;
+            this.staffCMND.Width = 132;
             // 
             // staffPhoneNumber
             // 
             this.staffPhoneNumber.Text = "SĐT";
+            this.staffPhoneNumber.Width = 167;
             // 
             // staffType
             // 

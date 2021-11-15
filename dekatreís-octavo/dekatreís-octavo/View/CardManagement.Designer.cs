@@ -145,7 +145,6 @@ namespace dekatreís_octavo.View
             this.cardList.TabIndex = 1;
             this.cardList.UseCompatibleStateImageBehavior = false;
             this.cardList.View = System.Windows.Forms.View.Details;
-            this.cardList.SelectedIndexChanged += new System.EventHandler(this.cardList_SelectedIndexChanged);
             this.cardList.DoubleClick += new System.EventHandler(this.cardList_DoubleClick);
             // 
             // ID
@@ -161,15 +160,17 @@ namespace dekatreís_octavo.View
             // Type
             // 
             this.Type.Text = "Loại";
+            this.Type.Width = 101;
             // 
             // Status
             // 
             this.Status.Text = "Trạng thái";
-            this.Status.Width = 252;
+            this.Status.Width = 130;
             // 
             // Start_date
             // 
             this.Start_date.Text = "Ngày bắt đầu";
+            this.Start_date.Width = 361;
             // 
             // CardManagement
             // 
