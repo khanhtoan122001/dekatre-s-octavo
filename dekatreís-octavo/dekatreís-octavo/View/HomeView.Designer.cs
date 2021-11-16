@@ -82,7 +82,7 @@ namespace dekatreís_octavo.View
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1225, 725);
+            this.panel1.Size = new System.Drawing.Size(1325, 758);
             this.panel1.TabIndex = 1;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
@@ -102,7 +102,7 @@ namespace dekatreís_octavo.View
             this.tabDrawer.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabDrawer.Name = "tabDrawer";
             this.tabDrawer.ShowIconsWhenHidden = false;
-            this.tabDrawer.Size = new System.Drawing.Size(231, 573);
+            this.tabDrawer.Size = new System.Drawing.Size(231, 606);
             this.tabDrawer.TabIndex = 6;
             this.tabDrawer.Text = "materialDrawer2";
             this.tabDrawer.UseColors = false;
@@ -123,7 +123,7 @@ namespace dekatreís_octavo.View
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(993, 603);
+            this.tabControl.Size = new System.Drawing.Size(1093, 636);
             this.tabControl.TabIndex = 7;
             this.tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl_Selected);
             this.tabControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
@@ -134,7 +134,7 @@ namespace dekatreís_octavo.View
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(985, 574);
+            this.tabPage1.Size = new System.Drawing.Size(1085, 499);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Trang chính";
             this.tabPage1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
@@ -145,7 +145,7 @@ namespace dekatreís_octavo.View
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(985, 574);
+            this.tabPage2.Size = new System.Drawing.Size(1085, 499);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Thẻ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -157,7 +157,7 @@ namespace dekatreís_octavo.View
             this.tabPage3.Controls.Add(this.staffView1);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(985, 574);
+            this.tabPage3.Size = new System.Drawing.Size(1085, 607);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Nhân viên";
             this.tabPage3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
@@ -182,7 +182,7 @@ namespace dekatreís_octavo.View
             this.materialCard1.Controls.Add(this.bt_ChangePass);
             this.materialCard1.Controls.Add(this.bt_info);
             this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialCard1.Location = new System.Drawing.Point(1046, 33);
+            this.materialCard1.Location = new System.Drawing.Point(1146, 33);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
             this.materialCard1.MouseInteract = false;
             this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
@@ -261,7 +261,7 @@ namespace dekatreís_octavo.View
             this.materialButton1.Depth = 0;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1186, -2);
+            this.materialButton1.Location = new System.Drawing.Point(1286, -2);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -282,7 +282,7 @@ namespace dekatreís_octavo.View
             this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cardManagement1.Location = new System.Drawing.Point(3, 3);
             this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(979, 568);
+            this.cardManagement1.Size = new System.Drawing.Size(1079, 493);
             this.cardManagement1.TabIndex = 0;
             this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
@@ -291,7 +291,7 @@ namespace dekatreís_octavo.View
             this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.staffView1.Location = new System.Drawing.Point(0, 0);
             this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(985, 574);
+            this.staffView1.Size = new System.Drawing.Size(1085, 607);
             this.staffView1.TabIndex = 0;
             this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
@@ -308,7 +308,7 @@ namespace dekatreís_octavo.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1225, 725);
+            this.ClientSize = new System.Drawing.Size(1325, 758);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.materialDrawer1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;

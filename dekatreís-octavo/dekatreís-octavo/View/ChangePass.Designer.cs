@@ -60,7 +60,7 @@ namespace dekatreís_octavo.View
             // tb_NewPass
             // 
             this.tb_NewPass.AutoScaleColor = true;
-            this.tb_NewPass.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_NewPass.BackColor = System.Drawing.Color.White;
             this.tb_NewPass.CountText = false;
             this.tb_NewPass.FieldType = MaterialSurface.BoxType.Normal;
             this.tb_NewPass.FloatingLabelText = "FloatingLabel";
@@ -87,7 +87,7 @@ namespace dekatreís_octavo.View
             // tb_ConfirmPass
             // 
             this.tb_ConfirmPass.AutoScaleColor = true;
-            this.tb_ConfirmPass.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_ConfirmPass.BackColor = System.Drawing.Color.White;
             this.tb_ConfirmPass.CountText = false;
             this.tb_ConfirmPass.FieldType = MaterialSurface.BoxType.Normal;
             this.tb_ConfirmPass.FloatingLabelText = "FloatingLabel";
@@ -135,7 +135,7 @@ namespace dekatreís_octavo.View
             // tb_OldPass
             // 
             this.tb_OldPass.AutoScaleColor = true;
-            this.tb_OldPass.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_OldPass.BackColor = System.Drawing.Color.White;
             this.tb_OldPass.CountText = false;
             this.tb_OldPass.FieldType = MaterialSurface.BoxType.Normal;
             this.tb_OldPass.FloatingLabelText = "FloatingLabel";
@@ -163,6 +163,7 @@ namespace dekatreís_octavo.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(425, 384);
             this.Controls.Add(this.tb_OldPass);
             this.Controls.Add(this.bt_Confirm);
