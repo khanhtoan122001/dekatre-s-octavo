@@ -25,6 +25,7 @@ namespace dekatreís_octavo.Bus
             LoginViewBus.Instance.CheckDataAccount();
             LoaiTheBus.Instance.CheckLoaiThe();
             ThamSoBus.Instance.SetDefaultThamSo();
+            CardManagementBus.Instance.SetDefault();
         }
 
         public string Encrypt(string text)

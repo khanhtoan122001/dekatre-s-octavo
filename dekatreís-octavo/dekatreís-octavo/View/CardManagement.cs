@@ -37,7 +37,10 @@ namespace dekatreís_octavo.View
             var result = CardManagementBus.Instance.GetTheXes().ToList();
             foreach (TheXe i in result)
             {
-                cardList.Items.Add(new ListViewItem(new string[] { i.IDThe.ToString(), i.ChuSoHuu, i.LoaiThe.ToString(), i.NgayTao.ToString() }));
+                string trangthai = (bool)i.Status ? "Rảnh" : "Bận";
+                string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? i.NgayTao.Value.Date.ToString() : "";
+                cardList.Items.Add(new ListViewItem(
+                    new string[] { i.IDThe.ToString(), i.ChuSoHuu, i.LoaiThe1.TenLoai, trangthai, date }));
             }
         }
 
@@ -66,11 +69,6 @@ namespace dekatreís_octavo.View
             edit.selected = GetIDTheXeSelected();
             edit.ShowDialog();
             this.LoadData();
-        }
-
-        private void cardList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

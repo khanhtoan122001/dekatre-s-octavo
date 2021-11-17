@@ -92,5 +92,19 @@ namespace dekatreís_octavo.Bus
             return from c in db.TheXes
                    select c;
         }
+        public void SetDefault()
+        {
+            QuanLyDoXeEntities1 db = DataProvider.Instance.db;
+            if (db.TheXes.Count() < 19)
+            {
+                for (int i = 0; i < 10; i++)
+                {
+                    AddCard("", "", "", LoaiTheBus.Instance.GetIDTheByTen("Thẻ thường"));
+                    AddCard("", "", "", LoaiTheBus.Instance.GetIDTheByTen("Thẻ tháng"));
+                }
+                db.SaveChanges();
+            }
+
+        }
     }
 }

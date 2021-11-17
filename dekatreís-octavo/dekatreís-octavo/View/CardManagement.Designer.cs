@@ -35,9 +35,10 @@ namespace dekatreís_octavo.View
             this.panel1 = new System.Windows.Forms.Panel();
             this.cardList = new MaterialSkin.Controls.MaterialListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Chusohuu = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Owner = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Start_date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +46,7 @@ namespace dekatreís_octavo.View
             // 
             this.statusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.statusComboBox.AutoResize = false;
-            this.statusComboBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.statusComboBox.BackColor = System.Drawing.SystemColors.Control;
             this.statusComboBox.Depth = 0;
             this.statusComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.statusComboBox.DropDownHeight = 174;
@@ -57,7 +58,7 @@ namespace dekatreís_octavo.View
             this.statusComboBox.Hint = "Status";
             this.statusComboBox.IntegralHeight = false;
             this.statusComboBox.ItemHeight = 43;
-            this.statusComboBox.Location = new System.Drawing.Point(799, 47);
+            this.statusComboBox.Location = new System.Drawing.Point(799, 48);
             this.statusComboBox.MaxDropDownItems = 4;
             this.statusComboBox.MouseState = MaterialSkin.MouseState.OUT;
             this.statusComboBox.Name = "statusComboBox";
@@ -127,9 +128,10 @@ namespace dekatreís_octavo.View
             this.cardList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.cardList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
-            this.Chusohuu,
+            this.Owner,
             this.Type,
-            this.Status});
+            this.Status,
+            this.Start_date});
             this.cardList.Depth = 0;
             this.cardList.FullRowSelect = true;
             this.cardList.HideSelection = false;
@@ -143,7 +145,6 @@ namespace dekatreís_octavo.View
             this.cardList.TabIndex = 1;
             this.cardList.UseCompatibleStateImageBehavior = false;
             this.cardList.View = System.Windows.Forms.View.Details;
-            this.cardList.SelectedIndexChanged += new System.EventHandler(this.cardList_SelectedIndexChanged);
             this.cardList.DoubleClick += new System.EventHandler(this.cardList_DoubleClick);
             // 
             // ID
@@ -151,22 +152,25 @@ namespace dekatreís_octavo.View
             this.ID.Text = "ID";
             this.ID.Width = 67;
             // 
-            // Chusohuu
+            // Owner
             // 
-            this.Chusohuu.DisplayIndex = 3;
-            this.Chusohuu.Text = "Chủ sở hữu";
-            this.Chusohuu.Width = 185;
+            this.Owner.Text = "Chủ sở hữu";
+            this.Owner.Width = 185;
             // 
             // Type
             // 
-            this.Type.DisplayIndex = 1;
             this.Type.Text = "Loại";
+            this.Type.Width = 130;
             // 
             // Status
             // 
-            this.Status.DisplayIndex = 2;
             this.Status.Text = "Trạng thái";
-            this.Status.Width = 252;
+            this.Status.Width = 130;
+            // 
+            // Start_date
+            // 
+            this.Start_date.Text = "Ngày bắt đầu";
+            this.Start_date.Width = 361;
             // 
             // CardManagement
             // 
@@ -194,8 +198,9 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialListView cardList;
         private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader Chusohuu;
+        private System.Windows.Forms.ColumnHeader Owner;
         private System.Windows.Forms.ColumnHeader Type;
         private System.Windows.Forms.ColumnHeader Status;
+        private System.Windows.Forms.ColumnHeader Start_date;
     }
 }

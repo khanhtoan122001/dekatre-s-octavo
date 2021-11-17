@@ -51,7 +51,7 @@ namespace dekatreís_octavo.View
             this.tb_Username.HandleError = false;
             this.tb_Username.HelperText = "";
             this.tb_Username.HideSelection = true;
-            this.tb_Username.HintText = "TĐN";
+            this.tb_Username.HintText = "Tài khoản";
             this.tb_Username.Location = new System.Drawing.Point(627, 263);
             this.tb_Username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Username.MaxLength = 32767;
@@ -79,7 +79,7 @@ namespace dekatreís_octavo.View
             this.tb_Password.HandleError = false;
             this.tb_Password.HelperText = "";
             this.tb_Password.HideSelection = true;
-            this.tb_Password.HintText = "MK";
+            this.tb_Password.HintText = "Mật khẩu";
             this.tb_Password.Location = new System.Drawing.Point(627, 328);
             this.tb_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Password.MaxLength = 32767;
@@ -178,8 +178,10 @@ namespace dekatreís_octavo.View
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginView";
             this.Load += new System.EventHandler(this.LoginView_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblMoveForm_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.CloseBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPictureBox)).EndInit();
             this.ResumeLayout(false);

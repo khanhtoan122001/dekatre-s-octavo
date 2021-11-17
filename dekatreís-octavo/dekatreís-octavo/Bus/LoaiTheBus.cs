@@ -14,6 +14,8 @@ namespace dekatreís_octavo.Bus
 
         QuanLyDoXeEntities1 db = DataProvider.Instance.db;
 
+        
+
         private bool AddLoaiThe(string ten, int gia)
         {
             if (db.LoaiThes.Where(p => p.TenLoai == ten).SingleOrDefault() != null)

@@ -44,6 +44,9 @@ namespace dekatreís_octavo.View
             // 
             // materialListView1
             // 
+            this.materialListView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialListView1.AutoSizeTable = false;
             this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -56,7 +59,7 @@ namespace dekatreís_octavo.View
             this.materialListView1.Depth = 0;
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HideSelection = false;
-            this.materialListView1.Location = new System.Drawing.Point(3, 57);
+            this.materialListView1.Location = new System.Drawing.Point(0, 112);
             this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
             this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
@@ -71,15 +74,17 @@ namespace dekatreís_octavo.View
             // staffName
             // 
             this.staffName.Text = "Tên";
+            this.staffName.Width = 209;
             // 
             // staffCMND
             // 
             this.staffCMND.Text = "CMND";
-            this.staffCMND.Width = 86;
+            this.staffCMND.Width = 132;
             // 
             // staffPhoneNumber
             // 
             this.staffPhoneNumber.Text = "SĐT";
+            this.staffPhoneNumber.Width = 167;
             // 
             // staffType
             // 
@@ -97,7 +102,7 @@ namespace dekatreís_octavo.View
             this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton1.Icon = null;
-            this.containedButton1.Location = new System.Drawing.Point(59, 473);
+            this.containedButton1.Location = new System.Drawing.Point(0, 58);
             this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton1.Name = "containedButton1";
             this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -118,7 +123,7 @@ namespace dekatreís_octavo.View
             this.containedButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton2.Icon = null;
-            this.containedButton2.Location = new System.Drawing.Point(256, 470);
+            this.containedButton2.Location = new System.Drawing.Point(186, 58);
             this.containedButton2.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton2.Name = "containedButton2";
             this.containedButton2.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -139,7 +144,7 @@ namespace dekatreís_octavo.View
             this.containedButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton3.Icon = null;
-            this.containedButton3.Location = new System.Drawing.Point(454, 470);
+            this.containedButton3.Location = new System.Drawing.Point(372, 58);
             this.containedButton3.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton3.Name = "containedButton3";
             this.containedButton3.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -182,6 +187,7 @@ namespace dekatreís_octavo.View
             // 
             // materialComboBox1
             // 
+            this.materialComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.materialComboBox1.AutoResize = false;
             this.materialComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialComboBox1.Depth = 0;

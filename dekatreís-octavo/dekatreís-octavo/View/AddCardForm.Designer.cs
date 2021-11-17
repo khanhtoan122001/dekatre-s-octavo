@@ -29,48 +29,12 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            this.tb_TenChuSoHuu = new MaterialSkin.Controls.MaterialTextBox();
-            this.tb_TenXe = new MaterialSkin.Controls.MaterialTextBox();
             this.bt_Confirm = new MaterialSkin.Controls.MaterialButton();
-            this.tb_BienSo = new MaterialSkin.Controls.MaterialTextBox();
             this.cb_LoaiThe = new MaterialSurface.MaterialComboBox();
+            this.tb_TenChuSoHuu = new MaterialSurface.MaterialTextfield();
+            this.tb_TenXe = new MaterialSurface.MaterialTextfield();
+            this.tb_BienSo = new MaterialSurface.MaterialTextfield();
             this.SuspendLayout();
-            // 
-            // tb_TenChuSoHuu
-            // 
-            this.tb_TenChuSoHuu.AnimateReadOnly = false;
-            this.tb_TenChuSoHuu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_TenChuSoHuu.Depth = 0;
-            this.tb_TenChuSoHuu.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_TenChuSoHuu.LeadingIcon = null;
-            this.tb_TenChuSoHuu.Location = new System.Drawing.Point(179, 71);
-            this.tb_TenChuSoHuu.MaxLength = 50;
-            this.tb_TenChuSoHuu.MouseState = MaterialSkin.MouseState.OUT;
-            this.tb_TenChuSoHuu.Multiline = false;
-            this.tb_TenChuSoHuu.Name = "tb_TenChuSoHuu";
-            this.tb_TenChuSoHuu.Size = new System.Drawing.Size(258, 50);
-            this.tb_TenChuSoHuu.TabIndex = 0;
-            this.tb_TenChuSoHuu.Text = "";
-            this.tb_TenChuSoHuu.TrailingIcon = null;
-            this.tb_TenChuSoHuu.TextChanged += new System.EventHandler(this.tb_TenChuSoHuu_TextChanged);
-            // 
-            // tb_TenXe
-            // 
-            this.tb_TenXe.AnimateReadOnly = false;
-            this.tb_TenXe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_TenXe.Depth = 0;
-            this.tb_TenXe.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_TenXe.LeadingIcon = null;
-            this.tb_TenXe.Location = new System.Drawing.Point(179, 146);
-            this.tb_TenXe.MaxLength = 50;
-            this.tb_TenXe.MouseState = MaterialSkin.MouseState.OUT;
-            this.tb_TenXe.Multiline = false;
-            this.tb_TenXe.Name = "tb_TenXe";
-            this.tb_TenXe.Size = new System.Drawing.Size(258, 50);
-            this.tb_TenXe.TabIndex = 1;
-            this.tb_TenXe.Text = "";
-            this.tb_TenXe.TrailingIcon = null;
-            this.tb_TenXe.TextChanged += new System.EventHandler(this.tb_TenXe_TextChanged);
             // 
             // bt_Confirm
             // 
@@ -92,24 +56,6 @@ namespace dekatreís_octavo.View
             this.bt_Confirm.UseVisualStyleBackColor = true;
             this.bt_Confirm.Click += new System.EventHandler(this.bt_Confirm_Click);
             // 
-            // tb_BienSo
-            // 
-            this.tb_BienSo.AnimateReadOnly = false;
-            this.tb_BienSo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tb_BienSo.Depth = 0;
-            this.tb_BienSo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tb_BienSo.LeadingIcon = null;
-            this.tb_BienSo.Location = new System.Drawing.Point(179, 219);
-            this.tb_BienSo.MaxLength = 50;
-            this.tb_BienSo.MouseState = MaterialSkin.MouseState.OUT;
-            this.tb_BienSo.Multiline = false;
-            this.tb_BienSo.Name = "tb_BienSo";
-            this.tb_BienSo.Size = new System.Drawing.Size(258, 50);
-            this.tb_BienSo.TabIndex = 3;
-            this.tb_BienSo.Text = "";
-            this.tb_BienSo.TrailingIcon = null;
-            this.tb_BienSo.TextChanged += new System.EventHandler(this.tb_BienSo_TextChanged);
-            // 
             // cb_LoaiThe
             // 
             this.cb_LoaiThe.AutoSizing = false;
@@ -119,7 +65,7 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.DropDownWidth = 121;
             this.cb_LoaiThe.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cb_LoaiThe.FormattingEnabled = true;
-            this.cb_LoaiThe.HintText = "";
+            this.cb_LoaiThe.HintText = "Loại thẻ";
             this.cb_LoaiThe.ItemHeight = 47;
             this.cb_LoaiThe.Location = new System.Drawing.Point(179, 285);
             this.cb_LoaiThe.MaxDropDownItems = 4;
@@ -130,16 +76,97 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.TabIndex = 4;
             this.cb_LoaiThe.SelectedIndexChanged += new System.EventHandler(this.cb_LoaiThe_SelectedIndexChanged);
             // 
+            // tb_TenChuSoHuu
+            // 
+            this.tb_TenChuSoHuu.AutoScaleColor = true;
+            this.tb_TenChuSoHuu.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_TenChuSoHuu.CountText = false;
+            this.tb_TenChuSoHuu.FieldType = MaterialSurface.BoxType.Normal;
+            this.tb_TenChuSoHuu.FloatingLabelText = "FloatingLabel";
+            this.tb_TenChuSoHuu.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_TenChuSoHuu.HandleError = false;
+            this.tb_TenChuSoHuu.HelperText = "";
+            this.tb_TenChuSoHuu.HideSelection = true;
+            this.tb_TenChuSoHuu.HintText = "Tên chủ sở hữu";
+            this.tb_TenChuSoHuu.Location = new System.Drawing.Point(179, 75);
+            this.tb_TenChuSoHuu.MaxLength = 32767;
+            this.tb_TenChuSoHuu.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_TenChuSoHuu.Multiline = false;
+            this.tb_TenChuSoHuu.Name = "tb_TenChuSoHuu";
+            this.tb_TenChuSoHuu.PasswordChar = '\0';
+            this.tb_TenChuSoHuu.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.tb_TenChuSoHuu.ReadOnly = false;
+            this.tb_TenChuSoHuu.ShortcutsEnable = true;
+            this.tb_TenChuSoHuu.ShowCaret = true;
+            this.tb_TenChuSoHuu.Size = new System.Drawing.Size(317, 49);
+            this.tb_TenChuSoHuu.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_TenChuSoHuu.TabIndex = 6;
+            this.tb_TenChuSoHuu.UseSystemPasswordChar = false;
+            // 
+            // tb_TenXe
+            // 
+            this.tb_TenXe.AutoScaleColor = true;
+            this.tb_TenXe.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_TenXe.CountText = false;
+            this.tb_TenXe.FieldType = MaterialSurface.BoxType.Normal;
+            this.tb_TenXe.FloatingLabelText = "FloatingLabel";
+            this.tb_TenXe.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_TenXe.HandleError = false;
+            this.tb_TenXe.HelperText = "";
+            this.tb_TenXe.HideSelection = true;
+            this.tb_TenXe.HintText = "Tên xe";
+            this.tb_TenXe.Location = new System.Drawing.Point(179, 155);
+            this.tb_TenXe.MaxLength = 32767;
+            this.tb_TenXe.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_TenXe.Multiline = false;
+            this.tb_TenXe.Name = "tb_TenXe";
+            this.tb_TenXe.PasswordChar = '\0';
+            this.tb_TenXe.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.tb_TenXe.ReadOnly = false;
+            this.tb_TenXe.ShortcutsEnable = true;
+            this.tb_TenXe.ShowCaret = true;
+            this.tb_TenXe.Size = new System.Drawing.Size(317, 49);
+            this.tb_TenXe.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_TenXe.TabIndex = 7;
+            this.tb_TenXe.UseSystemPasswordChar = false;
+            // 
+            // tb_BienSo
+            // 
+            this.tb_BienSo.AutoScaleColor = true;
+            this.tb_BienSo.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_BienSo.CountText = false;
+            this.tb_BienSo.FieldType = MaterialSurface.BoxType.Normal;
+            this.tb_BienSo.FloatingLabelText = "FloatingLabel";
+            this.tb_BienSo.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_BienSo.HandleError = false;
+            this.tb_BienSo.HelperText = "";
+            this.tb_BienSo.HideSelection = true;
+            this.tb_BienSo.HintText = "Biển số";
+            this.tb_BienSo.Location = new System.Drawing.Point(179, 230);
+            this.tb_BienSo.MaxLength = 32767;
+            this.tb_BienSo.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_BienSo.Multiline = false;
+            this.tb_BienSo.Name = "tb_BienSo";
+            this.tb_BienSo.PasswordChar = '\0';
+            this.tb_BienSo.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.tb_BienSo.ReadOnly = false;
+            this.tb_BienSo.ShortcutsEnable = true;
+            this.tb_BienSo.ShowCaret = true;
+            this.tb_BienSo.Size = new System.Drawing.Size(317, 49);
+            this.tb_BienSo.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_BienSo.TabIndex = 8;
+            this.tb_BienSo.UseSystemPasswordChar = false;
+            // 
             // AddCardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cb_LoaiThe);
             this.Controls.Add(this.tb_BienSo);
-            this.Controls.Add(this.bt_Confirm);
             this.Controls.Add(this.tb_TenXe);
             this.Controls.Add(this.tb_TenChuSoHuu);
+            this.Controls.Add(this.cb_LoaiThe);
+            this.Controls.Add(this.bt_Confirm);
             this.Name = "AddCardForm";
             this.Text = "AddCardForm";
             this.Load += new System.EventHandler(this.AddCardForm_Load);
@@ -149,11 +176,10 @@ namespace dekatreís_octavo.View
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialTextBox tb_TenChuSoHuu;
-        private MaterialSkin.Controls.MaterialTextBox tb_TenXe;
         private MaterialSkin.Controls.MaterialButton bt_Confirm;
-        private MaterialSkin.Controls.MaterialTextBox tb_BienSo;
         private MaterialSurface.MaterialComboBox cb_LoaiThe;
+        private MaterialSurface.MaterialTextfield tb_TenChuSoHuu;
+        private MaterialSurface.MaterialTextfield tb_TenXe;
+        private MaterialSurface.MaterialTextfield tb_BienSo;
     }
 }
