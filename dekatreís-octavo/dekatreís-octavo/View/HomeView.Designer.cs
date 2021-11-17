@@ -51,6 +51,7 @@ namespace dekatreís_octavo.View
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.materialCard1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -104,7 +105,6 @@ namespace dekatreís_octavo.View
             this.tabDrawer.ShowIconsWhenHidden = false;
             this.tabDrawer.Size = new System.Drawing.Size(231, 606);
             this.tabDrawer.TabIndex = 6;
-            this.tabDrawer.Text = "materialDrawer2";
             this.tabDrawer.UseColors = false;
             this.tabDrawer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
@@ -324,6 +324,7 @@ namespace dekatreís_octavo.View
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
