@@ -39,6 +39,7 @@ namespace dekatreís_octavo.View
             this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Start_date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -172,6 +173,30 @@ namespace dekatreís_octavo.View
             this.Start_date.Text = "Ngày bắt đầu";
             this.Start_date.Width = 361;
             // 
+            // materialComboBox1
+            // 
+            this.materialComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialComboBox1.AutoResize = false;
+            this.materialComboBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialComboBox1.Depth = 0;
+            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.materialComboBox1.DropDownHeight = 174;
+            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.materialComboBox1.DropDownWidth = 121;
+            this.materialComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialComboBox1.ForeColor = System.Drawing.Color.White;
+            this.materialComboBox1.FormattingEnabled = true;
+            this.materialComboBox1.Hint = "Type";
+            this.materialComboBox1.IntegralHeight = false;
+            this.materialComboBox1.ItemHeight = 43;
+            this.materialComboBox1.Location = new System.Drawing.Point(653, 48);
+            this.materialComboBox1.MaxDropDownItems = 4;
+            this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialComboBox1.Name = "materialComboBox1";
+            this.materialComboBox1.Size = new System.Drawing.Size(140, 49);
+            this.materialComboBox1.StartIndex = 0;
+            this.materialComboBox1.TabIndex = 5;
+            // 
             // CardManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -179,6 +204,7 @@ namespace dekatreís_octavo.View
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.materialComboBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.addButton);
             this.Controls.Add(this.delButton);
@@ -202,5 +228,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.ColumnHeader Type;
         private System.Windows.Forms.ColumnHeader Status;
         private System.Windows.Forms.ColumnHeader Start_date;
+        private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
     }
 }
