@@ -14,6 +14,7 @@ namespace dekatreís_octavo.View
     public partial class CardManagement : UserControl
     {
         QuanLyDoXeEntities1 db = DataProvider.Instance.db;
+        string sortType, sortStatus;
         public CardManagement()
         {
             InitializeComponent();
@@ -34,13 +35,19 @@ namespace dekatreís_octavo.View
         public void LoadData()
         {
             cardList.Items.Clear();
-            var result = CardManagementBus.Instance.GetTheXes().ToList();
+            typeComboBox.Items.Clear();
+            var result = CardManagementBus.Instance.GetTheXes(sortType, sortStatus).ToList();
             foreach (TheXe i in result)
             {
                 string trangthai = (bool)i.Status ? "Rảnh" : "Bận";
                 string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? i.NgayTao.Value.Date.ToString() : "";
                 cardList.Items.Add(new ListViewItem(
                     new string[] { i.IDThe.ToString(), i.ChuSoHuu, i.LoaiThe1.TenLoai, trangthai, date }));
+            }
+            List<string> list = db.LoaiThes.Select(p => p.TenLoai).ToList();
+            foreach(string i in list)
+            {
+                typeComboBox.Items.Add(i);
             }
         }
 
@@ -69,6 +76,23 @@ namespace dekatreís_octavo.View
             edit.selected = GetIDTheXeSelected();
             edit.ShowDialog();
             this.LoadData();
+        }
+
+        private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (statusComboBox.SelectedIndex != -1)
+            {
+                if (statusComboBox.SelectedIndex == 0)
+                    sortStatus = "false";
+                else sortStatus = "true";
+            }
+            else sortStatus = null;
+            if (typeComboBox.SelectedIndex != -1)
+            {
+                sortType = typeComboBox.SelectedItem.ToString();
+            }
+            else sortType = null;
+            LoadData();
         }
     }
 }

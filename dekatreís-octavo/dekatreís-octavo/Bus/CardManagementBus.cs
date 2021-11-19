@@ -86,11 +86,23 @@ namespace dekatreís_octavo.Bus
                          select c;
             return result;
         }
-        public IQueryable<TheXe> GetTheXes()
+        public IQueryable<TheXe> GetTheXes(string sortType = null, string sortStatus = null)
         {
             QuanLyDoXeEntities1 db = DataProvider.Instance.db;
-            return from c in db.TheXes
+            
+            var result = from c in db.TheXes
                    select c;
+
+            if (!string.IsNullOrEmpty(sortStatus))
+            {
+                bool status = sortStatus != "true" ? true : false;
+                result = result.Where(p => p.Status == status);
+            }
+            if (!string.IsNullOrEmpty(sortType))
+            {
+                result = result.Where(p => p.LoaiThe1.TenLoai == sortType);
+            }
+            return result;
         }
         public void SetDefault()
         {
