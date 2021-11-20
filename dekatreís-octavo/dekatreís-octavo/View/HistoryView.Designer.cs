@@ -29,8 +29,15 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.findTextBox = new MaterialSurface.MaterialTextfield();
             this.historyList = new MaterialSkin.Controls.MaterialListView();
+            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cardID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.licensePlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // findTextBox
@@ -65,10 +72,18 @@ namespace dekatreís_octavo.View
             this.historyList.AutoSizeTable = false;
             this.historyList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.historyList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.historyList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ID,
+            this.time,
+            this.type,
+            this.cardID,
+            this.licensePlate});
             this.historyList.Depth = 0;
             this.historyList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.historyList.FullRowSelect = true;
             this.historyList.HideSelection = false;
+            this.historyList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
             this.historyList.Location = new System.Drawing.Point(3, 98);
             this.historyList.MinimumSize = new System.Drawing.Size(200, 100);
             this.historyList.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -80,11 +95,43 @@ namespace dekatreís_octavo.View
             this.historyList.UseCompatibleStateImageBehavior = false;
             this.historyList.View = System.Windows.Forms.View.Details;
             // 
+            // ID
+            // 
+            this.ID.Text = "ID";
+            // 
+            // time
+            // 
+            this.time.Text = "Thời gian";
+            this.time.Width = 180;
+            // 
+            // type
+            // 
+            this.type.Text = "Loại";
+            this.type.Width = 120;
+            // 
+            // cardID
+            // 
+            this.cardID.Text = "ID thẻ";
+            this.cardID.Width = 120;
+            // 
+            // licensePlate
+            // 
+            this.licensePlate.Text = "Biển số xe";
+            this.licensePlate.Width = 180;
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Location = new System.Drawing.Point(588, 33);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker.TabIndex = 5;
+            // 
             // HistoryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.findTextBox);
             this.Controls.Add(this.historyList);
             this.Name = "HistoryView";
@@ -97,5 +144,11 @@ namespace dekatreís_octavo.View
 
         private MaterialSurface.MaterialTextfield findTextBox;
         private MaterialSkin.Controls.MaterialListView historyList;
+        private System.Windows.Forms.ColumnHeader ID;
+        private System.Windows.Forms.ColumnHeader time;
+        private System.Windows.Forms.ColumnHeader type;
+        private System.Windows.Forms.ColumnHeader cardID;
+        private System.Windows.Forms.ColumnHeader licensePlate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
     }
 }

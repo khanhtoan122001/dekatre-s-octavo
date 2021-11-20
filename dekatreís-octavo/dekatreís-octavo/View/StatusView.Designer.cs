@@ -31,6 +31,9 @@ namespace dekatreís_octavo.View
         {
             this.statusList = new MaterialSkin.Controls.MaterialListView();
             this.findTextBox = new MaterialSurface.MaterialTextfield();
+            this.orderNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cardID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.licensePlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // statusList
@@ -38,6 +41,10 @@ namespace dekatreís_octavo.View
             this.statusList.AutoSizeTable = false;
             this.statusList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.statusList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.statusList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.orderNumber,
+            this.cardID,
+            this.licensePlate});
             this.statusList.Depth = 0;
             this.statusList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.statusList.FullRowSelect = true;
@@ -80,6 +87,20 @@ namespace dekatreís_octavo.View
             this.findTextBox.TabIndex = 2;
             this.findTextBox.UseSystemPasswordChar = false;
             // 
+            // orderNumber
+            // 
+            this.orderNumber.Text = "STT";
+            // 
+            // cardID
+            // 
+            this.cardID.Text = "ID thẻ";
+            this.cardID.Width = 120;
+            // 
+            // licensePlate
+            // 
+            this.licensePlate.Text = "Biển số xe";
+            this.licensePlate.Width = 180;
+            // 
             // StatusView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -97,5 +118,8 @@ namespace dekatreís_octavo.View
 
         private MaterialSkin.Controls.MaterialListView statusList;
         private MaterialSurface.MaterialTextfield findTextBox;
+        private System.Windows.Forms.ColumnHeader orderNumber;
+        private System.Windows.Forms.ColumnHeader cardID;
+        private System.Windows.Forms.ColumnHeader licensePlate;
     }
 }
