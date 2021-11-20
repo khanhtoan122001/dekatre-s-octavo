@@ -50,6 +50,7 @@ namespace dekatreís_octavo.View
                 }
             }
         }
+        #region Di chuyen
         const int WS_MINIMIZEBOX = 0x20000;
         const int CS_DBLCLKS = 0x8;
         protected override CreateParams CreateParams
@@ -78,6 +79,7 @@ namespace dekatreís_octavo.View
                 this.DefWndProc(ref msg);
             }
         }
+        #endregion
         private void materialButton1_Click(object sender, EventArgs e)
         {
             

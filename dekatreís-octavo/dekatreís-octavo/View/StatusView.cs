@@ -1,4 +1,5 @@
-﻿using System;
+﻿using dekatreís_octavo.Bus;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,22 @@ namespace dekatreís_octavo.View
         public StatusView()
         {
             InitializeComponent();
+        }
+        public void LoadData()
+        {
+            var result = CardManagementBus.Instance.GetTheXes("", "false").ToList();
+            int c = 0;
+            statusList.Items.Clear();
+            foreach(TheXe i in result)
+            {
+                c++;
+                statusList.Items.Add(new ListViewItem(new string[] { c.ToString(), i.IDThe.ToString(), i.BienSoXe }));
+            }
+        }
+
+        private void bt_Refresh_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }

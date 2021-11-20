@@ -23,14 +23,21 @@ namespace dekatreís_octavo.Bus
             }
         }
 
-        public int GetGiaTriByTen(string ten)
+        public ThamSo GetByTen(string ten)
         {
             var thamso = db.ThamSoes.Where(p => p.TenThamSo == ten).ToList();
             if (thamso.Count == 0)
-                return -1;
-            return (int)thamso[0].GiaTri;
+                return null;
+            return thamso[0];
         }
 
+        public ThamSo GetById(int id)
+        {
+            var thamso = db.ThamSoes.Where(p => p.IDThamSo == id).ToList();
+            if (thamso.Count == 0)
+                return null;
+            return thamso[0];
+        }
         public bool AddThamSo(string ten, int giaTri)
         {
             if (db.ThamSoes.Where(p => p.TenThamSo == ten).Count() != 0)

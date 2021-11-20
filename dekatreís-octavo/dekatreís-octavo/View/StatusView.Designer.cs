@@ -30,10 +30,11 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.statusList = new MaterialSkin.Controls.MaterialListView();
-            this.findTextBox = new MaterialSurface.MaterialTextfield();
             this.orderNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cardID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.licensePlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.findTextBox = new MaterialSurface.MaterialTextfield();
+            this.bt_Refresh = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // statusList
@@ -59,6 +60,20 @@ namespace dekatreís_octavo.View
             this.statusList.TabIndex = 0;
             this.statusList.UseCompatibleStateImageBehavior = false;
             this.statusList.View = System.Windows.Forms.View.Details;
+            // 
+            // orderNumber
+            // 
+            this.orderNumber.Text = "STT";
+            // 
+            // cardID
+            // 
+            this.cardID.Text = "ID thẻ";
+            this.cardID.Width = 120;
+            // 
+            // licensePlate
+            // 
+            this.licensePlate.Text = "Biển số xe";
+            this.licensePlate.Width = 180;
             // 
             // findTextBox
             // 
@@ -87,30 +102,38 @@ namespace dekatreís_octavo.View
             this.findTextBox.TabIndex = 2;
             this.findTextBox.UseSystemPasswordChar = false;
             // 
-            // orderNumber
+            // bt_Refresh
             // 
-            this.orderNumber.Text = "STT";
-            // 
-            // cardID
-            // 
-            this.cardID.Text = "ID thẻ";
-            this.cardID.Width = 120;
-            // 
-            // licensePlate
-            // 
-            this.licensePlate.Text = "Biển số xe";
-            this.licensePlate.Width = 180;
+            this.bt_Refresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bt_Refresh.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.bt_Refresh.Depth = 0;
+            this.bt_Refresh.HighEmphasis = true;
+            this.bt_Refresh.Icon = null;
+            this.bt_Refresh.Location = new System.Drawing.Point(629, 25);
+            this.bt_Refresh.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bt_Refresh.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bt_Refresh.Name = "bt_Refresh";
+            this.bt_Refresh.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.bt_Refresh.Size = new System.Drawing.Size(158, 36);
+            this.bt_Refresh.TabIndex = 3;
+            this.bt_Refresh.Text = "Refresh";
+            this.bt_Refresh.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.bt_Refresh.UseAccentColor = false;
+            this.bt_Refresh.UseVisualStyleBackColor = true;
+            this.bt_Refresh.Click += new System.EventHandler(this.bt_Refresh_Click);
             // 
             // StatusView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bt_Refresh);
             this.Controls.Add(this.findTextBox);
             this.Controls.Add(this.statusList);
             this.Name = "StatusView";
             this.Text = "StatusView";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -121,5 +144,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.ColumnHeader orderNumber;
         private System.Windows.Forms.ColumnHeader cardID;
         private System.Windows.Forms.ColumnHeader licensePlate;
+        private MaterialSkin.Controls.MaterialButton bt_Refresh;
     }
 }

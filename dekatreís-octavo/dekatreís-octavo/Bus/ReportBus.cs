@@ -80,6 +80,30 @@ namespace dekatreís_octavo.Bus
             return result != null;
         }
 
+        public List<CT_BaoCaoLichSuHoatDong> GetCT_BaoCaoLichSuHoatDongs(DateTime? date = null)
+        {
+            var result = from c in db.CT_BaoCaoLichSuHoatDong
+                         select c;
+
+            if(date != null)
+            {
+                var l = (from c in db.BaoCaoLichSuHoatDongs
+                         where c.Ngay == date
+                         select c).ToList();
+
+                int id1 = -1, id2 = -1;
+
+                if (l.Count == 1)
+                    id1 = l[0].IDBaoCao;
+
+                if (l.Count == 2)
+                    id2 = l[1].IDBaoCao;
+
+                result = result.Where(p => p.IDBaoCao == id1 || p.IDBaoCao == id2);
+            }
+
+            return result.ToList();
+        }
         public int GetIdBaoCaoLichSuHoatDong(DateTime time, int hoatDong)
         {
             var list = db.BaoCaoLichSuHoatDongs.Where(c => c.Ngay == time && hoatDong == c.HoatDong).ToList();

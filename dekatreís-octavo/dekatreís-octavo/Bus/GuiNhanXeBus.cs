@@ -25,9 +25,9 @@ namespace dekatreís_octavo.Bus
             the.Status = false;
             db.SaveChanges();
             // report
-            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetGiaTriByTen("Gửi xe")))
+            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Gửi xe").IDThamSo))
             {
-                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetGiaTriByTen("Gửi xe"));
+                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Gửi xe").IDThamSo);
                 ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, BienSo);
             }
             //
@@ -39,9 +39,9 @@ namespace dekatreís_octavo.Bus
             if (the == null || the.Status == true)
                 return false;
             // report
-            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetGiaTriByTen("Nhận xe")))
+            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Nhận xe").IDThamSo))
             {
-                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetGiaTriByTen("Nhận xe"));
+                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Nhận xe").IDThamSo);
                 ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
             }
             //
@@ -61,9 +61,9 @@ namespace dekatreís_octavo.Bus
             the.Status = false;
             db.SaveChanges();
             // report
-            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetGiaTriByTen("Gửi xe")))
+            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Gửi xe").IDThamSo))
             {
-                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetGiaTriByTen("Gửi xe"));
+                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Gửi xe").IDThamSo);
                 ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
             }
             //
@@ -75,9 +75,9 @@ namespace dekatreís_octavo.Bus
             if (the == null || the.Status == true)
                 return false;
             // report
-            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetGiaTriByTen("Nhận xe")))
+            if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Nhận xe").IDThamSo))
             {
-                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetGiaTriByTen("Nhận xe"));
+                int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Nhận xe").IDThamSo);
                 ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
             }
             //

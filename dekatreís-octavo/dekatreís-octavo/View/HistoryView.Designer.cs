@@ -38,6 +38,7 @@ namespace dekatreís_octavo.View
             this.cardID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.licensePlate = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.bt_refresh = new MaterialSkin.Controls.MaterialButton();
             this.SuspendLayout();
             // 
             // findTextBox
@@ -126,17 +127,39 @@ namespace dekatreís_octavo.View
             this.dateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker.TabIndex = 5;
             // 
+            // bt_refresh
+            // 
+            this.bt_refresh.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.bt_refresh.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.bt_refresh.Depth = 0;
+            this.bt_refresh.HighEmphasis = true;
+            this.bt_refresh.Icon = null;
+            this.bt_refresh.Location = new System.Drawing.Point(380, 19);
+            this.bt_refresh.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.bt_refresh.MouseState = MaterialSkin.MouseState.HOVER;
+            this.bt_refresh.Name = "bt_refresh";
+            this.bt_refresh.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.bt_refresh.Size = new System.Drawing.Size(158, 36);
+            this.bt_refresh.TabIndex = 6;
+            this.bt_refresh.Text = "refresh";
+            this.bt_refresh.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.bt_refresh.UseAccentColor = false;
+            this.bt_refresh.UseVisualStyleBackColor = true;
+            this.bt_refresh.Click += new System.EventHandler(this.bt_refresh_Click);
+            // 
             // HistoryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bt_refresh);
             this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.findTextBox);
             this.Controls.Add(this.historyList);
             this.Name = "HistoryView";
             this.Text = "HistoryView";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -150,5 +173,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.ColumnHeader cardID;
         private System.Windows.Forms.ColumnHeader licensePlate;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private MaterialSkin.Controls.MaterialButton bt_refresh;
     }
 }

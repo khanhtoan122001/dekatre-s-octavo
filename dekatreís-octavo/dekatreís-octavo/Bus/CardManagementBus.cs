@@ -95,7 +95,7 @@ namespace dekatreís_octavo.Bus
 
             if (!string.IsNullOrEmpty(sortStatus))
             {
-                bool status = sortStatus != "true" ? true : false;
+                bool status = sortStatus == "true" ? true : false;
                 result = result.Where(p => p.Status == status);
             }
             if (!string.IsNullOrEmpty(sortType))
