@@ -29,6 +29,8 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.statusComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.addButton = new MaterialSurface.ContainedButton();
             this.delButton = new MaterialSurface.ContainedButton();
@@ -131,6 +133,7 @@ namespace dekatreís_octavo.View
             this.cardList.AutoSizeTable = false;
             this.cardList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cardList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.cardList.CheckBoxes = true;
             this.cardList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
             this.Owner,
@@ -138,8 +141,16 @@ namespace dekatreís_octavo.View
             this.Status,
             this.Start_date});
             this.cardList.Depth = 0;
+            this.cardList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardList.FullRowSelect = true;
+            this.cardList.GridLines = true;
             this.cardList.HideSelection = false;
+            listViewGroup1.Header = "ListViewGroup";
+            listViewGroup1.Name = "listViewGroup1";
+            listViewItem1.Group = listViewGroup1;
+            listViewItem1.StateImageIndex = 0;
+            this.cardList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
             this.cardList.Location = new System.Drawing.Point(-3, 0);
             this.cardList.MinimumSize = new System.Drawing.Size(200, 100);
             this.cardList.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -175,7 +186,7 @@ namespace dekatreís_octavo.View
             // Start_date
             // 
             this.Start_date.Text = "Ngày bắt đầu";
-            this.Start_date.Width = 361;
+            this.Start_date.Width = 240;
             // 
             // typeComboBox
             // 

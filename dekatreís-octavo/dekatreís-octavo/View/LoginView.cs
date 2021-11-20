@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialSurface;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,7 @@ namespace dekatreís_octavo.View
                 
             if (string.IsNullOrEmpty(tb_Username.Text) || string.IsNullOrEmpty(tb_Password.Text))
             {
+                Dialog.Show(this, "Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!", "Đăng nhập thất bại");
                 return;
             }
             else
@@ -41,6 +43,10 @@ namespace dekatreís_octavo.View
                     this.Hide();
                     home.ShowDialog();
                     this.Show();
+                }
+                else
+                {
+                    Dialog.Show(this, "Sai tên đăng nhập hoặc mật khẩu, vui lòng kiểm tra lại!", "Đăng nhập thất bại");
                 }
             }
         }
@@ -74,7 +80,8 @@ namespace dekatreís_octavo.View
         }
         private void materialButton1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            
+                Application.Exit();
         }
 
         private void LoginView_Load(object sender, EventArgs e)
@@ -84,12 +91,8 @@ namespace dekatreís_octavo.View
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            if (Dialog.Show(this, "Bạn chắc chắn muốn thoát?", "Xác nhận", Buttons.YesNo) == DialogResult.Yes)
+                Application.Exit();
         }
     }
 }

@@ -43,7 +43,7 @@ namespace dekatreís_octavo.View
             this.cb_ListTheXe.DropDownWidth = 121;
             this.cb_ListTheXe.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cb_ListTheXe.FormattingEnabled = true;
-            this.cb_ListTheXe.HintText = "";
+            this.cb_ListTheXe.HintText = "ID";
             this.cb_ListTheXe.ItemHeight = 47;
             this.cb_ListTheXe.Location = new System.Drawing.Point(234, 97);
             this.cb_ListTheXe.MaxDropDownItems = 4;

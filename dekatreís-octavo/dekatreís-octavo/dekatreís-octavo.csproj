@@ -212,6 +212,12 @@
     <Compile Include="View\EditStaffView.Designer.cs">
       <DependentUpon>EditStaffView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\HistoryView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HistoryView.Designer.cs">
+      <DependentUpon>HistoryView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HomeView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -229,6 +235,12 @@
     </Compile>
     <Compile Include="View\ParkingView.Designer.cs">
       <DependentUpon>ParkingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StatusView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StatusView.Designer.cs">
+      <DependentUpon>StatusView.cs</DependentUpon>
     </Compile>
     <Compile Include="View\UserControl_Test.cs">
       <SubType>UserControl</SubType>
@@ -268,6 +280,9 @@
     <EmbeddedResource Include="View\EditStaffView.resx">
       <DependentUpon>EditStaffView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\HistoryView.resx">
+      <DependentUpon>HistoryView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\HomeView.resx">
       <DependentUpon>HomeView.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ParkingView.resx">
       <DependentUpon>ParkingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StatusView.resx">
+      <DependentUpon>StatusView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl_Test.resx">
       <DependentUpon>UserControl_Test.cs</DependentUpon>
