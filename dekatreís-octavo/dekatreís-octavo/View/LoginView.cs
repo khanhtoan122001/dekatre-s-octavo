@@ -94,10 +94,5 @@ namespace dekatreís_octavo.View
             if (Dialog.Show(this, "Bạn chắc chắn muốn thoát?", "Xác nhận", Buttons.YesNo) == DialogResult.Yes)
                 Application.Exit();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

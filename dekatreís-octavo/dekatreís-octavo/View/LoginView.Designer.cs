@@ -149,7 +149,6 @@ namespace dekatreís_octavo.View
             this.label1.Size = new System.Drawing.Size(137, 41);
             this.label1.TabIndex = 7;
             this.label1.Text = "Xin Chào";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
