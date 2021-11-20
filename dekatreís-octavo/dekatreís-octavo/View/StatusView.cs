@@ -16,6 +16,7 @@ namespace dekatreís_octavo.View
         public StatusView()
         {
             InitializeComponent();
+            LoadData();
         }
         public void LoadData()
         {

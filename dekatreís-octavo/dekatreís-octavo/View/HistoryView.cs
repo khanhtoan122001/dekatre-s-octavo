@@ -17,6 +17,7 @@ namespace dekatreís_octavo.View
         public HistoryView()
         {
             InitializeComponent();
+            LoadData();
         }
         public void LoadData()
         {
@@ -30,6 +31,11 @@ namespace dekatreís_octavo.View
         }
 
         private void bt_refresh_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             LoadData();
         }

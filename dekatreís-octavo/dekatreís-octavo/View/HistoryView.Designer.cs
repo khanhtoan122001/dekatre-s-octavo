@@ -29,7 +29,7 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.findTextBox = new MaterialSurface.MaterialTextfield();
             this.historyList = new MaterialSkin.Controls.MaterialListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -84,7 +84,7 @@ namespace dekatreís_octavo.View
             this.historyList.FullRowSelect = true;
             this.historyList.HideSelection = false;
             this.historyList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.historyList.Location = new System.Drawing.Point(3, 98);
             this.historyList.MinimumSize = new System.Drawing.Size(200, 100);
             this.historyList.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -126,6 +126,7 @@ namespace dekatreís_octavo.View
             this.dateTimePicker.Name = "dateTimePicker";
             this.dateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker.TabIndex = 5;
+            this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
             // bt_refresh
             // 
