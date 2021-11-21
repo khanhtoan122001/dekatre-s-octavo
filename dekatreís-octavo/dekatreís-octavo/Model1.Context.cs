@@ -36,5 +36,6 @@ namespace dekatreís_octavo
         public virtual DbSet<ThamSo> ThamSoes { get; set; }
         public virtual DbSet<TheXe> TheXes { get; set; }
         public virtual DbSet<LoaiThe> LoaiThes { get; set; }
+        public virtual DbSet<BaoCaoChamCongNhanVien> BaoCaoChamCongNhanViens { get; set; }
     }
 }

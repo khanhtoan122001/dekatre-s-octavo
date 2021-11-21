@@ -268,3 +268,31 @@ CREATE TABLE [dbo].[LoaiThe](
 ) ON [PRIMARY]
 GO
 
+USE [QuanLyDoXe]
+GO
+
+/****** Object:  Table [dbo].[BaoCaoChamCongNhanVien]    Script Date: 11/21/2021 5:15:32 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[BaoCaoChamCongNhanVien](
+	[IDBaoCao] [int] IDENTITY(1,1) NOT NULL,
+	[ThoiGian] [smalldatetime] NOT NULL,
+	[TenDangNhap] [nvarchar](50) NULL,
+ CONSTRAINT [PK_BaoCaoChamCongNhanVien] PRIMARY KEY CLUSTERED 
+(
+	[IDBaoCao] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[BaoCaoChamCongNhanVien]  WITH CHECK ADD  CONSTRAINT [FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien] FOREIGN KEY([TenDangNhap])
+REFERENCES [dbo].[TaiKhoan] ([TenDangNhap])
+GO
+
+ALTER TABLE [dbo].[BaoCaoChamCongNhanVien] CHECK CONSTRAINT [FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien]
+GO
+

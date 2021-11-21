@@ -56,6 +56,7 @@ namespace dekatreís_octavo.View
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
             parkingView1.LoadData();
+            BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
         private void AddTab()

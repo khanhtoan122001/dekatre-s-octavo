@@ -14,13 +14,22 @@ namespace dekatreís_octavo
     
     public partial class TaiKhoan
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TaiKhoan()
+        {
+            this.BaoCaoChamCongNhanViens = new HashSet<BaoCaoChamCongNhanVien>();
+        }
+    
         public string TenDangNhap { get; set; }
         public string MatKhau { get; set; }
         public string TenThat { get; set; }
         public string SDT { get; set; }
         public string CMND { get; set; }
         public Nullable<int> LoaiTaiKhoan { get; set; }
+        public byte[] Avatar { get; set; }
     
         public virtual LoaiTaiKhoan LoaiTaiKhoan1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BaoCaoChamCongNhanVien> BaoCaoChamCongNhanViens { get; set; }
     }
 }

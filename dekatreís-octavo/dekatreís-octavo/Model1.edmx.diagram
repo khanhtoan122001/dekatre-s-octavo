@@ -21,6 +21,8 @@
         <EntityTypeShape EntityType="QuanLyDoXeModel.LoaiThe" Width="1.5" PointX="0.75" PointY="0.75" />
         <AssociationConnector Association="QuanLyDoXeModel.FK_BaoCaoDoanhThuThang_LoaiThe" />
         <AssociationConnector Association="QuanLyDoXeModel.FK_TheXe_LoaiThe" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.BaoCaoChamCongNhanVien" Width="1.5" PointX="5.25" PointY="8.5" />
+        <AssociationConnector Association="QuanLyDoXeModel.FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
