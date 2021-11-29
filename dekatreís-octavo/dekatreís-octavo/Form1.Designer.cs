@@ -29,23 +29,22 @@ namespace dekatreís_octavo
         /// </summary>
         private void InitializeComponent()
         {
-            this.parkingView1 = new dekatreís_octavo.View.ParkingView();
+            this.chart1 = new dekatreís_octavo.View.Chart();
             this.SuspendLayout();
             // 
-            // parkingView1
+            // chart1
             // 
-            this.parkingView1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.parkingView1.Location = new System.Drawing.Point(115, 118);
-            this.parkingView1.Name = "parkingView1";
-            this.parkingView1.Size = new System.Drawing.Size(791, 483);
-            this.parkingView1.TabIndex = 0;
+            this.chart1.Location = new System.Drawing.Point(104, 130);
+            this.chart1.Name = "chart1";
+            this.chart1.Size = new System.Drawing.Size(860, 489);
+            this.chart1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 688);
-            this.Controls.Add(this.parkingView1);
+            this.Controls.Add(this.chart1);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Sizable = false;
@@ -57,7 +56,7 @@ namespace dekatreís_octavo
 
         #endregion
 
-        private View.ParkingView parkingView1;
+        private View.Chart chart1;
     }
 }
 

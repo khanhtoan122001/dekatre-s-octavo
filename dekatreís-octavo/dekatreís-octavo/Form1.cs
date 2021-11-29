@@ -36,7 +36,7 @@ namespace dekatreís_octavo
         private void Form1_Load(object sender, EventArgs e)
         {
             DataProvider.Instance.CreateDataDefault();
-            parkingView1.LoadData();
+            //parkingView1.LoadData();
         }
     }
 }
