@@ -30,7 +30,6 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             this.statusComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.addButton = new MaterialSurface.ContainedButton();
             this.delButton = new MaterialSurface.ContainedButton();
@@ -47,7 +46,6 @@ namespace dekatreís_octavo.View
             // 
             // statusComboBox
             // 
-            this.statusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.statusComboBox.AutoResize = false;
             this.statusComboBox.BackColor = System.Drawing.SystemColors.Control;
             this.statusComboBox.Depth = 0;
@@ -143,11 +141,7 @@ namespace dekatreís_octavo.View
             this.cardList.Depth = 0;
             this.cardList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardList.FullRowSelect = true;
-            this.cardList.GridLines = true;
             this.cardList.HideSelection = false;
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewItem1.Group = listViewGroup1;
             listViewItem1.StateImageIndex = 0;
             this.cardList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
@@ -157,10 +151,11 @@ namespace dekatreís_octavo.View
             this.cardList.MouseState = MaterialSkin.MouseState.OUT;
             this.cardList.Name = "cardList";
             this.cardList.OwnerDraw = true;
-            this.cardList.Size = new System.Drawing.Size(939, 399);
+            this.cardList.Size = new System.Drawing.Size(939, 396);
             this.cardList.TabIndex = 1;
             this.cardList.UseCompatibleStateImageBehavior = false;
             this.cardList.View = System.Windows.Forms.View.Details;
+            this.cardList.Click += new System.EventHandler(this.cardList_Click);
             this.cardList.DoubleClick += new System.EventHandler(this.cardList_DoubleClick);
             // 
             // ID
@@ -190,7 +185,6 @@ namespace dekatreís_octavo.View
             // 
             // typeComboBox
             // 
-            this.typeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.typeComboBox.AutoResize = false;
             this.typeComboBox.BackColor = System.Drawing.SystemColors.Control;
             this.typeComboBox.Depth = 0;
