@@ -29,20 +29,29 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
             this.statusComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.addButton = new MaterialSurface.ContainedButton();
             this.delButton = new MaterialSurface.ContainedButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.cardList = new MaterialSkin.Controls.MaterialListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Owner = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Start_date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.inOutButton = new MaterialSurface.ContainedButton();
             this.typeComboBox = new MaterialSkin.Controls.MaterialComboBox();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.topPanel.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusComboBox
@@ -64,7 +73,7 @@ namespace dekatreís_octavo.View
             this.statusComboBox.Items.AddRange(new object[] {
             "Bận",
             "Rảnh"});
-            this.statusComboBox.Location = new System.Drawing.Point(799, 48);
+            this.statusComboBox.Location = new System.Drawing.Point(154, 27);
             this.statusComboBox.MaxDropDownItems = 4;
             this.statusComboBox.MouseState = MaterialSkin.MouseState.OUT;
             this.statusComboBox.Name = "statusComboBox";
@@ -79,7 +88,7 @@ namespace dekatreís_octavo.View
             this.addButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.addButton.Icon = null;
-            this.addButton.Location = new System.Drawing.Point(132, 47);
+            this.addButton.Location = new System.Drawing.Point(3, 27);
             this.addButton.MouseState = MaterialSurface.MouseState.OUT;
             this.addButton.Name = "addButton";
             this.addButton.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -95,12 +104,12 @@ namespace dekatreís_octavo.View
             // 
             // delButton
             // 
-            this.delButton.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.delButton.BackColor = System.Drawing.Color.White;
             this.delButton.EffectType = MaterialSurface.ET.Custom;
             this.delButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.delButton.Icon = null;
-            this.delButton.Location = new System.Drawing.Point(0, 47);
+            this.delButton.Location = new System.Drawing.Point(135, 27);
             this.delButton.MouseState = MaterialSurface.MouseState.OUT;
             this.delButton.Name = "delButton";
             this.delButton.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -114,22 +123,8 @@ namespace dekatreís_octavo.View
             this.delButton.UseVisualStyleBackColor = false;
             this.delButton.Click += new System.EventHandler(this.delButton_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.cardList);
-            this.panel1.Location = new System.Drawing.Point(3, 134);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(936, 399);
-            this.panel1.TabIndex = 4;
-            // 
             // cardList
             // 
-            this.cardList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.cardList.AutoSizeTable = false;
             this.cardList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cardList.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -141,26 +136,24 @@ namespace dekatreís_octavo.View
             this.Status,
             this.Start_date});
             this.cardList.Depth = 0;
+            this.cardList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cardList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardList.FullRowSelect = true;
-            this.cardList.GridLines = true;
             this.cardList.HideSelection = false;
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewItem1.Group = listViewGroup1;
-            listViewItem1.StateImageIndex = 0;
+            listViewItem4.StateImageIndex = 0;
             this.cardList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.cardList.Location = new System.Drawing.Point(-3, 0);
+            listViewItem4});
+            this.cardList.Location = new System.Drawing.Point(0, 0);
             this.cardList.MinimumSize = new System.Drawing.Size(200, 100);
             this.cardList.MouseLocation = new System.Drawing.Point(-1, -1);
             this.cardList.MouseState = MaterialSkin.MouseState.OUT;
             this.cardList.Name = "cardList";
             this.cardList.OwnerDraw = true;
-            this.cardList.Size = new System.Drawing.Size(939, 399);
+            this.cardList.Size = new System.Drawing.Size(1078, 537);
             this.cardList.TabIndex = 1;
             this.cardList.UseCompatibleStateImageBehavior = false;
             this.cardList.View = System.Windows.Forms.View.Details;
+            this.cardList.SelectedIndexChanged += new System.EventHandler(this.cardList_SelectedIndexChanged);
             this.cardList.DoubleClick += new System.EventHandler(this.cardList_DoubleClick);
             // 
             // ID
@@ -171,22 +164,40 @@ namespace dekatreís_octavo.View
             // Owner
             // 
             this.Owner.Text = "Chủ sở hữu";
-            this.Owner.Width = 185;
+            this.Owner.Width = 228;
             // 
             // Type
             // 
             this.Type.Text = "Loại";
-            this.Type.Width = 130;
+            this.Type.Width = 153;
             // 
             // Status
             // 
             this.Status.Text = "Trạng thái";
-            this.Status.Width = 130;
+            this.Status.Width = 168;
             // 
             // Start_date
             // 
             this.Start_date.Text = "Ngày bắt đầu";
-            this.Start_date.Width = 240;
+            this.Start_date.Width = 448;
+            // 
+            // inOutButton
+            // 
+            this.inOutButton.EffectType = MaterialSurface.ET.Custom;
+            this.inOutButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inOutButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.inOutButton.Icon = null;
+            this.inOutButton.Location = new System.Drawing.Point(267, 27);
+            this.inOutButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.inOutButton.Name = "inOutButton";
+            this.inOutButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.inOutButton.Radius = 6;
+            this.inOutButton.ShawdowDepth = 3;
+            this.inOutButton.ShawdowOpacity = 50;
+            this.inOutButton.Size = new System.Drawing.Size(119, 50);
+            this.inOutButton.TabIndex = 2;
+            this.inOutButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.inOutButton.UseVisualStyleBackColor = true;
             // 
             // typeComboBox
             // 
@@ -204,7 +215,7 @@ namespace dekatreís_octavo.View
             this.typeComboBox.Hint = "Type";
             this.typeComboBox.IntegralHeight = false;
             this.typeComboBox.ItemHeight = 43;
-            this.typeComboBox.Location = new System.Drawing.Point(653, 48);
+            this.typeComboBox.Location = new System.Drawing.Point(300, 27);
             this.typeComboBox.MaxDropDownItems = 4;
             this.typeComboBox.MouseState = MaterialSkin.MouseState.OUT;
             this.typeComboBox.Name = "typeComboBox";
@@ -213,22 +224,71 @@ namespace dekatreís_octavo.View
             this.typeComboBox.TabIndex = 5;
             this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
             // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.splitContainer1);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1078, 100);
+            this.topPanel.TabIndex = 6;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Controls.Add(this.panel1);
+            this.mainPanel.Controls.Add(this.topPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1078, 637);
+            this.mainPanel.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cardList);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 100);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1078, 537);
+            this.panel1.TabIndex = 7;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.addButton);
+            this.splitContainer1.Panel1.Controls.Add(this.delButton);
+            this.splitContainer1.Panel1.Controls.Add(this.inOutButton);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.typeComboBox);
+            this.splitContainer1.Panel2.Controls.Add(this.statusComboBox);
+            this.splitContainer1.Size = new System.Drawing.Size(1078, 100);
+            this.splitContainer1.SplitterDistance = 530;
+            this.splitContainer1.TabIndex = 0;
+            // 
             // CardManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.typeComboBox);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.addButton);
-            this.Controls.Add(this.delButton);
-            this.Controls.Add(this.statusComboBox);
+            this.Controls.Add(this.mainPanel);
             this.Name = "CardManagement";
-            this.Size = new System.Drawing.Size(942, 536);
+            this.Size = new System.Drawing.Size(1078, 637);
             this.Load += new System.EventHandler(this.CardManagement_Load);
+            this.topPanel.ResumeLayout(false);
+            this.mainPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -237,7 +297,6 @@ namespace dekatreís_octavo.View
         private MaterialSkin.Controls.MaterialComboBox statusComboBox;
         private MaterialSurface.ContainedButton addButton;
         private MaterialSurface.ContainedButton delButton;
-        private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialListView cardList;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Owner;
@@ -245,5 +304,10 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.ColumnHeader Status;
         private System.Windows.Forms.ColumnHeader Start_date;
         private MaterialSkin.Controls.MaterialComboBox typeComboBox;
+        private MaterialSurface.ContainedButton inOutButton;
+        private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
