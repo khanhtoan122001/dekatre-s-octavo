@@ -385,6 +385,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\icon.png" />
     <None Include="Resources\close %283%29.png" />
     <None Include="Resources\close %282%29.png" />
     <None Include="Resources\close1.png" />
