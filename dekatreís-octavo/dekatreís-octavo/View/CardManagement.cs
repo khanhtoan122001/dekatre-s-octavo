@@ -78,9 +78,9 @@ namespace dekatreís_octavo.View
             this.LoadData();
         }
 
-        private void cardList_Click(object sender, EventArgs e)
+        private void cardList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //cardList.Items.
+
         }
 
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)

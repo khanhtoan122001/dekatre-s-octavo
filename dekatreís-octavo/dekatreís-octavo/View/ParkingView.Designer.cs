@@ -32,6 +32,7 @@ namespace dekatreís_octavo.View
             this.cb_ListTheXe = new MaterialSurface.MaterialComboBox();
             this.tb_BienSo = new MaterialSurface.MaterialTextfield();
             this.containedButton1 = new MaterialSurface.ContainedButton();
+            this.materialComboBox1 = new MaterialSurface.MaterialComboBox();
             this.SuspendLayout();
             // 
             // cb_ListTheXe
@@ -101,11 +102,31 @@ namespace dekatreís_octavo.View
             this.containedButton1.UseVisualStyleBackColor = true;
             this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
             // 
+            // materialComboBox1
+            // 
+            this.materialComboBox1.AutoSizing = false;
+            this.materialComboBox1.ComboBoxType = MaterialSurface.BoxType.Normal;
+            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.materialComboBox1.DropDownWidth = 121;
+            this.materialComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.materialComboBox1.FormattingEnabled = true;
+            this.materialComboBox1.HintText = "Loại thẻ";
+            this.materialComboBox1.ItemHeight = 47;
+            this.materialComboBox1.Location = new System.Drawing.Point(442, 97);
+            this.materialComboBox1.MaxDropDownItems = 4;
+            this.materialComboBox1.MouseState = MaterialSurface.MouseState.OUT;
+            this.materialComboBox1.Name = "materialComboBox1";
+            this.materialComboBox1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.materialComboBox1.Size = new System.Drawing.Size(121, 53);
+            this.materialComboBox1.TabIndex = 3;
+            // 
             // ParkingView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.materialComboBox1);
             this.Controls.Add(this.containedButton1);
             this.Controls.Add(this.tb_BienSo);
             this.Controls.Add(this.cb_ListTheXe);
@@ -120,5 +141,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialComboBox cb_ListTheXe;
         private MaterialSurface.MaterialTextfield tb_BienSo;
         private MaterialSurface.ContainedButton containedButton1;
+        private MaterialSurface.MaterialComboBox materialComboBox1;
     }
 }

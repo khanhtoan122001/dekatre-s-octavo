@@ -29,8 +29,7 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
             this.staffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffCMND = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,6 +41,17 @@ namespace dekatreís_octavo.View
             this.containedButton3 = new MaterialSurface.ContainedButton();
             this.materialTextfield1 = new MaterialSurface.MaterialTextfield();
             this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.mainPanel.SuspendLayout();
+            this.topPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialListView1
@@ -56,22 +66,19 @@ namespace dekatreís_octavo.View
             this.staffType,
             this.staffUsername});
             this.materialListView1.Depth = 0;
+            this.materialListView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialListView1.FullRowSelect = true;
-            this.materialListView1.GridLines = true;
             this.materialListView1.HideSelection = false;
-            listViewGroup1.Header = "ListViewGroup";
-            listViewGroup1.Name = "listViewGroup1";
-            listViewItem1.Group = listViewGroup1;
             this.materialListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.materialListView1.Location = new System.Drawing.Point(15, 112);
+            listViewItem4});
+            this.materialListView1.Location = new System.Drawing.Point(0, 0);
             this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
             this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
             this.materialListView1.Name = "materialListView1";
             this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(1191, 529);
+            this.materialListView1.Size = new System.Drawing.Size(1209, 477);
             this.materialListView1.TabIndex = 0;
             this.materialListView1.UseCompatibleStateImageBehavior = false;
             this.materialListView1.View = System.Windows.Forms.View.Details;
@@ -108,7 +115,7 @@ namespace dekatreís_octavo.View
             this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton1.Icon = null;
-            this.containedButton1.Location = new System.Drawing.Point(0, 58);
+            this.containedButton1.Location = new System.Drawing.Point(3, 77);
             this.containedButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton1.Name = "containedButton1";
@@ -130,7 +137,7 @@ namespace dekatreís_octavo.View
             this.containedButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton2.Icon = null;
-            this.containedButton2.Location = new System.Drawing.Point(187, 58);
+            this.containedButton2.Location = new System.Drawing.Point(189, 77);
             this.containedButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.containedButton2.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton2.Name = "containedButton2";
@@ -152,7 +159,7 @@ namespace dekatreís_octavo.View
             this.containedButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton3.Icon = null;
-            this.containedButton3.Location = new System.Drawing.Point(372, 58);
+            this.containedButton3.Location = new System.Drawing.Point(375, 77);
             this.containedButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.containedButton3.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton3.Name = "containedButton3";
@@ -211,7 +218,7 @@ namespace dekatreís_octavo.View
             this.materialComboBox1.Hint = "Sort by";
             this.materialComboBox1.IntegralHeight = false;
             this.materialComboBox1.ItemHeight = 43;
-            this.materialComboBox1.Location = new System.Drawing.Point(1089, 2);
+            this.materialComboBox1.Location = new System.Drawing.Point(288, 46);
             this.materialComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.materialComboBox1.MaxDropDownItems = 4;
             this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
@@ -220,21 +227,71 @@ namespace dekatreís_octavo.View
             this.materialComboBox1.StartIndex = 0;
             this.materialComboBox1.TabIndex = 5;
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Controls.Add(this.panel1);
+            this.mainPanel.Controls.Add(this.topPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1209, 644);
+            this.mainPanel.TabIndex = 6;
+            // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.splitContainer1);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1209, 167);
+            this.topPanel.TabIndex = 6;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.materialTextfield1);
+            this.splitContainer1.Panel1.Controls.Add(this.containedButton1);
+            this.splitContainer1.Panel1.Controls.Add(this.containedButton2);
+            this.splitContainer1.Panel1.Controls.Add(this.containedButton3);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.materialComboBox1);
+            this.splitContainer1.Size = new System.Drawing.Size(1209, 167);
+            this.splitContainer1.SplitterDistance = 682;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.materialListView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 167);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1209, 477);
+            this.panel1.TabIndex = 7;
+            // 
             // StaffView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.Controls.Add(this.materialComboBox1);
-            this.Controls.Add(this.materialTextfield1);
-            this.Controls.Add(this.containedButton3);
-            this.Controls.Add(this.containedButton2);
-            this.Controls.Add(this.containedButton1);
-            this.Controls.Add(this.materialListView1);
+            this.Controls.Add(this.mainPanel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StaffView";
             this.Size = new System.Drawing.Size(1209, 644);
             this.Load += new System.EventHandler(this.StaffView_Load);
+            this.mainPanel.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -252,5 +309,9 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.ColumnHeader staffPhoneNumber;
         private System.Windows.Forms.ColumnHeader staffType;
         private System.Windows.Forms.ColumnHeader staffUsername;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
