@@ -30,6 +30,7 @@ namespace dekatreís_octavo.Bus
                 int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Gửi xe").IDThamSo);
                 ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, BienSo);
             }
+            ReportBus.Instance.GuiXe_BaoCaoMatDoGuiXe();
             //
             return true;
         }
@@ -44,6 +45,7 @@ namespace dekatreís_octavo.Bus
                 int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Nhận xe").IDThamSo);
                 ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
             }
+            ReportBus.Instance.NhanXe_BaoCaoMatDoGuiXe();
             //
             the.BienSoXe = "";
             the.TenXe = "";
@@ -66,6 +68,7 @@ namespace dekatreís_octavo.Bus
                 int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Gửi xe").IDThamSo);
                 ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
             }
+            ReportBus.Instance.GuiXe_BaoCaoMatDoGuiXe();
             //
             return true;
         }
@@ -80,8 +83,9 @@ namespace dekatreís_octavo.Bus
                 int idBaoCao = ReportBus.Instance.GetIdBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Nhận xe").IDThamSo);
                 ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
             }
+            ReportBus.Instance.NhanXe_BaoCaoMatDoGuiXe();
             //
-            the.Status = false;
+            the.Status = true;
             the.ThoiGianGui = null;
             db.SaveChanges();
             return true;

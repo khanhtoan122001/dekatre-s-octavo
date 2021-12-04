@@ -18,7 +18,7 @@ namespace dekatreís_octavo
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Test_Form());
+            Application.Run(new Form1());
         }
     }
 }

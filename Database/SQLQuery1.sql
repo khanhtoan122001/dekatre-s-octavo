@@ -1,4 +1,4 @@
-CREATE DATABASE [QuanLyDoXe]
+﻿CREATE DATABASE [QuanLyDoXe]
 GO
 
 USE [QuanLyDoXe]
@@ -24,10 +24,7 @@ GO
 USE [QuanLyDoXe]
 GO
 
-USE [QuanLyDoXe]
-GO
-
-/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 11/13/2021 11:11:41 AM ******/
+/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 12/4/2021 2:50:57 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -41,11 +38,12 @@ CREATE TABLE [dbo].[TaiKhoan](
 	[SDT] [nchar](10) NULL,
 	[CMND] [nchar](10) NULL,
 	[LoaiTaiKhoan] [int] NULL,
+	[Avatar] [image] NULL,
  CONSTRAINT [PK_TaiKhoan] PRIMARY KEY CLUSTERED 
 (
 	[TenDangNhap] ASC
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 
 ALTER TABLE [dbo].[TaiKhoan]  WITH CHECK ADD  CONSTRAINT [FK_TaiKhoan_LoaiTaiKhoan] FOREIGN KEY([LoaiTaiKhoan])
@@ -54,6 +52,8 @@ GO
 
 ALTER TABLE [dbo].[TaiKhoan] CHECK CONSTRAINT [FK_TaiKhoan_LoaiTaiKhoan]
 GO
+
+
 
 
 
@@ -296,3 +296,21 @@ GO
 ALTER TABLE [dbo].[BaoCaoChamCongNhanVien] CHECK CONSTRAINT [FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien]
 GO
 
+USE [QuanLyDoXe]
+GO
+
+INSERT INTO [dbo].[LoaiThe]
+           ([TenLoai]
+           ,[Gia])
+     VALUES
+           ('Thẻ thường'
+           ,10000)
+GO
+
+INSERT INTO [dbo].[LoaiThe]
+           ([TenLoai]
+           ,[Gia])
+     VALUES
+           ('Thẻ tháng'
+           ,100000)
+GO

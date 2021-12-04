@@ -93,15 +93,18 @@ namespace dekatreís_octavo.View
             TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
             if (the.Status == null || the.Status == false)
             {
-                the.BienSoXe = "";
-                the.ThoiGianGui = null;
+                if(the.LoaiThe1.TenLoai == "Thẻ thường")
+                    GuiNhanXeBus.Instance.NhanXeThuong(the.IDThe);
+                else
+                    GuiNhanXeBus.Instance.NhanXeTheThang(the.IDThe);
             }
             else
             {
-                the.BienSoXe = "123123654654";
-                the.ThoiGianGui = DateTime.Now;
+                if (the.LoaiThe1.TenLoai == "Thẻ thường")
+                    GuiNhanXeBus.Instance.GuiXeThuong(the.IDThe, "123123654654", "");
+                else
+                    GuiNhanXeBus.Instance.GuiXeTheThang(the.IDThe);
             }
-            the.Status = !the.Status;
             db.SaveChanges();
             this.LoadData();
         }

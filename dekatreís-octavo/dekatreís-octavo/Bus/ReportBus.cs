@@ -38,8 +38,9 @@ namespace dekatreís_octavo.Bus
             db.SaveChanges();
             return result != null;
         }
-        public bool AddBaoCaoMatDoGuiXe(DateTime time, int XeVao, int XeRa)
+        private bool AddBaoCaoMatDoGuiXe(DateTime time, int XeVao, int XeRa)
         {
+            time = time.Date;
             var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay == time).ToList();
             if (list.Count != 0)
                 return true;
@@ -52,6 +53,38 @@ namespace dekatreís_octavo.Bus
             var result = db.BaoCaoMatDoGuiXes.Add(report);
             db.SaveChanges();
             return result != null;
+        }
+        public bool GuiXe_BaoCaoMatDoGuiXe()
+        {
+            DateTime time = DateTime.Now.Date;
+            var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay == time).ToList();
+            if (list.Count == 0)
+            {
+                AddBaoCaoMatDoGuiXe(time, 1, 0);
+                return true;
+            }
+            else
+            {
+                list[0].TongXeVao++;
+                db.SaveChanges();
+                return true;
+            }
+        }
+        public bool NhanXe_BaoCaoMatDoGuiXe()
+        {
+            DateTime time = DateTime.Now.Date;
+            var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay == time).ToList();
+            if (list.Count == 0)
+            {
+                AddBaoCaoMatDoGuiXe(time, 0, 1);
+                return true;
+            }
+            else
+            {
+                list[0].TongXeRa++;
+                db.SaveChanges();
+                return true;
+            }
         }
         public bool AddCT_BaoCaoDoanhThuThang(int idBaoCao, int Thang, int TongChi, int TongThu)
         {
@@ -112,12 +145,20 @@ namespace dekatreís_octavo.Bus
             return list[0].IDBaoCao;
         }
 
-        public List<BaoCaoMatDoGuiXe> GetBaoCaoMatDoGuiXes()
+        public List<BaoCaoMatDoGuiXe> GetBaoCaoMatDoGuiXes(int? Thang = 0, int? Nam = 0)
         {
             var result = (from c in db.BaoCaoMatDoGuiXes
-                          where true
-                          select c).ToList();
-            return result;
+                          select c);
+            if(Thang != 0 && Nam != 0)
+            {
+                result = result.Where(p => p.Ngay.Value.Month == Thang.Value && p.Ngay.Value.Year == Nam.Value);
+            }
+            if(Thang == 0 && Nam != 0)
+            {
+                result = result.Where(p => p.Ngay.Value.Year == Nam.Value);
+            }
+            return result.ToList();
         }
+
     }
 }
