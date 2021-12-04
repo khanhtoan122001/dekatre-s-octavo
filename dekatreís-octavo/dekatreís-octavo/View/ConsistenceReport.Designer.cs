@@ -36,7 +36,7 @@ namespace dekatreís_octavo.View
             this.topPanel = new System.Windows.Forms.Panel();
             this.yearComboBox = new MaterialSurface.MaterialComboBox();
             this.monthComboBox = new MaterialSurface.MaterialComboBox();
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            this.rpChart = new LiveCharts.WinForms.CartesianChart();
             this.mainPanel.SuspendLayout();
             this.chartPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
@@ -56,7 +56,7 @@ namespace dekatreís_octavo.View
             // 
             // chartPanel
             // 
-            this.chartPanel.Controls.Add(this.cartesianChart1);
+            this.chartPanel.Controls.Add(this.rpChart);
             this.chartPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartPanel.Location = new System.Drawing.Point(0, 100);
             this.chartPanel.Name = "chartPanel";
@@ -152,14 +152,14 @@ namespace dekatreís_octavo.View
             this.monthComboBox.Size = new System.Drawing.Size(121, 53);
             this.monthComboBox.TabIndex = 0;
             // 
-            // cartesianChart1
+            // rpChart
             // 
-            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChart1.Location = new System.Drawing.Point(0, 0);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(654, 417);
-            this.cartesianChart1.TabIndex = 0;
-            this.cartesianChart1.Text = "cartesianChart1";
+            this.rpChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpChart.Location = new System.Drawing.Point(0, 0);
+            this.rpChart.Name = "rpChart";
+            this.rpChart.Size = new System.Drawing.Size(654, 417);
+            this.rpChart.TabIndex = 0;
+            this.rpChart.Text = "cartesianChart1";
             // 
             // ConsistenceReport
             // 
@@ -186,6 +186,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialComboBox monthComboBox;
         private MaterialSurface.MaterialComboBox yearComboBox;
         private MaterialSurface.ContainedButton exportButton;
-        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private LiveCharts.WinForms.CartesianChart rpChart;
     }
 }
