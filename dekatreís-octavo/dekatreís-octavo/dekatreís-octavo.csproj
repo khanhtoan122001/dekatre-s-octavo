@@ -282,6 +282,12 @@
     <Compile Include="View\StatusView.Designer.cs">
       <DependentUpon>StatusView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Test_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Test_Form.Designer.cs">
+      <DependentUpon>Test_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UserControl_Test.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -340,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\StatusView.resx">
       <DependentUpon>StatusView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Test_Form.resx">
+      <DependentUpon>Test_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\UserControl_Test.resx">
       <DependentUpon>UserControl_Test.cs</DependentUpon>
