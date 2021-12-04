@@ -32,6 +32,11 @@ namespace dekatreís_octavo.View
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.bt_ChangePass = new MaterialSurface.TextButton();
+            this.bt_info = new MaterialSurface.TextButton();
+            this.bt_LogOut = new MaterialSurface.TextButton();
+            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.tabPanel = new System.Windows.Forms.Panel();
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -44,26 +49,22 @@ namespace dekatreís_octavo.View
             this.utility = new System.Windows.Forms.TabPage();
             this.statusButton = new MaterialSurface.ContainedButton();
             this.historyButton = new MaterialSurface.ContainedButton();
-            this.schedule = new System.Windows.Forms.TabPage();
-            this.materialCard1 = new MaterialSurface.MaterialCard();
-            this.bt_ChangePass = new MaterialSurface.TextButton();
-            this.bt_info = new MaterialSurface.TextButton();
-            this.bt_LogOut = new MaterialSurface.TextButton();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
             this.iconPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.consistenceButton = new MaterialSurface.ContainedButton();
+            this.reportPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
+            this.materialCard1.SuspendLayout();
             this.tabPanel.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.utility.SuspendLayout();
-            this.materialCard1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.iconPanel.SuspendLayout();
@@ -113,180 +114,6 @@ namespace dekatreís_octavo.View
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(1151, 758);
             this.leftPanel.TabIndex = 11;
-            // 
-            // tabPanel
-            // 
-            this.tabPanel.Controls.Add(this.tabControl);
-            this.tabPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tabPanel.Location = new System.Drawing.Point(0, 100);
-            this.tabPanel.Name = "tabPanel";
-            this.tabPanel.Size = new System.Drawing.Size(1151, 658);
-            this.tabPanel.TabIndex = 11;
-            // 
-            // tabControl
-            // 
-            this.tabControl.Controls.Add(this.tabPage1);
-            this.tabControl.Controls.Add(this.tabPage2);
-            this.tabControl.Controls.Add(this.tabPage3);
-            this.tabControl.Controls.Add(this.tabPage4);
-            this.tabControl.Controls.Add(this.utility);
-            this.tabControl.Controls.Add(this.schedule);
-            this.tabControl.Depth = 0;
-            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl.Location = new System.Drawing.Point(0, 0);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tabControl.Multiline = true;
-            this.tabControl.Name = "tabControl";
-            this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1151, 658);
-            this.tabControl.TabIndex = 7;
-            this.tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl_Selected);
-            this.tabControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1143, 629);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Trang chính";
-            this.tabPage1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.cardManagement1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage2.Size = new System.Drawing.Size(1143, 629);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Thẻ";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // cardManagement1
-            // 
-            this.cardManagement1.AutoSize = true;
-            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cardManagement1.BackColor = System.Drawing.Color.White;
-            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
-            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(1137, 625);
-            this.cardManagement1.TabIndex = 0;
-            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.White;
-            this.tabPage3.Controls.Add(this.staffView1);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1143, 629);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Nhân viên";
-            this.tabPage3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // staffView1
-            // 
-            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffView1.Location = new System.Drawing.Point(0, 0);
-            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(1143, 629);
-            this.staffView1.TabIndex = 0;
-            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.White;
-            this.tabPage4.Controls.Add(this.parkingView1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1143, 629);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Parking";
-            this.tabPage4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // parkingView1
-            // 
-            this.parkingView1.BackColor = System.Drawing.Color.White;
-            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parkingView1.Location = new System.Drawing.Point(0, 0);
-            this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.parkingView1.Name = "parkingView1";
-            this.parkingView1.Size = new System.Drawing.Size(1143, 629);
-            this.parkingView1.TabIndex = 0;
-            this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // utility
-            // 
-            this.utility.BackColor = System.Drawing.Color.White;
-            this.utility.Controls.Add(this.statusButton);
-            this.utility.Controls.Add(this.historyButton);
-            this.utility.Location = new System.Drawing.Point(4, 25);
-            this.utility.Name = "utility";
-            this.utility.Padding = new System.Windows.Forms.Padding(3);
-            this.utility.Size = new System.Drawing.Size(1143, 629);
-            this.utility.TabIndex = 4;
-            this.utility.Text = "Báo cáo";
-            // 
-            // statusButton
-            // 
-            this.statusButton.EffectType = MaterialSurface.ET.Custom;
-            this.statusButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.statusButton.Icon = null;
-            this.statusButton.Location = new System.Drawing.Point(364, 296);
-            this.statusButton.MouseState = MaterialSurface.MouseState.OUT;
-            this.statusButton.Name = "statusButton";
-            this.statusButton.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.statusButton.Radius = 6;
-            this.statusButton.ShawdowDepth = 3;
-            this.statusButton.ShawdowOpacity = 50;
-            this.statusButton.Size = new System.Drawing.Size(180, 50);
-            this.statusButton.TabIndex = 1;
-            this.statusButton.Text = "Trạng thái";
-            this.statusButton.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.statusButton.UseVisualStyleBackColor = true;
-            // 
-            // historyButton
-            // 
-            this.historyButton.EffectType = MaterialSurface.ET.Custom;
-            this.historyButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.historyButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.historyButton.Icon = null;
-            this.historyButton.Location = new System.Drawing.Point(178, 296);
-            this.historyButton.MouseState = MaterialSurface.MouseState.OUT;
-            this.historyButton.Name = "historyButton";
-            this.historyButton.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.historyButton.Radius = 6;
-            this.historyButton.ShawdowDepth = 3;
-            this.historyButton.ShawdowOpacity = 50;
-            this.historyButton.Size = new System.Drawing.Size(180, 50);
-            this.historyButton.TabIndex = 0;
-            this.historyButton.Text = "Lịch sử";
-            this.historyButton.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.historyButton.UseVisualStyleBackColor = true;
-            // 
-            // schedule
-            // 
-            this.schedule.Location = new System.Drawing.Point(4, 25);
-            this.schedule.Name = "schedule";
-            this.schedule.Padding = new System.Windows.Forms.Padding(3);
-            this.schedule.Size = new System.Drawing.Size(1143, 629);
-            this.schedule.TabIndex = 5;
-            this.schedule.Text = "Lịch làm việc";
-            this.schedule.UseVisualStyleBackColor = true;
             // 
             // materialCard1
             // 
@@ -392,6 +219,171 @@ namespace dekatreís_octavo.View
             this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
             this.materialButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
+            // tabPanel
+            // 
+            this.tabPanel.Controls.Add(this.tabControl);
+            this.tabPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tabPanel.Location = new System.Drawing.Point(0, 100);
+            this.tabPanel.Name = "tabPanel";
+            this.tabPanel.Size = new System.Drawing.Size(1151, 658);
+            this.tabPanel.TabIndex = 11;
+            // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Controls.Add(this.tabPage4);
+            this.tabControl.Controls.Add(this.utility);
+            this.tabControl.Depth = 0;
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabControl.Multiline = true;
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(1151, 658);
+            this.tabControl.TabIndex = 7;
+            this.tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl_Selected);
+            this.tabControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(1143, 629);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Trang chính";
+            this.tabPage1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.cardManagement1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(1143, 629);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Thẻ";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // cardManagement1
+            // 
+            this.cardManagement1.AutoSize = true;
+            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cardManagement1.BackColor = System.Drawing.Color.White;
+            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
+            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cardManagement1.Name = "cardManagement1";
+            this.cardManagement1.Size = new System.Drawing.Size(1137, 625);
+            this.cardManagement1.TabIndex = 0;
+            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.White;
+            this.tabPage3.Controls.Add(this.staffView1);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1143, 629);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Nhân viên";
+            this.tabPage3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // staffView1
+            // 
+            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffView1.Location = new System.Drawing.Point(0, 0);
+            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.staffView1.Name = "staffView1";
+            this.staffView1.Size = new System.Drawing.Size(1143, 629);
+            this.staffView1.TabIndex = 0;
+            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.White;
+            this.tabPage4.Controls.Add(this.parkingView1);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1143, 629);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Parking";
+            this.tabPage4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // parkingView1
+            // 
+            this.parkingView1.BackColor = System.Drawing.Color.White;
+            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.parkingView1.Location = new System.Drawing.Point(0, 0);
+            this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.parkingView1.Name = "parkingView1";
+            this.parkingView1.Size = new System.Drawing.Size(1143, 629);
+            this.parkingView1.TabIndex = 0;
+            this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // utility
+            // 
+            this.utility.BackColor = System.Drawing.Color.White;
+            this.utility.Controls.Add(this.reportPanel);
+            this.utility.Controls.Add(this.consistenceButton);
+            this.utility.Controls.Add(this.statusButton);
+            this.utility.Controls.Add(this.historyButton);
+            this.utility.Location = new System.Drawing.Point(4, 25);
+            this.utility.Name = "utility";
+            this.utility.Padding = new System.Windows.Forms.Padding(3);
+            this.utility.Size = new System.Drawing.Size(1143, 629);
+            this.utility.TabIndex = 4;
+            this.utility.Text = "Báo cáo";
+            // 
+            // statusButton
+            // 
+            this.statusButton.EffectType = MaterialSurface.ET.Custom;
+            this.statusButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.statusButton.Icon = null;
+            this.statusButton.Location = new System.Drawing.Point(476, 520);
+            this.statusButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.statusButton.Name = "statusButton";
+            this.statusButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.statusButton.Radius = 6;
+            this.statusButton.ShawdowDepth = 3;
+            this.statusButton.ShawdowOpacity = 50;
+            this.statusButton.Size = new System.Drawing.Size(180, 50);
+            this.statusButton.TabIndex = 1;
+            this.statusButton.Text = "Trạng thái";
+            this.statusButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.statusButton.UseVisualStyleBackColor = true;
+            // 
+            // historyButton
+            // 
+            this.historyButton.EffectType = MaterialSurface.ET.Custom;
+            this.historyButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.historyButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.historyButton.Icon = null;
+            this.historyButton.Location = new System.Drawing.Point(662, 520);
+            this.historyButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.historyButton.Name = "historyButton";
+            this.historyButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.historyButton.Radius = 6;
+            this.historyButton.ShawdowDepth = 3;
+            this.historyButton.ShawdowOpacity = 50;
+            this.historyButton.Size = new System.Drawing.Size(180, 50);
+            this.historyButton.TabIndex = 0;
+            this.historyButton.Text = "Lịch sử";
+            this.historyButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.historyButton.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel3);
@@ -452,6 +444,32 @@ namespace dekatreís_octavo.View
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // consistenceButton
+            // 
+            this.consistenceButton.EffectType = MaterialSurface.ET.Custom;
+            this.consistenceButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consistenceButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.consistenceButton.Icon = null;
+            this.consistenceButton.Location = new System.Drawing.Point(75, 520);
+            this.consistenceButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.consistenceButton.Name = "consistenceButton";
+            this.consistenceButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.consistenceButton.Radius = 6;
+            this.consistenceButton.ShawdowDepth = 3;
+            this.consistenceButton.ShawdowOpacity = 50;
+            this.consistenceButton.Size = new System.Drawing.Size(180, 50);
+            this.consistenceButton.TabIndex = 2;
+            this.consistenceButton.Text = "containedButton1";
+            this.consistenceButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.consistenceButton.UseVisualStyleBackColor = true;
+            // 
+            // reportPanel
+            // 
+            this.reportPanel.Location = new System.Drawing.Point(2, 0);
+            this.reportPanel.Name = "reportPanel";
+            this.reportPanel.Size = new System.Drawing.Size(928, 458);
+            this.reportPanel.TabIndex = 3;
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -468,6 +486,7 @@ namespace dekatreís_octavo.View
             this.Load += new System.EventHandler(this.HomeView_Load);
             this.panel1.ResumeLayout(false);
             this.leftPanel.ResumeLayout(false);
+            this.materialCard1.ResumeLayout(false);
             this.tabPanel.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -475,7 +494,6 @@ namespace dekatreís_octavo.View
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.utility.ResumeLayout(false);
-            this.materialCard1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.iconPanel.ResumeLayout(false);
@@ -506,11 +524,12 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.TabPage utility;
         private MaterialSurface.ContainedButton statusButton;
         private MaterialSurface.ContainedButton historyButton;
-        private System.Windows.Forms.TabPage schedule;
         private System.Windows.Forms.Panel leftPanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel iconPanel;
         private System.Windows.Forms.Panel tabPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel reportPanel;
+        private MaterialSurface.ContainedButton consistenceButton;
     }
 }

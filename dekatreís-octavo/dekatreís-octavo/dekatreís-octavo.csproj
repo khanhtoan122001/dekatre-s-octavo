@@ -234,6 +234,12 @@
     <Compile Include="View\Chart.Designer.cs">
       <DependentUpon>Chart.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\ConsistenceReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ConsistenceReport.Designer.cs">
+      <DependentUpon>ConsistenceReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\EditCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -310,6 +316,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Chart.resx">
       <DependentUpon>Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ConsistenceReport.resx">
+      <DependentUpon>ConsistenceReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditCard.resx">
       <DependentUpon>EditCard.cs</DependentUpon>
