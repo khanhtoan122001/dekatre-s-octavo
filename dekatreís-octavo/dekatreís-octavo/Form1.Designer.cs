@@ -34,7 +34,7 @@ namespace dekatreís_octavo
             // 
             // chart1
             // 
-            this.chart1.Location = new System.Drawing.Point(104, 130);
+            this.chart1.Location = new System.Drawing.Point(98, 105);
             this.chart1.Name = "chart1";
             this.chart1.Size = new System.Drawing.Size(860, 489);
             this.chart1.TabIndex = 0;

@@ -30,15 +30,17 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.rightPanel = new System.Windows.Forms.Panel();
             this.chartPanel = new System.Windows.Forms.Panel();
-            this.monthComboBox = new MaterialSurface.MaterialComboBox();
-            this.yearComboBox = new MaterialSurface.MaterialComboBox();
+            this.rightPanel = new System.Windows.Forms.Panel();
             this.exportButton = new MaterialSurface.ContainedButton();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.yearComboBox = new MaterialSurface.MaterialComboBox();
+            this.monthComboBox = new MaterialSurface.MaterialComboBox();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.mainPanel.SuspendLayout();
-            this.topPanel.SuspendLayout();
+            this.chartPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
+            this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -52,15 +54,14 @@ namespace dekatreís_octavo.View
             this.mainPanel.Size = new System.Drawing.Size(854, 517);
             this.mainPanel.TabIndex = 0;
             // 
-            // topPanel
+            // chartPanel
             // 
-            this.topPanel.Controls.Add(this.yearComboBox);
-            this.topPanel.Controls.Add(this.monthComboBox);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(854, 100);
-            this.topPanel.TabIndex = 0;
+            this.chartPanel.Controls.Add(this.cartesianChart1);
+            this.chartPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chartPanel.Location = new System.Drawing.Point(0, 100);
+            this.chartPanel.Name = "chartPanel";
+            this.chartPanel.Size = new System.Drawing.Size(654, 417);
+            this.chartPanel.TabIndex = 2;
             // 
             // rightPanel
             // 
@@ -71,13 +72,53 @@ namespace dekatreís_octavo.View
             this.rightPanel.Size = new System.Drawing.Size(200, 417);
             this.rightPanel.TabIndex = 1;
             // 
-            // chartPanel
+            // exportButton
             // 
-            this.chartPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chartPanel.Location = new System.Drawing.Point(0, 100);
-            this.chartPanel.Name = "chartPanel";
-            this.chartPanel.Size = new System.Drawing.Size(654, 417);
-            this.chartPanel.TabIndex = 2;
+            this.exportButton.EffectType = MaterialSurface.ET.Custom;
+            this.exportButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.exportButton.Icon = null;
+            this.exportButton.Location = new System.Drawing.Point(38, 315);
+            this.exportButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.exportButton.Name = "exportButton";
+            this.exportButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.exportButton.Radius = 6;
+            this.exportButton.ShawdowDepth = 3;
+            this.exportButton.ShawdowOpacity = 50;
+            this.exportButton.Size = new System.Drawing.Size(128, 50);
+            this.exportButton.TabIndex = 0;
+            this.exportButton.Text = "Xuất";
+            this.exportButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.exportButton.UseVisualStyleBackColor = true;
+            // 
+            // topPanel
+            // 
+            this.topPanel.Controls.Add(this.yearComboBox);
+            this.topPanel.Controls.Add(this.monthComboBox);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(854, 100);
+            this.topPanel.TabIndex = 0;
+            // 
+            // yearComboBox
+            // 
+            this.yearComboBox.AutoSizing = false;
+            this.yearComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
+            this.yearComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.yearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.yearComboBox.DropDownWidth = 121;
+            this.yearComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.yearComboBox.FormattingEnabled = true;
+            this.yearComboBox.HintText = "Năm";
+            this.yearComboBox.ItemHeight = 47;
+            this.yearComboBox.Location = new System.Drawing.Point(159, 23);
+            this.yearComboBox.MaxDropDownItems = 4;
+            this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
+            this.yearComboBox.Name = "yearComboBox";
+            this.yearComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.yearComboBox.Size = new System.Drawing.Size(121, 53);
+            this.yearComboBox.TabIndex = 1;
             // 
             // monthComboBox
             // 
@@ -111,43 +152,14 @@ namespace dekatreís_octavo.View
             this.monthComboBox.Size = new System.Drawing.Size(121, 53);
             this.monthComboBox.TabIndex = 0;
             // 
-            // yearComboBox
+            // cartesianChart1
             // 
-            this.yearComboBox.AutoSizing = false;
-            this.yearComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
-            this.yearComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.yearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.yearComboBox.DropDownWidth = 121;
-            this.yearComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.yearComboBox.FormattingEnabled = true;
-            this.yearComboBox.HintText = "Năm";
-            this.yearComboBox.ItemHeight = 47;
-            this.yearComboBox.Location = new System.Drawing.Point(159, 23);
-            this.yearComboBox.MaxDropDownItems = 4;
-            this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
-            this.yearComboBox.Name = "yearComboBox";
-            this.yearComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.yearComboBox.Size = new System.Drawing.Size(121, 53);
-            this.yearComboBox.TabIndex = 1;
-            // 
-            // exportButton
-            // 
-            this.exportButton.EffectType = MaterialSurface.ET.Custom;
-            this.exportButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.exportButton.Icon = null;
-            this.exportButton.Location = new System.Drawing.Point(38, 315);
-            this.exportButton.MouseState = MaterialSurface.MouseState.OUT;
-            this.exportButton.Name = "exportButton";
-            this.exportButton.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.exportButton.Radius = 6;
-            this.exportButton.ShawdowDepth = 3;
-            this.exportButton.ShawdowOpacity = 50;
-            this.exportButton.Size = new System.Drawing.Size(128, 50);
-            this.exportButton.TabIndex = 0;
-            this.exportButton.Text = "Xuất";
-            this.exportButton.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.exportButton.UseVisualStyleBackColor = true;
+            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartesianChart1.Location = new System.Drawing.Point(0, 0);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(654, 417);
+            this.cartesianChart1.TabIndex = 0;
+            this.cartesianChart1.Text = "cartesianChart1";
             // 
             // ConsistenceReport
             // 
@@ -158,8 +170,9 @@ namespace dekatreís_octavo.View
             this.Name = "ConsistenceReport";
             this.Size = new System.Drawing.Size(854, 517);
             this.mainPanel.ResumeLayout(false);
-            this.topPanel.ResumeLayout(false);
+            this.chartPanel.ResumeLayout(false);
             this.rightPanel.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -173,5 +186,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialComboBox monthComboBox;
         private MaterialSurface.MaterialComboBox yearComboBox;
         private MaterialSurface.ContainedButton exportButton;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
     }
 }

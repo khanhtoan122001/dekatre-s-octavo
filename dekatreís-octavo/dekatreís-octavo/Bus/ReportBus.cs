@@ -111,5 +111,13 @@ namespace dekatreís_octavo.Bus
                 return -1;
             return list[0].IDBaoCao;
         }
+
+        public List<BaoCaoMatDoGuiXe> GetBaoCaoMatDoGuiXes()
+        {
+            var result = (from c in db.BaoCaoMatDoGuiXes
+                          where true
+                          select c).ToList();
+            return result;
+        }
     }
 }
