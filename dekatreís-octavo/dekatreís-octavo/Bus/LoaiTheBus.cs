@@ -54,10 +54,20 @@ namespace dekatreís_octavo.Bus
         {
             if (db.LoaiThes.Count() == 0)
             {
-                AddLoaiThe("Thẻ thường", 10000);
-                AddLoaiThe("Thẻ tháng", 200000);
+                AddLoaiThe("Thẻ thường", ThamSoBus.Instance.GetByTen("Thẻ thường").GiaTri.Value);
+                AddLoaiThe("Thẻ tháng", ThamSoBus.Instance.GetByTen("Thẻ tháng").GiaTri.Value);
             }
         }
+
+        public void Update()
+        {
+            ThamSoBus.Instance.Update();
+            foreach(var i in db.LoaiThes)
+            {
+                i.Gia = ThamSoBus.Instance.GetByTen(i.TenLoai).GiaTri.Value;
+            }
+        }
+
         public IQueryable<LoaiThe> GetLoaiThes()
         {
             var result = from c in db.LoaiThes

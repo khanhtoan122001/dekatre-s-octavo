@@ -23,8 +23,8 @@ namespace dekatreís_octavo.Bus
         public void CreateDataDefault()
         {
             LoginViewBus.Instance.CheckDataAccount();
-            LoaiTheBus.Instance.CheckLoaiThe();
             ThamSoBus.Instance.SetDefaultThamSo();
+            LoaiTheBus.Instance.CheckLoaiThe();
             CardManagementBus.Instance.SetDefault();
         }
 

@@ -139,6 +139,7 @@
     <Compile Include="Bus\ChangePassBus.cs" />
     <Compile Include="Bus\DataProvider.cs" />
     <Compile Include="Bus\GuiNhanXeBus.cs" />
+    <Compile Include="Bus\HoaDonBus.cs" />
     <Compile Include="Bus\LoaiTaiKhoanBus.cs" />
     <Compile Include="Bus\LoginViewBus.cs" />
     <Compile Include="Bus\ReportBus.cs" />
@@ -156,6 +157,9 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="LoaiTaiKhoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -191,9 +195,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="TaiKhoan.cs">
       <DependentUpon>Model1.tt</DependentUpon>

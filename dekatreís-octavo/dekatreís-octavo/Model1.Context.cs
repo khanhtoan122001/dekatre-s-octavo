@@ -31,11 +31,11 @@ namespace dekatreís_octavo
         public virtual DbSet<CT_BaoCaoDoanhThuThang> CT_BaoCaoDoanhThuThang { get; set; }
         public virtual DbSet<CT_BaoCaoLichSuHoatDong> CT_BaoCaoLichSuHoatDong { get; set; }
         public virtual DbSet<LoaiTaiKhoan> LoaiTaiKhoans { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<ThamSo> ThamSoes { get; set; }
         public virtual DbSet<TheXe> TheXes { get; set; }
         public virtual DbSet<LoaiThe> LoaiThes { get; set; }
         public virtual DbSet<BaoCaoChamCongNhanVien> BaoCaoChamCongNhanViens { get; set; }
+        public virtual DbSet<HoaDon> HoaDons { get; set; }
     }
 }

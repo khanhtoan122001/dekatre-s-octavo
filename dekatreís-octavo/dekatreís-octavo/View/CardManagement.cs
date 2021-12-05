@@ -41,7 +41,7 @@ namespace dekatreís_octavo.View
             {
                 string trangthai = (bool)i.Status ? "Rảnh" : "Bận";
                 string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? i.NgayTao.Value.Date.ToString() : "";
-                string date1;
+        
                 cardList.Items.Add(new ListViewItem(
                     new string[] { i.IDThe.ToString(), i.BienSoXe, i.LoaiThe1.TenLoai, trangthai, i.ThoiGianGui.ToString() })
                 { Tag = i });

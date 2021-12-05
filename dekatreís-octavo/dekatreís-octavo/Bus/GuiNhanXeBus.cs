@@ -39,6 +39,10 @@ namespace dekatreís_octavo.Bus
             TheXe the = db.TheXes.Find(IDThe);
             if (the == null || the.Status == true)
                 return false;
+            // hoa don
+            LoaiTheBus.Instance.Update();
+            HoaDonBus.Instance.AddHoaDon(the.BienSoXe, the.LoaiThe1.Gia.Value);
+            //
             // report
             if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Nhận xe").IDThamSo))
             {
@@ -77,6 +81,10 @@ namespace dekatreís_octavo.Bus
             TheXe the = db.TheXes.Find(IDThe);
             if (the == null || the.Status == true)
                 return false;
+            // hoa don
+            LoaiTheBus.Instance.Update();
+            HoaDonBus.Instance.AddHoaDon(the.BienSoXe, 0);
+            //
             // report
             if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Nhận xe").IDThamSo))
             {
