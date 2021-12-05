@@ -86,5 +86,18 @@ namespace dekatreís_octavo.View
         {
             Refresh(Control.MousePosition);
         }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            if (dateTimePicker.Value < DateTime.Today)
+            {
+                dateTimePicker.Value = DateTime.Today;
+            }
+        }
     }
 }

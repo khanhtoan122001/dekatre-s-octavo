@@ -47,6 +47,8 @@ namespace dekatreís_octavo.View
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.parkingView1 = new dekatreís_octavo.View.ParkingView();
             this.utility = new System.Windows.Forms.TabPage();
+            this.reportPanel = new System.Windows.Forms.Panel();
+            this.consistenceButton = new MaterialSurface.ContainedButton();
             this.statusButton = new MaterialSurface.ContainedButton();
             this.historyButton = new MaterialSurface.ContainedButton();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -54,8 +56,20 @@ namespace dekatreís_octavo.View
             this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
             this.iconPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.consistenceButton = new MaterialSurface.ContainedButton();
-            this.reportPanel = new System.Windows.Forms.Panel();
+            this.statusPage = new System.Windows.Forms.TabPage();
+            this.setting = new System.Windows.Forms.TabPage();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.updateButton = new MaterialSurface.ContainedButton();
+            this.choiceChip1 = new MaterialSurface.ChoiceChip();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
             this.materialCard1.SuspendLayout();
@@ -69,6 +83,7 @@ namespace dekatreís_octavo.View
             this.panel3.SuspendLayout();
             this.iconPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.setting.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -235,6 +250,8 @@ namespace dekatreís_octavo.View
             this.tabControl.Controls.Add(this.tabPage3);
             this.tabControl.Controls.Add(this.tabPage4);
             this.tabControl.Controls.Add(this.utility);
+            this.tabControl.Controls.Add(this.statusPage);
+            this.tabControl.Controls.Add(this.setting);
             this.tabControl.Depth = 0;
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
@@ -346,6 +363,32 @@ namespace dekatreís_octavo.View
             this.utility.TabIndex = 4;
             this.utility.Text = "Báo cáo";
             // 
+            // reportPanel
+            // 
+            this.reportPanel.Location = new System.Drawing.Point(2, 0);
+            this.reportPanel.Name = "reportPanel";
+            this.reportPanel.Size = new System.Drawing.Size(928, 458);
+            this.reportPanel.TabIndex = 3;
+            // 
+            // consistenceButton
+            // 
+            this.consistenceButton.EffectType = MaterialSurface.ET.Custom;
+            this.consistenceButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.consistenceButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.consistenceButton.Icon = null;
+            this.consistenceButton.Location = new System.Drawing.Point(75, 520);
+            this.consistenceButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.consistenceButton.Name = "consistenceButton";
+            this.consistenceButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.consistenceButton.Radius = 6;
+            this.consistenceButton.ShawdowDepth = 3;
+            this.consistenceButton.ShawdowOpacity = 50;
+            this.consistenceButton.Size = new System.Drawing.Size(180, 50);
+            this.consistenceButton.TabIndex = 2;
+            this.consistenceButton.Text = "containedButton1";
+            this.consistenceButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.consistenceButton.UseVisualStyleBackColor = true;
+            // 
             // statusButton
             // 
             this.statusButton.EffectType = MaterialSurface.ET.Custom;
@@ -444,31 +487,169 @@ namespace dekatreís_octavo.View
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // consistenceButton
+            // statusPage
             // 
-            this.consistenceButton.EffectType = MaterialSurface.ET.Custom;
-            this.consistenceButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.consistenceButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.consistenceButton.Icon = null;
-            this.consistenceButton.Location = new System.Drawing.Point(75, 520);
-            this.consistenceButton.MouseState = MaterialSurface.MouseState.OUT;
-            this.consistenceButton.Name = "consistenceButton";
-            this.consistenceButton.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.consistenceButton.Radius = 6;
-            this.consistenceButton.ShawdowDepth = 3;
-            this.consistenceButton.ShawdowOpacity = 50;
-            this.consistenceButton.Size = new System.Drawing.Size(180, 50);
-            this.consistenceButton.TabIndex = 2;
-            this.consistenceButton.Text = "containedButton1";
-            this.consistenceButton.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.consistenceButton.UseVisualStyleBackColor = true;
+            this.statusPage.Location = new System.Drawing.Point(4, 25);
+            this.statusPage.Name = "statusPage";
+            this.statusPage.Size = new System.Drawing.Size(1143, 629);
+            this.statusPage.TabIndex = 5;
+            this.statusPage.Text = "Trạng thái";
+            this.statusPage.UseVisualStyleBackColor = true;
             // 
-            // reportPanel
+            // setting
             // 
-            this.reportPanel.Location = new System.Drawing.Point(2, 0);
-            this.reportPanel.Name = "reportPanel";
-            this.reportPanel.Size = new System.Drawing.Size(928, 458);
-            this.reportPanel.TabIndex = 3;
+            this.setting.BackColor = System.Drawing.Color.White;
+            this.setting.Controls.Add(this.choiceChip1);
+            this.setting.Controls.Add(this.updateButton);
+            this.setting.Controls.Add(this.dateTimePicker);
+            this.setting.Controls.Add(this.materialLabel5);
+            this.setting.Controls.Add(this.textBox4);
+            this.setting.Controls.Add(this.materialLabel4);
+            this.setting.Controls.Add(this.textBox3);
+            this.setting.Controls.Add(this.textBox2);
+            this.setting.Controls.Add(this.textBox1);
+            this.setting.Controls.Add(this.materialLabel3);
+            this.setting.Controls.Add(this.materialLabel2);
+            this.setting.Controls.Add(this.materialLabel1);
+            this.setting.Location = new System.Drawing.Point(4, 25);
+            this.setting.Name = "setting";
+            this.setting.Size = new System.Drawing.Size(1143, 629);
+            this.setting.TabIndex = 6;
+            this.setting.Text = "Quy định";
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(150, 86);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(88, 19);
+            this.materialLabel1.TabIndex = 1;
+            this.materialLabel1.Text = "Giá vé ngày:";
+            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(150, 150);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(94, 19);
+            this.materialLabel2.TabIndex = 2;
+            this.materialLabel2.Text = "Giá vé tháng:";
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.Location = new System.Drawing.Point(135, 207);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(124, 19);
+            this.materialLabel3.TabIndex = 5;
+            this.materialLabel3.Text = "Lương nhân viên:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(280, 86);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 6;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(280, 150);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 7;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(280, 207);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 8;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.Location = new System.Drawing.Point(135, 268);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(108, 19);
+            this.materialLabel4.TabIndex = 9;
+            this.materialLabel4.Text = "Tiền mặt bằng:";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(280, 268);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.TabIndex = 10;
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.Location = new System.Drawing.Point(136, 328);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(121, 19);
+            this.materialLabel5.TabIndex = 11;
+            this.materialLabel5.Text = "Bắt đầu hiệu lực:";
+            // 
+            // dateTimePicker
+            // 
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker.Location = new System.Drawing.Point(280, 328);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(100, 22);
+            this.dateTimePicker.TabIndex = 12;
+            this.dateTimePicker.Value = new System.DateTime(2021, 12, 6, 0, 0, 0, 0);
+            this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // updateButton
+            // 
+            this.updateButton.EffectType = MaterialSurface.ET.Custom;
+            this.updateButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.updateButton.Icon = null;
+            this.updateButton.Location = new System.Drawing.Point(432, 423);
+            this.updateButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.updateButton.Name = "updateButton";
+            this.updateButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.updateButton.Radius = 6;
+            this.updateButton.ShawdowDepth = 3;
+            this.updateButton.ShawdowOpacity = 50;
+            this.updateButton.Size = new System.Drawing.Size(140, 50);
+            this.updateButton.TabIndex = 13;
+            this.updateButton.Text = "Cập nhật";
+            this.updateButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.updateButton.UseVisualStyleBackColor = true;
+            // 
+            // choiceChip1
+            // 
+            this.choiceChip1.AutoSize = true;
+            this.choiceChip1.ChipType = MaterialSurface.ChoiceChip.ChipStyle.Filled;
+            this.choiceChip1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.choiceChip1.Location = new System.Drawing.Point(270, 376);
+            this.choiceChip1.MinimumSize = new System.Drawing.Size(25, 24);
+            this.choiceChip1.MouseState = MaterialSurface.MouseState.OUT;
+            this.choiceChip1.Name = "choiceChip1";
+            this.choiceChip1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.choiceChip1.Size = new System.Drawing.Size(414, 29);
+            this.choiceChip1.TabIndex = 14;
+            this.choiceChip1.TabStop = true;
+            this.choiceChip1.Text = "lương nhân viên có hiệu lực từ đầu tháng sau";
+            this.choiceChip1.UseVisualStyleBackColor = true;
             // 
             // HomeView
             // 
@@ -498,6 +679,8 @@ namespace dekatreís_octavo.View
             this.panel3.ResumeLayout(false);
             this.iconPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.setting.ResumeLayout(false);
+            this.setting.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -531,5 +714,19 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel reportPanel;
         private MaterialSurface.ContainedButton consistenceButton;
+        private System.Windows.Forms.TabPage statusPage;
+        private System.Windows.Forms.TabPage setting;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
+        private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private System.Windows.Forms.TextBox textBox4;
+        private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSurface.ChoiceChip choiceChip1;
+        private MaterialSurface.ContainedButton updateButton;
     }
 }
