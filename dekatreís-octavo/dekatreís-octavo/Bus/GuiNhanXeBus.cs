@@ -40,7 +40,6 @@ namespace dekatreís_octavo.Bus
             if (the == null || the.Status == true)
                 return false;
             // hoa don
-            LoaiTheBus.Instance.Update();
             HoaDonBus.Instance.AddHoaDon(the.BienSoXe, the.LoaiThe1.Gia.Value);
             //
             // report
@@ -82,7 +81,6 @@ namespace dekatreís_octavo.Bus
             if (the == null || the.Status == true)
                 return false;
             // hoa don
-            LoaiTheBus.Instance.Update();
             HoaDonBus.Instance.AddHoaDon(the.BienSoXe, 0);
             //
             // report

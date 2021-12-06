@@ -61,11 +61,11 @@ namespace dekatreís_octavo.Bus
 
         public void Update()
         {
-            ThamSoBus.Instance.Update();
             foreach(var i in db.LoaiThes)
             {
                 i.Gia = ThamSoBus.Instance.GetByTen(i.TenLoai).GiaTri.Value;
             }
+            db.SaveChanges();
         }
 
         public IQueryable<LoaiThe> GetLoaiThes()

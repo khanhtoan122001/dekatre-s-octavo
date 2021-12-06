@@ -49,7 +49,7 @@ namespace dekatreís_octavo.Bus
             report.Ngay = time;
             report.Gio = time.Hour;
             report.TongXeRa = XeRa;
-            report.ChenhLech = XeVao - XeRa;
+            report.ChenhLech = Math.Abs(XeVao - XeRa);
             var result = db.BaoCaoMatDoGuiXes.Add(report);
             db.SaveChanges();
             return result != null;
@@ -66,6 +66,7 @@ namespace dekatreís_octavo.Bus
             else
             {
                 list[0].TongXeVao++;
+                list[0].ChenhLech = Math.Abs(list[0].TongXeVao.Value - list[0].TongXeRa.Value);
                 db.SaveChanges();
                 return true;
             }
@@ -82,6 +83,7 @@ namespace dekatreís_octavo.Bus
             else
             {
                 list[0].TongXeRa++;
+                list[0].ChenhLech = Math.Abs(list[0].TongXeVao.Value - list[0].TongXeRa.Value);
                 db.SaveChanges();
                 return true;
             }
