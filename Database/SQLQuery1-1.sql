@@ -1,8 +1,8 @@
---create database QuanLyDoXe1
+--create database QuanLyDoXe
 
-use QuanLyDoXe1
+use QuanLyDoXe
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[LoaiTaiKhoan]    Script Date: 12/6/2021 1:27:51 AM ******/
@@ -22,7 +22,7 @@ CREATE TABLE [dbo].[LoaiTaiKhoan](
 ) ON [PRIMARY]
 GO
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[LoaiThe]    Script Date: 12/6/2021 1:55:31 AM ******/
@@ -45,7 +45,7 @@ GO
 
 
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[ThamSo]    Script Date: 12/6/2021 1:55:50 AM ******/
@@ -70,7 +70,7 @@ GO
 
 
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[HoaDon]    Script Date: 12/6/2021 1:28:43 AM ******/
@@ -92,7 +92,7 @@ CREATE TABLE [dbo].[HoaDon](
 ) ON [PRIMARY]
 GO
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[TaiKhoan]    Script Date: 12/6/2021 1:29:07 AM ******/
@@ -124,7 +124,7 @@ GO
 ALTER TABLE [dbo].[TaiKhoan] CHECK CONSTRAINT [FK_TaiKhoan_LoaiTaiKhoan]
 GO
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[TheXe]    Script Date: 12/6/2021 1:29:20 AM ******/
@@ -157,7 +157,7 @@ GO
 ALTER TABLE [dbo].[TheXe] CHECK CONSTRAINT [FK_TheXe_LoaiThe]
 GO
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[BaoCaoChamCongNhanVien]    Script Date: 12/6/2021 1:29:34 AM ******/
@@ -185,7 +185,7 @@ GO
 ALTER TABLE [dbo].[BaoCaoChamCongNhanVien] CHECK CONSTRAINT [FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien]
 GO
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[BaoCaoDoanhThuThang]    Script Date: 12/6/2021 1:29:44 AM ******/
@@ -213,7 +213,7 @@ GO
 ALTER TABLE [dbo].[BaoCaoDoanhThuThang] CHECK CONSTRAINT [FK_BaoCaoDoanhThuThang_LoaiThe]
 GO
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[BaoCaoLichSuHoatDong]    Script Date: 12/6/2021 1:29:54 AM ******/
@@ -234,7 +234,7 @@ CREATE TABLE [dbo].[BaoCaoLichSuHoatDong](
 ) ON [PRIMARY]
 GO
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[BaoCaoMatDoGuiXe]    Script Date: 12/6/2021 1:30:04 AM ******/
@@ -258,7 +258,7 @@ CREATE TABLE [dbo].[BaoCaoMatDoGuiXe](
 ) ON [PRIMARY]
 GO
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[CT_BaoCaoDoanhThuThang]    Script Date: 12/6/2021 1:30:12 AM ******/
@@ -289,7 +289,7 @@ GO
 ALTER TABLE [dbo].[CT_BaoCaoDoanhThuThang] CHECK CONSTRAINT [FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang]
 GO
 
-USE [QuanLyDoXe1]
+USE [QuanLyDoXe]
 GO
 
 /****** Object:  Table [dbo].[CT_BaoCaoLichSuHoatDong]    Script Date: 12/6/2021 1:30:21 AM ******/
