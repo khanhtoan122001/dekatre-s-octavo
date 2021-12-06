@@ -51,6 +51,20 @@ namespace dekatreís_octavo.Bus
             }
             else return false;
         }
+
+        public bool SaveChange(TaiKhoan tk)
+        {
+            if (DataProvider.Instance.TaiKhoan != null)
+            {
+                DataProvider.Instance.TaiKhoan.CMND = tk.CMND;
+                DataProvider.Instance.TaiKhoan.SDT = tk.SDT;
+                DataProvider.Instance.TaiKhoan.TenThat = tk.TenThat;
+                DataProvider.Instance.db.SaveChanges();
+                return true;
+            }
+            else return false;
+        }
+        
         public byte[] imageToByteArray(Image imageIn)
         {
             MemoryStream ms = new MemoryStream();
