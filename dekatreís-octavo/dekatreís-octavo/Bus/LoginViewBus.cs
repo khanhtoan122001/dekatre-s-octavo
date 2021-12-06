@@ -63,9 +63,6 @@ namespace dekatreís_octavo.Bus
             Image returnImage = Image.FromStream(ms);
             return returnImage;
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> yami
     }
 }
