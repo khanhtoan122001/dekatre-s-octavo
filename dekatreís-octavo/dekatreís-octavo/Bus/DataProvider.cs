@@ -26,8 +26,12 @@ namespace dekatreís_octavo.Bus
         {
             if (db == null)
                 db = new QuanLyDoXeEntities1();
+        }
+
+        public void ReadLog()
+        {
             ReadLogUpdate();
-            if(dateUpdate < DateTime.Now || (dateUpdate == DateTime.Now && isUpdate == false))
+            if (dateUpdate < DateTime.Now || (dateUpdate == DateTime.Now && isUpdate == false))
             {
                 Update();
             }

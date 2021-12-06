@@ -106,5 +106,30 @@ namespace dekatreís_octavo.View
                 dateTimePicker.Value = DateTime.Today;
             }
         }
+
+        private void setting_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
