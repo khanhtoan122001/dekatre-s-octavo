@@ -109,6 +109,11 @@ namespace dekatreís_octavo.View
             this.LoadData();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            inputCard.Visible = false;
+        }
+
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (statusComboBox.SelectedIndex != -1)

@@ -274,6 +274,12 @@
     <Compile Include="View\HomeView.Designer.cs">
       <DependentUpon>HomeView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\InView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InView.Designer.cs">
+      <DependentUpon>InView.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -351,6 +357,9 @@
     <EmbeddedResource Include="View\HomeView.resx">
       <DependentUpon>HomeView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\InView.resx">
+      <DependentUpon>InView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
     </EmbeddedResource>
@@ -417,6 +426,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Resources\default-avatar-300x300.png" />
+    <None Include="Resources\x-button-icon-20.jpg" />
     <None Include="Resources\arrow_cloud_up_upload_icon_123722.png" />
     <None Include="Resources\person.png" />
     <None Include="Resources\auricular-phone-symbol-in-a-circle_icon-icons.com_56570.png" />

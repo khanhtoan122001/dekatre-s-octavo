@@ -32,17 +32,17 @@ namespace dekatreís_octavo.View
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.bt_ChangePass = new MaterialSurface.TextButton();
+            this.bt_info = new MaterialSurface.TextButton();
+            this.bt_LogOut = new MaterialSurface.TextButton();
             this.tabPanel = new System.Windows.Forms.Panel();
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.staffView1 = new dekatreís_octavo.View.StaffView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.parkingView1 = new dekatreís_octavo.View.ParkingView();
             this.utility = new System.Windows.Forms.TabPage();
-            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
             this.statusButton = new MaterialSurface.ContainedButton();
             this.historyButton = new MaterialSurface.ContainedButton();
             this.statusPage = new System.Windows.Forms.TabPage();
@@ -59,12 +59,6 @@ namespace dekatreís_octavo.View
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.materialCard1 = new MaterialSurface.MaterialCard();
-            this.bt_ChangePass = new MaterialSurface.TextButton();
-            this.bt_info = new MaterialSurface.TextButton();
-            this.bt_LogOut = new MaterialSurface.TextButton();
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
@@ -72,8 +66,15 @@ namespace dekatreís_octavo.View
             this.reportPanel = new System.Windows.Forms.Panel();
             this.consistenceButton = new MaterialSurface.ContainedButton();
             this.schedule = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
+            this.staffView1 = new dekatreís_octavo.View.StaffView();
+            this.parkingView1 = new dekatreís_octavo.View.ParkingView();
+            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
+            this.materialCard1.SuspendLayout();
             this.tabPanel.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -81,11 +82,11 @@ namespace dekatreís_octavo.View
             this.tabPage4.SuspendLayout();
             this.utility.SuspendLayout();
             this.setting.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.materialCard1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.iconPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -123,14 +124,97 @@ namespace dekatreís_octavo.View
             // 
             // leftPanel
             // 
+            this.leftPanel.Controls.Add(this.pictureBox2);
             this.leftPanel.Controls.Add(this.materialCard1);
             this.leftPanel.Controls.Add(this.tabPanel);
-            this.leftPanel.Controls.Add(this.materialButton1);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.leftPanel.Location = new System.Drawing.Point(228, 0);
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(1151, 758);
             this.leftPanel.TabIndex = 11;
+            // 
+            // materialCard1
+            // 
+            this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialCard1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialCard1.CardColor = System.Drawing.Color.White;
+            this.materialCard1.Controls.Add(this.bt_ChangePass);
+            this.materialCard1.Controls.Add(this.bt_info);
+            this.materialCard1.Controls.Add(this.bt_LogOut);
+            this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialCard1.Location = new System.Drawing.Point(971, 37);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
+            this.materialCard1.MouseInteract = false;
+            this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Radius = 8;
+            this.materialCard1.ShawdowDepth = 2;
+            this.materialCard1.ShawdowOpacity = 50;
+            this.materialCard1.Size = new System.Drawing.Size(180, 150);
+            this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
+            this.materialCard1.TabIndex = 1;
+            this.materialCard1.Visible = false;
+            this.materialCard1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // bt_ChangePass
+            // 
+            this.bt_ChangePass.EffectType = MaterialSurface.ET.Custom;
+            this.bt_ChangePass.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_ChangePass.ForeColor = System.Drawing.Color.Black;
+            this.bt_ChangePass.Icon = null;
+            this.bt_ChangePass.Location = new System.Drawing.Point(11, 57);
+            this.bt_ChangePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_ChangePass.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_ChangePass.Name = "bt_ChangePass";
+            this.bt_ChangePass.PrimaryColor = System.Drawing.Color.Black;
+            this.bt_ChangePass.Radius = 6;
+            this.bt_ChangePass.Size = new System.Drawing.Size(163, 39);
+            this.bt_ChangePass.TabIndex = 1;
+            this.bt_ChangePass.Text = "Đổi mật khẩu";
+            this.bt_ChangePass.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_ChangePass.UseVisualStyleBackColor = true;
+            this.bt_ChangePass.Click += new System.EventHandler(this.bt_ChangePass_Click);
+            this.bt_ChangePass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // bt_info
+            // 
+            this.bt_info.EffectType = MaterialSurface.ET.Custom;
+            this.bt_info.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_info.ForeColor = System.Drawing.Color.Black;
+            this.bt_info.Icon = null;
+            this.bt_info.Location = new System.Drawing.Point(11, 10);
+            this.bt_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_info.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_info.Name = "bt_info";
+            this.bt_info.PrimaryColor = System.Drawing.Color.Black;
+            this.bt_info.Radius = 6;
+            this.bt_info.Size = new System.Drawing.Size(163, 39);
+            this.bt_info.TabIndex = 0;
+            this.bt_info.Text = "Thông tin";
+            this.bt_info.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_info.UseVisualStyleBackColor = true;
+            this.bt_info.Click += new System.EventHandler(this.bt_info_Click_1);
+            this.bt_info.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // bt_LogOut
+            // 
+            this.bt_LogOut.EffectType = MaterialSurface.ET.Custom;
+            this.bt_LogOut.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_LogOut.ForeColor = System.Drawing.Color.Crimson;
+            this.bt_LogOut.Icon = null;
+            this.bt_LogOut.Location = new System.Drawing.Point(11, 101);
+            this.bt_LogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_LogOut.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_LogOut.Name = "bt_LogOut";
+            this.bt_LogOut.PrimaryColor = System.Drawing.Color.Crimson;
+            this.bt_LogOut.Radius = 6;
+            this.bt_LogOut.Size = new System.Drawing.Size(163, 39);
+            this.bt_LogOut.TabIndex = 2;
+            this.bt_LogOut.Text = "Đăng xuất";
+            this.bt_LogOut.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_LogOut.UseVisualStyleBackColor = true;
+            this.bt_LogOut.Click += new System.EventHandler(this.bt_LogOut_Click);
+            this.bt_LogOut.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // tabPanel
             // 
@@ -188,19 +272,6 @@ namespace dekatreís_octavo.View
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
-            // cardManagement1
-            // 
-            this.cardManagement1.AutoSize = true;
-            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cardManagement1.BackColor = System.Drawing.Color.White;
-            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
-            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(1137, 625);
-            this.cardManagement1.TabIndex = 0;
-            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.White;
@@ -212,17 +283,6 @@ namespace dekatreís_octavo.View
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Nhân viên";
             this.tabPage3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // staffView1
-            // 
-            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffView1.Location = new System.Drawing.Point(0, 0);
-            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(1143, 629);
-            this.staffView1.TabIndex = 0;
-            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // tabPage4
             // 
@@ -236,17 +296,6 @@ namespace dekatreís_octavo.View
             this.tabPage4.Text = "Parking";
             this.tabPage4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
-            // parkingView1
-            // 
-            this.parkingView1.BackColor = System.Drawing.Color.White;
-            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parkingView1.Location = new System.Drawing.Point(0, 0);
-            this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.parkingView1.Name = "parkingView1";
-            this.parkingView1.Size = new System.Drawing.Size(1143, 629);
-            this.parkingView1.TabIndex = 0;
-            this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
             // utility
             // 
             this.utility.BackColor = System.Drawing.Color.White;
@@ -259,18 +308,6 @@ namespace dekatreís_octavo.View
             this.utility.Size = new System.Drawing.Size(1143, 629);
             this.utility.TabIndex = 4;
             this.utility.Text = "Báo cáo";
-            // 
-            // consistenceReport1
-            // 
-            this.consistenceReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.consistenceReport1.BackColor = System.Drawing.Color.White;
-            this.consistenceReport1.Location = new System.Drawing.Point(6, 62);
-            this.consistenceReport1.Name = "consistenceReport1";
-            this.consistenceReport1.Size = new System.Drawing.Size(1119, 548);
-            this.consistenceReport1.TabIndex = 2;
-            this.consistenceReport1.Visible = false;
             // 
             // statusButton
             // 
@@ -485,121 +522,6 @@ namespace dekatreís_octavo.View
             this.materialLabel1.Text = "Giá vé ngày:";
             this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.icon;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(228, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // materialCard1
-            // 
-            this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialCard1.BackColor = System.Drawing.SystemColors.Control;
-            this.materialCard1.CardColor = System.Drawing.Color.White;
-            this.materialCard1.Controls.Add(this.bt_ChangePass);
-            this.materialCard1.Controls.Add(this.bt_info);
-            this.materialCard1.Controls.Add(this.bt_LogOut);
-            this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialCard1.Location = new System.Drawing.Point(971, 37);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
-            this.materialCard1.MouseInteract = false;
-            this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Radius = 8;
-            this.materialCard1.ShawdowDepth = 2;
-            this.materialCard1.ShawdowOpacity = 50;
-            this.materialCard1.Size = new System.Drawing.Size(180, 150);
-            this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
-            this.materialCard1.TabIndex = 1;
-            this.materialCard1.Visible = false;
-            this.materialCard1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // bt_ChangePass
-            // 
-            this.bt_ChangePass.EffectType = MaterialSurface.ET.Custom;
-            this.bt_ChangePass.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_ChangePass.ForeColor = System.Drawing.Color.Black;
-            this.bt_ChangePass.Icon = null;
-            this.bt_ChangePass.Location = new System.Drawing.Point(11, 57);
-            this.bt_ChangePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_ChangePass.MouseState = MaterialSurface.MouseState.OUT;
-            this.bt_ChangePass.Name = "bt_ChangePass";
-            this.bt_ChangePass.PrimaryColor = System.Drawing.Color.Black;
-            this.bt_ChangePass.Radius = 6;
-            this.bt_ChangePass.Size = new System.Drawing.Size(163, 39);
-            this.bt_ChangePass.TabIndex = 1;
-            this.bt_ChangePass.Text = "Đổi mật khẩu";
-            this.bt_ChangePass.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.bt_ChangePass.UseVisualStyleBackColor = true;
-            this.bt_ChangePass.Click += new System.EventHandler(this.bt_ChangePass_Click);
-            this.bt_ChangePass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // bt_info
-            // 
-            this.bt_info.EffectType = MaterialSurface.ET.Custom;
-            this.bt_info.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_info.ForeColor = System.Drawing.Color.Black;
-            this.bt_info.Icon = null;
-            this.bt_info.Location = new System.Drawing.Point(11, 10);
-            this.bt_info.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_info.MouseState = MaterialSurface.MouseState.OUT;
-            this.bt_info.Name = "bt_info";
-            this.bt_info.PrimaryColor = System.Drawing.Color.Black;
-            this.bt_info.Radius = 6;
-            this.bt_info.Size = new System.Drawing.Size(163, 39);
-            this.bt_info.TabIndex = 0;
-            this.bt_info.Text = "Thông tin";
-            this.bt_info.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.bt_info.UseVisualStyleBackColor = true;
-            this.bt_info.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // bt_LogOut
-            // 
-            this.bt_LogOut.EffectType = MaterialSurface.ET.Custom;
-            this.bt_LogOut.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_LogOut.ForeColor = System.Drawing.Color.Crimson;
-            this.bt_LogOut.Icon = null;
-            this.bt_LogOut.Location = new System.Drawing.Point(11, 101);
-            this.bt_LogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_LogOut.MouseState = MaterialSurface.MouseState.OUT;
-            this.bt_LogOut.Name = "bt_LogOut";
-            this.bt_LogOut.PrimaryColor = System.Drawing.Color.Crimson;
-            this.bt_LogOut.Radius = 6;
-            this.bt_LogOut.Size = new System.Drawing.Size(163, 39);
-            this.bt_LogOut.TabIndex = 2;
-            this.bt_LogOut.Text = "Đăng xuất";
-            this.bt_LogOut.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.bt_LogOut.UseVisualStyleBackColor = true;
-            this.bt_LogOut.Click += new System.EventHandler(this.bt_LogOut_Click);
-            this.bt_LogOut.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // materialButton1
-            // 
-            this.materialButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(1115, 0);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(36, 36);
-            this.materialButton1.TabIndex = 8;
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
-            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
-            this.materialButton1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.panel3);
@@ -685,6 +607,76 @@ namespace dekatreís_octavo.View
             this.schedule.Text = "Lịch làm việc";
             this.schedule.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources.default_avatar_300x300;
+            this.pictureBox2.Location = new System.Drawing.Point(1109, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.materialButton1_Click);
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.icon;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(228, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cardManagement1
+            // 
+            this.cardManagement1.AutoSize = true;
+            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cardManagement1.BackColor = System.Drawing.Color.White;
+            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
+            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cardManagement1.Name = "cardManagement1";
+            this.cardManagement1.Size = new System.Drawing.Size(1137, 625);
+            this.cardManagement1.TabIndex = 0;
+            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // staffView1
+            // 
+            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffView1.Location = new System.Drawing.Point(0, 0);
+            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.staffView1.Name = "staffView1";
+            this.staffView1.Size = new System.Drawing.Size(1143, 629);
+            this.staffView1.TabIndex = 0;
+            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // parkingView1
+            // 
+            this.parkingView1.BackColor = System.Drawing.Color.White;
+            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.parkingView1.Location = new System.Drawing.Point(0, 0);
+            this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.parkingView1.Name = "parkingView1";
+            this.parkingView1.Size = new System.Drawing.Size(1143, 629);
+            this.parkingView1.TabIndex = 0;
+            this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // consistenceReport1
+            // 
+            this.consistenceReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.consistenceReport1.BackColor = System.Drawing.Color.White;
+            this.consistenceReport1.Location = new System.Drawing.Point(6, 62);
+            this.consistenceReport1.Name = "consistenceReport1";
+            this.consistenceReport1.Size = new System.Drawing.Size(1119, 548);
+            this.consistenceReport1.TabIndex = 2;
+            this.consistenceReport1.Visible = false;
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -701,6 +693,7 @@ namespace dekatreís_octavo.View
             this.Load += new System.EventHandler(this.HomeView_Load);
             this.panel1.ResumeLayout(false);
             this.leftPanel.ResumeLayout(false);
+            this.materialCard1.ResumeLayout(false);
             this.tabPanel.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
@@ -710,11 +703,11 @@ namespace dekatreís_octavo.View
             this.utility.ResumeLayout(false);
             this.setting.ResumeLayout(false);
             this.setting.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.materialCard1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.iconPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -730,7 +723,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.TextButton bt_LogOut;
         private MaterialSurface.TextButton bt_ChangePass;
         private MaterialSurface.TextButton bt_info;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
@@ -764,5 +756,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.ChoiceChip choiceChip1;
         private MaterialSurface.ContainedButton updateButton;
         private ConsistenceReport consistenceReport1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

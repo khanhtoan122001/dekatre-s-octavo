@@ -55,7 +55,7 @@ namespace dekatreís_octavo.View
         private void HomeView_Load(object sender, EventArgs e)
         {
             if(DataProvider.Instance.TaiKhoan.Avatar == null)
-                LoginViewBus.Instance.ChangeAvatar(Resources.ic_profile_info_97647);
+                LoginViewBus.Instance.ChangeAvatar(Resources.default_avatar_300x300);
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
             parkingView1.LoadData();
@@ -146,7 +146,8 @@ namespace dekatreís_octavo.View
             consistenceReport1.LoadData();
         }
 
-        private void bt_info_Click(object sender, EventArgs e)
+
+        private void bt_info_Click_1(object sender, EventArgs e)
         {
             DetailView detailView = new DetailView();
             detailView.Show();

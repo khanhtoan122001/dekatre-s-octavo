@@ -34,14 +34,14 @@ namespace dekatreís_octavo.View
             this.idLabel = new MaterialSkin.Controls.MaterialLabel();
             this.phoneLabel = new MaterialSkin.Controls.MaterialLabel();
             this.nameLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.accountLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.containedButton1 = new MaterialSurface.ContainedButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cirPictureBox2 = new dekatreís_octavo.CirPictureBox();
             this.avatar = new dekatreís_octavo.CirPictureBox();
-            this.accountLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.containedButton1 = new MaterialSurface.ContainedButton();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,7 +72,7 @@ namespace dekatreís_octavo.View
             this.materialCard1.Radius = 8;
             this.materialCard1.ShawdowDepth = 2;
             this.materialCard1.ShawdowOpacity = 50;
-            this.materialCard1.Size = new System.Drawing.Size(250, 287);
+            this.materialCard1.Size = new System.Drawing.Size(310, 287);
             this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.materialCard1.TabIndex = 3;
             // 
@@ -82,7 +82,7 @@ namespace dekatreís_octavo.View
             this.positionLabel.BackColor = System.Drawing.Color.White;
             this.positionLabel.Depth = 0;
             this.positionLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.positionLabel.Location = new System.Drawing.Point(125, 212);
+            this.positionLabel.Location = new System.Drawing.Point(152, 212);
             this.positionLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.positionLabel.Name = "positionLabel";
             this.positionLabel.Size = new System.Drawing.Size(58, 19);
@@ -95,7 +95,7 @@ namespace dekatreís_octavo.View
             this.idLabel.BackColor = System.Drawing.Color.White;
             this.idLabel.Depth = 0;
             this.idLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.idLabel.Location = new System.Drawing.Point(125, 162);
+            this.idLabel.Location = new System.Drawing.Point(152, 162);
             this.idLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.idLabel.Name = "idLabel";
             this.idLabel.Size = new System.Drawing.Size(14, 19);
@@ -108,7 +108,7 @@ namespace dekatreís_octavo.View
             this.phoneLabel.BackColor = System.Drawing.Color.White;
             this.phoneLabel.Depth = 0;
             this.phoneLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.phoneLabel.Location = new System.Drawing.Point(125, 106);
+            this.phoneLabel.Location = new System.Drawing.Point(152, 106);
             this.phoneLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.phoneLabel.Name = "phoneLabel";
             this.phoneLabel.Size = new System.Drawing.Size(45, 19);
@@ -121,73 +121,12 @@ namespace dekatreís_octavo.View
             this.nameLabel.BackColor = System.Drawing.Color.White;
             this.nameLabel.Depth = 0;
             this.nameLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.nameLabel.Location = new System.Drawing.Point(125, 55);
+            this.nameLabel.Location = new System.Drawing.Point(152, 55);
             this.nameLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(41, 19);
             this.nameLabel.TabIndex = 4;
             this.nameLabel.Text = "name";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = global::dekatreís_octavo.Properties.Resources.arrow_cloud_up_upload_icon_123722;
-            this.pictureBox4.Location = new System.Drawing.Point(64, 199);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = global::dekatreís_octavo.Properties.Resources.person;
-            this.pictureBox3.Location = new System.Drawing.Point(64, 42);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources.auricular_phone_symbol_in_a_circle_icon_icons_com_56570;
-            this.pictureBox2.Location = new System.Drawing.Point(64, 93);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.ic_profile_info_97647;
-            this.pictureBox1.Location = new System.Drawing.Point(64, 149);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // cirPictureBox2
-            // 
-            this.cirPictureBox2.Image = global::dekatreís_octavo.Properties.Resources.pencil;
-            this.cirPictureBox2.Location = new System.Drawing.Point(79, 71);
-            this.cirPictureBox2.Name = "cirPictureBox2";
-            this.cirPictureBox2.Size = new System.Drawing.Size(18, 18);
-            this.cirPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cirPictureBox2.TabIndex = 2;
-            this.cirPictureBox2.TabStop = false;
-            this.cirPictureBox2.Click += new System.EventHandler(this.cirPictureBox2_Click);
-            // 
-            // avatar
-            // 
-            this.avatar.Image = global::dekatreís_octavo.Properties.Resources.icon;
-            this.avatar.Location = new System.Drawing.Point(37, 29);
-            this.avatar.Name = "avatar";
-            this.avatar.Size = new System.Drawing.Size(60, 60);
-            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.avatar.TabIndex = 1;
-            this.avatar.TabStop = false;
             // 
             // accountLabel
             // 
@@ -221,6 +160,71 @@ namespace dekatreís_octavo.View
             this.containedButton1.UseVisualStyleBackColor = true;
             this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.White;
+            this.pictureBox4.Image = global::dekatreís_octavo.Properties.Resources.arrow_cloud_up_upload_icon_123722;
+            this.pictureBox4.Location = new System.Drawing.Point(64, 199);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.White;
+            this.pictureBox3.Image = global::dekatreís_octavo.Properties.Resources.person;
+            this.pictureBox3.Location = new System.Drawing.Point(64, 42);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources.auricular_phone_symbol_in_a_circle_icon_icons_com_56570;
+            this.pictureBox2.Location = new System.Drawing.Point(64, 93);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.ic_profile_info_97647;
+            this.pictureBox1.Location = new System.Drawing.Point(64, 149);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cirPictureBox2
+            // 
+            this.cirPictureBox2.Image = global::dekatreís_octavo.Properties.Resources.pencil;
+            this.cirPictureBox2.Location = new System.Drawing.Point(79, 71);
+            this.cirPictureBox2.Name = "cirPictureBox2";
+            this.cirPictureBox2.Size = new System.Drawing.Size(18, 18);
+            this.cirPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cirPictureBox2.TabIndex = 2;
+            this.cirPictureBox2.TabStop = false;
+            this.cirPictureBox2.Click += new System.EventHandler(this.cirPictureBox2_Click);
+            // 
+            // avatar
+            // 
+            this.avatar.Image = global::dekatreís_octavo.Properties.Resources.icon;
+            this.avatar.Location = new System.Drawing.Point(37, 29);
+            this.avatar.Name = "avatar";
+            this.avatar.Size = new System.Drawing.Size(60, 60);
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.avatar.TabIndex = 1;
+            this.avatar.TabStop = false;
+            // 
             // DetailView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,7 +238,7 @@ namespace dekatreís_octavo.View
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetailView";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetailView";
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
