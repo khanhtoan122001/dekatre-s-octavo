@@ -73,6 +73,16 @@ namespace dekatreís_octavo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _94392719_p0 {
+            get {
+                object obj = ResourceManager.GetObject("94392719_p0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_cloud_up_upload_icon_123722 {
             get {
                 object obj = ResourceManager.GetObject("arrow_cloud_up_upload_icon_123722", resourceCulture);
@@ -133,6 +143,16 @@ namespace dekatreís_octavo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap default_avatar_300x300 {
+            get {
+                object obj = ResourceManager.GetObject("default-avatar-300x300", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ic_profile_info_97647 {
             get {
                 object obj = ResourceManager.GetObject("ic-profile-info_97647", resourceCulture);
@@ -166,6 +186,16 @@ namespace dekatreís_octavo.Properties {
         internal static System.Drawing.Bitmap person {
             get {
                 object obj = ResourceManager.GetObject("person", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap x_button_icon_20 {
+            get {
+                object obj = ResourceManager.GetObject("x-button-icon-20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
