@@ -145,6 +145,9 @@
     <Compile Include="Bus\ThamSoBus.cs" />
     <Compile Include="Bus\LoaiTheBus.cs" />
     <Compile Include="Bus\StaffViewBus.cs" />
+    <Compile Include="CirPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CT_BaoCaoDoanhThuThang.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -412,6 +415,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\arrow_cloud_up_upload_icon_123722.png" />
+    <None Include="Resources\person.png" />
+    <None Include="Resources\auricular-phone-symbol-in-a-circle_icon-icons.com_56570.png" />
+    <None Include="Resources\ic-profile-info_97647.png" />
+    <None Include="Resources\pencil.png" />
     <None Include="Resources\icon.png" />
     <None Include="Resources\close %283%29.png" />
     <None Include="Resources\close %282%29.png" />
