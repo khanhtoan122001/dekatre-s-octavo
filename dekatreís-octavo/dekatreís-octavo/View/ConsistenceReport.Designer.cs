@@ -31,12 +31,12 @@ namespace dekatreís_octavo.View
         {
             this.mainPanel = new System.Windows.Forms.Panel();
             this.chartPanel = new System.Windows.Forms.Panel();
+            this.rpChart = new LiveCharts.WinForms.CartesianChart();
             this.rightPanel = new System.Windows.Forms.Panel();
             this.exportButton = new MaterialSurface.ContainedButton();
             this.topPanel = new System.Windows.Forms.Panel();
             this.yearComboBox = new MaterialSurface.MaterialComboBox();
             this.monthComboBox = new MaterialSurface.MaterialComboBox();
-            this.rpChart = new LiveCharts.WinForms.CartesianChart();
             this.mainPanel.SuspendLayout();
             this.chartPanel.SuspendLayout();
             this.rightPanel.SuspendLayout();
@@ -62,6 +62,15 @@ namespace dekatreís_octavo.View
             this.chartPanel.Name = "chartPanel";
             this.chartPanel.Size = new System.Drawing.Size(654, 417);
             this.chartPanel.TabIndex = 2;
+            // 
+            // rpChart
+            // 
+            this.rpChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rpChart.Location = new System.Drawing.Point(0, 0);
+            this.rpChart.Name = "rpChart";
+            this.rpChart.Size = new System.Drawing.Size(654, 417);
+            this.rpChart.TabIndex = 0;
+            this.rpChart.Text = "cartesianChart1";
             // 
             // rightPanel
             // 
@@ -119,6 +128,7 @@ namespace dekatreís_octavo.View
             this.yearComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
             this.yearComboBox.Size = new System.Drawing.Size(121, 53);
             this.yearComboBox.TabIndex = 1;
+            this.yearComboBox.SelectedIndexChanged += new System.EventHandler(this.yearComboBox_SelectedIndexChanged);
             // 
             // monthComboBox
             // 
@@ -151,15 +161,7 @@ namespace dekatreís_octavo.View
             this.monthComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
             this.monthComboBox.Size = new System.Drawing.Size(121, 53);
             this.monthComboBox.TabIndex = 0;
-            // 
-            // rpChart
-            // 
-            this.rpChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rpChart.Location = new System.Drawing.Point(0, 0);
-            this.rpChart.Name = "rpChart";
-            this.rpChart.Size = new System.Drawing.Size(654, 417);
-            this.rpChart.TabIndex = 0;
-            this.rpChart.Text = "cartesianChart1";
+            this.monthComboBox.SelectedIndexChanged += new System.EventHandler(this.monthComboBox_SelectedIndexChanged);
             // 
             // ConsistenceReport
             // 

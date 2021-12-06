@@ -20,7 +20,25 @@ namespace dekatreís_octavo.Bus
             {
                 db.ThamSoes.Add(new ThamSo() {TenThamSo = "Gửi xe",GiaTri = 45 });
                 db.ThamSoes.Add(new ThamSo() {TenThamSo = "Nhận xe",GiaTri = 49 });
+                db.ThamSoes.Add(new ThamSo() { TenThamSo = "Thẻ tháng", GiaTri = 200000 });
+                db.ThamSoes.Add(new ThamSo() { TenThamSo = "Thẻ thường", GiaTri = 10000 });
+                db.ThamSoes.Add(new ThamSo() { TenThamSo = "Lương", GiaTri = 4000000 });
+                db.ThamSoes.Add(new ThamSo() { TenThamSo = "Tiền mặt bằng", GiaTri = 8000000 });
+                db.SaveChanges();
             }
+        }
+
+        public void Update()
+        {
+            foreach(var i in db.ThamSoes)
+            {
+                if(i.GiaTriMoi != null && i.NgayApDung <= DateTime.Now)
+                {
+                    i.GiaTri = i.GiaTriMoi;
+                    i.GiaTriMoi = null;
+                }
+            }
+            db.SaveChanges();
         }
 
         public ThamSo GetByTen(string ten)

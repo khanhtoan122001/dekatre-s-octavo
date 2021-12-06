@@ -29,22 +29,23 @@ namespace dekatreís_octavo
         /// </summary>
         private void InitializeComponent()
         {
-            this.chart1 = new dekatreís_octavo.View.Chart();
+            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
             this.SuspendLayout();
             // 
-            // chart1
+            // consistenceReport1
             // 
-            this.chart1.Location = new System.Drawing.Point(104, 130);
-            this.chart1.Name = "chart1";
-            this.chart1.Size = new System.Drawing.Size(860, 489);
-            this.chart1.TabIndex = 0;
+            this.consistenceReport1.BackColor = System.Drawing.Color.White;
+            this.consistenceReport1.Location = new System.Drawing.Point(114, 85);
+            this.consistenceReport1.Name = "consistenceReport1";
+            this.consistenceReport1.Size = new System.Drawing.Size(854, 517);
+            this.consistenceReport1.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1081, 688);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.consistenceReport1);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Sizable = false;
@@ -56,7 +57,7 @@ namespace dekatreís_octavo
 
         #endregion
 
-        private View.Chart chart1;
+        private View.ConsistenceReport consistenceReport1;
     }
 }
 

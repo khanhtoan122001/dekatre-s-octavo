@@ -73,6 +73,7 @@ namespace dekatreís_octavo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap arrow_cloud_up_upload_icon_123722 {
             get {
                 object obj = ResourceManager.GetObject("arrow_cloud_up_upload_icon_123722", resourceCulture);
@@ -86,6 +87,11 @@ namespace dekatreís_octavo.Properties {
         internal static System.Drawing.Bitmap auricular_phone_symbol_in_a_circle_icon_icons_com_56570 {
             get {
                 object obj = ResourceManager.GetObject("auricular-phone-symbol-in-a-circle_icon-icons.com_56570", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap _94392719_p0 {
+            get {
+                object obj = ResourceManager.GetObject("94392719_p0", resourceCulture);
+>>>>>>> yami
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

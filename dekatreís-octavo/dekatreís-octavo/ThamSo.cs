@@ -17,5 +17,7 @@ namespace dekatreís_octavo
         public string TenThamSo { get; set; }
         public Nullable<int> GiaTri { get; set; }
         public int IDThamSo { get; set; }
+        public Nullable<System.DateTime> NgayApDung { get; set; }
+        public Nullable<int> GiaTriMoi { get; set; }
     }
 }

@@ -60,6 +60,15 @@
           <Property Name="ThoiGian" Type="smalldatetime" />
           <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="IDHoaDon" />
+          </Key>
+          <Property Name="IDHoaDon" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ThoiGian" Type="smalldatetime" />
+          <Property Name="ThanhTien" Type="money" />
+          <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="LoaiTaiKhoan">
           <Key>
             <PropertyRef Name="IDLoai" />
@@ -74,16 +83,6 @@
           <Property Name="IDLoai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenLoai" Type="nvarchar" MaxLength="50" />
           <Property Name="Gia" Type="int" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
@@ -104,6 +103,8 @@
           <Property Name="TenThamSo" Type="nvarchar" MaxLength="50" />
           <Property Name="GiaTri" Type="int" />
           <Property Name="IDThamSo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NgayApDung" Type="smalldatetime" />
+          <Property Name="GiaTriMoi" Type="int" />
         </EntityType>
         <EntityType Name="TheXe">
           <Key>
@@ -197,9 +198,9 @@
           <EntitySet Name="BaoCaoMatDoGuiXe" EntityType="Self.BaoCaoMatDoGuiXe" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CT_BaoCaoDoanhThuThang" EntityType="Self.CT_BaoCaoDoanhThuThang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CT_BaoCaoLichSuHoatDong" EntityType="Self.CT_BaoCaoLichSuHoatDong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiTaiKhoan" EntityType="Self.LoaiTaiKhoan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiThe" EntityType="Self.LoaiThe" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TaiKhoan" EntityType="Self.TaiKhoan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ThamSo" EntityType="Self.ThamSo" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TheXe" EntityType="Self.TheXe" Schema="dbo" store:Type="Tables" />
@@ -292,16 +293,6 @@
           <Property Name="TenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TaiKhoans" Relationship="Self.FK_TaiKhoan_LoaiTaiKhoan" FromRole="LoaiTaiKhoan" ToRole="TaiKhoan" />
         </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-        </EntityType>
         <EntityType Name="TaiKhoan">
           <Key>
             <PropertyRef Name="TenDangNhap" />
@@ -323,6 +314,8 @@
           <Property Name="TenThamSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="GiaTri" Type="Int32" />
           <Property Name="IDThamSo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NgayApDung" Type="DateTime" Precision="0" />
+          <Property Name="GiaTriMoi" Type="Int32" />
         </EntityType>
         <EntityType Name="TheXe">
           <Key>
@@ -381,7 +374,6 @@
           <EntitySet Name="CT_BaoCaoDoanhThuThang" EntityType="Self.CT_BaoCaoDoanhThuThang" />
           <EntitySet Name="CT_BaoCaoLichSuHoatDong" EntityType="Self.CT_BaoCaoLichSuHoatDong" />
           <EntitySet Name="LoaiTaiKhoans" EntityType="Self.LoaiTaiKhoan" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="TaiKhoans" EntityType="Self.TaiKhoan" />
           <EntitySet Name="ThamSoes" EntityType="Self.ThamSo" />
           <EntitySet Name="TheXes" EntityType="Self.TheXe" />
@@ -411,6 +403,7 @@
             <End Role="TaiKhoan" EntitySet="TaiKhoans" />
             <End Role="BaoCaoChamCongNhanVien" EntitySet="BaoCaoChamCongNhanViens" />
           </AssociationSet>
+          <EntitySet Name="HoaDons" EntityType="QuanLyDoXeModel.HoaDon" />
         </EntityContainer>
         <EntityType Name="LoaiThe">
           <Key>
@@ -467,6 +460,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="HoaDon">
+          <Key>
+            <PropertyRef Name="IDHoaDon" />
+          </Key>
+          <Property Name="IDHoaDon" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ThoiGian" Type="DateTime" Precision="0" />
+          <Property Name="ThanhTien" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="BienSo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -533,17 +535,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="QuanLyDoXeModel.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TaiKhoans">
             <EntityTypeMapping TypeName="QuanLyDoXeModel.TaiKhoan">
               <MappingFragment StoreEntitySet="TaiKhoan">
@@ -560,6 +551,8 @@
           <EntitySetMapping Name="ThamSoes">
             <EntityTypeMapping TypeName="QuanLyDoXeModel.ThamSo">
               <MappingFragment StoreEntitySet="ThamSo">
+                <ScalarProperty Name="GiaTriMoi" ColumnName="GiaTriMoi" />
+                <ScalarProperty Name="NgayApDung" ColumnName="NgayApDung" />
                 <ScalarProperty Name="TenThamSo" ColumnName="TenThamSo" />
                 <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
                 <ScalarProperty Name="IDThamSo" ColumnName="IDThamSo" />
@@ -595,6 +588,16 @@
                 <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
                 <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
                 <ScalarProperty Name="IDBaoCao" ColumnName="IDBaoCao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HoaDons">
+            <EntityTypeMapping TypeName="QuanLyDoXeModel.HoaDon">
+              <MappingFragment StoreEntitySet="HoaDon">
+                <ScalarProperty Name="BienSo" ColumnName="BienSo" />
+                <ScalarProperty Name="ThanhTien" ColumnName="ThanhTien" />
+                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+                <ScalarProperty Name="IDHoaDon" ColumnName="IDHoaDon" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

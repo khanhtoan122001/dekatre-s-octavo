@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dekatreís_octavo.Properties;
 
 namespace dekatreís_octavo.View
 {
@@ -18,7 +19,7 @@ namespace dekatreís_octavo.View
         public HomeView()
         {
             InitializeComponent();
-
+            
             //tabPage1.Controls.Add(new CardManagement());
             //tabPage1.BackColor = Color.White;
         }
@@ -53,9 +54,11 @@ namespace dekatreís_octavo.View
 
         private void HomeView_Load(object sender, EventArgs e)
         {
+            LoginViewBus.Instance.ChangeAvatar(Resources._94392719_p0);
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
             parkingView1.LoadData();
+            
             BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
@@ -77,6 +80,15 @@ namespace dekatreís_octavo.View
             }
         }
 
+        private void LoadThamSo()
+        {
+            var listTs = ThamSoBus.Instance.GetThamSos();
+            tb_Vethuong.Text = listTs.Where(p => p.TenThamSo == "Thẻ thường").FirstOrDefault().GiaTri.Value.ToString();
+            tb_Vethang.Text = listTs.Where(p => p.TenThamSo == "Thẻ tháng").FirstOrDefault().GiaTri.Value.ToString();
+            tb_Luong.Text = listTs.Where(p => p.TenThamSo == "Lương").FirstOrDefault().GiaTri.Value.ToString();
+            tb_TienMatBang.Text = listTs.Where(p => p.TenThamSo == "Tiền mặt bằng").FirstOrDefault().GiaTri.Value.ToString();
+        }
+
         private void materialDrawer1_MouseDown(object sender, MouseEventArgs e)
         {
             Refresh(e.Location);
@@ -85,6 +97,8 @@ namespace dekatreís_octavo.View
         private void tabControl_Selected(object sender, TabControlEventArgs e)
         {
             Refresh(Control.MousePosition);
+            if (e.TabPageIndex == 6)
+                LoadThamSo();
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)
@@ -98,6 +112,37 @@ namespace dekatreís_octavo.View
             {
                 dateTimePicker.Value = DateTime.Today;
             }
+        }
+
+        private void setting_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusButton_Click(object sender, EventArgs e)
+        {
+            consistenceReport1.Visible = true;
+            consistenceReport1.LoadData();
         }
 
         private void bt_info_Click(object sender, EventArgs e)

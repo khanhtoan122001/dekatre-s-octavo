@@ -41,11 +41,14 @@ namespace dekatreís_octavo.View
             {
                 string trangthai = (bool)i.Status ? "Rảnh" : "Bận";
                 string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? i.NgayTao.Value.Date.ToString() : "";
+        
                 cardList.Items.Add(new ListViewItem(
-                    new string[] { i.IDThe.ToString(), i.ChuSoHuu, i.LoaiThe1.TenLoai, trangthai, date }));
+                    new string[] { i.IDThe.ToString(), i.BienSoXe, i.LoaiThe1.TenLoai, trangthai, i.ThoiGianGui.ToString() })
+                { Tag = i });
             }
             List<string> list = db.LoaiThes.Select(p => p.TenLoai).ToList();
-            foreach(string i in list)
+            typeComboBox.Items.Add("None");
+            foreach (string i in list)
             {
                 typeComboBox.Items.Add(i);
             }
@@ -80,16 +83,41 @@ namespace dekatreís_octavo.View
 
         private void cardList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        private void inOutButton_Click(object sender, EventArgs e)
+        {
+            if (cardList.SelectedItems.Count == 0)
+                return;
+            TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
+            if (the.Status == null || the.Status == false)
+            {
+                if(the.LoaiThe1.TenLoai == "Thẻ thường")
+                    GuiNhanXeBus.Instance.NhanXeThuong(the.IDThe);
+                else
+                    GuiNhanXeBus.Instance.NhanXeTheThang(the.IDThe);
+            }
+            else
+            {
+                if (the.LoaiThe1.TenLoai == "Thẻ thường")
+                    GuiNhanXeBus.Instance.GuiXeThuong(the.IDThe, "123123654654", "");
+                else
+                    GuiNhanXeBus.Instance.GuiXeTheThang(the.IDThe);
+            }
+            db.SaveChanges();
+            this.LoadData();
         }
 
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (statusComboBox.SelectedIndex != -1)
             {
-                if (statusComboBox.SelectedIndex == 0)
+                if (statusComboBox.SelectedIndex == 1)
                     sortStatus = "false";
-                else sortStatus = "true";
+                else if (statusComboBox.SelectedIndex == 2)
+                    sortStatus = "true";
+                else sortStatus = null;
             }
             else sortStatus = null;
             if (typeComboBox.SelectedIndex != -1)

@@ -12,12 +12,11 @@ namespace dekatreís_octavo
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagram
+    public partial class HoaDon
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int IDHoaDon { get; set; }
+        public Nullable<System.DateTime> ThoiGian { get; set; }
+        public Nullable<decimal> ThanhTien { get; set; }
+        public string BienSo { get; set; }
     }
 }

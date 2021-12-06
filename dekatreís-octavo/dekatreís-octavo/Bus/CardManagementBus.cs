@@ -92,7 +92,8 @@ namespace dekatreís_octavo.Bus
             
             var result = from c in db.TheXes
                    select c;
-
+            if (sortType == "None")
+                sortType = null;
             if (!string.IsNullOrEmpty(sortStatus))
             {
                 bool status = sortStatus == "true" ? true : false;

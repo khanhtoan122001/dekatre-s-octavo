@@ -42,16 +42,16 @@ namespace dekatreís_octavo.View
             this.inOutButton = new MaterialSurface.ContainedButton();
             this.typeComboBox = new MaterialSkin.Controls.MaterialComboBox();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.topPanel.SuspendLayout();
-            this.mainPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.mainPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusComboBox
@@ -70,6 +70,7 @@ namespace dekatreís_octavo.View
             this.statusComboBox.IntegralHeight = false;
             this.statusComboBox.ItemHeight = 43;
             this.statusComboBox.Items.AddRange(new object[] {
+            "None",
             "Bận",
             "Rảnh"});
             this.statusComboBox.Location = new System.Drawing.Point(154, 27);
@@ -162,7 +163,7 @@ namespace dekatreís_octavo.View
             // 
             // Owner
             // 
-            this.Owner.Text = "Chủ sở hữu";
+            this.Owner.Text = "Biển số";
             this.Owner.Width = 228;
             // 
             // Type
@@ -197,6 +198,7 @@ namespace dekatreís_octavo.View
             this.inOutButton.TabIndex = 2;
             this.inOutButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.inOutButton.UseVisualStyleBackColor = true;
+            this.inOutButton.Click += new System.EventHandler(this.inOutButton_Click);
             // 
             // typeComboBox
             // 
@@ -213,6 +215,8 @@ namespace dekatreís_octavo.View
             this.typeComboBox.Hint = "Type";
             this.typeComboBox.IntegralHeight = false;
             this.typeComboBox.ItemHeight = 43;
+            this.typeComboBox.Items.AddRange(new object[] {
+            "None"});
             this.typeComboBox.Location = new System.Drawing.Point(300, 27);
             this.typeComboBox.MaxDropDownItems = 4;
             this.typeComboBox.MouseState = MaterialSkin.MouseState.OUT;
@@ -230,25 +234,6 @@ namespace dekatreís_octavo.View
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1078, 100);
             this.topPanel.TabIndex = 6;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Controls.Add(this.panel1);
-            this.mainPanel.Controls.Add(this.topPanel);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1078, 637);
-            this.mainPanel.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.cardList);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 100);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1078, 537);
-            this.panel1.TabIndex = 7;
             // 
             // splitContainer1
             // 
@@ -270,6 +255,25 @@ namespace dekatreís_octavo.View
             this.splitContainer1.SplitterDistance = 530;
             this.splitContainer1.TabIndex = 0;
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Controls.Add(this.panel1);
+            this.mainPanel.Controls.Add(this.topPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1078, 637);
+            this.mainPanel.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cardList);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 100);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1078, 537);
+            this.panel1.TabIndex = 7;
+            // 
             // CardManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -281,12 +285,12 @@ namespace dekatreís_octavo.View
             this.Size = new System.Drawing.Size(1078, 637);
             this.Load += new System.EventHandler(this.CardManagement_Load);
             this.topPanel.ResumeLayout(false);
-            this.mainPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.mainPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
