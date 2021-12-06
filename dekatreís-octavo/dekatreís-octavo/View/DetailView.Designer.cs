@@ -30,16 +30,16 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.positionLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.idLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.phoneLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.nameLabel = new MaterialSkin.Controls.MaterialLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cirPictureBox2 = new dekatreís_octavo.CirPictureBox();
             this.avatar = new dekatreís_octavo.CirPictureBox();
-            this.nameLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.phoneLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.idLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.positionLabel = new MaterialSkin.Controls.MaterialLabel();
             this.accountLabel = new MaterialSkin.Controls.MaterialLabel();
             this.containedButton1 = new MaterialSurface.ContainedButton();
             this.materialCard1.SuspendLayout();
@@ -75,6 +75,58 @@ namespace dekatreís_octavo.View
             this.materialCard1.Size = new System.Drawing.Size(250, 287);
             this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.materialCard1.TabIndex = 3;
+            // 
+            // positionLabel
+            // 
+            this.positionLabel.AutoSize = true;
+            this.positionLabel.BackColor = System.Drawing.Color.White;
+            this.positionLabel.Depth = 0;
+            this.positionLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.positionLabel.Location = new System.Drawing.Point(125, 212);
+            this.positionLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.positionLabel.Name = "positionLabel";
+            this.positionLabel.Size = new System.Drawing.Size(58, 19);
+            this.positionLabel.TabIndex = 7;
+            this.positionLabel.Text = "position";
+            // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.BackColor = System.Drawing.Color.White;
+            this.idLabel.Depth = 0;
+            this.idLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.idLabel.Location = new System.Drawing.Point(125, 162);
+            this.idLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(14, 19);
+            this.idLabel.TabIndex = 6;
+            this.idLabel.Text = "id";
+            // 
+            // phoneLabel
+            // 
+            this.phoneLabel.AutoSize = true;
+            this.phoneLabel.BackColor = System.Drawing.Color.White;
+            this.phoneLabel.Depth = 0;
+            this.phoneLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.phoneLabel.Location = new System.Drawing.Point(125, 106);
+            this.phoneLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(45, 19);
+            this.phoneLabel.TabIndex = 5;
+            this.phoneLabel.Text = "phone";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.BackColor = System.Drawing.Color.White;
+            this.nameLabel.Depth = 0;
+            this.nameLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.nameLabel.Location = new System.Drawing.Point(125, 55);
+            this.nameLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(41, 19);
+            this.nameLabel.TabIndex = 4;
+            this.nameLabel.Text = "name";
             // 
             // pictureBox4
             // 
@@ -125,6 +177,7 @@ namespace dekatreís_octavo.View
             this.cirPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cirPictureBox2.TabIndex = 2;
             this.cirPictureBox2.TabStop = false;
+            this.cirPictureBox2.Click += new System.EventHandler(this.cirPictureBox2_Click);
             // 
             // avatar
             // 
@@ -135,58 +188,6 @@ namespace dekatreís_octavo.View
             this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.avatar.TabIndex = 1;
             this.avatar.TabStop = false;
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.BackColor = System.Drawing.Color.White;
-            this.nameLabel.Depth = 0;
-            this.nameLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.nameLabel.Location = new System.Drawing.Point(125, 55);
-            this.nameLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(41, 19);
-            this.nameLabel.TabIndex = 4;
-            this.nameLabel.Text = "name";
-            // 
-            // phoneLabel
-            // 
-            this.phoneLabel.AutoSize = true;
-            this.phoneLabel.BackColor = System.Drawing.Color.White;
-            this.phoneLabel.Depth = 0;
-            this.phoneLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.phoneLabel.Location = new System.Drawing.Point(125, 106);
-            this.phoneLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(45, 19);
-            this.phoneLabel.TabIndex = 5;
-            this.phoneLabel.Text = "phone";
-            // 
-            // idLabel
-            // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.BackColor = System.Drawing.Color.White;
-            this.idLabel.Depth = 0;
-            this.idLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.idLabel.Location = new System.Drawing.Point(125, 162);
-            this.idLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(14, 19);
-            this.idLabel.TabIndex = 6;
-            this.idLabel.Text = "id";
-            // 
-            // positionLabel
-            // 
-            this.positionLabel.AutoSize = true;
-            this.positionLabel.BackColor = System.Drawing.Color.White;
-            this.positionLabel.Depth = 0;
-            this.positionLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.positionLabel.Location = new System.Drawing.Point(125, 212);
-            this.positionLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.positionLabel.Name = "positionLabel";
-            this.positionLabel.Size = new System.Drawing.Size(58, 19);
-            this.positionLabel.TabIndex = 7;
-            this.positionLabel.Text = "position";
             // 
             // accountLabel
             // 

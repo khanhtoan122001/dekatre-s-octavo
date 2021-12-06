@@ -21,12 +21,25 @@ namespace dekatreís_octavo.View
             nameLabel.Text = TaiKhoan.TenThat;
             phoneLabel.Text = TaiKhoan.SDT;
             idLabel.Text = TaiKhoan.CMND;
-            avatar = LoginViewBus.Instance.byteArrayToImage(TaiKhoan.Avatar);
+            avatar.Image = LoginViewBus.Instance.byteArrayToImage(TaiKhoan.Avatar);
         }
 
         private void containedButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cirPictureBox2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.FileName = "";
+            openFileDialog.Title = "Open Image";
+            openFileDialog.Filter = "Image files (*.jpg)|*.jpg|(*.jpeg)|*jpeg|(*.bmp)|*.bmp|(*wmf)|*wmf|(*.png)|*.png|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                avatar.Image = new Bitmap(openFileDialog.FileName);
+                LoginViewBus.Instance.ChangeAvatar(avatar.Image);
+            }    
         }
     }
 }
