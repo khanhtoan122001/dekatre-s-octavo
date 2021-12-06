@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using dekatreís_octavo.Properties;
 
 namespace dekatreís_octavo.View
 {
@@ -19,7 +18,7 @@ namespace dekatreís_octavo.View
         public HomeView()
         {
             InitializeComponent();
-            
+
             //tabPage1.Controls.Add(new CardManagement());
             //tabPage1.BackColor = Color.White;
         }
@@ -54,15 +53,9 @@ namespace dekatreís_octavo.View
 
         private void HomeView_Load(object sender, EventArgs e)
         {
-            LoginViewBus.Instance.ChangeAvatar(Resources._94392719_p0);
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
             parkingView1.LoadData();
-            if(DataProvider.Instance.TaiKhoan != null)
-                if(DataProvider.Instance.TaiKhoan.Avatar != null)
-                {
-                    pictureBox1.Image = LoginViewBus.Instance.byteArrayToImage(DataProvider.Instance.TaiKhoan.Avatar);
-                }
             BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
