@@ -91,9 +91,29 @@ namespace dekatreís_octavo.View
             if (cardList.SelectedItems.Count == 0)
                 return;
             TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
+            if(the.LoaiThe1.TenLoai != "Thẻ tháng")
+            {
+                if (!the.Status.Value)
+                {
+                    GuiNhan(the);
+                }
+                else
+                {
+                    inputCard.Visible = true;
+                    inputTextBox.Focus();
+                }
+            }
+            else
+            {
+                GuiNhan(the);
+            }
+        }
+
+        public void GuiNhan(TheXe the, string bienSo = null)
+        {
             if (the.Status == null || the.Status == false)
             {
-                if(the.LoaiThe1.TenLoai == "Thẻ thường")
+                if (the.LoaiThe1.TenLoai == "Thẻ thường")
                     GuiNhanXeBus.Instance.NhanXeThuong(the.IDThe);
                 else
                     GuiNhanXeBus.Instance.NhanXeTheThang(the.IDThe);
@@ -101,7 +121,7 @@ namespace dekatreís_octavo.View
             else
             {
                 if (the.LoaiThe1.TenLoai == "Thẻ thường")
-                    GuiNhanXeBus.Instance.GuiXeThuong(the.IDThe, "123123654654", "");
+                    GuiNhanXeBus.Instance.GuiXeThuong(the.IDThe, bienSo, "");
                 else
                     GuiNhanXeBus.Instance.GuiXeTheThang(the.IDThe);
             }
@@ -110,6 +130,21 @@ namespace dekatreís_octavo.View
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            inputCard.Visible = false;
+        }
+
+        private void inputTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
+            if(e.KeyCode == Keys.Enter)
+            {
+                GuiNhan(the, inputTextBox.Text);
+                inputCard.Visible = false;
+            }
+        }
+
+        private void inputTextBox_Leave(object sender, EventArgs e)
         {
             inputCard.Visible = false;
         }
