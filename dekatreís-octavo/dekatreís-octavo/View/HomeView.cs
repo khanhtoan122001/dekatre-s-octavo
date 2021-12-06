@@ -54,7 +54,8 @@ namespace dekatreís_octavo.View
 
         private void HomeView_Load(object sender, EventArgs e)
         {
-            LoginViewBus.Instance.ChangeAvatar(Resources.);
+            if(DataProvider.Instance.TaiKhoan.Avatar == null)
+                LoginViewBus.Instance.ChangeAvatar(Resources.ic_profile_info_97647);
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
             parkingView1.LoadData();
