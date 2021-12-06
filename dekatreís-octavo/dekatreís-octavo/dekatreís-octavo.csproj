@@ -416,6 +416,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Resources\default-avatar-300x300.png" />
     <None Include="Resources\arrow_cloud_up_upload_icon_123722.png" />
     <None Include="Resources\person.png" />
     <None Include="Resources\auricular-phone-symbol-in-a-circle_icon-icons.com_56570.png" />
