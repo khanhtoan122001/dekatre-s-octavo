@@ -13,15 +13,15 @@ namespace dekatreís_octavo.View
 {
     public partial class DetailView : Form
     {
-        public TaiKhoan TaiKhoan;
+        public TaiKhoan taiKhoan = DataProvider.Instance.TaiKhoan;
         public DetailView()
         {
             InitializeComponent();
-            accountLabel.Text = TaiKhoan.TenDangNhap;
-            nameLabel.Text = TaiKhoan.TenThat;
-            phoneLabel.Text = TaiKhoan.SDT;
-            idLabel.Text = TaiKhoan.CMND;
-            avatar.Image = LoginViewBus.Instance.byteArrayToImage(TaiKhoan.Avatar);
+            accountLabel.Text = taiKhoan.TenDangNhap;
+            nameLabel.Text = taiKhoan.TenThat;
+            phoneLabel.Text = taiKhoan.SDT;
+            idLabel.Text = taiKhoan.CMND;
+            avatar.Image = LoginViewBus.Instance.byteArrayToImage(taiKhoan.Avatar);
         }
 
         private void containedButton1_Click(object sender, EventArgs e)

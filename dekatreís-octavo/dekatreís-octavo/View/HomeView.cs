@@ -103,7 +103,6 @@ namespace dekatreís_octavo.View
         private void bt_info_Click(object sender, EventArgs e)
         {
             DetailView detailView = new DetailView();
-            detailView.TaiKhoan = TaiKhoan;
             detailView.Show();
         }
     }
