@@ -22,6 +22,8 @@ namespace dekatreís_octavo.Bus
                 db.ThamSoes.Add(new ThamSo() {TenThamSo = "Nhận xe",GiaTri = 49 });
                 db.ThamSoes.Add(new ThamSo() { TenThamSo = "Thẻ tháng", GiaTri = 200000 });
                 db.ThamSoes.Add(new ThamSo() { TenThamSo = "Thẻ thường", GiaTri = 10000 });
+                db.ThamSoes.Add(new ThamSo() { TenThamSo = "Lương", GiaTri = 4000000 });
+                db.ThamSoes.Add(new ThamSo() { TenThamSo = "Tiền mặt bằng", GiaTri = 8000000 });
                 db.SaveChanges();
             }
         }

@@ -58,11 +58,7 @@ namespace dekatreís_octavo.View
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
             parkingView1.LoadData();
-            if(DataProvider.Instance.TaiKhoan != null)
-                if(DataProvider.Instance.TaiKhoan.Avatar != null)
-                {
-                    pictureBox1.Image = LoginViewBus.Instance.byteArrayToImage(DataProvider.Instance.TaiKhoan.Avatar);
-                }
+            
             BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
@@ -84,6 +80,15 @@ namespace dekatreís_octavo.View
             }
         }
 
+        private void LoadThamSo()
+        {
+            var listTs = ThamSoBus.Instance.GetThamSos();
+            tb_Vethuong.Text = listTs.Where(p => p.TenThamSo == "Thẻ thường").FirstOrDefault().GiaTri.Value.ToString();
+            tb_Vethang.Text = listTs.Where(p => p.TenThamSo == "Thẻ tháng").FirstOrDefault().GiaTri.Value.ToString();
+            tb_Luong.Text = listTs.Where(p => p.TenThamSo == "Lương").FirstOrDefault().GiaTri.Value.ToString();
+            tb_TienMatBang.Text = listTs.Where(p => p.TenThamSo == "Tiền mặt bằng").FirstOrDefault().GiaTri.Value.ToString();
+        }
+
         private void materialDrawer1_MouseDown(object sender, MouseEventArgs e)
         {
             Refresh(e.Location);
@@ -92,6 +97,8 @@ namespace dekatreís_octavo.View
         private void tabControl_Selected(object sender, TabControlEventArgs e)
         {
             Refresh(Control.MousePosition);
+            if (e.TabPageIndex == 6)
+                LoadThamSo();
         }
 
         private void materialLabel1_Click(object sender, EventArgs e)
@@ -130,6 +137,12 @@ namespace dekatreís_octavo.View
         private void materialLabel5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void statusButton_Click(object sender, EventArgs e)
+        {
+            consistenceReport1.Visible = true;
+            consistenceReport1.LoadData();
         }
     }
 }
