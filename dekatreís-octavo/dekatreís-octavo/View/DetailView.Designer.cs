@@ -30,6 +30,10 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.positionTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -39,10 +43,6 @@ namespace dekatreís_octavo.View
             this.cirPictureBox2 = new dekatreís_octavo.CirPictureBox();
             this.avatar = new dekatreís_octavo.CirPictureBox();
             this.editButton = new MaterialSurface.ContainedButton();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.positionTextBox = new System.Windows.Forms.TextBox();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -73,9 +73,41 @@ namespace dekatreís_octavo.View
             this.materialCard1.Radius = 8;
             this.materialCard1.ShawdowDepth = 2;
             this.materialCard1.ShawdowOpacity = 50;
-            this.materialCard1.Size = new System.Drawing.Size(310, 287);
+            this.materialCard1.Size = new System.Drawing.Size(469, 287);
             this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.materialCard1.TabIndex = 3;
+            // 
+            // positionTextBox
+            // 
+            this.positionTextBox.Enabled = false;
+            this.positionTextBox.Location = new System.Drawing.Point(131, 199);
+            this.positionTextBox.Name = "positionTextBox";
+            this.positionTextBox.Size = new System.Drawing.Size(201, 31);
+            this.positionTextBox.TabIndex = 10;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.Enabled = false;
+            this.idTextBox.Location = new System.Drawing.Point(131, 149);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(201, 31);
+            this.idTextBox.TabIndex = 9;
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.Enabled = false;
+            this.phoneTextBox.Location = new System.Drawing.Point(131, 94);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(201, 31);
+            this.phoneTextBox.TabIndex = 8;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Enabled = false;
+            this.nameTextBox.Location = new System.Drawing.Point(131, 43);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(201, 31);
+            this.nameTextBox.TabIndex = 7;
             // 
             // pictureBox4
             // 
@@ -193,38 +225,6 @@ namespace dekatreís_octavo.View
             this.editButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Enabled = false;
-            this.nameTextBox.Location = new System.Drawing.Point(131, 43);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 31);
-            this.nameTextBox.TabIndex = 7;
-            // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.Enabled = false;
-            this.phoneTextBox.Location = new System.Drawing.Point(131, 94);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(100, 31);
-            this.phoneTextBox.TabIndex = 8;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.Enabled = false;
-            this.idTextBox.Location = new System.Drawing.Point(131, 149);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 31);
-            this.idTextBox.TabIndex = 9;
-            // 
-            // positionTextBox
-            // 
-            this.positionTextBox.Enabled = false;
-            this.positionTextBox.Location = new System.Drawing.Point(131, 199);
-            this.positionTextBox.Name = "positionTextBox";
-            this.positionTextBox.Size = new System.Drawing.Size(100, 31);
-            this.positionTextBox.TabIndex = 10;
             // 
             // DetailView
             // 

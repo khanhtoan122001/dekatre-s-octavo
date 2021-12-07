@@ -22,7 +22,7 @@ namespace dekatreís_octavo.View
             nameTextBox.Text = taiKhoan.TenThat;
             phoneTextBox.Text = taiKhoan.SDT;
             idTextBox.Text = taiKhoan.CMND;
-            if (taiKhoan.LoaiTaiKhoan == 1)
+            if (taiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
             {
                 positionTextBox.Text = "admin";
             }
@@ -68,6 +68,7 @@ namespace dekatreís_octavo.View
                 phoneTextBox.Enabled = true;
                 editButton.Text = "Save";
                 closeButton.Text = "Save & exit";
+                editing = true;
             }
             else
             {
@@ -80,6 +81,7 @@ namespace dekatreís_octavo.View
                 tk.CMND = idTextBox.Text;
                 LoginViewBus.Instance.SaveChange(tk);
                 editButton.Text = "Edit";
+                editing = false;
             }
         }
     }
