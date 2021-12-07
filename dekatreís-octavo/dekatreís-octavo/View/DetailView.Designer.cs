@@ -30,6 +30,10 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.positionTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -39,10 +43,6 @@ namespace dekatreís_octavo.View
             this.cirPictureBox2 = new dekatreís_octavo.CirPictureBox();
             this.avatar = new dekatreís_octavo.CirPictureBox();
             this.editButton = new MaterialSurface.ContainedButton();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.phoneTextBox = new System.Windows.Forms.TextBox();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.positionTextBox = new System.Windows.Forms.TextBox();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -76,6 +76,38 @@ namespace dekatreís_octavo.View
             this.materialCard1.Size = new System.Drawing.Size(310, 287);
             this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.materialCard1.TabIndex = 3;
+            // 
+            // positionTextBox
+            // 
+            this.positionTextBox.Enabled = false;
+            this.positionTextBox.Location = new System.Drawing.Point(131, 199);
+            this.positionTextBox.Name = "positionTextBox";
+            this.positionTextBox.Size = new System.Drawing.Size(100, 31);
+            this.positionTextBox.TabIndex = 10;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.Enabled = false;
+            this.idTextBox.Location = new System.Drawing.Point(131, 149);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(100, 31);
+            this.idTextBox.TabIndex = 9;
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.Enabled = false;
+            this.phoneTextBox.Location = new System.Drawing.Point(131, 94);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(100, 31);
+            this.phoneTextBox.TabIndex = 8;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Enabled = false;
+            this.nameTextBox.Location = new System.Drawing.Point(131, 43);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 31);
+            this.nameTextBox.TabIndex = 7;
             // 
             // pictureBox4
             // 
@@ -139,14 +171,14 @@ namespace dekatreís_octavo.View
             this.closeButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.closeButton.Icon = null;
-            this.closeButton.Location = new System.Drawing.Point(126, 435);
+            this.closeButton.Location = new System.Drawing.Point(100, 435);
             this.closeButton.MouseState = MaterialSurface.MouseState.OUT;
             this.closeButton.Name = "closeButton";
             this.closeButton.PrimaryColor = System.Drawing.Color.BlueViolet;
             this.closeButton.Radius = 6;
             this.closeButton.ShawdowDepth = 3;
             this.closeButton.ShawdowOpacity = 50;
-            this.closeButton.Size = new System.Drawing.Size(155, 44);
+            this.closeButton.Size = new System.Drawing.Size(178, 44);
             this.closeButton.TabIndex = 5;
             this.closeButton.Text = "Close";
             this.closeButton.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -180,51 +212,19 @@ namespace dekatreís_octavo.View
             this.editButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.editButton.Icon = null;
-            this.editButton.Location = new System.Drawing.Point(287, 435);
+            this.editButton.Location = new System.Drawing.Point(284, 435);
             this.editButton.MouseState = MaterialSurface.MouseState.OUT;
             this.editButton.Name = "editButton";
             this.editButton.PrimaryColor = System.Drawing.Color.BlueViolet;
             this.editButton.Radius = 6;
             this.editButton.ShawdowDepth = 3;
             this.editButton.ShawdowOpacity = 50;
-            this.editButton.Size = new System.Drawing.Size(155, 44);
+            this.editButton.Size = new System.Drawing.Size(174, 44);
             this.editButton.TabIndex = 6;
             this.editButton.Text = "Edit";
             this.editButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.Enabled = false;
-            this.nameTextBox.Location = new System.Drawing.Point(131, 43);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 31);
-            this.nameTextBox.TabIndex = 7;
-            // 
-            // phoneTextBox
-            // 
-            this.phoneTextBox.Enabled = false;
-            this.phoneTextBox.Location = new System.Drawing.Point(131, 94);
-            this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(100, 31);
-            this.phoneTextBox.TabIndex = 8;
-            // 
-            // idTextBox
-            // 
-            this.idTextBox.Enabled = false;
-            this.idTextBox.Location = new System.Drawing.Point(131, 149);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 31);
-            this.idTextBox.TabIndex = 9;
-            // 
-            // positionTextBox
-            // 
-            this.positionTextBox.Enabled = false;
-            this.positionTextBox.Location = new System.Drawing.Point(131, 199);
-            this.positionTextBox.Name = "positionTextBox";
-            this.positionTextBox.Size = new System.Drawing.Size(100, 31);
-            this.positionTextBox.TabIndex = 10;
             // 
             // DetailView
             // 
