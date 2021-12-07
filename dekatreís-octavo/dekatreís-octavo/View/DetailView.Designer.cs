@@ -40,9 +40,9 @@ namespace dekatreís_octavo.View
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.accountLabel = new MaterialSkin.Controls.MaterialLabel();
             this.closeButton = new MaterialSurface.ContainedButton();
+            this.editButton = new MaterialSurface.ContainedButton();
             this.cirPictureBox2 = new dekatreís_octavo.CirPictureBox();
             this.avatar = new dekatreís_octavo.CirPictureBox();
-            this.editButton = new MaterialSurface.ContainedButton();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -54,7 +54,7 @@ namespace dekatreís_octavo.View
             // 
             // materialCard1
             // 
-            this.materialCard1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialCard1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.materialCard1.CardColor = System.Drawing.Color.White;
             this.materialCard1.Controls.Add(this.positionTextBox);
             this.materialCard1.Controls.Add(this.idTextBox);
@@ -185,6 +185,26 @@ namespace dekatreís_octavo.View
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.containedButton1_Click);
             // 
+            // editButton
+            // 
+            this.editButton.EffectType = MaterialSurface.ET.Custom;
+            this.editButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.editButton.Icon = null;
+            this.editButton.Location = new System.Drawing.Point(284, 435);
+            this.editButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.editButton.Name = "editButton";
+            this.editButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.editButton.Radius = 6;
+            this.editButton.ShawdowDepth = 3;
+            this.editButton.ShawdowOpacity = 50;
+            this.editButton.Size = new System.Drawing.Size(174, 44);
+            this.editButton.TabIndex = 6;
+            this.editButton.Text = "Edit";
+            this.editButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
             // cirPictureBox2
             // 
             this.cirPictureBox2.Image = global::dekatreís_octavo.Properties.Resources.pencil;
@@ -206,30 +226,11 @@ namespace dekatreís_octavo.View
             this.avatar.TabIndex = 1;
             this.avatar.TabStop = false;
             // 
-            // editButton
-            // 
-            this.editButton.EffectType = MaterialSurface.ET.Custom;
-            this.editButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.editButton.Icon = null;
-            this.editButton.Location = new System.Drawing.Point(284, 435);
-            this.editButton.MouseState = MaterialSurface.MouseState.OUT;
-            this.editButton.Name = "editButton";
-            this.editButton.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.editButton.Radius = 6;
-            this.editButton.ShawdowDepth = 3;
-            this.editButton.ShawdowOpacity = 50;
-            this.editButton.Size = new System.Drawing.Size(174, 44);
-            this.editButton.TabIndex = 6;
-            this.editButton.Text = "Edit";
-            this.editButton.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.editButton.UseVisualStyleBackColor = true;
-            this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
             // DetailView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(570, 521);
             this.Controls.Add(this.editButton);
             this.Controls.Add(this.closeButton);
