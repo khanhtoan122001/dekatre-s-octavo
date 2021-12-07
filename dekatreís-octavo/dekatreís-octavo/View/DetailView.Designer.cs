@@ -30,18 +30,19 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSurface.MaterialCard();
-            this.positionLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.idLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.phoneLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.nameLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.accountLabel = new MaterialSkin.Controls.MaterialLabel();
-            this.containedButton1 = new MaterialSurface.ContainedButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.accountLabel = new MaterialSkin.Controls.MaterialLabel();
+            this.closeButton = new MaterialSurface.ContainedButton();
             this.cirPictureBox2 = new dekatreís_octavo.CirPictureBox();
             this.avatar = new dekatreís_octavo.CirPictureBox();
+            this.editButton = new MaterialSurface.ContainedButton();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.positionTextBox = new System.Windows.Forms.TextBox();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -55,10 +56,10 @@ namespace dekatreís_octavo.View
             // 
             this.materialCard1.BackColor = System.Drawing.SystemColors.Control;
             this.materialCard1.CardColor = System.Drawing.Color.White;
-            this.materialCard1.Controls.Add(this.positionLabel);
-            this.materialCard1.Controls.Add(this.idLabel);
-            this.materialCard1.Controls.Add(this.phoneLabel);
-            this.materialCard1.Controls.Add(this.nameLabel);
+            this.materialCard1.Controls.Add(this.positionTextBox);
+            this.materialCard1.Controls.Add(this.idTextBox);
+            this.materialCard1.Controls.Add(this.phoneTextBox);
+            this.materialCard1.Controls.Add(this.nameTextBox);
             this.materialCard1.Controls.Add(this.pictureBox4);
             this.materialCard1.Controls.Add(this.pictureBox3);
             this.materialCard1.Controls.Add(this.pictureBox2);
@@ -75,90 +76,6 @@ namespace dekatreís_octavo.View
             this.materialCard1.Size = new System.Drawing.Size(310, 287);
             this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.materialCard1.TabIndex = 3;
-            // 
-            // positionLabel
-            // 
-            this.positionLabel.AutoSize = true;
-            this.positionLabel.BackColor = System.Drawing.Color.White;
-            this.positionLabel.Depth = 0;
-            this.positionLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.positionLabel.Location = new System.Drawing.Point(152, 212);
-            this.positionLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.positionLabel.Name = "positionLabel";
-            this.positionLabel.Size = new System.Drawing.Size(58, 19);
-            this.positionLabel.TabIndex = 7;
-            this.positionLabel.Text = "position";
-            // 
-            // idLabel
-            // 
-            this.idLabel.AutoSize = true;
-            this.idLabel.BackColor = System.Drawing.Color.White;
-            this.idLabel.Depth = 0;
-            this.idLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.idLabel.Location = new System.Drawing.Point(152, 162);
-            this.idLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(14, 19);
-            this.idLabel.TabIndex = 6;
-            this.idLabel.Text = "id";
-            // 
-            // phoneLabel
-            // 
-            this.phoneLabel.AutoSize = true;
-            this.phoneLabel.BackColor = System.Drawing.Color.White;
-            this.phoneLabel.Depth = 0;
-            this.phoneLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.phoneLabel.Location = new System.Drawing.Point(152, 106);
-            this.phoneLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(45, 19);
-            this.phoneLabel.TabIndex = 5;
-            this.phoneLabel.Text = "phone";
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.BackColor = System.Drawing.Color.White;
-            this.nameLabel.Depth = 0;
-            this.nameLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.nameLabel.Location = new System.Drawing.Point(152, 55);
-            this.nameLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(41, 19);
-            this.nameLabel.TabIndex = 4;
-            this.nameLabel.Text = "name";
-            // 
-            // accountLabel
-            // 
-            this.accountLabel.AutoSize = true;
-            this.accountLabel.Depth = 0;
-            this.accountLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.accountLabel.Location = new System.Drawing.Point(123, 70);
-            this.accountLabel.MouseState = MaterialSkin.MouseState.HOVER;
-            this.accountLabel.Name = "accountLabel";
-            this.accountLabel.Size = new System.Drawing.Size(58, 19);
-            this.accountLabel.TabIndex = 4;
-            this.accountLabel.Text = "account";
-            // 
-            // containedButton1
-            // 
-            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
-            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.containedButton1.Icon = null;
-            this.containedButton1.Location = new System.Drawing.Point(202, 432);
-            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
-            this.containedButton1.Name = "containedButton1";
-            this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.containedButton1.Radius = 6;
-            this.containedButton1.ShawdowDepth = 3;
-            this.containedButton1.ShawdowOpacity = 50;
-            this.containedButton1.Size = new System.Drawing.Size(155, 44);
-            this.containedButton1.TabIndex = 5;
-            this.containedButton1.Text = "Close";
-            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.containedButton1.UseVisualStyleBackColor = true;
-            this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
             // 
             // pictureBox4
             // 
@@ -204,6 +121,38 @@ namespace dekatreís_octavo.View
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // accountLabel
+            // 
+            this.accountLabel.AutoSize = true;
+            this.accountLabel.Depth = 0;
+            this.accountLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.accountLabel.Location = new System.Drawing.Point(123, 70);
+            this.accountLabel.MouseState = MaterialSkin.MouseState.HOVER;
+            this.accountLabel.Name = "accountLabel";
+            this.accountLabel.Size = new System.Drawing.Size(58, 19);
+            this.accountLabel.TabIndex = 4;
+            this.accountLabel.Text = "account";
+            // 
+            // closeButton
+            // 
+            this.closeButton.EffectType = MaterialSurface.ET.Custom;
+            this.closeButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closeButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.closeButton.Icon = null;
+            this.closeButton.Location = new System.Drawing.Point(126, 435);
+            this.closeButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.closeButton.Name = "closeButton";
+            this.closeButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.closeButton.Radius = 6;
+            this.closeButton.ShawdowDepth = 3;
+            this.closeButton.ShawdowOpacity = 50;
+            this.closeButton.Size = new System.Drawing.Size(155, 44);
+            this.closeButton.TabIndex = 5;
+            this.closeButton.Text = "Close";
+            this.closeButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.Click += new System.EventHandler(this.containedButton1_Click);
+            // 
             // cirPictureBox2
             // 
             this.cirPictureBox2.Image = global::dekatreís_octavo.Properties.Resources.pencil;
@@ -225,12 +174,65 @@ namespace dekatreís_octavo.View
             this.avatar.TabIndex = 1;
             this.avatar.TabStop = false;
             // 
+            // editButton
+            // 
+            this.editButton.EffectType = MaterialSurface.ET.Custom;
+            this.editButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.editButton.Icon = null;
+            this.editButton.Location = new System.Drawing.Point(287, 435);
+            this.editButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.editButton.Name = "editButton";
+            this.editButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.editButton.Radius = 6;
+            this.editButton.ShawdowDepth = 3;
+            this.editButton.ShawdowOpacity = 50;
+            this.editButton.Size = new System.Drawing.Size(155, 44);
+            this.editButton.TabIndex = 6;
+            this.editButton.Text = "Edit";
+            this.editButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.Enabled = false;
+            this.nameTextBox.Location = new System.Drawing.Point(131, 43);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 31);
+            this.nameTextBox.TabIndex = 7;
+            // 
+            // phoneTextBox
+            // 
+            this.phoneTextBox.Enabled = false;
+            this.phoneTextBox.Location = new System.Drawing.Point(131, 94);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(100, 31);
+            this.phoneTextBox.TabIndex = 8;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.Enabled = false;
+            this.idTextBox.Location = new System.Drawing.Point(131, 149);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(100, 31);
+            this.idTextBox.TabIndex = 9;
+            // 
+            // positionTextBox
+            // 
+            this.positionTextBox.Enabled = false;
+            this.positionTextBox.Location = new System.Drawing.Point(131, 199);
+            this.positionTextBox.Name = "positionTextBox";
+            this.positionTextBox.Size = new System.Drawing.Size(100, 31);
+            this.positionTextBox.TabIndex = 10;
+            // 
             // DetailView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 521);
-            this.Controls.Add(this.containedButton1);
+            this.Controls.Add(this.editButton);
+            this.Controls.Add(this.closeButton);
             this.Controls.Add(this.accountLabel);
             this.Controls.Add(this.materialCard1);
             this.Controls.Add(this.cirPictureBox2);
@@ -262,11 +264,12 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private MaterialSkin.Controls.MaterialLabel positionLabel;
-        private MaterialSkin.Controls.MaterialLabel idLabel;
-        private MaterialSkin.Controls.MaterialLabel phoneLabel;
-        private MaterialSkin.Controls.MaterialLabel nameLabel;
         private MaterialSkin.Controls.MaterialLabel accountLabel;
-        private MaterialSurface.ContainedButton containedButton1;
+        private MaterialSurface.ContainedButton closeButton;
+        private System.Windows.Forms.TextBox positionTextBox;
+        private System.Windows.Forms.TextBox idTextBox;
+        private System.Windows.Forms.TextBox phoneTextBox;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private MaterialSurface.ContainedButton editButton;
     }
 }

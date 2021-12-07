@@ -13,19 +13,36 @@ namespace dekatreís_octavo.View
 {
     public partial class DetailView : Form
     {
+        bool editing = false;
         public TaiKhoan taiKhoan = DataProvider.Instance.TaiKhoan;
         public DetailView()
         {
             InitializeComponent();
             accountLabel.Text = taiKhoan.TenDangNhap;
-            nameLabel.Text = taiKhoan.TenThat;
-            phoneLabel.Text = taiKhoan.SDT;
-            idLabel.Text = taiKhoan.CMND;
+            nameTextBox.Text = taiKhoan.TenThat;
+            phoneTextBox.Text = taiKhoan.SDT;
+            idTextBox.Text = taiKhoan.CMND;
+            if (taiKhoan.LoaiTaiKhoan == 1)
+            {
+                positionTextBox.Text = "admin";
+            }
+            else
+            {
+                positionTextBox.Text = "staff";
+            }
             avatar.Image = LoginViewBus.Instance.byteArrayToImage(taiKhoan.Avatar);
         }
 
         private void containedButton1_Click(object sender, EventArgs e)
         {
+            if (editing)
+            {
+                TaiKhoan tk = new TaiKhoan();
+                tk.TenThat = nameTextBox.Text;
+                tk.SDT = phoneTextBox.Text;
+                tk.CMND = idTextBox.Text;
+                LoginViewBus.Instance.SaveChange(tk);
+            }
             this.Close();
         }
 
@@ -40,6 +57,30 @@ namespace dekatreís_octavo.View
                 avatar.Image = new Bitmap(openFileDialog.FileName);
                 LoginViewBus.Instance.ChangeAvatar(avatar.Image);
             }    
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (editing == false)
+            {
+                nameTextBox.Enabled = true;
+                idTextBox.Enabled = true;
+                phoneTextBox.Enabled = true;
+                editButton.Text = "Save";
+                closeButton.Text = "Save & exit";
+            }
+            else
+            {
+                nameTextBox.Enabled = false;
+                idTextBox.Enabled = false;
+                phoneTextBox.Enabled = false;
+                TaiKhoan tk = new TaiKhoan();
+                tk.TenThat = nameTextBox.Text;
+                tk.SDT = phoneTextBox.Text;
+                tk.CMND = idTextBox.Text;
+                LoginViewBus.Instance.SaveChange(tk);
+                editButton.Text = "Edit";
+            }
         }
     }
 }
