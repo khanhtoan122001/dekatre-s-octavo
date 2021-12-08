@@ -19,7 +19,7 @@ namespace dekatreís_octavo.View
         public HomeView()
         {
             InitializeComponent();
-            
+            pictureBox2.Image = LoginViewBus.Instance.byteArrayToImage(TaiKhoan.Avatar);
             //tabPage1.Controls.Add(new CardManagement());
             //tabPage1.BackColor = Color.White;
         }
@@ -54,7 +54,7 @@ namespace dekatreís_octavo.View
 
         private void HomeView_Load(object sender, EventArgs e)
         {
-            if(DataProvider.Instance.TaiKhoan.Avatar == null)
+            if (DataProvider.Instance.TaiKhoan.Avatar == null)
                 LoginViewBus.Instance.ChangeAvatar(Resources.default_avatar_300x300);
             cardManagement1.LoadData();
             staffView1.LoadStaffList();

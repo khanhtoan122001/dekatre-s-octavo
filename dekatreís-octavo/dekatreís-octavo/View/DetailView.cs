@@ -42,6 +42,7 @@ namespace dekatreís_octavo.View
                 tk.SDT = phoneTextBox.Text;
                 tk.CMND = idTextBox.Text;
                 LoginViewBus.Instance.SaveChange(tk);
+                editing = false;
             }
             this.Close();
         }
@@ -81,6 +82,7 @@ namespace dekatreís_octavo.View
                 tk.CMND = idTextBox.Text;
                 LoginViewBus.Instance.SaveChange(tk);
                 editButton.Text = "Edit";
+                closeButton.Text = "Close";
                 editing = false;
             }
         }
