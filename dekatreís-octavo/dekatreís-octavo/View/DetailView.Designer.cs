@@ -43,7 +43,6 @@ namespace dekatreís_octavo.View
             this.editButton = new MaterialSurface.ContainedButton();
             this.cirPictureBox2 = new dekatreís_octavo.CirPictureBox();
             this.avatar = new dekatreís_octavo.CirPictureBox();
-            this.editButton = new MaterialSurface.ContainedButton();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -83,7 +82,7 @@ namespace dekatreís_octavo.View
             this.positionTextBox.Enabled = false;
             this.positionTextBox.Location = new System.Drawing.Point(131, 199);
             this.positionTextBox.Name = "positionTextBox";
-            this.positionTextBox.Size = new System.Drawing.Size(100, 31);
+            this.positionTextBox.Size = new System.Drawing.Size(232, 31);
             this.positionTextBox.TabIndex = 10;
             // 
             // idTextBox
@@ -91,7 +90,7 @@ namespace dekatreís_octavo.View
             this.idTextBox.Enabled = false;
             this.idTextBox.Location = new System.Drawing.Point(131, 149);
             this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 31);
+            this.idTextBox.Size = new System.Drawing.Size(232, 31);
             this.idTextBox.TabIndex = 9;
             // 
             // phoneTextBox
@@ -99,7 +98,7 @@ namespace dekatreís_octavo.View
             this.phoneTextBox.Enabled = false;
             this.phoneTextBox.Location = new System.Drawing.Point(131, 94);
             this.phoneTextBox.Name = "phoneTextBox";
-            this.phoneTextBox.Size = new System.Drawing.Size(100, 31);
+            this.phoneTextBox.Size = new System.Drawing.Size(232, 31);
             this.phoneTextBox.TabIndex = 8;
             // 
             // nameTextBox
@@ -107,7 +106,7 @@ namespace dekatreís_octavo.View
             this.nameTextBox.Enabled = false;
             this.nameTextBox.Location = new System.Drawing.Point(131, 43);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 31);
+            this.nameTextBox.Size = new System.Drawing.Size(232, 31);
             this.nameTextBox.TabIndex = 7;
             // 
             // pictureBox4
@@ -211,7 +210,7 @@ namespace dekatreís_octavo.View
             this.cirPictureBox2.Image = global::dekatreís_octavo.Properties.Resources.pencil;
             this.cirPictureBox2.Location = new System.Drawing.Point(79, 71);
             this.cirPictureBox2.Name = "cirPictureBox2";
-            this.cirPictureBox2.Size = new System.Drawing.Size(18, 18);
+            this.cirPictureBox2.Size = new System.Drawing.Size(24, 24);
             this.cirPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.cirPictureBox2.TabIndex = 2;
             this.cirPictureBox2.TabStop = false;
@@ -223,7 +222,7 @@ namespace dekatreís_octavo.View
             this.avatar.Location = new System.Drawing.Point(37, 29);
             this.avatar.Name = "avatar";
             this.avatar.Size = new System.Drawing.Size(60, 60);
-            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.avatar.TabIndex = 1;
             this.avatar.TabStop = false;
             // 
@@ -244,6 +243,7 @@ namespace dekatreís_octavo.View
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DetailView";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DetailView_FormClosed);
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

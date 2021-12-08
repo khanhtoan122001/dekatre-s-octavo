@@ -67,6 +67,7 @@ namespace dekatreís_octavo.View
             this.tb_Username.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_Username.TabIndex = 1;
             this.tb_Username.UseSystemPasswordChar = false;
+            this.tb_Username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_Username_KeyDown);
             // 
             // tb_Password
             // 
@@ -95,6 +96,7 @@ namespace dekatreís_octavo.View
             this.tb_Password.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_Password.TabIndex = 2;
             this.tb_Password.UseSystemPasswordChar = true;
+            this.tb_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_Password_KeyDown);
             // 
             // bt_Login
             // 

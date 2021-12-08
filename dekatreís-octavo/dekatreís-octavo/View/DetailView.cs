@@ -86,5 +86,10 @@ namespace dekatreís_octavo.View
                 editing = false;
             }
         }
+
+        private void DetailView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }
