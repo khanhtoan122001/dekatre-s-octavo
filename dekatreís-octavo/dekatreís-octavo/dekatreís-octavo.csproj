@@ -295,6 +295,12 @@
     <Compile Include="View\ParkingView.Designer.cs">
       <DependentUpon>ParkingView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\RevenueReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\RevenueReport.Designer.cs">
+      <DependentUpon>RevenueReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StatusView.cs">
       <SubType>Form</SubType>
     </Compile>
