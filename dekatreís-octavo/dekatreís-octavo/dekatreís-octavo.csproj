@@ -140,6 +140,7 @@
     <Compile Include="Bus\DataProvider.cs" />
     <Compile Include="Bus\GuiNhanXeBus.cs" />
     <Compile Include="Bus\HoaDonBus.cs" />
+    <Compile Include="Bus\ImageHelper.cs" />
     <Compile Include="Bus\LoaiTaiKhoanBus.cs" />
     <Compile Include="Bus\LoginViewBus.cs" />
     <Compile Include="Bus\ReportBus.cs" />

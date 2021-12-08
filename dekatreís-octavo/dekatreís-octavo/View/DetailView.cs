@@ -30,7 +30,7 @@ namespace dekatreís_octavo.View
             {
                 positionTextBox.Text = "staff";
             }
-            avatar.Image = LoginViewBus.Instance.byteArrayToImage(taiKhoan.Avatar);
+            avatar.Image = ImageHelper.byteArrayToImage(taiKhoan.Avatar);
         }
 
         private void containedButton1_Click(object sender, EventArgs e)
