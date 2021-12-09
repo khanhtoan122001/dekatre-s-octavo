@@ -96,5 +96,21 @@ namespace dekatreís_octavo.View
             if (Dialog.Show(this, "Bạn chắc chắn muốn thoát?", "Xác nhận", Buttons.YesNo) == DialogResult.Yes)
                 Application.Exit();
         }
+
+        private void tb_Username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                tb_Password.Focus();
+            }
+        }
+
+        private void tb_Password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.containedButton1_Click(null, null);
+            }
+        }
     }
 }

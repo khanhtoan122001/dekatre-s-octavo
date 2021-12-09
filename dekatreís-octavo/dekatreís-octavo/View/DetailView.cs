@@ -22,7 +22,7 @@ namespace dekatreís_octavo.View
             nameTextBox.Text = taiKhoan.TenThat;
             phoneTextBox.Text = taiKhoan.SDT;
             idTextBox.Text = taiKhoan.CMND;
-            if (taiKhoan.LoaiTaiKhoan == 1)
+            if (taiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
             {
                 positionTextBox.Text = "admin";
             }
@@ -30,7 +30,7 @@ namespace dekatreís_octavo.View
             {
                 positionTextBox.Text = "staff";
             }
-            avatar.Image = LoginViewBus.Instance.byteArrayToImage(taiKhoan.Avatar);
+            avatar.Image = ImageHelper.byteArrayToImage(taiKhoan.Avatar);
         }
 
         private void containedButton1_Click(object sender, EventArgs e)
@@ -85,6 +85,11 @@ namespace dekatreís_octavo.View
                 closeButton.Text = "Close";
                 editing = false;
             }
+        }
+
+        private void DetailView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 }

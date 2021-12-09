@@ -19,6 +19,8 @@ namespace dekatreís_octavo.View
         public HomeView()
         {
             InitializeComponent();
+            if (TaiKhoan != null)
+                pictureBox2.Image = ImageHelper.byteArrayToImage(TaiKhoan.Avatar);
             pictureBox2.Image = LoginViewBus.Instance.byteArrayToImage(TaiKhoan.Avatar);
             AddTab();
             //tabPage1.Controls.Add(new CardManagement());
@@ -161,8 +163,11 @@ namespace dekatreís_octavo.View
 
         private void bt_info_Click_1(object sender, EventArgs e)
         {
+            materialCard1.Visible = false;
             DetailView detailView = new DetailView();
-            detailView.Show();
+            detailView.ShowDialog();
+            if (TaiKhoan != null)
+                pictureBox2.Image = ImageHelper.byteArrayToImage(TaiKhoan.Avatar);
         }
     }
 }
