@@ -21,7 +21,6 @@ namespace dekatreís_octavo.View
             InitializeComponent();
             if (TaiKhoan != null)
                 pictureBox2.Image = ImageHelper.byteArrayToImage(TaiKhoan.Avatar);
-            pictureBox2.Image = LoginViewBus.Instance.byteArrayToImage(TaiKhoan.Avatar);
             AddTab();
             //tabPage1.Controls.Add(new CardManagement());
             //tabPage1.BackColor = Color.White;

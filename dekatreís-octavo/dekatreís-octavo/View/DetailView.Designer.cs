@@ -55,8 +55,13 @@ namespace dekatreís_octavo.View
             // materialCard1
             // 
             this.materialCard1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.materialCard1.CardColor = System.Drawing.Color.White;
+            this.materialCard1.CardColor = System.Drawing.SystemColors.ControlLightLight;
+            this.materialCard1.Controls.Add(this.accountLabel);
+            this.materialCard1.Controls.Add(this.editButton);
             this.materialCard1.Controls.Add(this.positionTextBox);
+            this.materialCard1.Controls.Add(this.cirPictureBox2);
+            this.materialCard1.Controls.Add(this.closeButton);
+            this.materialCard1.Controls.Add(this.avatar);
             this.materialCard1.Controls.Add(this.idTextBox);
             this.materialCard1.Controls.Add(this.phoneTextBox);
             this.materialCard1.Controls.Add(this.nameTextBox);
@@ -64,8 +69,9 @@ namespace dekatreís_octavo.View
             this.materialCard1.Controls.Add(this.pictureBox3);
             this.materialCard1.Controls.Add(this.pictureBox2);
             this.materialCard1.Controls.Add(this.pictureBox1);
+            this.materialCard1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialCard1.Location = new System.Drawing.Point(47, 107);
+            this.materialCard1.Location = new System.Drawing.Point(0, 0);
             this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
             this.materialCard1.MouseInteract = false;
             this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
@@ -73,14 +79,14 @@ namespace dekatreís_octavo.View
             this.materialCard1.Radius = 8;
             this.materialCard1.ShawdowDepth = 2;
             this.materialCard1.ShawdowOpacity = 50;
-            this.materialCard1.Size = new System.Drawing.Size(469, 287);
+            this.materialCard1.Size = new System.Drawing.Size(570, 521);
             this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.materialCard1.TabIndex = 3;
             // 
             // positionTextBox
             // 
             this.positionTextBox.Enabled = false;
-            this.positionTextBox.Location = new System.Drawing.Point(131, 199);
+            this.positionTextBox.Location = new System.Drawing.Point(163, 331);
             this.positionTextBox.Name = "positionTextBox";
             this.positionTextBox.Size = new System.Drawing.Size(232, 31);
             this.positionTextBox.TabIndex = 10;
@@ -88,7 +94,7 @@ namespace dekatreís_octavo.View
             // idTextBox
             // 
             this.idTextBox.Enabled = false;
-            this.idTextBox.Location = new System.Drawing.Point(131, 149);
+            this.idTextBox.Location = new System.Drawing.Point(163, 276);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(232, 31);
             this.idTextBox.TabIndex = 9;
@@ -96,7 +102,7 @@ namespace dekatreís_octavo.View
             // phoneTextBox
             // 
             this.phoneTextBox.Enabled = false;
-            this.phoneTextBox.Location = new System.Drawing.Point(131, 94);
+            this.phoneTextBox.Location = new System.Drawing.Point(163, 215);
             this.phoneTextBox.Name = "phoneTextBox";
             this.phoneTextBox.Size = new System.Drawing.Size(232, 31);
             this.phoneTextBox.TabIndex = 8;
@@ -104,7 +110,7 @@ namespace dekatreís_octavo.View
             // nameTextBox
             // 
             this.nameTextBox.Enabled = false;
-            this.nameTextBox.Location = new System.Drawing.Point(131, 43);
+            this.nameTextBox.Location = new System.Drawing.Point(163, 155);
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(232, 31);
             this.nameTextBox.TabIndex = 7;
@@ -113,7 +119,7 @@ namespace dekatreís_octavo.View
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.White;
             this.pictureBox4.Image = global::dekatreís_octavo.Properties.Resources.arrow_cloud_up_upload_icon_123722;
-            this.pictureBox4.Location = new System.Drawing.Point(64, 199);
+            this.pictureBox4.Location = new System.Drawing.Point(93, 330);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -124,7 +130,7 @@ namespace dekatreís_octavo.View
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.White;
             this.pictureBox3.Image = global::dekatreís_octavo.Properties.Resources.person;
-            this.pictureBox3.Location = new System.Drawing.Point(64, 42);
+            this.pictureBox3.Location = new System.Drawing.Point(93, 154);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -135,7 +141,7 @@ namespace dekatreís_octavo.View
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources.auricular_phone_symbol_in_a_circle_icon_icons_com_56570;
-            this.pictureBox2.Location = new System.Drawing.Point(64, 93);
+            this.pictureBox2.Location = new System.Drawing.Point(93, 214);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(32, 32);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -146,7 +152,7 @@ namespace dekatreís_octavo.View
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.ic_profile_info_97647;
-            this.pictureBox1.Location = new System.Drawing.Point(64, 149);
+            this.pictureBox1.Location = new System.Drawing.Point(93, 276);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(32, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -158,12 +164,13 @@ namespace dekatreís_octavo.View
             this.accountLabel.AutoSize = true;
             this.accountLabel.Depth = 0;
             this.accountLabel.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.accountLabel.Location = new System.Drawing.Point(123, 70);
+            this.accountLabel.Location = new System.Drawing.Point(160, 74);
             this.accountLabel.MouseState = MaterialSkin.MouseState.HOVER;
             this.accountLabel.Name = "accountLabel";
             this.accountLabel.Size = new System.Drawing.Size(58, 19);
             this.accountLabel.TabIndex = 4;
             this.accountLabel.Text = "account";
+            this.accountLabel.Click += new System.EventHandler(this.accountLabel_Click);
             // 
             // closeButton
             // 
@@ -171,7 +178,7 @@ namespace dekatreís_octavo.View
             this.closeButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.closeButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.closeButton.Icon = null;
-            this.closeButton.Location = new System.Drawing.Point(100, 435);
+            this.closeButton.Location = new System.Drawing.Point(93, 407);
             this.closeButton.MouseState = MaterialSurface.MouseState.OUT;
             this.closeButton.Name = "closeButton";
             this.closeButton.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -191,7 +198,7 @@ namespace dekatreís_octavo.View
             this.editButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.editButton.Icon = null;
-            this.editButton.Location = new System.Drawing.Point(284, 435);
+            this.editButton.Location = new System.Drawing.Point(293, 407);
             this.editButton.MouseState = MaterialSurface.MouseState.OUT;
             this.editButton.Name = "editButton";
             this.editButton.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -208,7 +215,7 @@ namespace dekatreís_octavo.View
             // cirPictureBox2
             // 
             this.cirPictureBox2.Image = global::dekatreís_octavo.Properties.Resources.pencil;
-            this.cirPictureBox2.Location = new System.Drawing.Point(79, 71);
+            this.cirPictureBox2.Location = new System.Drawing.Point(101, 69);
             this.cirPictureBox2.Name = "cirPictureBox2";
             this.cirPictureBox2.Size = new System.Drawing.Size(24, 24);
             this.cirPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -219,7 +226,7 @@ namespace dekatreís_octavo.View
             // avatar
             // 
             this.avatar.Image = global::dekatreís_octavo.Properties.Resources.icon;
-            this.avatar.Location = new System.Drawing.Point(37, 29);
+            this.avatar.Location = new System.Drawing.Point(57, 33);
             this.avatar.Name = "avatar";
             this.avatar.Size = new System.Drawing.Size(60, 60);
             this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -232,12 +239,7 @@ namespace dekatreís_octavo.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(570, 521);
-            this.Controls.Add(this.editButton);
-            this.Controls.Add(this.closeButton);
-            this.Controls.Add(this.accountLabel);
             this.Controls.Add(this.materialCard1);
-            this.Controls.Add(this.cirPictureBox2);
-            this.Controls.Add(this.avatar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetailView";
             this.ShowInTaskbar = false;
@@ -253,7 +255,6 @@ namespace dekatreís_octavo.View
             ((System.ComponentModel.ISupportInitialize)(this.cirPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

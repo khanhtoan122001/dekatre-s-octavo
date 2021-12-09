@@ -83,7 +83,23 @@ namespace dekatreís_octavo.View
 
         private void cardList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (cardList.SelectedItems.Count == 0)
+            {
+                inOutButton.Enabled = false;
+            }
+            else
+            {
+                TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
+                inOutButton.Enabled = true;
+                if (the.Status.Value)
+                {
+                    inOutButton.Text = "Gửi";
+                }
+                else
+                {
+                    inOutButton.Text = "Trả";
+                }
+            }             
         }
 
         private void inOutButton_Click(object sender, EventArgs e)

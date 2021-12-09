@@ -34,6 +34,8 @@ namespace dekatreís_octavo.View
             this.tb_ConfirmPass = new MaterialSurface.MaterialTextfield();
             this.bt_Confirm = new MaterialSkin.Controls.MaterialButton();
             this.tb_OldPass = new MaterialSurface.MaterialTextfield();
+            this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bt_Exit
@@ -44,14 +46,14 @@ namespace dekatreís_octavo.View
             this.bt_Exit.Depth = 0;
             this.bt_Exit.HighEmphasis = true;
             this.bt_Exit.Icon = null;
-            this.bt_Exit.Location = new System.Drawing.Point(386, -1);
+            this.bt_Exit.Location = new System.Drawing.Point(111, 296);
             this.bt_Exit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.bt_Exit.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.bt_Exit.Size = new System.Drawing.Size(39, 36);
+            this.bt_Exit.Size = new System.Drawing.Size(200, 36);
             this.bt_Exit.TabIndex = 0;
-            this.bt_Exit.Text = "X";
+            this.bt_Exit.Text = "ĐÓNG";
             this.bt_Exit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.bt_Exit.UseAccentColor = false;
             this.bt_Exit.UseVisualStyleBackColor = true;
@@ -60,7 +62,7 @@ namespace dekatreís_octavo.View
             // tb_NewPass
             // 
             this.tb_NewPass.AutoScaleColor = true;
-            this.tb_NewPass.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tb_NewPass.BackColor = System.Drawing.Color.White;
             this.tb_NewPass.CountText = false;
             this.tb_NewPass.FieldType = MaterialSurface.BoxType.Normal;
             this.tb_NewPass.FloatingLabelText = "FloatingLabel";
@@ -69,7 +71,7 @@ namespace dekatreís_octavo.View
             this.tb_NewPass.HelperText = "";
             this.tb_NewPass.HideSelection = true;
             this.tb_NewPass.HintText = "Mật khẩu mới";
-            this.tb_NewPass.Location = new System.Drawing.Point(115, 112);
+            this.tb_NewPass.Location = new System.Drawing.Point(111, 120);
             this.tb_NewPass.MaxLength = 32767;
             this.tb_NewPass.MouseState = MaterialSurface.MouseState.OUT;
             this.tb_NewPass.Multiline = false;
@@ -87,7 +89,7 @@ namespace dekatreís_octavo.View
             // tb_ConfirmPass
             // 
             this.tb_ConfirmPass.AutoScaleColor = true;
-            this.tb_ConfirmPass.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tb_ConfirmPass.BackColor = System.Drawing.Color.White;
             this.tb_ConfirmPass.CountText = false;
             this.tb_ConfirmPass.FieldType = MaterialSurface.BoxType.Normal;
             this.tb_ConfirmPass.FloatingLabelText = "FloatingLabel";
@@ -96,7 +98,7 @@ namespace dekatreís_octavo.View
             this.tb_ConfirmPass.HelperText = "";
             this.tb_ConfirmPass.HideSelection = true;
             this.tb_ConfirmPass.HintText = "Xác nhận mật khẩu";
-            this.tb_ConfirmPass.Location = new System.Drawing.Point(115, 167);
+            this.tb_ConfirmPass.Location = new System.Drawing.Point(111, 175);
             this.tb_ConfirmPass.MaxLength = 32767;
             this.tb_ConfirmPass.MouseState = MaterialSurface.MouseState.OUT;
             this.tb_ConfirmPass.Multiline = false;
@@ -119,7 +121,7 @@ namespace dekatreís_octavo.View
             this.bt_Confirm.Depth = 0;
             this.bt_Confirm.HighEmphasis = true;
             this.bt_Confirm.Icon = null;
-            this.bt_Confirm.Location = new System.Drawing.Point(115, 271);
+            this.bt_Confirm.Location = new System.Drawing.Point(111, 248);
             this.bt_Confirm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.bt_Confirm.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_Confirm.Name = "bt_Confirm";
@@ -135,7 +137,7 @@ namespace dekatreís_octavo.View
             // tb_OldPass
             // 
             this.tb_OldPass.AutoScaleColor = true;
-            this.tb_OldPass.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tb_OldPass.BackColor = System.Drawing.Color.White;
             this.tb_OldPass.CountText = false;
             this.tb_OldPass.FieldType = MaterialSurface.BoxType.Normal;
             this.tb_OldPass.FloatingLabelText = "FloatingLabel";
@@ -144,7 +146,7 @@ namespace dekatreís_octavo.View
             this.tb_OldPass.HelperText = "";
             this.tb_OldPass.HideSelection = true;
             this.tb_OldPass.HintText = "Mật khẩu cũ";
-            this.tb_OldPass.Location = new System.Drawing.Point(115, 57);
+            this.tb_OldPass.Location = new System.Drawing.Point(111, 65);
             this.tb_OldPass.MaxLength = 32767;
             this.tb_OldPass.MouseState = MaterialSurface.MouseState.OUT;
             this.tb_OldPass.Multiline = false;
@@ -159,22 +161,42 @@ namespace dekatreís_octavo.View
             this.tb_OldPass.TabIndex = 5;
             this.tb_OldPass.UseSystemPasswordChar = false;
             // 
+            // materialCard1
+            // 
+            this.materialCard1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.materialCard1.CardColor = System.Drawing.SystemColors.ControlLightLight;
+            this.materialCard1.Controls.Add(this.tb_OldPass);
+            this.materialCard1.Controls.Add(this.bt_Exit);
+            this.materialCard1.Controls.Add(this.bt_Confirm);
+            this.materialCard1.Controls.Add(this.tb_NewPass);
+            this.materialCard1.Controls.Add(this.tb_ConfirmPass);
+            this.materialCard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialCard1.Location = new System.Drawing.Point(0, 0);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
+            this.materialCard1.MouseInteract = false;
+            this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Radius = 8;
+            this.materialCard1.ShawdowDepth = 2;
+            this.materialCard1.ShawdowOpacity = 50;
+            this.materialCard1.Size = new System.Drawing.Size(425, 384);
+            this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
+            this.materialCard1.TabIndex = 6;
+            // 
             // ChangePass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(425, 384);
-            this.Controls.Add(this.tb_OldPass);
-            this.Controls.Add(this.bt_Confirm);
-            this.Controls.Add(this.tb_ConfirmPass);
-            this.Controls.Add(this.tb_NewPass);
-            this.Controls.Add(this.bt_Exit);
+            this.Controls.Add(this.materialCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePass";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblMoveForm_MouseDown);
+            this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -186,5 +208,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialTextfield tb_ConfirmPass;
         private MaterialSkin.Controls.MaterialButton bt_Confirm;
         private MaterialSurface.MaterialTextfield tb_OldPass;
+        private MaterialSurface.MaterialCard materialCard1;
     }
 }
