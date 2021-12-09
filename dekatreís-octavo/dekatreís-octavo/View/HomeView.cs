@@ -20,6 +20,7 @@ namespace dekatreís_octavo.View
         {
             InitializeComponent();
             pictureBox2.Image = LoginViewBus.Instance.byteArrayToImage(TaiKhoan.Avatar);
+            AddTab();
             //tabPage1.Controls.Add(new CardManagement());
             //tabPage1.BackColor = Color.White;
         }
@@ -68,7 +69,18 @@ namespace dekatreís_octavo.View
             tabControl.TabPages.Clear();
             if (TaiKhoan.LoaiTaiKhoan == 1)
             {
-
+                tabControl.TabPages.Add(homePage);
+                tabControl.TabPages.Add(cardPage);
+                tabControl.TabPages.Add(staffPage);
+                tabControl.TabPages.Add(utility);
+                tabControl.TabPages.Add(statusPage);
+                tabControl.TabPages.Add(setting);
+            }
+            if (TaiKhoan.LoaiTaiKhoan == 2)
+            {
+                tabControl.TabPages.Add(homePage);
+                tabControl.TabPages.Add(cardPage);
+                tabControl.TabPages.Add(statusPage);
             }
         }
 
