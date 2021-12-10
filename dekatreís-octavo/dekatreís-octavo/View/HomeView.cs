@@ -25,6 +25,8 @@ namespace dekatreís_octavo.View
         public void initHomeView(TaiKhoan taiKhoan = null)
         {
             if (taiKhoan != null) TaiKhoan = taiKhoan;
+            if (TaiKhoan.Avatar == null)
+                LoginViewBus.Instance.ChangeAvatar(Resources.default_avatar_300x300);
             pictureBox2.Image = ImageHelper.byteArrayToImage(TaiKhoan.Avatar);
             AddTab();
         }
@@ -77,7 +79,7 @@ namespace dekatreís_octavo.View
                 tabControl.TabPages.Add(cardPage);
                 tabControl.TabPages.Add(staffPage);
                 tabControl.TabPages.Add(utility);
-                tabControl.TabPages.Add(statusPage);
+                //tabControl.TabPages.Add(statusPage);
                 tabControl.TabPages.Add(setting);
             }
             else

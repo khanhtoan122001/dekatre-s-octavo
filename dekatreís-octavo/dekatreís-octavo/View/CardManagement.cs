@@ -15,6 +15,7 @@ namespace dekatreís_octavo.View
     {
         QuanLyDoXeEntities1 db = DataProvider.Instance.db;
         string sortType, sortStatus;
+        bool flag = true;
         public CardManagement()
         {
             InitializeComponent();
@@ -32,18 +33,22 @@ namespace dekatreís_octavo.View
             this.LoadData();
         }
 
-        public void LoadData()
+        public void LoadData(List<TheXe> thes = null)
         {
             cardList.Items.Clear();
             typeComboBox.Items.Clear();
-            var result = CardManagementBus.Instance.GetTheXes(sortType, sortStatus).ToList();
+            List<TheXe> result;
+            if(thes != null)
+                result = thes;
+            else
+                result = CardManagementBus.Instance.GetTheXes(sortType, sortStatus).ToList();
             foreach (TheXe i in result)
             {
                 string trangthai = (bool)i.Status ? "Rảnh" : "Bận";
                 string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? i.NgayTao.Value.Date.ToString() : "";
         
                 cardList.Items.Add(new ListViewItem(
-                    new string[] { i.IDThe.ToString(), i.BienSoXe, i.LoaiThe1.TenLoai, trangthai, i.ThoiGianGui.ToString() })
+                    new string[] { i.IDThe.ToString(), i.BienSoXe, i.LoaiThe1.TenLoai, trangthai, i.ThoiGianGui.ToString(), i.NgayTao.ToString() })
                 { Tag = i });
             }
             List<string> list = db.LoaiThes.Select(p => p.TenLoai).ToList();
@@ -51,6 +56,15 @@ namespace dekatreís_octavo.View
             foreach (string i in list)
             {
                 typeComboBox.Items.Add(i);
+            }
+            if (flag)
+            {
+                flag = false;
+                if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "staff")
+                {
+                    addButton.Enabled = false;
+                    delButton.Enabled = false;
+                }
             }
         }
 
@@ -117,7 +131,10 @@ namespace dekatreís_octavo.View
                 {
                     inOutButton.Text = "Trả";
                 }
-            }             
+            }
+            if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
+                inOutButton.Enabled = false;
+            
         }
 
         private void inOutButton_Click(object sender, EventArgs e)
@@ -209,6 +226,19 @@ namespace dekatreís_octavo.View
             inputCard.Left = 267;
             inputCard.Visible = true;
             inputTextBox.Focus();
+        }
+
+        private void materialTextfield1_TextChanged(object sender, EventArgs e)
+        {
+            var result = CardManagementBus.Instance.Search(tb_search.Text).ToList();
+            if(result.Count > 0)
+            {
+                LoadData(result);
+            }
+            else
+            {
+                LoadData();
+            }
         }
 
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)

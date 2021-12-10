@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.SqlServer;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -120,6 +121,13 @@ namespace dekatreís_octavo.Bus
 
         }
 
+        public IQueryable<TheXe> Search(string txt)
+        {
+            var result = from c in DataProvider.Instance.db.TheXes
+                         select c;
+            return result.Where(p => p.BienSoXe.ToLower().Contains(txt.ToLower()));
+
+        }
         public void DangKyTheThang(int id, string bienso)
         {
             TheXe the = DataProvider.Instance.db.TheXes.Where(p => p.IDThe == id).FirstOrDefault();

@@ -41,7 +41,10 @@ namespace dekatreís_octavo.View
                     home.initHomeView(TaiKhoan);
                     this.Hide();
                     home.ShowDialog();
+                    tb_Password.Text = tb_Username.Text = "";
                     this.Show();
+                    tb_Username.Focus();
+                    home = new HomeView();
                 }
                 else
                 {

@@ -92,6 +92,7 @@
       <HintPath>..\packages\System.Configuration.ConfigurationManager.6.0.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Net" />
     <Reference Include="System.Printing" />
