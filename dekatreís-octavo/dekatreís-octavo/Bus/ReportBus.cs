@@ -162,5 +162,18 @@ namespace dekatreís_octavo.Bus
             return result.ToList();
         }
 
+        public List<CT_BaoCaoDoanhThuThang> GetCTBaoCaoDoanhThuThangs(int Nam, int LoaiThe)
+        {
+            List<BaoCaoDoanhThuThang> baoCaoDoanhThuThangList = new List<BaoCaoDoanhThuThang>(DataProvider.Instance.db.BaoCaoDoanhThuThangs);
+            var baoCaoDoanhThuThangCount = baoCaoDoanhThuThangList.Where(x => x.Nam == Nam && x.LoaiThe == LoaiThe).Count();
+            if (baoCaoDoanhThuThangCount < 1)
+            {
+                return null;
+            }
+            BaoCaoDoanhThuThang baoCaoList = baoCaoDoanhThuThangList.Where(x => x.Nam == Nam && x.LoaiThe == LoaiThe).First();
+            List<CT_BaoCaoDoanhThuThang> result = new List<CT_BaoCaoDoanhThuThang>(DataProvider.Instance.db.CT_BaoCaoDoanhThuThang.Where(x => x.IDBaoCao == baoCaoList.IDBaoCao).OrderBy(v => v.Thang));
+
+            return result;
+        }
     }
 }

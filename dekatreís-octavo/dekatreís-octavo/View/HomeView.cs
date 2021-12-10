@@ -142,6 +142,7 @@ namespace dekatreís_octavo.View
 
         private void statusButton_Click(object sender, EventArgs e)
         {
+            revenueReport1.Visible = false;
             consistenceReport1.Visible = true;
             consistenceReport1.LoadData();
         }
@@ -151,6 +152,12 @@ namespace dekatreís_octavo.View
         {
             DetailView detailView = new DetailView();
             detailView.Show();
+        }
+
+        private void revenueButton_Click(object sender, EventArgs e)
+        {
+            consistenceReport1.Visible = false;
+            revenueReport1.Visible = true;
         }
     }
 }
