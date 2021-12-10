@@ -17,18 +17,17 @@ namespace dekatreís_octavo.View
 {
     public partial class LoginView : Form
     {
-        
-
+        HomeView home;// = new HomeView();
         public TaiKhoan TaiKhoan;
         public LoginView()
         {
             InitializeComponent();
             DataProvider.Instance.CreateDataDefault();
+            home = new HomeView();
         }        
 
         private void containedButton1_Click(object sender, EventArgs e)
         {
-                
             if (string.IsNullOrEmpty(tb_Username.Text) || string.IsNullOrEmpty(tb_Password.Text))
             {
                 Dialog.Show(this, "Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!", "Đăng nhập thất bại");
@@ -39,7 +38,7 @@ namespace dekatreís_octavo.View
                 TaiKhoan = LoginViewBus.Instance.Login(tb_Username.Text, tb_Password.Text);
                 if (TaiKhoan != null)
                 {
-                    HomeView home = new HomeView();
+                    home.initHomeView(TaiKhoan);
                     this.Hide();
                     home.ShowDialog();
                     this.Show();

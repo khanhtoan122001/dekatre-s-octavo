@@ -19,11 +19,14 @@ namespace dekatreís_octavo.View
         public HomeView()
         {
             InitializeComponent();
-            if (TaiKhoan != null)
-                pictureBox2.Image = ImageHelper.byteArrayToImage(TaiKhoan.Avatar);
+            if (TaiKhoan != null) initHomeView();
+        }
+
+        public void initHomeView(TaiKhoan taiKhoan = null)
+        {
+            if (taiKhoan != null) TaiKhoan = taiKhoan;
+            pictureBox2.Image = ImageHelper.byteArrayToImage(TaiKhoan.Avatar);
             AddTab();
-            //tabPage1.Controls.Add(new CardManagement());
-            //tabPage1.BackColor = Color.White;
         }
 
         private void materialButton1_Click(object sender, EventArgs e)
