@@ -47,7 +47,7 @@ namespace dekatreís_octavo.View
                 { Tag = i });
             }
             List<string> list = db.LoaiThes.Select(p => p.TenLoai).ToList();
-            typeComboBox.Items.Add("None");
+            //typeComboBox.Items.Add("None");
             foreach (string i in list)
             {
                 typeComboBox.Items.Add(i);
@@ -67,7 +67,7 @@ namespace dekatreís_octavo.View
             if(GetIDTheXeSelected() != -1)
             {
                 CardManagementBus.Instance.DeleteCard(GetIDTheXeSelected());
-                MessageBox.Show("Thành công");
+                MessageBox.Show("Xóa thẻ thành công");
                 this.LoadData();
             }
             
@@ -95,18 +95,27 @@ namespace dekatreís_octavo.View
                 {
                     inOutButton.Enabled = true;
                     createButton.Enabled = false;
-                    if (the.Status.Value)
-                    {
-                        inOutButton.Text = "Gửi";
-                    }
-                    else
-                    {
-                        inOutButton.Text = "Trả";
-                    }
                 }
                 else
                 {
-                    createButton.Enabled = true;
+                    if (string.IsNullOrEmpty(the.BienSoXe))
+                    {
+                        createButton.Enabled = true;
+                        inOutButton.Enabled = false;
+                    }
+                    else
+                    {
+                        inOutButton.Enabled = true;
+                        createButton.Enabled = false;
+                    }
+                }
+                if (the.Status.Value)
+                {
+                    inOutButton.Text = "Gửi";
+                }
+                else
+                {
+                    inOutButton.Text = "Trả";
                 }
             }             
         }
@@ -165,8 +174,9 @@ namespace dekatreís_octavo.View
             TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
             if(e.KeyCode == Keys.Enter)
             {
-                GuiNhan(the, inputTextBox.Text);
-                inputCard.Visible = false;
+                this.pictureBox2_Click(null, null);
+                //GuiNhan(the, inputTextBox.Text);
+                //inputCard.Visible = false;
             }
         }
 
@@ -178,7 +188,19 @@ namespace dekatreís_octavo.View
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
-            GuiNhan(the, inputTextBox.Text);
+            if (!string.IsNullOrEmpty(inputTextBox.Text))
+            {
+                if (the.LoaiThe1.TenLoai == "Thẻ tháng" && string.IsNullOrEmpty(the.BienSoXe))
+                {
+                    CardManagementBus.Instance.DangKyTheThang(the.IDThe, inputTextBox.Text);
+                    LoadData();
+                }
+                else
+                {
+                    GuiNhan(the, inputTextBox.Text);
+                }
+            }
+            inputTextBox.Text = "";
             inputCard.Visible = false;
         }
 

@@ -120,6 +120,12 @@ namespace dekatreís_octavo.Bus
 
         }
 
-
+        public void DangKyTheThang(int id, string bienso)
+        {
+            TheXe the = DataProvider.Instance.db.TheXes.Where(p => p.IDThe == id).FirstOrDefault();
+            the.BienSoXe = bienso;
+            the.NgayTao = DateTime.Now.Date;
+            DataProvider.Instance.db.SaveChanges();
+        }
     }
 }

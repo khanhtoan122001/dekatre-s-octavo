@@ -68,7 +68,7 @@ namespace dekatreís_octavo.View
         private void AddTab()
         {
             tabControl.TabPages.Clear();
-            if (TaiKhoan.LoaiTaiKhoan == 1)
+            if (TaiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
             {
                 tabControl.TabPages.Add(homePage);
                 tabControl.TabPages.Add(cardPage);
@@ -77,7 +77,7 @@ namespace dekatreís_octavo.View
                 tabControl.TabPages.Add(statusPage);
                 tabControl.TabPages.Add(setting);
             }
-            if (TaiKhoan.LoaiTaiKhoan == 2)
+            else
             {
                 tabControl.TabPages.Add(homePage);
                 tabControl.TabPages.Add(cardPage);
