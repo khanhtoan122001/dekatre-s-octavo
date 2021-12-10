@@ -37,29 +37,30 @@ namespace dekatreís_octavo.View
             this.Owner = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.In_date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Start_date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inOutButton = new MaterialSurface.ContainedButton();
             this.topPanel = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.inputCard = new MaterialSurface.MaterialCard();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.inputTextBox = new MaterialSurface.MaterialTextfield();
+            this.typeComboBox = new MaterialSurface.MaterialComboBox();
+            this.statusComboBox = new MaterialSurface.MaterialComboBox();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.In_date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.statusComboBox = new MaterialSurface.MaterialComboBox();
-            this.typeComboBox = new MaterialSurface.MaterialComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.createButton = new MaterialSurface.ContainedButton();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.inputCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // addButton
@@ -157,6 +158,11 @@ namespace dekatreís_octavo.View
             this.Status.Text = "Trạng thái";
             this.Status.Width = 183;
             // 
+            // In_date
+            // 
+            this.In_date.Text = "Ngày gửi";
+            this.In_date.Width = 240;
+            // 
             // Start_date
             // 
             this.Start_date.Text = "Ngày bắt đầu";
@@ -199,6 +205,7 @@ namespace dekatreís_octavo.View
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.createButton);
             this.splitContainer1.Panel1.Controls.Add(this.inputCard);
             this.splitContainer1.Panel1.Controls.Add(this.addButton);
             this.splitContainer1.Panel1.Controls.Add(this.delButton);
@@ -233,17 +240,6 @@ namespace dekatreís_octavo.View
             this.inputCard.TabIndex = 4;
             this.inputCard.Visible = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.x_button_icon_20;
-            this.pictureBox1.Location = new System.Drawing.Point(283, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // inputTextBox
             // 
             this.inputTextBox.AutoScaleColor = true;
@@ -273,29 +269,29 @@ namespace dekatreís_octavo.View
             this.inputTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.inputTextBox_KeyUp);
             this.inputTextBox.Leave += new System.EventHandler(this.inputTextBox_Leave);
             // 
-            // mainPanel
+            // typeComboBox
             // 
-            this.mainPanel.Controls.Add(this.panel1);
-            this.mainPanel.Controls.Add(this.topPanel);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1269, 637);
-            this.mainPanel.TabIndex = 1;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.cardList);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 151);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1269, 486);
-            this.panel1.TabIndex = 7;
-            // 
-            // In_date
-            // 
-            this.In_date.Text = "Ngày gửi";
-            this.In_date.Width = 240;
+            this.typeComboBox.AutoSizing = false;
+            this.typeComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
+            this.typeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.typeComboBox.DropDownWidth = 121;
+            this.typeComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.typeComboBox.FormattingEnabled = true;
+            this.typeComboBox.HintText = "Loại thẻ";
+            this.typeComboBox.ItemHeight = 47;
+            this.typeComboBox.Items.AddRange(new object[] {
+            "All",
+            "Thẻ thường",
+            "Thẻ tháng"});
+            this.typeComboBox.Location = new System.Drawing.Point(310, 53);
+            this.typeComboBox.MaxDropDownItems = 4;
+            this.typeComboBox.MouseState = MaterialSurface.MouseState.OUT;
+            this.typeComboBox.Name = "typeComboBox";
+            this.typeComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.typeComboBox.Size = new System.Drawing.Size(140, 53);
+            this.typeComboBox.TabIndex = 7;
+            this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
             // 
             // statusComboBox
             // 
@@ -321,39 +317,67 @@ namespace dekatreís_octavo.View
             this.statusComboBox.TabIndex = 6;
             this.statusComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
             // 
-            // typeComboBox
+            // mainPanel
             // 
-            this.typeComboBox.AutoSizing = false;
-            this.typeComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
-            this.typeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.typeComboBox.DropDownWidth = 121;
-            this.typeComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.typeComboBox.FormattingEnabled = true;
-            this.typeComboBox.HintText = "Loại thẻ";
-            this.typeComboBox.ItemHeight = 47;
-            this.typeComboBox.Items.AddRange(new object[] {
-            "All",
-            "Thẻ thường",
-            "Thẻ tháng"});
-            this.typeComboBox.Location = new System.Drawing.Point(310, 53);
-            this.typeComboBox.MaxDropDownItems = 4;
-            this.typeComboBox.MouseState = MaterialSurface.MouseState.OUT;
-            this.typeComboBox.Name = "typeComboBox";
-            this.typeComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.typeComboBox.Size = new System.Drawing.Size(140, 53);
-            this.typeComboBox.TabIndex = 7;
-            this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
+            this.mainPanel.Controls.Add(this.panel1);
+            this.mainPanel.Controls.Add(this.topPanel);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1269, 637);
+            this.mainPanel.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.cardList);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 151);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1269, 486);
+            this.panel1.TabIndex = 7;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources.x_button_icon_20;
+            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources._62025;
             this.pictureBox2.Location = new System.Drawing.Point(241, 26);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(24, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.x_button_icon_20;
+            this.pictureBox1.Location = new System.Drawing.Point(283, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // createButton
+            // 
+            this.createButton.EffectType = MaterialSurface.ET.Custom;
+            this.createButton.Enabled = false;
+            this.createButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.createButton.Icon = null;
+            this.createButton.Location = new System.Drawing.Point(392, 11);
+            this.createButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.createButton.Name = "createButton";
+            this.createButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.createButton.Radius = 6;
+            this.createButton.ShawdowDepth = 3;
+            this.createButton.ShawdowOpacity = 50;
+            this.createButton.Size = new System.Drawing.Size(119, 50);
+            this.createButton.TabIndex = 5;
+            this.createButton.Text = "Tạo";
+            this.createButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
             // 
             // CardManagement
             // 
@@ -371,10 +395,10 @@ namespace dekatreís_octavo.View
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.inputCard.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -400,5 +424,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialComboBox typeComboBox;
         private MaterialSurface.MaterialComboBox statusComboBox;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private MaterialSurface.ContainedButton createButton;
     }
 }

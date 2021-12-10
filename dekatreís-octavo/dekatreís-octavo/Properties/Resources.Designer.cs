@@ -73,6 +73,16 @@ namespace dekatreís_octavo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _62025 {
+            get {
+                object obj = ResourceManager.GetObject("62025", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _94392719_p0 {
             get {
                 object obj = ResourceManager.GetObject("94392719_p0", resourceCulture);

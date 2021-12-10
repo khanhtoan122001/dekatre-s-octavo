@@ -435,6 +435,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\62025.png" />
     <Content Include="Resources\default-avatar-300x300.png" />
     <None Include="Resources\x-button-icon-20.jpg" />
     <None Include="Resources\arrow_cloud_up_upload_icon_123722.png" />

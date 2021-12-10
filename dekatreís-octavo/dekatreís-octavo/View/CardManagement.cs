@@ -86,18 +86,27 @@ namespace dekatreís_octavo.View
             if (cardList.SelectedItems.Count == 0)
             {
                 inOutButton.Enabled = false;
+                createButton.Enabled = false;
             }
             else
             {
                 TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
-                inOutButton.Enabled = true;
-                if (the.Status.Value)
+                if (the.LoaiThe1.TenLoai != "Thẻ tháng")
                 {
-                    inOutButton.Text = "Gửi";
+                    inOutButton.Enabled = true;
+                    createButton.Enabled = false;
+                    if (the.Status.Value)
+                    {
+                        inOutButton.Text = "Gửi";
+                    }
+                    else
+                    {
+                        inOutButton.Text = "Trả";
+                    }
                 }
                 else
                 {
-                    inOutButton.Text = "Trả";
+                    createButton.Enabled = true;
                 }
             }             
         }
@@ -115,6 +124,7 @@ namespace dekatreís_octavo.View
                 }
                 else
                 {
+                    inputCard.Left = 267;
                     inputCard.Visible = true;
                     inputTextBox.Focus();
                 }
@@ -163,6 +173,20 @@ namespace dekatreís_octavo.View
         private void inputTextBox_Leave(object sender, EventArgs e)
         {
             inputCard.Visible = false;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
+            GuiNhan(the, inputTextBox.Text);
+            inputCard.Visible = false;
+        }
+
+        private void createButton_Click(object sender, EventArgs e)
+        {
+            inputCard.Left = 267;
+            inputCard.Visible = true;
+            inputTextBox.Focus();
         }
 
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
