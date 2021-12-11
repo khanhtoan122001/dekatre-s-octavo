@@ -43,7 +43,7 @@ namespace dekatreís_octavo.View
             this.bt_Confirm.Depth = 0;
             this.bt_Confirm.HighEmphasis = true;
             this.bt_Confirm.Icon = null;
-            this.bt_Confirm.Location = new System.Drawing.Point(169, 365);
+            this.bt_Confirm.Location = new System.Drawing.Point(179, 390);
             this.bt_Confirm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.bt_Confirm.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_Confirm.Name = "bt_Confirm";
@@ -67,12 +67,12 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.FormattingEnabled = true;
             this.cb_LoaiThe.HintText = "Loại thẻ";
             this.cb_LoaiThe.ItemHeight = 47;
-            this.cb_LoaiThe.Location = new System.Drawing.Point(179, 285);
+            this.cb_LoaiThe.Location = new System.Drawing.Point(179, 305);
             this.cb_LoaiThe.MaxDropDownItems = 4;
             this.cb_LoaiThe.MouseState = MaterialSurface.MouseState.OUT;
             this.cb_LoaiThe.Name = "cb_LoaiThe";
             this.cb_LoaiThe.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.cb_LoaiThe.Size = new System.Drawing.Size(397, 53);
+            this.cb_LoaiThe.Size = new System.Drawing.Size(317, 53);
             this.cb_LoaiThe.TabIndex = 4;
             this.cb_LoaiThe.SelectedIndexChanged += new System.EventHandler(this.cb_LoaiThe_SelectedIndexChanged);
             // 

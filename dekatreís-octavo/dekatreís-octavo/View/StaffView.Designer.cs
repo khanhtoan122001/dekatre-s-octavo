@@ -29,7 +29,7 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
             this.staffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffCMND = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -42,16 +42,16 @@ namespace dekatreís_octavo.View
             this.materialTextfield1 = new MaterialSurface.MaterialTextfield();
             this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.mainPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialListView1
@@ -67,11 +67,11 @@ namespace dekatreís_octavo.View
             this.staffUsername});
             this.materialListView1.Depth = 0;
             this.materialListView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HideSelection = false;
             this.materialListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem4});
+            listViewItem1});
             this.materialListView1.Location = new System.Drawing.Point(0, 0);
             this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
             this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -237,6 +237,15 @@ namespace dekatreís_octavo.View
             this.mainPanel.Size = new System.Drawing.Size(1209, 644);
             this.mainPanel.TabIndex = 6;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.materialListView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 167);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1209, 477);
+            this.panel1.TabIndex = 7;
+            // 
             // topPanel
             // 
             this.topPanel.Controls.Add(this.splitContainer1);
@@ -266,15 +275,6 @@ namespace dekatreís_octavo.View
             this.splitContainer1.SplitterDistance = 682;
             this.splitContainer1.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.materialListView1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 167);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1209, 477);
-            this.panel1.TabIndex = 7;
-            // 
             // StaffView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -286,12 +286,12 @@ namespace dekatreís_octavo.View
             this.Size = new System.Drawing.Size(1209, 644);
             this.Load += new System.EventHandler(this.StaffView_Load);
             this.mainPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
