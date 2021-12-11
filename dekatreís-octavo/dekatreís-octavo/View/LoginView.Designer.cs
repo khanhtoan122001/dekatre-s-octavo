@@ -36,8 +36,13 @@ namespace dekatreís_octavo.View
             this.MainPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_Username
@@ -52,7 +57,7 @@ namespace dekatreís_octavo.View
             this.tb_Username.HelperText = "";
             this.tb_Username.HideSelection = true;
             this.tb_Username.HintText = "Tài khoản";
-            this.tb_Username.Location = new System.Drawing.Point(627, 263);
+            this.tb_Username.Location = new System.Drawing.Point(98, 250);
             this.tb_Username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Username.MaxLength = 32767;
             this.tb_Username.MouseState = MaterialSurface.MouseState.OUT;
@@ -63,7 +68,7 @@ namespace dekatreís_octavo.View
             this.tb_Username.ReadOnly = false;
             this.tb_Username.ShortcutsEnable = true;
             this.tb_Username.ShowCaret = true;
-            this.tb_Username.Size = new System.Drawing.Size(216, 49);
+            this.tb_Username.Size = new System.Drawing.Size(277, 49);
             this.tb_Username.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_Username.TabIndex = 1;
             this.tb_Username.UseSystemPasswordChar = false;
@@ -81,7 +86,7 @@ namespace dekatreís_octavo.View
             this.tb_Password.HelperText = "";
             this.tb_Password.HideSelection = true;
             this.tb_Password.HintText = "Mật khẩu";
-            this.tb_Password.Location = new System.Drawing.Point(627, 328);
+            this.tb_Password.Location = new System.Drawing.Point(98, 315);
             this.tb_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Password.MaxLength = 32767;
             this.tb_Password.MouseState = MaterialSurface.MouseState.OUT;
@@ -92,7 +97,7 @@ namespace dekatreís_octavo.View
             this.tb_Password.ReadOnly = false;
             this.tb_Password.ShortcutsEnable = true;
             this.tb_Password.ShowCaret = true;
-            this.tb_Password.Size = new System.Drawing.Size(216, 49);
+            this.tb_Password.Size = new System.Drawing.Size(277, 49);
             this.tb_Password.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_Password.TabIndex = 2;
             this.tb_Password.UseSystemPasswordChar = true;
@@ -104,7 +109,7 @@ namespace dekatreís_octavo.View
             this.bt_Login.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Login.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_Login.Icon = null;
-            this.bt_Login.Location = new System.Drawing.Point(627, 400);
+            this.bt_Login.Location = new System.Drawing.Point(134, 409);
             this.bt_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Login.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_Login.Name = "bt_Login";
@@ -121,8 +126,9 @@ namespace dekatreís_octavo.View
             // 
             // CloseBox
             // 
+            this.CloseBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CloseBox.Image = global::dekatreís_octavo.Properties.Resources.close__3_;
-            this.CloseBox.Location = new System.Drawing.Point(902, 0);
+            this.CloseBox.Location = new System.Drawing.Point(403, 2);
             this.CloseBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CloseBox.Name = "CloseBox";
             this.CloseBox.Size = new System.Drawing.Size(53, 49);
@@ -133,11 +139,12 @@ namespace dekatreís_octavo.View
             // 
             // MainPictureBox
             // 
+            this.MainPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPictureBox.Image = global::dekatreís_octavo.Properties.Resources._59c80c4b45d2a027e83b578f;
-            this.MainPictureBox.Location = new System.Drawing.Point(-1, 0);
+            this.MainPictureBox.Location = new System.Drawing.Point(0, 0);
             this.MainPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MainPictureBox.Name = "MainPictureBox";
-            this.MainPictureBox.Size = new System.Drawing.Size(511, 550);
+            this.MainPictureBox.Size = new System.Drawing.Size(496, 552);
             this.MainPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MainPictureBox.TabIndex = 0;
             this.MainPictureBox.TabStop = false;
@@ -146,7 +153,7 @@ namespace dekatreís_octavo.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(667, 159);
+            this.label1.Location = new System.Drawing.Point(163, 96);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 41);
             this.label1.TabIndex = 7;
@@ -157,25 +164,41 @@ namespace dekatreís_octavo.View
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(595, 211);
+            this.label2.Location = new System.Drawing.Point(93, 151);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(282, 28);
             this.label2.TabIndex = 8;
             this.label2.Text = "Vui lòng đăng nhập để tiếp tục";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.MainPictureBox);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
+            this.splitContainer1.Panel2.Controls.Add(this.CloseBox);
+            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.bt_Login);
+            this.splitContainer1.Panel2.Controls.Add(this.tb_Username);
+            this.splitContainer1.Panel2.Controls.Add(this.tb_Password);
+            this.splitContainer1.Size = new System.Drawing.Size(956, 552);
+            this.splitContainer1.SplitterDistance = 496;
+            this.splitContainer1.TabIndex = 9;
             // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(953, 550);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.CloseBox);
-            this.Controls.Add(this.bt_Login);
-            this.Controls.Add(this.tb_Password);
-            this.Controls.Add(this.tb_Username);
-            this.Controls.Add(this.MainPictureBox);
+            this.ClientSize = new System.Drawing.Size(956, 552);
+            this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginView";
@@ -185,8 +208,12 @@ namespace dekatreís_octavo.View
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblMoveForm_MouseDown);
             ((System.ComponentModel.ISupportInitialize)(this.CloseBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPictureBox)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -199,5 +226,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.PictureBox CloseBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

@@ -45,12 +45,12 @@
             this.materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
             this.materialTextBox1.Hint = "Họ và tên";
             this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(294, 43);
+            this.materialTextBox1.Location = new System.Drawing.Point(262, 43);
             this.materialTextBox1.MaxLength = 50;
             this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox1.Multiline = false;
             this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(206, 50);
+            this.materialTextBox1.Size = new System.Drawing.Size(267, 50);
             this.materialTextBox1.TabIndex = 1;
             this.materialTextBox1.Text = "Tên";
             this.materialTextBox1.TrailingIcon = null;
@@ -64,12 +64,12 @@
             this.materialTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
             this.materialTextBox2.Hint = "CMND";
             this.materialTextBox2.LeadingIcon = null;
-            this.materialTextBox2.Location = new System.Drawing.Point(294, 109);
+            this.materialTextBox2.Location = new System.Drawing.Point(262, 109);
             this.materialTextBox2.MaxLength = 50;
             this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox2.Multiline = false;
             this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Size = new System.Drawing.Size(206, 50);
+            this.materialTextBox2.Size = new System.Drawing.Size(267, 50);
             this.materialTextBox2.TabIndex = 2;
             this.materialTextBox2.Text = "CMND";
             this.materialTextBox2.TrailingIcon = null;
@@ -83,12 +83,12 @@
             this.materialTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
             this.materialTextBox3.Hint = "SĐT";
             this.materialTextBox3.LeadingIcon = null;
-            this.materialTextBox3.Location = new System.Drawing.Point(294, 178);
+            this.materialTextBox3.Location = new System.Drawing.Point(262, 178);
             this.materialTextBox3.MaxLength = 50;
             this.materialTextBox3.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox3.Multiline = false;
             this.materialTextBox3.Name = "materialTextBox3";
-            this.materialTextBox3.Size = new System.Drawing.Size(206, 50);
+            this.materialTextBox3.Size = new System.Drawing.Size(267, 50);
             this.materialTextBox3.TabIndex = 3;
             this.materialTextBox3.Text = "SĐT";
             this.materialTextBox3.TrailingIcon = null;
@@ -103,13 +103,13 @@
             this.materialTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
             this.materialTextBox4.Hint = "Tên Đăng Nhập";
             this.materialTextBox4.LeadingIcon = null;
-            this.materialTextBox4.Location = new System.Drawing.Point(294, 318);
+            this.materialTextBox4.Location = new System.Drawing.Point(262, 318);
             this.materialTextBox4.MaxLength = 50;
             this.materialTextBox4.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox4.Multiline = false;
             this.materialTextBox4.Name = "materialTextBox4";
             this.materialTextBox4.ReadOnly = true;
-            this.materialTextBox4.Size = new System.Drawing.Size(206, 36);
+            this.materialTextBox4.Size = new System.Drawing.Size(267, 36);
             this.materialTextBox4.TabIndex = 1;
             this.materialTextBox4.Text = "Tên Đăng Nhập";
             this.materialTextBox4.TrailingIcon = null;
@@ -166,7 +166,7 @@
             this.materialComboBox1.DropDownHeight = 174;
             this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.materialComboBox1.DropDownWidth = 121;
-            this.materialComboBox1.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.materialComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialComboBox1.FormattingEnabled = true;
             this.materialComboBox1.Hint = "Loại Tài Khoản";
@@ -175,16 +175,16 @@
             this.materialComboBox1.Items.AddRange(new object[] {
             "Admin",
             "Nhân Viên"});
-            this.materialComboBox1.Location = new System.Drawing.Point(294, 246);
+            this.materialComboBox1.Location = new System.Drawing.Point(262, 246);
             this.materialComboBox1.MaxDropDownItems = 4;
             this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
             this.materialComboBox1.Name = "materialComboBox1";
-            this.materialComboBox1.Size = new System.Drawing.Size(206, 49);
+            this.materialComboBox1.Size = new System.Drawing.Size(267, 49);
             this.materialComboBox1.StartIndex = 0;
             this.materialComboBox1.TabIndex = 4;
             this.materialComboBox1.TextChanged += new System.EventHandler(this.materialTextBox1_TextChanged);
             // 
-            // EditStaffForm
+            // EditStaffView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -196,7 +196,7 @@
             this.Controls.Add(this.materialTextBox3);
             this.Controls.Add(this.materialTextBox2);
             this.Controls.Add(this.materialTextBox1);
-            this.Name = "EditStaffForm";
+            this.Name = "EditStaffView";
             this.Text = "EditStaff";
             this.Load += new System.EventHandler(this.EditStaff_Load);
             this.ResumeLayout(false);

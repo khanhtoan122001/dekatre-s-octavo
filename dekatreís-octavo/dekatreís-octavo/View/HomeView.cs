@@ -49,10 +49,9 @@ namespace dekatreís_octavo.View
         {
             BaoCaoChamCongNhanVienBus.Instance.ChamCong_Logout();
             DataProvider.Instance.TaiKhoan = null;
+            LoginView loginView = new LoginView();
+            loginView.Show();
             this.Close();
-
-            ////LoginView loginView = new LoginView();
-            //loginView.Show();
         }
 
         private void HomeView_FormClosed(object sender, FormClosedEventArgs e)
@@ -177,6 +176,47 @@ namespace dekatreís_octavo.View
             detailView.ShowDialog();
             if (TaiKhoan != null)
                 pictureBox2.Image = ImageHelper.byteArrayToImage(TaiKhoan.Avatar);
+        }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControl.SelectedTab.Name)
+            {
+                case "homePage":
+                    {
+                        tabNameLabel.Text = "Trang chính";
+                        break;
+                    }
+                case "cardPage":
+                    {
+                        tabNameLabel.Text = "Quản lý thẻ";
+                        break;
+                    }
+                case "staffPage":
+                    {
+                        tabNameLabel.Text = "Quản lý nhân viên";
+                        break;
+                    }
+                case "utility":
+                    {
+                        tabNameLabel.Text = "Báo cáo";
+                        break;
+                    }
+                case "statusPage":
+                    {
+                        tabNameLabel.Text = "Tình trạng bãi";
+                        break;
+                    }
+                case "setting":
+                    {
+                        tabNameLabel.Text = "Quản lý quy định";
+                        break;
+                    }
+                default:
+                    break;
+            };
+                
+
         }
     }
 }

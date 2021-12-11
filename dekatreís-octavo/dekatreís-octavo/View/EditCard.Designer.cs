@@ -52,7 +52,7 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.MouseState = MaterialSurface.MouseState.OUT;
             this.cb_LoaiThe.Name = "cb_LoaiThe";
             this.cb_LoaiThe.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.cb_LoaiThe.Size = new System.Drawing.Size(121, 53);
+            this.cb_LoaiThe.Size = new System.Drawing.Size(221, 53);
             this.cb_LoaiThe.TabIndex = 9;
             // 
             // bt_Confirm
@@ -62,7 +62,7 @@ namespace dekatreís_octavo.View
             this.bt_Confirm.Depth = 0;
             this.bt_Confirm.HighEmphasis = true;
             this.bt_Confirm.Icon = null;
-            this.bt_Confirm.Location = new System.Drawing.Point(218, 351);
+            this.bt_Confirm.Location = new System.Drawing.Point(228, 365);
             this.bt_Confirm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.bt_Confirm.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_Confirm.Name = "bt_Confirm";
@@ -97,7 +97,7 @@ namespace dekatreís_octavo.View
             this.tb_TenChuSoHuu.ReadOnly = false;
             this.tb_TenChuSoHuu.ShortcutsEnable = true;
             this.tb_TenChuSoHuu.ShowCaret = true;
-            this.tb_TenChuSoHuu.Size = new System.Drawing.Size(200, 49);
+            this.tb_TenChuSoHuu.Size = new System.Drawing.Size(221, 49);
             this.tb_TenChuSoHuu.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_TenChuSoHuu.TabIndex = 10;
             this.tb_TenChuSoHuu.UseSystemPasswordChar = false;
@@ -124,7 +124,7 @@ namespace dekatreís_octavo.View
             this.tb_TenXe.ReadOnly = false;
             this.tb_TenXe.ShortcutsEnable = true;
             this.tb_TenXe.ShowCaret = true;
-            this.tb_TenXe.Size = new System.Drawing.Size(200, 49);
+            this.tb_TenXe.Size = new System.Drawing.Size(221, 49);
             this.tb_TenXe.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_TenXe.TabIndex = 13;
             this.tb_TenXe.UseSystemPasswordChar = false;
@@ -141,7 +141,7 @@ namespace dekatreís_octavo.View
             this.tb_BienSo.HelperText = "";
             this.tb_BienSo.HideSelection = true;
             this.tb_BienSo.HintText = "Biển số";
-            this.tb_BienSo.Location = new System.Drawing.Point(228, 216);
+            this.tb_BienSo.Location = new System.Drawing.Point(225, 216);
             this.tb_BienSo.MaxLength = 32767;
             this.tb_BienSo.MouseState = MaterialSurface.MouseState.OUT;
             this.tb_BienSo.Multiline = false;
@@ -151,7 +151,7 @@ namespace dekatreís_octavo.View
             this.tb_BienSo.ReadOnly = false;
             this.tb_BienSo.ShortcutsEnable = true;
             this.tb_BienSo.ShowCaret = true;
-            this.tb_BienSo.Size = new System.Drawing.Size(200, 49);
+            this.tb_BienSo.Size = new System.Drawing.Size(224, 49);
             this.tb_BienSo.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_BienSo.TabIndex = 14;
             this.tb_BienSo.UseSystemPasswordChar = false;
