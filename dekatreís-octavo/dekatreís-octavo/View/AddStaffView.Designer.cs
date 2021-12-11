@@ -90,7 +90,7 @@
             this.materialTextfield1.HelperText = "";
             this.materialTextfield1.HideSelection = true;
             this.materialTextfield1.HintText = "Mật Khẩu";
-            this.materialTextfield1.Location = new System.Drawing.Point(152, 215);
+            this.materialTextfield1.Location = new System.Drawing.Point(127, 215);
             this.materialTextfield1.MaxLength = 32767;
             this.materialTextfield1.MouseState = MaterialSurface.MouseState.OUT;
             this.materialTextfield1.Multiline = false;
@@ -100,7 +100,7 @@
             this.materialTextfield1.ReadOnly = false;
             this.materialTextfield1.ShortcutsEnable = true;
             this.materialTextfield1.ShowCaret = true;
-            this.materialTextfield1.Size = new System.Drawing.Size(274, 49);
+            this.materialTextfield1.Size = new System.Drawing.Size(324, 49);
             this.materialTextfield1.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.materialTextfield1.TabIndex = 3;
             this.materialTextfield1.UseSystemPasswordChar = true;
@@ -117,7 +117,7 @@
             this.materialTextfield2.HelperText = "";
             this.materialTextfield2.HideSelection = true;
             this.materialTextfield2.HintText = "Xác Nhận Mật Khẩu";
-            this.materialTextfield2.Location = new System.Drawing.Point(152, 287);
+            this.materialTextfield2.Location = new System.Drawing.Point(127, 287);
             this.materialTextfield2.MaxLength = 32767;
             this.materialTextfield2.MouseState = MaterialSurface.MouseState.OUT;
             this.materialTextfield2.Multiline = false;
@@ -127,7 +127,7 @@
             this.materialTextfield2.ReadOnly = false;
             this.materialTextfield2.ShortcutsEnable = true;
             this.materialTextfield2.ShowCaret = true;
-            this.materialTextfield2.Size = new System.Drawing.Size(274, 49);
+            this.materialTextfield2.Size = new System.Drawing.Size(324, 49);
             this.materialTextfield2.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.materialTextfield2.TabIndex = 4;
             this.materialTextfield2.UseSystemPasswordChar = true;
@@ -144,7 +144,7 @@
             this.materialTextBox2.HelperText = "";
             this.materialTextBox2.HideSelection = true;
             this.materialTextBox2.HintText = "Tên đăng nhập";
-            this.materialTextBox2.Location = new System.Drawing.Point(152, 68);
+            this.materialTextBox2.Location = new System.Drawing.Point(127, 68);
             this.materialTextBox2.MaxLength = 32767;
             this.materialTextBox2.MouseState = MaterialSurface.MouseState.OUT;
             this.materialTextBox2.Multiline = false;
@@ -154,7 +154,7 @@
             this.materialTextBox2.ReadOnly = false;
             this.materialTextBox2.ShortcutsEnable = true;
             this.materialTextBox2.ShowCaret = true;
-            this.materialTextBox2.Size = new System.Drawing.Size(274, 49);
+            this.materialTextBox2.Size = new System.Drawing.Size(324, 49);
             this.materialTextBox2.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.materialTextBox2.TabIndex = 5;
             this.materialTextBox2.UseSystemPasswordChar = false;
@@ -171,7 +171,7 @@
             this.materialTextBox1.HelperText = "";
             this.materialTextBox1.HideSelection = true;
             this.materialTextBox1.HintText = "Họ và tên";
-            this.materialTextBox1.Location = new System.Drawing.Point(152, 148);
+            this.materialTextBox1.Location = new System.Drawing.Point(127, 148);
             this.materialTextBox1.MaxLength = 32767;
             this.materialTextBox1.MouseState = MaterialSurface.MouseState.OUT;
             this.materialTextBox1.Multiline = false;
@@ -181,7 +181,7 @@
             this.materialTextBox1.ReadOnly = false;
             this.materialTextBox1.ShortcutsEnable = true;
             this.materialTextBox1.ShowCaret = true;
-            this.materialTextBox1.Size = new System.Drawing.Size(274, 49);
+            this.materialTextBox1.Size = new System.Drawing.Size(324, 49);
             this.materialTextBox1.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.materialTextBox1.TabIndex = 6;
             this.materialTextBox1.UseSystemPasswordChar = false;

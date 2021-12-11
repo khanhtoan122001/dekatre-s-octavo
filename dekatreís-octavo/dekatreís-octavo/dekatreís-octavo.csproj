@@ -302,6 +302,12 @@
     <Compile Include="View\RevenueReport.Designer.cs">
       <DependentUpon>RevenueReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\StaffDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StaffDetail.Designer.cs">
+      <DependentUpon>StaffDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\StatusView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ParkingView.resx">
       <DependentUpon>ParkingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StaffDetail.resx">
+      <DependentUpon>StaffDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\StatusView.resx">
       <DependentUpon>StatusView.cs</DependentUpon>

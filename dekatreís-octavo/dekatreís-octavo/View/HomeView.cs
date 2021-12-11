@@ -168,5 +168,46 @@ namespace dekatreís_octavo.View
             if (TaiKhoan != null)
                 pictureBox2.Image = ImageHelper.byteArrayToImage(TaiKhoan.Avatar);
         }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tabControl.SelectedTab.Name)
+            {
+                case "homePage":
+                    {
+                        tabNameLabel.Text = "Trang chính";
+                        break;
+                    }
+                case "cardPage":
+                    {
+                        tabNameLabel.Text = "Quản lý thẻ";
+                        break;
+                    }
+                case "staffPage":
+                    {
+                        tabNameLabel.Text = "Quản lý nhân viên";
+                        break;
+                    }
+                case "utility":
+                    {
+                        tabNameLabel.Text = "Báo cáo";
+                        break;
+                    }
+                case "statusPage":
+                    {
+                        tabNameLabel.Text = "Tình trạng bãi";
+                        break;
+                    }
+                case "setting":
+                    {
+                        tabNameLabel.Text = "Quản lý quy định";
+                        break;
+                    }
+                default:
+                    break;
+            };
+                
+
+        }
     }
 }

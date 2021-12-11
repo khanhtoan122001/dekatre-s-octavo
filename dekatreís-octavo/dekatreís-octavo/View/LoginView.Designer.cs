@@ -57,7 +57,7 @@ namespace dekatreís_octavo.View
             this.tb_Username.HelperText = "";
             this.tb_Username.HideSelection = true;
             this.tb_Username.HintText = "Tài khoản";
-            this.tb_Username.Location = new System.Drawing.Point(116, 250);
+            this.tb_Username.Location = new System.Drawing.Point(98, 250);
             this.tb_Username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Username.MaxLength = 32767;
             this.tb_Username.MouseState = MaterialSurface.MouseState.OUT;
@@ -68,7 +68,7 @@ namespace dekatreís_octavo.View
             this.tb_Username.ReadOnly = false;
             this.tb_Username.ShortcutsEnable = true;
             this.tb_Username.ShowCaret = true;
-            this.tb_Username.Size = new System.Drawing.Size(234, 49);
+            this.tb_Username.Size = new System.Drawing.Size(277, 49);
             this.tb_Username.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_Username.TabIndex = 1;
             this.tb_Username.UseSystemPasswordChar = false;
@@ -86,7 +86,7 @@ namespace dekatreís_octavo.View
             this.tb_Password.HelperText = "";
             this.tb_Password.HideSelection = true;
             this.tb_Password.HintText = "Mật khẩu";
-            this.tb_Password.Location = new System.Drawing.Point(116, 315);
+            this.tb_Password.Location = new System.Drawing.Point(98, 315);
             this.tb_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Password.MaxLength = 32767;
             this.tb_Password.MouseState = MaterialSurface.MouseState.OUT;
@@ -97,7 +97,7 @@ namespace dekatreís_octavo.View
             this.tb_Password.ReadOnly = false;
             this.tb_Password.ShortcutsEnable = true;
             this.tb_Password.ShowCaret = true;
-            this.tb_Password.Size = new System.Drawing.Size(234, 49);
+            this.tb_Password.Size = new System.Drawing.Size(277, 49);
             this.tb_Password.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_Password.TabIndex = 2;
             this.tb_Password.UseSystemPasswordChar = true;
