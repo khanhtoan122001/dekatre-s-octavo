@@ -40,9 +40,8 @@ namespace dekatreís_octavo.View
                 if (TaiKhoan != null)
                 {
                     HomeView home = new HomeView();
-                    this.Hide();
-                    home.ShowDialog();
-                    this.Show();
+                    home.Show();
+                    this.Close();
                 }
                 else
                 {
@@ -111,6 +110,11 @@ namespace dekatreís_octavo.View
             {
                 this.containedButton1_Click(null, null);
             }
+        }
+
+        private void LoginView_Resize(object sender, EventArgs e)
+        {
+            this.Size = new Size(953, 550);
         }
     }
 }
