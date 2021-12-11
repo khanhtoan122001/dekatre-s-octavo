@@ -29,16 +29,16 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
             this.staffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffCMND = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffPhoneNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.containedButton1 = new MaterialSurface.ContainedButton();
-            this.containedButton2 = new MaterialSurface.ContainedButton();
-            this.containedButton3 = new MaterialSurface.ContainedButton();
+            this.bt_add = new MaterialSurface.ContainedButton();
+            this.bt_edit = new MaterialSurface.ContainedButton();
+            this.bt_remove = new MaterialSurface.ContainedButton();
             this.materialTextfield1 = new MaterialSurface.MaterialTextfield();
             this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
             this.mainPanel = new System.Windows.Forms.Panel();
@@ -72,7 +72,7 @@ namespace dekatreís_octavo.View
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HideSelection = false;
             this.materialListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.materialListView1.Location = new System.Drawing.Point(0, 0);
             this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
             this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -84,6 +84,7 @@ namespace dekatreís_octavo.View
             this.materialListView1.UseCompatibleStateImageBehavior = false;
             this.materialListView1.View = System.Windows.Forms.View.Details;
             this.materialListView1.SelectedIndexChanged += new System.EventHandler(this.materialListView1_SelectedIndexChanged);
+            this.materialListView1.DoubleClick += new System.EventHandler(this.materialListView1_DoubleClick);
             // 
             // staffName
             // 
@@ -110,70 +111,71 @@ namespace dekatreís_octavo.View
             this.staffUsername.Text = "Tên Đăng Nhập";
             this.staffUsername.Width = 160;
             // 
-            // containedButton1
+            // bt_add
             // 
-            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
-            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.containedButton1.Icon = null;
-            this.containedButton1.Location = new System.Drawing.Point(3, 77);
-            this.containedButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
-            this.containedButton1.Name = "containedButton1";
-            this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.containedButton1.Radius = 6;
-            this.containedButton1.ShawdowDepth = 3;
-            this.containedButton1.ShawdowOpacity = 50;
-            this.containedButton1.Size = new System.Drawing.Size(180, 50);
-            this.containedButton1.TabIndex = 1;
-            this.containedButton1.Text = "Thêm";
-            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.containedButton1.UseVisualStyleBackColor = true;
-            this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
+            this.bt_add.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bt_add.EffectType = MaterialSurface.ET.Custom;
+            this.bt_add.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_add.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_add.Icon = null;
+            this.bt_add.Location = new System.Drawing.Point(3, 77);
+            this.bt_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_add.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_add.Name = "bt_add";
+            this.bt_add.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.bt_add.Radius = 6;
+            this.bt_add.ShawdowDepth = 3;
+            this.bt_add.ShawdowOpacity = 50;
+            this.bt_add.Size = new System.Drawing.Size(180, 50);
+            this.bt_add.TabIndex = 1;
+            this.bt_add.Text = "Thêm";
+            this.bt_add.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_add.UseVisualStyleBackColor = true;
+            this.bt_add.Click += new System.EventHandler(this.containedButton1_Click);
             // 
-            // containedButton2
+            // bt_edit
             // 
-            this.containedButton2.EffectType = MaterialSurface.ET.Custom;
-            this.containedButton2.Enabled = false;
-            this.containedButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.containedButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.containedButton2.Icon = null;
-            this.containedButton2.Location = new System.Drawing.Point(189, 77);
-            this.containedButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.containedButton2.MouseState = MaterialSurface.MouseState.OUT;
-            this.containedButton2.Name = "containedButton2";
-            this.containedButton2.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.containedButton2.Radius = 6;
-            this.containedButton2.ShawdowDepth = 3;
-            this.containedButton2.ShawdowOpacity = 50;
-            this.containedButton2.Size = new System.Drawing.Size(180, 50);
-            this.containedButton2.TabIndex = 2;
-            this.containedButton2.Text = "Sửa";
-            this.containedButton2.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.containedButton2.UseVisualStyleBackColor = true;
-            this.containedButton2.Click += new System.EventHandler(this.containedButton2_Click);
+            this.bt_edit.EffectType = MaterialSurface.ET.Custom;
+            this.bt_edit.Enabled = false;
+            this.bt_edit.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_edit.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_edit.Icon = null;
+            this.bt_edit.Location = new System.Drawing.Point(189, 77);
+            this.bt_edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_edit.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_edit.Name = "bt_edit";
+            this.bt_edit.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.bt_edit.Radius = 6;
+            this.bt_edit.ShawdowDepth = 3;
+            this.bt_edit.ShawdowOpacity = 50;
+            this.bt_edit.Size = new System.Drawing.Size(180, 50);
+            this.bt_edit.TabIndex = 2;
+            this.bt_edit.Text = "Sửa";
+            this.bt_edit.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_edit.UseVisualStyleBackColor = true;
+            this.bt_edit.Click += new System.EventHandler(this.containedButton2_Click);
             // 
-            // containedButton3
+            // bt_remove
             // 
-            this.containedButton3.EffectType = MaterialSurface.ET.Custom;
-            this.containedButton3.Enabled = false;
-            this.containedButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.containedButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.containedButton3.Icon = null;
-            this.containedButton3.Location = new System.Drawing.Point(375, 77);
-            this.containedButton3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.containedButton3.MouseState = MaterialSurface.MouseState.OUT;
-            this.containedButton3.Name = "containedButton3";
-            this.containedButton3.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.containedButton3.Radius = 6;
-            this.containedButton3.ShawdowDepth = 3;
-            this.containedButton3.ShawdowOpacity = 50;
-            this.containedButton3.Size = new System.Drawing.Size(180, 50);
-            this.containedButton3.TabIndex = 3;
-            this.containedButton3.Text = "Xóa";
-            this.containedButton3.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.containedButton3.UseVisualStyleBackColor = true;
-            this.containedButton3.Click += new System.EventHandler(this.containedButton3_Click);
+            this.bt_remove.EffectType = MaterialSurface.ET.Custom;
+            this.bt_remove.Enabled = false;
+            this.bt_remove.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_remove.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_remove.Icon = null;
+            this.bt_remove.Location = new System.Drawing.Point(375, 77);
+            this.bt_remove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bt_remove.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_remove.Name = "bt_remove";
+            this.bt_remove.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.bt_remove.Radius = 6;
+            this.bt_remove.ShawdowDepth = 3;
+            this.bt_remove.ShawdowOpacity = 50;
+            this.bt_remove.Size = new System.Drawing.Size(180, 50);
+            this.bt_remove.TabIndex = 3;
+            this.bt_remove.Text = "Xóa";
+            this.bt_remove.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_remove.UseVisualStyleBackColor = true;
+            this.bt_remove.Click += new System.EventHandler(this.containedButton3_Click);
             // 
             // materialTextfield1
             // 
@@ -266,9 +268,9 @@ namespace dekatreís_octavo.View
             // 
             this.splitContainer1.Panel1.Controls.Add(this.passResetButton);
             this.splitContainer1.Panel1.Controls.Add(this.materialTextfield1);
-            this.splitContainer1.Panel1.Controls.Add(this.containedButton1);
-            this.splitContainer1.Panel1.Controls.Add(this.containedButton2);
-            this.splitContainer1.Panel1.Controls.Add(this.containedButton3);
+            this.splitContainer1.Panel1.Controls.Add(this.bt_add);
+            this.splitContainer1.Panel1.Controls.Add(this.bt_edit);
+            this.splitContainer1.Panel1.Controls.Add(this.bt_remove);
             // 
             // splitContainer1.Panel2
             // 
@@ -297,6 +299,7 @@ namespace dekatreís_octavo.View
             this.passResetButton.Text = "Đặt lại mật khẩu";
             this.passResetButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.passResetButton.UseVisualStyleBackColor = true;
+            this.passResetButton.Click += new System.EventHandler(this.passResetButton_Click);
             // 
             // StaffView
             // 
@@ -323,9 +326,9 @@ namespace dekatreís_octavo.View
 
         private MaterialSkin.Controls.MaterialListView materialListView1;
         private System.Windows.Forms.ColumnHeader staffName;
-        private MaterialSurface.ContainedButton containedButton1;
-        private MaterialSurface.ContainedButton containedButton2;
-        private MaterialSurface.ContainedButton containedButton3;
+        private MaterialSurface.ContainedButton bt_add;
+        private MaterialSurface.ContainedButton bt_edit;
+        private MaterialSurface.ContainedButton bt_remove;
         private MaterialSurface.MaterialTextfield materialTextfield1;
         private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
         private System.Windows.Forms.ColumnHeader staffCMND;

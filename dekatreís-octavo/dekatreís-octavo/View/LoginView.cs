@@ -24,7 +24,7 @@ namespace dekatreís_octavo.View
             InitializeComponent();
             DataProvider.Instance.CreateDataDefault();
             home = new HomeView();
-        }        
+        }
 
         private void containedButton1_Click(object sender, EventArgs e)
         {
@@ -40,6 +40,7 @@ namespace dekatreís_octavo.View
                 {
                     BaoCaoChamCongNhanVienBus.Instance.ChamCong_Login();
                     home.initHomeView(TaiKhoan);
+                    home.StartWork();
                     this.Hide();
                     home.ShowDialog();
                     tb_Password.Text = tb_Username.Text = "";
@@ -91,6 +92,7 @@ namespace dekatreís_octavo.View
 
         private void LoginView_Load(object sender, EventArgs e)
         {
+            tb_Username.Focus();
             //materialButton1.BackgroundImage = Image.FromFile(@"C:\Users\ADMIN\OneDrive\Documents\GitHub\dekatre-s-octavo\dekatreís-octavo\dekatreís-octavo\Resources\close.png");
         }
 

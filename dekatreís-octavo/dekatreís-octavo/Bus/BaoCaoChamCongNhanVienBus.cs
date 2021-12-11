@@ -37,32 +37,43 @@ namespace dekatreís_octavo.Bus
 
         public void ChamCong_Login()
         {
-            if (DataProvider.Instance.TaiKhoan == null)
-                return;
-            TaiKhoan taikhoan = DataProvider.Instance.TaiKhoan;
-            BaoCaoChamCongNhanVien baocao = new BaoCaoChamCongNhanVien()
-            {
-                TaiKhoan = taikhoan,
-                TenDangNhap = taikhoan.TenDangNhap,
-                ThoiGian = DateTime.Now,
-                IsLogin = true
-            };
-            db.BaoCaoChamCongNhanViens.Add(baocao);
-            db.SaveChanges();
+            //if (DataProvider.Instance.TaiKhoan == null)
+            //    return;
+            //TaiKhoan taikhoan = DataProvider.Instance.TaiKhoan;
+            //BaoCaoChamCongNhanVien baocao = new BaoCaoChamCongNhanVien()
+            //{
+            //    TaiKhoan = taikhoan,
+            //    TenDangNhap = taikhoan.TenDangNhap,
+            //    ThoiGian = DateTime.Now,
+            //    IsLogin = true
+            //};
+            //db.BaoCaoChamCongNhanViens.Add(baocao);
+            //db.SaveChanges();
         }
-        public void ChamCong_Logout()
+        public void ChamCong_Logout(int ThoiGian)
         {
             if (DataProvider.Instance.TaiKhoan == null)
                 return;
             TaiKhoan taikhoan = DataProvider.Instance.TaiKhoan;
-            BaoCaoChamCongNhanVien baocao = new BaoCaoChamCongNhanVien()
+            DateTime date = DateTime.Now.Date;
+            var i = db.BaoCaoChamCongNhanViens
+                .Where(p => p.TenDangNhap == taikhoan.TenDangNhap && p.ThoiGian == date).ToList();
+            if (i.Count != 0)
             {
-                TaiKhoan = taikhoan,
-                TenDangNhap = taikhoan.TenDangNhap,
-                ThoiGian = DateTime.Now,
-                IsLogin = false
-            };
-            db.BaoCaoChamCongNhanViens.Add(baocao);
+                i.First().ThoiGianLamViec += ThoiGian;
+            }
+            else
+            {
+                BaoCaoChamCongNhanVien baocao = new BaoCaoChamCongNhanVien()
+                {
+                    TaiKhoan = taikhoan,
+                    TenDangNhap = taikhoan.TenDangNhap,
+                    ThoiGian = DateTime.Now.Date,
+                    IsLogin = false,
+                    ThoiGianLamViec = ThoiGian
+                };
+                db.BaoCaoChamCongNhanViens.Add(baocao);
+            }
             db.SaveChanges();
         }
 

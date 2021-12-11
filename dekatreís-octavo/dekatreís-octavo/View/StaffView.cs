@@ -43,11 +43,12 @@ namespace dekatreís_octavo.View
 
         private void materialListView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            containedButton2.Enabled = true;
-            containedButton3.Enabled = true;
             if (materialListView1.SelectedItems.Count == 0)
                 return;
             //Select an account
+            passResetButton.Enabled = true;
+            bt_edit.Enabled = true;
+            bt_remove.Enabled = true;
             selectedTaiKhoan = StaffViewBus.Instance.SelectTaiKhoan(materialListView1.SelectedItems[0].SubItems[4].Text);
         }
 
@@ -65,6 +66,18 @@ namespace dekatreís_octavo.View
             if (addStaffView.ShowDialog() == DialogResult.OK)
                 LoadStaffList();
             addStaffView.Dispose();
+        }
+
+        private void materialListView1_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passResetButton_Click(object sender, EventArgs e)
+        {
+            selectedTaiKhoan.MatKhau = DataProvider.Instance.Encrypt("123456");
+            MessageBox.Show("Đã đặt về mật khẩu mặc định: 123456");
+            DataProvider.Instance.db.SaveChanges();
         }
     }
 }

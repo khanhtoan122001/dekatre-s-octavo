@@ -46,13 +46,13 @@ namespace dekatreís_octavo.View
             this.bt_Exit.Depth = 0;
             this.bt_Exit.HighEmphasis = true;
             this.bt_Exit.Icon = null;
-            this.bt_Exit.Location = new System.Drawing.Point(166, 358);
+            this.bt_Exit.Location = new System.Drawing.Point(166, 355);
             this.bt_Exit.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.bt_Exit.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.NoAccentTextColor = System.Drawing.Color.Empty;
             this.bt_Exit.Size = new System.Drawing.Size(200, 36);
-            this.bt_Exit.TabIndex = 0;
+            this.bt_Exit.TabIndex = 4;
             this.bt_Exit.Text = "ĐÓNG";
             this.bt_Exit.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.bt_Exit.UseAccentColor = false;
@@ -71,20 +71,21 @@ namespace dekatreís_octavo.View
             this.tb_NewPass.HelperText = "";
             this.tb_NewPass.HideSelection = true;
             this.tb_NewPass.HintText = "Mật khẩu mới";
-            this.tb_NewPass.Location = new System.Drawing.Point(147, 155);
+            this.tb_NewPass.Location = new System.Drawing.Point(147, 167);
             this.tb_NewPass.MaxLength = 32767;
             this.tb_NewPass.MouseState = MaterialSurface.MouseState.OUT;
             this.tb_NewPass.Multiline = false;
             this.tb_NewPass.Name = "tb_NewPass";
-            this.tb_NewPass.PasswordChar = '\0';
+            this.tb_NewPass.PasswordChar = '●';
             this.tb_NewPass.PrimaryColor = System.Drawing.Color.BlueViolet;
             this.tb_NewPass.ReadOnly = false;
             this.tb_NewPass.ShortcutsEnable = true;
             this.tb_NewPass.ShowCaret = true;
             this.tb_NewPass.Size = new System.Drawing.Size(235, 49);
             this.tb_NewPass.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_NewPass.TabIndex = 2;
-            this.tb_NewPass.UseSystemPasswordChar = false;
+            this.tb_NewPass.TabIndex = 1;
+            this.tb_NewPass.UseSystemPasswordChar = true;
+            this.tb_NewPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_NewPass_KeyDown);
             // 
             // tb_ConfirmPass
             // 
@@ -98,20 +99,21 @@ namespace dekatreís_octavo.View
             this.tb_ConfirmPass.HelperText = "";
             this.tb_ConfirmPass.HideSelection = true;
             this.tb_ConfirmPass.HintText = "Xác nhận mật khẩu";
-            this.tb_ConfirmPass.Location = new System.Drawing.Point(147, 220);
+            this.tb_ConfirmPass.Location = new System.Drawing.Point(147, 234);
             this.tb_ConfirmPass.MaxLength = 32767;
             this.tb_ConfirmPass.MouseState = MaterialSurface.MouseState.OUT;
             this.tb_ConfirmPass.Multiline = false;
             this.tb_ConfirmPass.Name = "tb_ConfirmPass";
-            this.tb_ConfirmPass.PasswordChar = '\0';
+            this.tb_ConfirmPass.PasswordChar = '●';
             this.tb_ConfirmPass.PrimaryColor = System.Drawing.Color.BlueViolet;
             this.tb_ConfirmPass.ReadOnly = false;
             this.tb_ConfirmPass.ShortcutsEnable = true;
             this.tb_ConfirmPass.ShowCaret = true;
             this.tb_ConfirmPass.Size = new System.Drawing.Size(235, 49);
             this.tb_ConfirmPass.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_ConfirmPass.TabIndex = 3;
-            this.tb_ConfirmPass.UseSystemPasswordChar = false;
+            this.tb_ConfirmPass.TabIndex = 2;
+            this.tb_ConfirmPass.UseSystemPasswordChar = true;
+            this.tb_ConfirmPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_ConfirmPass_KeyDown);
             // 
             // bt_Confirm
             // 
@@ -121,13 +123,13 @@ namespace dekatreís_octavo.View
             this.bt_Confirm.Depth = 0;
             this.bt_Confirm.HighEmphasis = true;
             this.bt_Confirm.Icon = null;
-            this.bt_Confirm.Location = new System.Drawing.Point(166, 300);
+            this.bt_Confirm.Location = new System.Drawing.Point(166, 301);
             this.bt_Confirm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.bt_Confirm.MouseState = MaterialSkin.MouseState.HOVER;
             this.bt_Confirm.Name = "bt_Confirm";
             this.bt_Confirm.NoAccentTextColor = System.Drawing.Color.Empty;
             this.bt_Confirm.Size = new System.Drawing.Size(200, 36);
-            this.bt_Confirm.TabIndex = 4;
+            this.bt_Confirm.TabIndex = 3;
             this.bt_Confirm.Text = "Xác nhận";
             this.bt_Confirm.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.bt_Confirm.UseAccentColor = false;
@@ -151,15 +153,16 @@ namespace dekatreís_octavo.View
             this.tb_OldPass.MouseState = MaterialSurface.MouseState.OUT;
             this.tb_OldPass.Multiline = false;
             this.tb_OldPass.Name = "tb_OldPass";
-            this.tb_OldPass.PasswordChar = '\0';
+            this.tb_OldPass.PasswordChar = '●';
             this.tb_OldPass.PrimaryColor = System.Drawing.Color.BlueViolet;
             this.tb_OldPass.ReadOnly = false;
             this.tb_OldPass.ShortcutsEnable = true;
             this.tb_OldPass.ShowCaret = true;
             this.tb_OldPass.Size = new System.Drawing.Size(235, 49);
             this.tb_OldPass.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_OldPass.TabIndex = 5;
-            this.tb_OldPass.UseSystemPasswordChar = false;
+            this.tb_OldPass.TabIndex = 0;
+            this.tb_OldPass.UseSystemPasswordChar = true;
+            this.tb_OldPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_OldPass_KeyDown);
             // 
             // materialCard1
             // 

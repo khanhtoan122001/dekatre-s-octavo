@@ -70,7 +70,7 @@ namespace dekatreís_octavo.View
             this.tb_Username.ShowCaret = true;
             this.tb_Username.Size = new System.Drawing.Size(277, 49);
             this.tb_Username.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_Username.TabIndex = 1;
+            this.tb_Username.TabIndex = 0;
             this.tb_Username.UseSystemPasswordChar = false;
             this.tb_Username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_Username_KeyDown);
             // 
@@ -99,7 +99,7 @@ namespace dekatreís_octavo.View
             this.tb_Password.ShowCaret = true;
             this.tb_Password.Size = new System.Drawing.Size(277, 49);
             this.tb_Password.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_Password.TabIndex = 2;
+            this.tb_Password.TabIndex = 1;
             this.tb_Password.UseSystemPasswordChar = true;
             this.tb_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_Password_KeyDown);
             // 
@@ -118,7 +118,7 @@ namespace dekatreís_octavo.View
             this.bt_Login.ShawdowDepth = 3;
             this.bt_Login.ShawdowOpacity = 50;
             this.bt_Login.Size = new System.Drawing.Size(216, 50);
-            this.bt_Login.TabIndex = 3;
+            this.bt_Login.TabIndex = 2;
             this.bt_Login.Text = "Đăng nhập";
             this.bt_Login.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_Login.UseVisualStyleBackColor = true;

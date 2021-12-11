@@ -18,6 +18,7 @@ namespace dekatreís_octavo
         public System.DateTime ThoiGian { get; set; }
         public string TenDangNhap { get; set; }
         public Nullable<bool> IsLogin { get; set; }
+        public Nullable<int> ThoiGianLamViec { get; set; }
     
         public virtual TaiKhoan TaiKhoan { get; set; }
     }

@@ -29,9 +29,12 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
+            this.lb_stopwatch = new MaterialSkin.Controls.MaterialLabel();
+            this.tabNameLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.materialCard1 = new MaterialSurface.MaterialCard();
             this.bt_ChangePass = new MaterialSurface.TextButton();
@@ -70,7 +73,7 @@ namespace dekatreís_octavo.View
             this.reportPanel = new System.Windows.Forms.Panel();
             this.consistenceButton = new MaterialSurface.ContainedButton();
             this.schedule = new System.Windows.Forms.TabPage();
-            this.tabNameLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.staffView1 = new dekatreís_octavo.View.StaffView();
             this.parkingView1 = new dekatreís_octavo.View.ParkingView();
@@ -127,6 +130,7 @@ namespace dekatreís_octavo.View
             // 
             // leftPanel
             // 
+            this.leftPanel.Controls.Add(this.lb_stopwatch);
             this.leftPanel.Controls.Add(this.tabNameLabel);
             this.leftPanel.Controls.Add(this.pictureBox2);
             this.leftPanel.Controls.Add(this.materialCard1);
@@ -136,6 +140,28 @@ namespace dekatreís_octavo.View
             this.leftPanel.Name = "leftPanel";
             this.leftPanel.Size = new System.Drawing.Size(1088, 693);
             this.leftPanel.TabIndex = 11;
+            // 
+            // lb_stopwatch
+            // 
+            this.lb_stopwatch.AutoSize = true;
+            this.lb_stopwatch.Depth = 0;
+            this.lb_stopwatch.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.lb_stopwatch.Location = new System.Drawing.Point(989, 9);
+            this.lb_stopwatch.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lb_stopwatch.Name = "lb_stopwatch";
+            this.lb_stopwatch.Size = new System.Drawing.Size(49, 19);
+            this.lb_stopwatch.TabIndex = 14;
+            this.lb_stopwatch.Text = "00 : 00";
+            // 
+            // tabNameLabel
+            // 
+            this.tabNameLabel.AutoSize = true;
+            this.tabNameLabel.Font = new System.Drawing.Font("Segoe UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabNameLabel.Location = new System.Drawing.Point(28, 32);
+            this.tabNameLabel.Name = "tabNameLabel";
+            this.tabNameLabel.Size = new System.Drawing.Size(152, 38);
+            this.tabNameLabel.TabIndex = 13;
+            this.tabNameLabel.Text = "Trang chính";
             // 
             // pictureBox2
             // 
@@ -661,15 +687,10 @@ namespace dekatreís_octavo.View
             this.schedule.Text = "Lịch làm việc";
             this.schedule.UseVisualStyleBackColor = true;
             // 
-            // tabNameLabel
+            // timer1
             // 
-            this.tabNameLabel.AutoSize = true;
-            this.tabNameLabel.Font = new System.Drawing.Font("Segoe UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabNameLabel.Location = new System.Drawing.Point(28, 32);
-            this.tabNameLabel.Name = "tabNameLabel";
-            this.tabNameLabel.Size = new System.Drawing.Size(152, 38);
-            this.tabNameLabel.TabIndex = 13;
-            this.tabNameLabel.Text = "Trang chính";
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // cardManagement1
             // 
@@ -680,7 +701,7 @@ namespace dekatreís_octavo.View
             this.cardManagement1.Location = new System.Drawing.Point(3, 2);
             this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(1071, 546);
+            this.cardManagement1.Size = new System.Drawing.Size(1071, 548);
             this.cardManagement1.TabIndex = 0;
             this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
@@ -691,7 +712,7 @@ namespace dekatreís_octavo.View
             this.staffView1.Location = new System.Drawing.Point(0, 0);
             this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(1077, 550);
+            this.staffView1.Size = new System.Drawing.Size(1077, 552);
             this.staffView1.TabIndex = 0;
             this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
@@ -702,7 +723,7 @@ namespace dekatreís_octavo.View
             this.parkingView1.Location = new System.Drawing.Point(0, 0);
             this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.parkingView1.Name = "parkingView1";
-            this.parkingView1.Size = new System.Drawing.Size(1077, 550);
+            this.parkingView1.Size = new System.Drawing.Size(1077, 552);
             this.parkingView1.TabIndex = 0;
             this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
@@ -804,5 +825,7 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.TextBox tb_SucChua;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private System.Windows.Forms.Label tabNameLabel;
+        private MaterialSkin.Controls.MaterialLabel lb_stopwatch;
+        private System.Windows.Forms.Timer timer1;
     }
 }

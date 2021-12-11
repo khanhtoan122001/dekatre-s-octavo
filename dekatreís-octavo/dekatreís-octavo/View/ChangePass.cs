@@ -15,6 +15,7 @@ namespace dekatreís_octavo.View
         public ChangePass()
         {
             InitializeComponent();
+            tb_OldPass.Focus();
         }
 
         private void Confirm_Change_Click(object sender, EventArgs e)
@@ -64,6 +65,24 @@ namespace dekatreís_octavo.View
         private void materialButton1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void tb_OldPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+                tb_NewPass.Focus();
+        }
+
+        private void tb_NewPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+                tb_ConfirmPass.Focus();
+        }
+
+        private void tb_ConfirmPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                this.Confirm_Change_Click(sender, e);
         }
     }
 }

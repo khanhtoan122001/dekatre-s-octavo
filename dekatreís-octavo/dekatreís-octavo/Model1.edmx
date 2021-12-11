@@ -13,6 +13,7 @@
           <Property Name="ThoiGian" Type="smalldatetime" Nullable="false" />
           <Property Name="TenDangNhap" Type="nvarchar" MaxLength="50" />
           <Property Name="IsLogin" Type="bit" />
+          <Property Name="ThoiGianLamViec" Type="int" />
         </EntityType>
         <EntityType Name="BaoCaoDoanhThuThang">
           <Key>
@@ -547,6 +548,7 @@
           <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TaiKhoan" Relationship="QuanLyDoXeModel.FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien" FromRole="BaoCaoChamCongNhanVien" ToRole="TaiKhoan" />
           <Property Name="IsLogin" Type="Boolean" />
+          <Property Name="ThoiGianLamViec" Type="Int32" />
         </EntityType>
         <Association Name="FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien">
           <End Type="QuanLyDoXeModel.TaiKhoan" Role="TaiKhoan" Multiplicity="0..1" />
@@ -760,6 +762,7 @@
           <EntitySetMapping Name="BaoCaoChamCongNhanViens">
             <EntityTypeMapping TypeName="QuanLyDoXeModel.BaoCaoChamCongNhanVien">
               <MappingFragment StoreEntitySet="BaoCaoChamCongNhanVien">
+                <ScalarProperty Name="ThoiGianLamViec" ColumnName="ThoiGianLamViec" />
                 <ScalarProperty Name="IsLogin" ColumnName="IsLogin" />
                 <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
                 <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />

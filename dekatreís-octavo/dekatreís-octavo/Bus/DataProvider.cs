@@ -16,10 +16,12 @@ namespace dekatreís_octavo.Bus
         public QuanLyDoXeEntities1 db;
         private bool isUpdate = false;
         private DateTime dateUpdate;
+        private int thoiGianLamViec = 0;
         public static DataProvider Instance { get { if (instance == null) instance = new DataProvider(); return instance; } set => instance = value; }
 
         public bool IsUpdate { get => isUpdate; set => isUpdate = value; }
         public DateTime DateUpdate { get => dateUpdate; set => dateUpdate = value; }
+        public int ThoiGianLamViec { get => thoiGianLamViec; set => thoiGianLamViec = value; }
 
         public TaiKhoan TaiKhoan;
         DataProvider()

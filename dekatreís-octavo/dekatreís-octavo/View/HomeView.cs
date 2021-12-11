@@ -22,6 +22,18 @@ namespace dekatreís_octavo.View
             if (TaiKhoan != null) initHomeView();
         }
 
+        public void StartWork()
+        {
+            timer1.Enabled = true;
+            DataProvider.Instance.ThoiGianLamViec = 0;
+        }
+
+        public void EndWork()
+        {
+            BaoCaoChamCongNhanVienBus.Instance.ChamCong_Logout(DataProvider.Instance.ThoiGianLamViec);
+            timer1.Enabled = false;
+        }
+
         public void initHomeView(TaiKhoan taiKhoan = null)
         {
             if (taiKhoan != null) TaiKhoan = taiKhoan;
@@ -47,10 +59,8 @@ namespace dekatreís_octavo.View
 
         private void bt_LogOut_Click(object sender, EventArgs e)
         {
-            BaoCaoChamCongNhanVienBus.Instance.ChamCong_Logout();
+            EndWork();
             DataProvider.Instance.TaiKhoan = null;
-            LoginView loginView = new LoginView();
-            loginView.Show();
             this.Close();
         }
 
@@ -58,7 +68,7 @@ namespace dekatreís_octavo.View
         {
             if(DataProvider.Instance.TaiKhoan != null)
             {
-                BaoCaoChamCongNhanVienBus.Instance.ChamCong_Logout();
+                EndWork();
                 Application.Exit();
             }
         }
@@ -217,6 +227,24 @@ namespace dekatreís_octavo.View
             };
                 
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DataProvider.Instance.ThoiGianLamViec++;
+            int i = DataProvider.Instance.ThoiGianLamViec;
+            int a, b;
+
+            a = i / 60;
+            b = i - a * 60;
+            if (a >= 10 && b >= 10)
+                lb_stopwatch.Text = string.Format("{0} : {1}", a.ToString(), b.ToString());
+            else if (a < 10 && b >= 10)
+                lb_stopwatch.Text = string.Format("0{0} : {1}", a.ToString(), b.ToString());
+            else if (a < 10 && b < 10)
+                lb_stopwatch.Text = string.Format("0{0} : 0{1}", a.ToString(), b.ToString());
+            else if (a >= 10 && b < 10)
+                lb_stopwatch.Text = string.Format("{0} : 0{1}", a.ToString(), b.ToString());
         }
     }
 }

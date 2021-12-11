@@ -157,7 +157,7 @@ GO
 USE [QuanLyDoXe]
 GO
 
-/****** Object:  Table [dbo].[BaoCaoChamCongNhanVien]    Script Date: 12/11/2021 1:26:17 PM ******/
+/****** Object:  Table [dbo].[BaoCaoChamCongNhanVien]    Script Date: 12/11/2021 10:09:12 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -169,6 +169,7 @@ CREATE TABLE [dbo].[BaoCaoChamCongNhanVien](
 	[ThoiGian] [smalldatetime] NOT NULL,
 	[TenDangNhap] [nvarchar](50) NULL,
 	[IsLogin] [bit] NULL,
+	[ThoiGianLamViec] [int] NULL,
  CONSTRAINT [PK_BaoCaoChamCongNhanVien] PRIMARY KEY CLUSTERED 
 (
 	[IDBaoCao] ASC
@@ -182,6 +183,7 @@ GO
 
 ALTER TABLE [dbo].[BaoCaoChamCongNhanVien] CHECK CONSTRAINT [FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien]
 GO
+
 
 USE [QuanLyDoXe]
 GO

@@ -62,8 +62,8 @@ namespace dekatreís_octavo.View
                 flag = false;
                 if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "staff")
                 {
-                    addButton.Enabled = false;
-                    delButton.Enabled = false;
+                    addButton.Visible = false;
+                    delButton.Visible = false;
                 }
             }
         }
@@ -133,7 +133,7 @@ namespace dekatreís_octavo.View
                 }
             }
             if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
-                inOutButton.Enabled = false;
+                inOutButton.Visible = false;
             
         }
 
