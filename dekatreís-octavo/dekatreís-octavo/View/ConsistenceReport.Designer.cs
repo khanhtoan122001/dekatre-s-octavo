@@ -83,11 +83,12 @@ namespace dekatreís_octavo.View
             // 
             // exportButton
             // 
+            this.exportButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.exportButton.EffectType = MaterialSurface.ET.Custom;
             this.exportButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exportButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.exportButton.Icon = null;
-            this.exportButton.Location = new System.Drawing.Point(38, 315);
+            this.exportButton.Location = new System.Drawing.Point(39, 332);
             this.exportButton.MouseState = MaterialSurface.MouseState.OUT;
             this.exportButton.Name = "exportButton";
             this.exportButton.PrimaryColor = System.Drawing.Color.BlueViolet;

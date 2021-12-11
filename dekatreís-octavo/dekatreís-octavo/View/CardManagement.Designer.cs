@@ -47,11 +47,11 @@ namespace dekatreís_octavo.View
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.inputTextBox = new MaterialSurface.MaterialTextfield();
+            this.tb_search = new MaterialSurface.MaterialTextfield();
             this.typeComboBox = new MaterialSurface.MaterialComboBox();
             this.statusComboBox = new MaterialSurface.MaterialComboBox();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tb_search = new MaterialSurface.MaterialTextfield();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -157,7 +157,7 @@ namespace dekatreís_octavo.View
             // Status
             // 
             this.Status.Text = "Trạng thái";
-            this.Status.Width = 183;
+            this.Status.Width = 115;
             // 
             // In_date
             // 
@@ -167,7 +167,7 @@ namespace dekatreís_octavo.View
             // Start_date
             // 
             this.Start_date.Text = "Ngày bắt đầu";
-            this.Start_date.Width = 448;
+            this.Start_date.Width = 240;
             // 
             // inOutButton
             // 
@@ -314,6 +314,35 @@ namespace dekatreís_octavo.View
             this.inputTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.inputTextBox_KeyUp);
             this.inputTextBox.Leave += new System.EventHandler(this.inputTextBox_Leave);
             // 
+            // tb_search
+            // 
+            this.tb_search.AutoScaleColor = true;
+            this.tb_search.BackColor = System.Drawing.Color.White;
+            this.tb_search.CountText = false;
+            this.tb_search.FieldType = MaterialSurface.BoxType.Normal;
+            this.tb_search.FloatingLabelText = "FloatingLabel";
+            this.tb_search.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_search.HandleError = false;
+            this.tb_search.HelperText = "";
+            this.tb_search.HideSelection = true;
+            this.tb_search.HintText = "Tìm kiếm";
+            this.tb_search.Location = new System.Drawing.Point(16, 13);
+            this.tb_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_search.MaxLength = 32767;
+            this.tb_search.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_search.Multiline = false;
+            this.tb_search.Name = "tb_search";
+            this.tb_search.PasswordChar = '\0';
+            this.tb_search.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.tb_search.ReadOnly = false;
+            this.tb_search.ShortcutsEnable = true;
+            this.tb_search.ShowCaret = true;
+            this.tb_search.Size = new System.Drawing.Size(341, 49);
+            this.tb_search.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_search.TabIndex = 8;
+            this.tb_search.UseSystemPasswordChar = false;
+            this.tb_search.TextChanged += new System.EventHandler(this.materialTextfield1_TextChanged);
+            // 
             // typeComboBox
             // 
             this.typeComboBox.AutoSizing = false;
@@ -380,35 +409,6 @@ namespace dekatreís_octavo.View
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1269, 486);
             this.panel1.TabIndex = 7;
-            // 
-            // tb_search
-            // 
-            this.tb_search.AutoScaleColor = true;
-            this.tb_search.BackColor = System.Drawing.Color.White;
-            this.tb_search.CountText = false;
-            this.tb_search.FieldType = MaterialSurface.BoxType.Normal;
-            this.tb_search.FloatingLabelText = "FloatingLabel";
-            this.tb_search.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.tb_search.HandleError = false;
-            this.tb_search.HelperText = "";
-            this.tb_search.HideSelection = true;
-            this.tb_search.HintText = "Tìm kiếm";
-            this.tb_search.Location = new System.Drawing.Point(16, 13);
-            this.tb_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_search.MaxLength = 32767;
-            this.tb_search.MouseState = MaterialSurface.MouseState.OUT;
-            this.tb_search.Multiline = false;
-            this.tb_search.Name = "tb_search";
-            this.tb_search.PasswordChar = '\0';
-            this.tb_search.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.tb_search.ReadOnly = false;
-            this.tb_search.ShortcutsEnable = true;
-            this.tb_search.ShowCaret = true;
-            this.tb_search.Size = new System.Drawing.Size(341, 49);
-            this.tb_search.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_search.TabIndex = 8;
-            this.tb_search.UseSystemPasswordChar = false;
-            this.tb_search.TextChanged += new System.EventHandler(this.materialTextfield1_TextChanged);
             // 
             // CardManagement
             // 

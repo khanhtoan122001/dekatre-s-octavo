@@ -40,7 +40,6 @@ namespace dekatreís_octavo.View
             this.bt_edit = new MaterialSurface.ContainedButton();
             this.bt_remove = new MaterialSurface.ContainedButton();
             this.materialTextfield1 = new MaterialSurface.MaterialTextfield();
-            this.materialComboBox1 = new MaterialSkin.Controls.MaterialComboBox();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
@@ -79,7 +78,7 @@ namespace dekatreís_octavo.View
             this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
             this.materialListView1.Name = "materialListView1";
             this.materialListView1.OwnerDraw = true;
-            this.materialListView1.Size = new System.Drawing.Size(1209, 477);
+            this.materialListView1.Size = new System.Drawing.Size(1209, 503);
             this.materialListView1.TabIndex = 0;
             this.materialListView1.UseCompatibleStateImageBehavior = false;
             this.materialListView1.View = System.Windows.Forms.View.Details;
@@ -118,7 +117,7 @@ namespace dekatreís_octavo.View
             this.bt_add.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_add.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_add.Icon = null;
-            this.bt_add.Location = new System.Drawing.Point(3, 77);
+            this.bt_add.Location = new System.Drawing.Point(3, 26);
             this.bt_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_add.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_add.Name = "bt_add";
@@ -126,7 +125,7 @@ namespace dekatreís_octavo.View
             this.bt_add.Radius = 6;
             this.bt_add.ShawdowDepth = 3;
             this.bt_add.ShawdowOpacity = 50;
-            this.bt_add.Size = new System.Drawing.Size(180, 50);
+            this.bt_add.Size = new System.Drawing.Size(161, 50);
             this.bt_add.TabIndex = 1;
             this.bt_add.Text = "Thêm";
             this.bt_add.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -140,7 +139,7 @@ namespace dekatreís_octavo.View
             this.bt_edit.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_edit.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_edit.Icon = null;
-            this.bt_edit.Location = new System.Drawing.Point(189, 77);
+            this.bt_edit.Location = new System.Drawing.Point(170, 27);
             this.bt_edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_edit.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_edit.Name = "bt_edit";
@@ -148,7 +147,7 @@ namespace dekatreís_octavo.View
             this.bt_edit.Radius = 6;
             this.bt_edit.ShawdowDepth = 3;
             this.bt_edit.ShawdowOpacity = 50;
-            this.bt_edit.Size = new System.Drawing.Size(180, 50);
+            this.bt_edit.Size = new System.Drawing.Size(161, 50);
             this.bt_edit.TabIndex = 2;
             this.bt_edit.Text = "Sửa";
             this.bt_edit.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -162,7 +161,7 @@ namespace dekatreís_octavo.View
             this.bt_remove.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_remove.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_remove.Icon = null;
-            this.bt_remove.Location = new System.Drawing.Point(375, 77);
+            this.bt_remove.Location = new System.Drawing.Point(337, 27);
             this.bt_remove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_remove.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_remove.Name = "bt_remove";
@@ -170,7 +169,7 @@ namespace dekatreís_octavo.View
             this.bt_remove.Radius = 6;
             this.bt_remove.ShawdowDepth = 3;
             this.bt_remove.ShawdowOpacity = 50;
-            this.bt_remove.Size = new System.Drawing.Size(180, 50);
+            this.bt_remove.Size = new System.Drawing.Size(161, 50);
             this.bt_remove.TabIndex = 3;
             this.bt_remove.Text = "Xóa";
             this.bt_remove.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -189,7 +188,7 @@ namespace dekatreís_octavo.View
             this.materialTextfield1.HelperText = "";
             this.materialTextfield1.HideSelection = true;
             this.materialTextfield1.HintText = "Tìm kiếm";
-            this.materialTextfield1.Location = new System.Drawing.Point(0, 2);
+            this.materialTextfield1.Location = new System.Drawing.Point(3, 27);
             this.materialTextfield1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.materialTextfield1.MaxLength = 32767;
             this.materialTextfield1.MouseState = MaterialSurface.MouseState.OUT;
@@ -200,36 +199,11 @@ namespace dekatreís_octavo.View
             this.materialTextfield1.ReadOnly = false;
             this.materialTextfield1.ShortcutsEnable = true;
             this.materialTextfield1.ShowCaret = true;
-            this.materialTextfield1.Size = new System.Drawing.Size(341, 49);
+            this.materialTextfield1.Size = new System.Drawing.Size(271, 49);
             this.materialTextfield1.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.materialTextfield1.TabIndex = 4;
             this.materialTextfield1.UseSystemPasswordChar = false;
             this.materialTextfield1.TextChanged += new System.EventHandler(this.materialTextfield1_TextChanged);
-            // 
-            // materialComboBox1
-            // 
-            this.materialComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialComboBox1.AutoResize = false;
-            this.materialComboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialComboBox1.Depth = 0;
-            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox1.DropDownHeight = 174;
-            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox1.DropDownWidth = 121;
-            this.materialComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialComboBox1.FormattingEnabled = true;
-            this.materialComboBox1.Hint = "Sort by";
-            this.materialComboBox1.IntegralHeight = false;
-            this.materialComboBox1.ItemHeight = 43;
-            this.materialComboBox1.Location = new System.Drawing.Point(221, 46);
-            this.materialComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.materialComboBox1.MaxDropDownItems = 4;
-            this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialComboBox1.Name = "materialComboBox1";
-            this.materialComboBox1.Size = new System.Drawing.Size(119, 49);
-            this.materialComboBox1.StartIndex = 0;
-            this.materialComboBox1.TabIndex = 5;
             // 
             // mainPanel
             // 
@@ -245,9 +219,9 @@ namespace dekatreís_octavo.View
             // 
             this.panel1.Controls.Add(this.materialListView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 167);
+            this.panel1.Location = new System.Drawing.Point(0, 141);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1209, 477);
+            this.panel1.Size = new System.Drawing.Size(1209, 503);
             this.panel1.TabIndex = 7;
             // 
             // topPanel
@@ -256,7 +230,7 @@ namespace dekatreís_octavo.View
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1209, 167);
+            this.topPanel.Size = new System.Drawing.Size(1209, 141);
             this.topPanel.TabIndex = 6;
             // 
             // splitContainer1
@@ -268,16 +242,15 @@ namespace dekatreís_octavo.View
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.passResetButton);
-            this.splitContainer1.Panel1.Controls.Add(this.materialTextfield1);
             this.splitContainer1.Panel1.Controls.Add(this.bt_add);
             this.splitContainer1.Panel1.Controls.Add(this.bt_edit);
             this.splitContainer1.Panel1.Controls.Add(this.bt_remove);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.materialComboBox1);
-            this.splitContainer1.Size = new System.Drawing.Size(1209, 167);
-            this.splitContainer1.SplitterDistance = 749;
+            this.splitContainer1.Panel2.Controls.Add(this.materialTextfield1);
+            this.splitContainer1.Size = new System.Drawing.Size(1209, 141);
+            this.splitContainer1.SplitterDistance = 688;
             this.splitContainer1.TabIndex = 0;
             // 
             // passResetButton
@@ -287,7 +260,7 @@ namespace dekatreís_octavo.View
             this.passResetButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passResetButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.passResetButton.Icon = null;
-            this.passResetButton.Location = new System.Drawing.Point(561, 77);
+            this.passResetButton.Location = new System.Drawing.Point(504, 27);
             this.passResetButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passResetButton.MouseState = MaterialSurface.MouseState.OUT;
             this.passResetButton.Name = "passResetButton";
@@ -295,7 +268,7 @@ namespace dekatreís_octavo.View
             this.passResetButton.Radius = 6;
             this.passResetButton.ShawdowDepth = 3;
             this.passResetButton.ShawdowOpacity = 50;
-            this.passResetButton.Size = new System.Drawing.Size(180, 50);
+            this.passResetButton.Size = new System.Drawing.Size(174, 50);
             this.passResetButton.TabIndex = 5;
             this.passResetButton.Text = "Đặt lại mật khẩu";
             this.passResetButton.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -331,7 +304,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.ContainedButton bt_edit;
         private MaterialSurface.ContainedButton bt_remove;
         private MaterialSurface.MaterialTextfield materialTextfield1;
-        private MaterialSkin.Controls.MaterialComboBox materialComboBox1;
         private System.Windows.Forms.ColumnHeader staffCMND;
         private System.Windows.Forms.ColumnHeader staffPhoneNumber;
         private System.Windows.Forms.ColumnHeader staffType;
