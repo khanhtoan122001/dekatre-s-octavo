@@ -65,6 +65,8 @@ namespace dekatreís_octavo.View
                     addButton.Visible = false;
                     delButton.Visible = false;
                 }
+                if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
+                    inOutButton.Visible = false;
             }
         }
 
@@ -84,7 +86,6 @@ namespace dekatreís_octavo.View
                 MessageBox.Show("Xóa thẻ thành công");
                 this.LoadData();
             }
-            
         }
 
         private void cardList_DoubleClick(object sender, EventArgs e)
@@ -132,9 +133,6 @@ namespace dekatreís_octavo.View
                     inOutButton.Text = "Trả";
                 }
             }
-            if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
-                inOutButton.Visible = false;
-            
         }
 
         private void inOutButton_Click(object sender, EventArgs e)

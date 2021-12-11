@@ -16,14 +16,15 @@ namespace dekatreís_octavo.Bus
 
         public void SetDefaultThamSo()
         {
-            if(db.ThamSoes.Count() == 0)
+            //if(db.ThamSoes.Count() == 0)
             {
-                db.ThamSoes.Add(new ThamSo() {TenThamSo = "Gửi xe",GiaTri = 45 });
-                db.ThamSoes.Add(new ThamSo() {TenThamSo = "Nhận xe",GiaTri = 49 });
-                db.ThamSoes.Add(new ThamSo() { TenThamSo = "Thẻ tháng", GiaTri = 200000 });
-                db.ThamSoes.Add(new ThamSo() { TenThamSo = "Thẻ thường", GiaTri = 10000 });
-                db.ThamSoes.Add(new ThamSo() { TenThamSo = "Lương", GiaTri = 4000000 });
-                db.ThamSoes.Add(new ThamSo() { TenThamSo = "Tiền mặt bằng", GiaTri = 8000000 });
+                AddThamSo("Gửi xe", 45);
+                AddThamSo("Nhận xe", 49);
+                AddThamSo("Thẻ tháng", 200000);
+                AddThamSo("Thẻ thường", 10000);
+                AddThamSo("Lương", 4000000);
+                AddThamSo("Tiền mặt bằng", 8000000);
+                AddThamSo("Sức chứa", 200);
                 db.SaveChanges();
             }
         }
@@ -67,16 +68,16 @@ namespace dekatreís_octavo.Bus
             db.SaveChanges();
             return result != null;
         }
-        public bool EditThamSo(int idThamSo, string ten, int giaTri)
+        public bool EditThamSo(string ten, int giaTri)
         {
-            if (db.ThamSoes.Where(p => p.TenThamSo == ten).Count() != 0)
+            if (db.ThamSoes.Where(p => p.TenThamSo == ten).Count() == 0)
                 return false;
-            ThamSo thamSo = db.ThamSoes.Find(idThamSo);
+            ThamSo thamSo = db.ThamSoes.Where(p => p.TenThamSo == ten).FirstOrDefault();
             thamSo.TenThamSo = ten;
             thamSo.GiaTri = giaTri;
-            var result = db.ThamSoes.Add(thamSo);
+            //var result = db.ThamSoes.Add(thamSo);
             db.SaveChanges();
-            return result != null;
+            return true;
         }
         public bool RemoveThamSo(int idThamSo)
         {

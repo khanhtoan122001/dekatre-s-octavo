@@ -120,6 +120,7 @@ namespace dekatreís_octavo.View
             tb_Vethang.Text = listTs.Where(p => p.TenThamSo == "Thẻ tháng").FirstOrDefault().GiaTri.Value.ToString();
             tb_Luong.Text = listTs.Where(p => p.TenThamSo == "Lương").FirstOrDefault().GiaTri.Value.ToString();
             tb_TienMatBang.Text = listTs.Where(p => p.TenThamSo == "Tiền mặt bằng").FirstOrDefault().GiaTri.Value.ToString();
+            tb_SucChua.Text = listTs.Where(p => p.TenThamSo == "Sức chứa").FirstOrDefault().GiaTri.Value.ToString();
         }
 
         private void materialDrawer1_MouseDown(object sender, MouseEventArgs e)
@@ -130,7 +131,7 @@ namespace dekatreís_octavo.View
         private void tabControl_Selected(object sender, TabControlEventArgs e)
         {
             Refresh(Control.MousePosition);
-            if (e.TabPageIndex == 6)
+            if (e.TabPage == setting)
                 LoadThamSo();
         }
 
@@ -141,10 +142,10 @@ namespace dekatreís_octavo.View
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            if (dateTimePicker.Value < DateTime.Today)
-            {
-                dateTimePicker.Value = DateTime.Today;
-            }
+            //if (dateTimePicker.Value < DateTime.Today)
+            //{
+            //    dateTimePicker.Value = DateTime.Today;
+            //}
         }
 
         private void setting_Click(object sender, EventArgs e)
@@ -245,6 +246,34 @@ namespace dekatreís_octavo.View
                 lb_stopwatch.Text = string.Format("0{0} : 0{1}", a.ToString(), b.ToString());
             else if (a >= 10 && b < 10)
                 lb_stopwatch.Text = string.Format("{0} : 0{1}", a.ToString(), b.ToString());
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            int o, vethuong, vethang, luong, succhua, tienmatbang;
+            if(int.TryParse( tb_Vethuong.Text, out vethuong) && int.TryParse(tb_Vethang.Text, out vethang) 
+                && int.TryParse(tb_TienMatBang.Text, out tienmatbang) && int.TryParse(tb_SucChua.Text, out succhua) 
+                && int.TryParse(tb_Luong.Text, out luong))
+            {
+                ThamSoBus.Instance.EditThamSo("Thẻ thường", vethuong);
+                ThamSoBus.Instance.EditThamSo("Thẻ tháng", vethang);
+                ThamSoBus.Instance.EditThamSo("Lương", luong);
+                ThamSoBus.Instance.EditThamSo("Tiền mặt bằng",tienmatbang);
+                ThamSoBus.Instance.EditThamSo("Sức chứa", succhua);
+                DataProvider.Instance.db.SaveChanges();
+                timer2.Enabled = true;
+                lb_success.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Giá trị không đúng định dạng");
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer2.Enabled = false;
+            lb_success.Visible = false;
         }
     }
 }

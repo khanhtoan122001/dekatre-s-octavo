@@ -52,10 +52,8 @@ namespace dekatreís_octavo.View
             this.statusPage = new System.Windows.Forms.TabPage();
             this.setting = new System.Windows.Forms.TabPage();
             this.tb_SucChua = new System.Windows.Forms.TextBox();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.choiceChip1 = new MaterialSurface.ChoiceChip();
             this.updateButton = new MaterialSurface.ContainedButton();
-            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.tb_TienMatBang = new System.Windows.Forms.TextBox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
@@ -74,6 +72,8 @@ namespace dekatreís_octavo.View
             this.consistenceButton = new MaterialSurface.ContainedButton();
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lb_success = new System.Windows.Forms.Label();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.staffView1 = new dekatreís_octavo.View.StaffView();
             this.parkingView1 = new dekatreís_octavo.View.ParkingView();
@@ -406,11 +406,10 @@ namespace dekatreís_octavo.View
             // setting
             // 
             this.setting.BackColor = System.Drawing.Color.White;
+            this.setting.Controls.Add(this.lb_success);
             this.setting.Controls.Add(this.tb_SucChua);
-            this.setting.Controls.Add(this.materialLabel6);
             this.setting.Controls.Add(this.choiceChip1);
             this.setting.Controls.Add(this.updateButton);
-            this.setting.Controls.Add(this.dateTimePicker);
             this.setting.Controls.Add(this.materialLabel5);
             this.setting.Controls.Add(this.tb_TienMatBang);
             this.setting.Controls.Add(this.materialLabel4);
@@ -430,37 +429,25 @@ namespace dekatreís_octavo.View
             // tb_SucChua
             // 
             this.tb_SucChua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_SucChua.Location = new System.Drawing.Point(315, 364);
+            this.tb_SucChua.Location = new System.Drawing.Point(315, 361);
             this.tb_SucChua.Name = "tb_SucChua";
             this.tb_SucChua.Size = new System.Drawing.Size(174, 28);
             this.tb_SucChua.TabIndex = 16;
-            // 
-            // materialLabel6
-            // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(93, 438);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(121, 19);
-            this.materialLabel6.TabIndex = 15;
-            this.materialLabel6.Text = "Bắt đầu hiệu lực:";
             // 
             // choiceChip1
             // 
             this.choiceChip1.AutoSize = true;
             this.choiceChip1.ChipType = MaterialSurface.ChoiceChip.ChipStyle.Filled;
             this.choiceChip1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.choiceChip1.Location = new System.Drawing.Point(305, 490);
+            this.choiceChip1.Location = new System.Drawing.Point(315, 420);
             this.choiceChip1.MinimumSize = new System.Drawing.Size(28, 27);
             this.choiceChip1.MouseState = MaterialSurface.MouseState.OUT;
             this.choiceChip1.Name = "choiceChip1";
             this.choiceChip1.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.choiceChip1.Size = new System.Drawing.Size(414, 29);
+            this.choiceChip1.Size = new System.Drawing.Size(418, 29);
             this.choiceChip1.TabIndex = 14;
             this.choiceChip1.TabStop = true;
-            this.choiceChip1.Text = "lương nhân viên có hiệu lực từ đầu tháng sau";
+            this.choiceChip1.Text = "Lương nhân viên có hiệu lực từ đầu tháng sau";
             this.choiceChip1.UseVisualStyleBackColor = true;
             // 
             // updateButton
@@ -469,7 +456,7 @@ namespace dekatreís_octavo.View
             this.updateButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.updateButton.Icon = null;
-            this.updateButton.Location = new System.Drawing.Point(495, 545);
+            this.updateButton.Location = new System.Drawing.Point(505, 475);
             this.updateButton.MouseState = MaterialSurface.MouseState.OUT;
             this.updateButton.Name = "updateButton";
             this.updateButton.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -481,24 +468,14 @@ namespace dekatreís_octavo.View
             this.updateButton.Text = "Cập nhật";
             this.updateButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.updateButton.UseVisualStyleBackColor = true;
-            // 
-            // dateTimePicker
-            // 
-            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker.Location = new System.Drawing.Point(315, 429);
-            this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(174, 28);
-            this.dateTimePicker.TabIndex = 12;
-            this.dateTimePicker.Value = new System.DateTime(2021, 12, 6, 0, 0, 0, 0);
-            this.dateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
             // materialLabel5
             // 
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
             this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(90, 372);
+            this.materialLabel5.Location = new System.Drawing.Point(90, 368);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
             this.materialLabel5.Size = new System.Drawing.Size(125, 19);
@@ -509,7 +486,7 @@ namespace dekatreís_octavo.View
             // tb_TienMatBang
             // 
             this.tb_TienMatBang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_TienMatBang.Location = new System.Drawing.Point(315, 302);
+            this.tb_TienMatBang.Location = new System.Drawing.Point(315, 295);
             this.tb_TienMatBang.Name = "tb_TienMatBang";
             this.tb_TienMatBang.Size = new System.Drawing.Size(174, 28);
             this.tb_TienMatBang.TabIndex = 10;
@@ -519,7 +496,7 @@ namespace dekatreís_octavo.View
             this.materialLabel4.AutoSize = true;
             this.materialLabel4.Depth = 0;
             this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(90, 305);
+            this.materialLabel4.Location = new System.Drawing.Point(90, 303);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
             this.materialLabel4.Size = new System.Drawing.Size(108, 19);
@@ -530,7 +507,7 @@ namespace dekatreís_octavo.View
             // tb_Luong
             // 
             this.tb_Luong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Luong.Location = new System.Drawing.Point(315, 233);
+            this.tb_Luong.Location = new System.Drawing.Point(315, 229);
             this.tb_Luong.Name = "tb_Luong";
             this.tb_Luong.Size = new System.Drawing.Size(174, 28);
             this.tb_Luong.TabIndex = 8;
@@ -538,7 +515,7 @@ namespace dekatreís_octavo.View
             // tb_Vethang
             // 
             this.tb_Vethang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Vethang.Location = new System.Drawing.Point(315, 169);
+            this.tb_Vethang.Location = new System.Drawing.Point(315, 163);
             this.tb_Vethang.Name = "tb_Vethang";
             this.tb_Vethang.Size = new System.Drawing.Size(174, 28);
             this.tb_Vethang.TabIndex = 7;
@@ -556,7 +533,7 @@ namespace dekatreís_octavo.View
             this.materialLabel3.AutoSize = true;
             this.materialLabel3.Depth = 0;
             this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(90, 236);
+            this.materialLabel3.Location = new System.Drawing.Point(90, 237);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
             this.materialLabel3.Size = new System.Drawing.Size(124, 19);
@@ -569,7 +546,7 @@ namespace dekatreís_octavo.View
             this.materialLabel2.AutoSize = true;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(90, 172);
+            this.materialLabel2.Location = new System.Drawing.Point(90, 171);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(94, 19);
@@ -582,7 +559,7 @@ namespace dekatreís_octavo.View
             this.materialLabel1.AutoSize = true;
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(90, 100);
+            this.materialLabel1.Location = new System.Drawing.Point(90, 105);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
             this.materialLabel1.Size = new System.Drawing.Size(88, 19);
@@ -691,6 +668,23 @@ namespace dekatreís_octavo.View
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lb_success
+            // 
+            this.lb_success.AutoSize = true;
+            this.lb_success.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_success.ForeColor = System.Drawing.Color.Blue;
+            this.lb_success.Location = new System.Drawing.Point(91, 491);
+            this.lb_success.Name = "lb_success";
+            this.lb_success.Size = new System.Drawing.Size(123, 25);
+            this.lb_success.TabIndex = 17;
+            this.lb_success.Text = "Thành công!";
+            this.lb_success.Visible = false;
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 2000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // cardManagement1
             // 
@@ -812,7 +806,6 @@ namespace dekatreís_octavo.View
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private System.Windows.Forms.TextBox tb_TienMatBang;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
@@ -823,9 +816,10 @@ namespace dekatreís_octavo.View
         private ParkingView parkingView1;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TextBox tb_SucChua;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private System.Windows.Forms.Label tabNameLabel;
         private MaterialSkin.Controls.MaterialLabel lb_stopwatch;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lb_success;
+        private System.Windows.Forms.Timer timer2;
     }
 }
