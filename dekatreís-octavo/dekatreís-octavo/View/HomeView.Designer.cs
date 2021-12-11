@@ -695,7 +695,7 @@ namespace dekatreís_octavo.View
             this.cardManagement1.Location = new System.Drawing.Point(3, 2);
             this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(1071, 548);
+            this.cardManagement1.Size = new System.Drawing.Size(1071, 546);
             this.cardManagement1.TabIndex = 0;
             this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
@@ -717,7 +717,7 @@ namespace dekatreís_octavo.View
             this.parkingView1.Location = new System.Drawing.Point(0, 0);
             this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.parkingView1.Name = "parkingView1";
-            this.parkingView1.Size = new System.Drawing.Size(1077, 552);
+            this.parkingView1.Size = new System.Drawing.Size(1077, 550);
             this.parkingView1.TabIndex = 0;
             this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 

@@ -41,9 +41,9 @@ namespace dekatreís_octavo.View
             taiKhoan.CMND = materialTextBox2.Text;
             taiKhoan.SDT = materialTextBox3.Text;
             if (materialComboBox1.SelectedIndex == materialComboBox1.FindStringExact("Admin"))
-                taiKhoan.LoaiTaiKhoan = 1;
+                taiKhoan.LoaiTaiKhoan = db.LoaiTaiKhoans.Where(p => p.TenLoai == "admin").FirstOrDefault().IDLoai;
             else
-                taiKhoan.LoaiTaiKhoan = 2;
+                taiKhoan.LoaiTaiKhoan = db.LoaiTaiKhoans.Where(p => p.TenLoai == "staff").FirstOrDefault().IDLoai;
             db.SaveChanges();
         }
 

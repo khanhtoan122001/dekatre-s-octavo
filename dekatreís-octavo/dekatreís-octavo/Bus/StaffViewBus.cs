@@ -15,10 +15,14 @@ namespace dekatreís_octavo.Bus
         public static StaffViewBus Instance { get { if (instance == null) instance = new StaffViewBus(); return instance; } set => instance = value; }
 
         QuanLyDoXeEntities1 db = DataProvider.Instance.db;
-        public List<ListViewItem> SelectTaiKhoanListViewItem()
+        public List<ListViewItem> SelectTaiKhoanListViewItem(List<TaiKhoan> list = null)
         {
             List<ListViewItem> itemList = new List<ListViewItem>();
-            var listTaiKhoan = (from p in db.TaiKhoans select p).ToList();
+            List<TaiKhoan> listTaiKhoan;
+            if (list == null)
+                listTaiKhoan = (from p in db.TaiKhoans select p).ToList();
+            else
+                listTaiKhoan = list;
             foreach (var TaiKhoan in listTaiKhoan)
             {
                 if (TaiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
@@ -44,6 +48,15 @@ namespace dekatreís_octavo.Bus
         {
             TaiKhoan test = db.TaiKhoans.Where((p) => p.TenDangNhap == TenDangNhap).FirstOrDefault();
             return test;
+        }
+        public List<TaiKhoan> Search(string txt)
+        {
+            var result = from c in db.TaiKhoans
+                         where c.LoaiTaiKhoan1.TenLoai == "staff"
+                         select c;
+            result = result.Where(p => p.TenDangNhap.Contains(txt) || p.SDT.Contains(txt) || p.CMND.Contains(txt) || p.TenThat.Contains(txt));
+
+            return result.ToList();
         }
     }
 }

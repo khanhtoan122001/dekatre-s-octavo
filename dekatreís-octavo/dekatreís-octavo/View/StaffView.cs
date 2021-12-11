@@ -21,10 +21,10 @@ namespace dekatreís_octavo.View
             //
         }
 
-        public void LoadStaffList()
+        public void LoadStaffList(List<TaiKhoan> list = null)
         {
             materialListView1.Items.Clear();
-            List<ListViewItem> itemList = StaffViewBus.Instance.SelectTaiKhoanListViewItem();
+            List<ListViewItem> itemList = StaffViewBus.Instance.SelectTaiKhoanListViewItem(list);
             foreach (var item in itemList)
             {
                 materialListView1.Items.Add(item);
@@ -70,7 +70,7 @@ namespace dekatreís_octavo.View
 
         private void materialListView1_DoubleClick(object sender, EventArgs e)
         {
-
+            containedButton2_Click(null, null);
         }
 
         private void passResetButton_Click(object sender, EventArgs e)
@@ -78,6 +78,18 @@ namespace dekatreís_octavo.View
             selectedTaiKhoan.MatKhau = DataProvider.Instance.Encrypt("123456");
             MessageBox.Show("Đã đặt về mật khẩu mặc định: 123456");
             DataProvider.Instance.db.SaveChanges();
+        }
+
+        private void materialTextfield1_TextChanged(object sender, EventArgs e)
+        {
+            if(StaffViewBus.Instance.Search(materialTextfield1.Text).Count > 0)
+            {
+                LoadStaffList(StaffViewBus.Instance.Search(materialTextfield1.Text));
+            }
+            else
+            {
+                LoadStaffList();
+            }
         }
     }
 }
