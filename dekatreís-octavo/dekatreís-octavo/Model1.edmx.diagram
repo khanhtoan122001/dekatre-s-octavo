@@ -24,6 +24,12 @@
         <AssociationConnector Association="QuanLyDoXeModel.FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien" />
         <EntityTypeShape EntityType="QuanLyDoXeModel.HoaDon" Width="1.5" PointX="7.375" PointY="8.75" />
         <EntityTypeShape EntityType="QuanLyDoXeModel.sysdiagram" Width="1.5" PointX="9.375" PointY="8.75" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.BaoCaoTongChi" Width="1.5" PointX="10.375" PointY="5.125" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.BaoCaoTongThu" Width="1.5" PointX="10.375" PointY="1.125" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.CT_BaoCaoTongChi" Width="1.5" PointX="12.625" PointY="4.875" />
+        <EntityTypeShape EntityType="QuanLyDoXeModel.CT_BaoCaoTongThu" Width="1.5" PointX="12.625" PointY="0.875" />
+        <AssociationConnector Association="QuanLyDoXeModel.FK_CT_BaoCaoTongChi_BaoCaoTongChi" />
+        <AssociationConnector Association="QuanLyDoXeModel.FK_CT_BaoCaoTongThu_BaoCaoTongThu" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

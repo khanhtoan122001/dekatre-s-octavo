@@ -135,6 +135,12 @@
     <Compile Include="BaoCaoMatDoGuiXe.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="BaoCaoTongChi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoTongThu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Bus\BaoCaoChamCongNhanVienBus.cs" />
     <Compile Include="Bus\CardManagementBus.cs" />
     <Compile Include="Bus\ChangePassBus.cs" />
@@ -155,6 +161,12 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="CT_BaoCaoLichSuHoatDong.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CT_BaoCaoTongChi.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CT_BaoCaoTongThu.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">

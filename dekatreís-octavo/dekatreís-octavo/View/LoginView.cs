@@ -38,6 +38,7 @@ namespace dekatreís_octavo.View
                 TaiKhoan = LoginViewBus.Instance.Login(tb_Username.Text, tb_Password.Text);
                 if (TaiKhoan != null)
                 {
+                    BaoCaoChamCongNhanVienBus.Instance.ChamCong_Login();
                     home.initHomeView(TaiKhoan);
                     this.Hide();
                     home.ShowDialog();

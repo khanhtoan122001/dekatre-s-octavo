@@ -12,6 +12,7 @@
           <Property Name="IDBaoCao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ThoiGian" Type="smalldatetime" Nullable="false" />
           <Property Name="TenDangNhap" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsLogin" Type="bit" />
         </EntityType>
         <EntityType Name="BaoCaoDoanhThuThang">
           <Key>
@@ -40,6 +41,22 @@
           <Property Name="TongXeRa" Type="int" />
           <Property Name="ChenhLech" Type="int" />
         </EntityType>
+        <EntityType Name="BaoCaoTongChi">
+          <Key>
+            <PropertyRef Name="IDBaoCaoChi" />
+          </Key>
+          <Property Name="IDBaoCaoChi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Thang" Type="int" />
+          <Property Name="Nam" Type="int" />
+        </EntityType>
+        <EntityType Name="BaoCaoTongThu">
+          <Key>
+            <PropertyRef Name="IDBaoCaoThu" />
+          </Key>
+          <Property Name="IDBaoCaoThu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Thang" Type="int" />
+          <Property Name="Nam" Type="int" />
+        </EntityType>
         <EntityType Name="CT_BaoCaoDoanhThuThang">
           <Key>
             <PropertyRef Name="IDCTBaoCao" />
@@ -59,6 +76,26 @@
           <Property Name="IDBaoCao" Type="int" Nullable="false" />
           <Property Name="ThoiGian" Type="smalldatetime" />
           <Property Name="BienSo" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CT_BaoCaoTongChi">
+          <Key>
+            <PropertyRef Name="IDCT_BaoCaoTongChi" />
+          </Key>
+          <Property Name="IDCT_BaoCaoTongChi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDBaoCao" Type="int" />
+          <Property Name="ThoiGian" Type="smalldatetime" />
+          <Property Name="GiaTri" Type="money" />
+          <Property Name="HoatDong" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CT_BaoCaoTongThu">
+          <Key>
+            <PropertyRef Name="IDCT_BaoCaoTongThu" />
+          </Key>
+          <Property Name="IDCT_BaoCaoTongThu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDBaoCao" Type="int" />
+          <Property Name="ThoiGian" Type="smalldatetime" />
+          <Property Name="GiaTri" Type="money" />
+          <Property Name="HoatDong" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="HoaDon">
           <Key>
@@ -166,6 +203,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_CT_BaoCaoTongChi_BaoCaoTongChi">
+          <End Role="BaoCaoTongChi" Type="Self.BaoCaoTongChi" Multiplicity="0..1" />
+          <End Role="CT_BaoCaoTongChi" Type="Self.CT_BaoCaoTongChi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BaoCaoTongChi">
+              <PropertyRef Name="IDBaoCaoChi" />
+            </Principal>
+            <Dependent Role="CT_BaoCaoTongChi">
+              <PropertyRef Name="IDBaoCao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CT_BaoCaoTongThu_BaoCaoTongThu">
+          <End Role="BaoCaoTongThu" Type="Self.BaoCaoTongThu" Multiplicity="0..1" />
+          <End Role="CT_BaoCaoTongThu" Type="Self.CT_BaoCaoTongThu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BaoCaoTongThu">
+              <PropertyRef Name="IDBaoCaoThu" />
+            </Principal>
+            <Dependent Role="CT_BaoCaoTongThu">
+              <PropertyRef Name="IDBaoCao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Table_1_Table_1">
           <End Role="BaoCaoLichSuHoatDong" Type="Self.BaoCaoLichSuHoatDong" Multiplicity="1" />
           <End Role="CT_BaoCaoLichSuHoatDong" Type="Self.CT_BaoCaoLichSuHoatDong" Multiplicity="*" />
@@ -207,8 +268,12 @@
           <EntitySet Name="BaoCaoDoanhThuThang" EntityType="Self.BaoCaoDoanhThuThang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BaoCaoLichSuHoatDong" EntityType="Self.BaoCaoLichSuHoatDong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="BaoCaoMatDoGuiXe" EntityType="Self.BaoCaoMatDoGuiXe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BaoCaoTongChi" EntityType="Self.BaoCaoTongChi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BaoCaoTongThu" EntityType="Self.BaoCaoTongThu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CT_BaoCaoDoanhThuThang" EntityType="Self.CT_BaoCaoDoanhThuThang" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CT_BaoCaoLichSuHoatDong" EntityType="Self.CT_BaoCaoLichSuHoatDong" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CT_BaoCaoTongChi" EntityType="Self.CT_BaoCaoTongChi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CT_BaoCaoTongThu" EntityType="Self.CT_BaoCaoTongThu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HoaDon" EntityType="Self.HoaDon" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiTaiKhoan" EntityType="Self.LoaiTaiKhoan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LoaiThe" EntityType="Self.LoaiThe" Schema="dbo" store:Type="Tables" />
@@ -227,6 +292,14 @@
           <AssociationSet Name="FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang" Association="Self.FK_CT_BaoCaoDoanhThuThang_BaoCaoDoanhThuThang">
             <End Role="BaoCaoDoanhThuThang" EntitySet="BaoCaoDoanhThuThang" />
             <End Role="CT_BaoCaoDoanhThuThang" EntitySet="CT_BaoCaoDoanhThuThang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CT_BaoCaoTongChi_BaoCaoTongChi" Association="Self.FK_CT_BaoCaoTongChi_BaoCaoTongChi">
+            <End Role="BaoCaoTongChi" EntitySet="BaoCaoTongChi" />
+            <End Role="CT_BaoCaoTongChi" EntitySet="CT_BaoCaoTongChi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CT_BaoCaoTongThu_BaoCaoTongThu" Association="Self.FK_CT_BaoCaoTongThu_BaoCaoTongThu">
+            <End Role="BaoCaoTongThu" EntitySet="BaoCaoTongThu" />
+            <End Role="CT_BaoCaoTongThu" EntitySet="CT_BaoCaoTongThu" />
           </AssociationSet>
           <AssociationSet Name="FK_Table_1_Table_1" Association="Self.FK_Table_1_Table_1">
             <End Role="BaoCaoLichSuHoatDong" EntitySet="BaoCaoLichSuHoatDong" />
@@ -418,6 +491,18 @@
           </AssociationSet>
           <EntitySet Name="HoaDons" EntityType="QuanLyDoXeModel.HoaDon" />
           <EntitySet Name="sysdiagrams" EntityType="QuanLyDoXeModel.sysdiagram" />
+          <EntitySet Name="BaoCaoTongChis" EntityType="QuanLyDoXeModel.BaoCaoTongChi" />
+          <EntitySet Name="BaoCaoTongThus" EntityType="QuanLyDoXeModel.BaoCaoTongThu" />
+          <EntitySet Name="CT_BaoCaoTongChi" EntityType="QuanLyDoXeModel.CT_BaoCaoTongChi" />
+          <EntitySet Name="CT_BaoCaoTongThu" EntityType="QuanLyDoXeModel.CT_BaoCaoTongThu" />
+          <AssociationSet Name="FK_CT_BaoCaoTongChi_BaoCaoTongChi" Association="QuanLyDoXeModel.FK_CT_BaoCaoTongChi_BaoCaoTongChi">
+            <End Role="BaoCaoTongChi" EntitySet="BaoCaoTongChis" />
+            <End Role="CT_BaoCaoTongChi" EntitySet="CT_BaoCaoTongChi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CT_BaoCaoTongThu_BaoCaoTongThu" Association="QuanLyDoXeModel.FK_CT_BaoCaoTongThu_BaoCaoTongThu">
+            <End Role="BaoCaoTongThu" EntitySet="BaoCaoTongThus" />
+            <End Role="CT_BaoCaoTongThu" EntitySet="CT_BaoCaoTongThu" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="LoaiThe">
           <Key>
@@ -461,6 +546,7 @@
           <Property Name="ThoiGian" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TenDangNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="TaiKhoan" Relationship="QuanLyDoXeModel.FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien" FromRole="BaoCaoChamCongNhanVien" ToRole="TaiKhoan" />
+          <Property Name="IsLogin" Type="Boolean" />
         </EntityType>
         <Association Name="FK_BaoCaoChamCongNhanVien_BaoCaoChamCongNhanVien">
           <End Type="QuanLyDoXeModel.TaiKhoan" Role="TaiKhoan" Multiplicity="0..1" />
@@ -493,6 +579,70 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <EntityType Name="BaoCaoTongChi">
+          <Key>
+            <PropertyRef Name="IDBaoCaoChi" />
+          </Key>
+          <Property Name="IDBaoCaoChi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Thang" Type="Int32" />
+          <Property Name="Nam" Type="Int32" />
+          <NavigationProperty Name="CT_BaoCaoTongChi" Relationship="QuanLyDoXeModel.FK_CT_BaoCaoTongChi_BaoCaoTongChi" FromRole="BaoCaoTongChi" ToRole="CT_BaoCaoTongChi" />
+        </EntityType>
+        <EntityType Name="BaoCaoTongThu">
+          <Key>
+            <PropertyRef Name="IDBaoCaoThu" />
+          </Key>
+          <Property Name="IDBaoCaoThu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Thang" Type="Int32" />
+          <Property Name="Nam" Type="Int32" />
+          <NavigationProperty Name="CT_BaoCaoTongThu" Relationship="QuanLyDoXeModel.FK_CT_BaoCaoTongThu_BaoCaoTongThu" FromRole="BaoCaoTongThu" ToRole="CT_BaoCaoTongThu" />
+        </EntityType>
+        <EntityType Name="CT_BaoCaoTongChi">
+          <Key>
+            <PropertyRef Name="IDCT_BaoCaoTongChi" />
+          </Key>
+          <Property Name="IDCT_BaoCaoTongChi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDBaoCao" Type="Int32" />
+          <Property Name="ThoiGian" Type="DateTime" Precision="0" />
+          <Property Name="GiaTri" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="HoatDong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BaoCaoTongChi" Relationship="QuanLyDoXeModel.FK_CT_BaoCaoTongChi_BaoCaoTongChi" FromRole="CT_BaoCaoTongChi" ToRole="BaoCaoTongChi" />
+        </EntityType>
+        <EntityType Name="CT_BaoCaoTongThu">
+          <Key>
+            <PropertyRef Name="IDCT_BaoCaoTongThu" />
+          </Key>
+          <Property Name="IDCT_BaoCaoTongThu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDBaoCao" Type="Int32" />
+          <Property Name="ThoiGian" Type="DateTime" Precision="0" />
+          <Property Name="GiaTri" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="HoatDong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="BaoCaoTongThu" Relationship="QuanLyDoXeModel.FK_CT_BaoCaoTongThu_BaoCaoTongThu" FromRole="CT_BaoCaoTongThu" ToRole="BaoCaoTongThu" />
+        </EntityType>
+        <Association Name="FK_CT_BaoCaoTongChi_BaoCaoTongChi">
+          <End Type="QuanLyDoXeModel.BaoCaoTongChi" Role="BaoCaoTongChi" Multiplicity="0..1" />
+          <End Type="QuanLyDoXeModel.CT_BaoCaoTongChi" Role="CT_BaoCaoTongChi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BaoCaoTongChi">
+              <PropertyRef Name="IDBaoCaoChi" />
+            </Principal>
+            <Dependent Role="CT_BaoCaoTongChi">
+              <PropertyRef Name="IDBaoCao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CT_BaoCaoTongThu_BaoCaoTongThu">
+          <End Type="QuanLyDoXeModel.BaoCaoTongThu" Role="BaoCaoTongThu" Multiplicity="0..1" />
+          <End Type="QuanLyDoXeModel.CT_BaoCaoTongThu" Role="CT_BaoCaoTongThu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BaoCaoTongThu">
+              <PropertyRef Name="IDBaoCaoThu" />
+            </Principal>
+            <Dependent Role="CT_BaoCaoTongThu">
+              <PropertyRef Name="IDBaoCao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -610,6 +760,7 @@
           <EntitySetMapping Name="BaoCaoChamCongNhanViens">
             <EntityTypeMapping TypeName="QuanLyDoXeModel.BaoCaoChamCongNhanVien">
               <MappingFragment StoreEntitySet="BaoCaoChamCongNhanVien">
+                <ScalarProperty Name="IsLogin" ColumnName="IsLogin" />
                 <ScalarProperty Name="TenDangNhap" ColumnName="TenDangNhap" />
                 <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
                 <ScalarProperty Name="IDBaoCao" ColumnName="IDBaoCao" />
@@ -634,6 +785,46 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
                 <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BaoCaoTongChis">
+            <EntityTypeMapping TypeName="QuanLyDoXeModel.BaoCaoTongChi">
+              <MappingFragment StoreEntitySet="BaoCaoTongChi">
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="Thang" ColumnName="Thang" />
+                <ScalarProperty Name="IDBaoCaoChi" ColumnName="IDBaoCaoChi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BaoCaoTongThus">
+            <EntityTypeMapping TypeName="QuanLyDoXeModel.BaoCaoTongThu">
+              <MappingFragment StoreEntitySet="BaoCaoTongThu">
+                <ScalarProperty Name="Nam" ColumnName="Nam" />
+                <ScalarProperty Name="Thang" ColumnName="Thang" />
+                <ScalarProperty Name="IDBaoCaoThu" ColumnName="IDBaoCaoThu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_BaoCaoTongChi">
+            <EntityTypeMapping TypeName="QuanLyDoXeModel.CT_BaoCaoTongChi">
+              <MappingFragment StoreEntitySet="CT_BaoCaoTongChi">
+                <ScalarProperty Name="HoatDong" ColumnName="HoatDong" />
+                <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
+                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+                <ScalarProperty Name="IDBaoCao" ColumnName="IDBaoCao" />
+                <ScalarProperty Name="IDCT_BaoCaoTongChi" ColumnName="IDCT_BaoCaoTongChi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CT_BaoCaoTongThu">
+            <EntityTypeMapping TypeName="QuanLyDoXeModel.CT_BaoCaoTongThu">
+              <MappingFragment StoreEntitySet="CT_BaoCaoTongThu">
+                <ScalarProperty Name="HoatDong" ColumnName="HoatDong" />
+                <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
+                <ScalarProperty Name="ThoiGian" ColumnName="ThoiGian" />
+                <ScalarProperty Name="IDBaoCao" ColumnName="IDBaoCao" />
+                <ScalarProperty Name="IDCT_BaoCaoTongThu" ColumnName="IDCT_BaoCaoTongThu" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

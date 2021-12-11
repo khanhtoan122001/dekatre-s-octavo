@@ -162,5 +162,67 @@ namespace dekatreís_octavo.Bus
             return result.ToList();
         }
 
+        public int AddBaoCaoTongThu()
+        {
+            var list = db.BaoCaoTongThus.Where(p => p.Thang == DateTime.Now.Month && p.Nam == DateTime.Now.Year).ToList();
+            BaoCaoTongThu baocao;
+
+            if (list.Count == 0)
+            {
+                baocao = new BaoCaoTongThu() { Nam = DateTime.Now.Year, Thang = DateTime.Now.Month };
+                db.BaoCaoTongThus.Add(baocao);
+                db.SaveChanges();
+            }
+            else
+            {
+                baocao = list.First();
+            }
+            return baocao.IDBaoCaoThu;
+        }
+        public int AddBaoCaoTongChi()
+        {
+            var list = db.BaoCaoTongChis.Where(p => p.Thang == DateTime.Now.Month && p.Nam == DateTime.Now.Year).ToList();
+            BaoCaoTongChi baocao;
+
+            if (list.Count == 0)
+            {
+                baocao = new BaoCaoTongChi() { Nam = DateTime.Now.Year, Thang = DateTime.Now.Month };
+                db.BaoCaoTongChis.Add(baocao);
+                db.SaveChanges();
+            }
+            else
+            {
+                baocao = list.First();
+            }
+            return baocao.IDBaoCaoChi;
+        }
+
+        public void AddCT_BaoCaoTongThu(int GiaTri, string HoatDong)
+        {
+            var baocao = db.BaoCaoTongThus.Where(p => p.Thang == DateTime.Now.Month && p.Nam == DateTime.Now.Year).ToList();
+            int id;
+            if (baocao.Count == 0)
+                id = AddBaoCaoTongThu();
+            else
+                id = baocao.First().IDBaoCaoThu;
+            CT_BaoCaoTongThu ct_baocao = new CT_BaoCaoTongThu() { IDBaoCao = id, GiaTri = GiaTri, HoatDong = HoatDong, ThoiGian = DateTime.Now };
+            db.CT_BaoCaoTongThu.Add(ct_baocao);
+
+            db.SaveChanges();
+        }
+
+        public void AddCT_BaoCaoTongChi(int GiaTri, string HoatDong)
+        {
+            var baocao = db.BaoCaoTongChis.Where(p => p.Thang == DateTime.Now.Month && p.Nam == DateTime.Now.Year).ToList();
+            int id;
+            if (baocao.Count == 0)
+                id = AddBaoCaoTongChi();
+            else
+                id = baocao.First().IDBaoCaoChi;
+            CT_BaoCaoTongChi ct_baocao = new CT_BaoCaoTongChi() { IDBaoCao = id, GiaTri = GiaTri, HoatDong = HoatDong, ThoiGian = DateTime.Now };
+            db.CT_BaoCaoTongChi.Add(ct_baocao);
+
+            db.SaveChanges();
+        }
     }
 }

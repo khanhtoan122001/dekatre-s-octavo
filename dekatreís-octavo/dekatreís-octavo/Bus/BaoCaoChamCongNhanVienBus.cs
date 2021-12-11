@@ -12,6 +12,8 @@ namespace dekatreís_octavo.Bus
 
         public static BaoCaoChamCongNhanVienBus Instance { get { if (instance == null) instance = new BaoCaoChamCongNhanVienBus(); return instance; } set => instance = value; }
 
+        QuanLyDoXeEntities1 db = DataProvider.Instance.db;
+
         public void ChamCong()
         {
             if (DataProvider.Instance.TaiKhoan == null)
@@ -31,6 +33,37 @@ namespace dekatreís_octavo.Bus
                 }
                 else return;
             }
+        }
+
+        public void ChamCong_Login()
+        {
+            if (DataProvider.Instance.TaiKhoan == null)
+                return;
+            TaiKhoan taikhoan = DataProvider.Instance.TaiKhoan;
+            BaoCaoChamCongNhanVien baocao = new BaoCaoChamCongNhanVien()
+            {
+                TaiKhoan = taikhoan,
+                TenDangNhap = taikhoan.TenDangNhap,
+                ThoiGian = DateTime.Now,
+                IsLogin = true
+            };
+            db.BaoCaoChamCongNhanViens.Add(baocao);
+            db.SaveChanges();
+        }
+        public void ChamCong_Logout()
+        {
+            if (DataProvider.Instance.TaiKhoan == null)
+                return;
+            TaiKhoan taikhoan = DataProvider.Instance.TaiKhoan;
+            BaoCaoChamCongNhanVien baocao = new BaoCaoChamCongNhanVien()
+            {
+                TaiKhoan = taikhoan,
+                TenDangNhap = taikhoan.TenDangNhap,
+                ThoiGian = DateTime.Now,
+                IsLogin = false
+            };
+            db.BaoCaoChamCongNhanViens.Add(baocao);
+            db.SaveChanges();
         }
 
         public List<BaoCaoChamCongNhanVien> GetBaoCaoChamCongNhanViens(string TenDangNhap, int? thang = null, int? nam = null)

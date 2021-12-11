@@ -52,7 +52,7 @@ namespace dekatreís_octavo.View
                 { Tag = i });
             }
             List<string> list = db.LoaiThes.Select(p => p.TenLoai).ToList();
-            //typeComboBox.Items.Add("None");
+            typeComboBox.Items.Add("All");
             foreach (string i in list)
             {
                 typeComboBox.Items.Add(i);

@@ -12,13 +12,14 @@ namespace dekatreís_octavo
     using System;
     using System.Collections.Generic;
     
-    public partial class BaoCaoChamCongNhanVien
+    public partial class CT_BaoCaoTongChi
     {
-        public int IDBaoCao { get; set; }
-        public System.DateTime ThoiGian { get; set; }
-        public string TenDangNhap { get; set; }
-        public Nullable<bool> IsLogin { get; set; }
+        public int IDCT_BaoCaoTongChi { get; set; }
+        public Nullable<int> IDBaoCao { get; set; }
+        public Nullable<System.DateTime> ThoiGian { get; set; }
+        public Nullable<decimal> GiaTri { get; set; }
+        public string HoatDong { get; set; }
     
-        public virtual TaiKhoan TaiKhoan { get; set; }
+        public virtual BaoCaoTongChi BaoCaoTongChi { get; set; }
     }
 }

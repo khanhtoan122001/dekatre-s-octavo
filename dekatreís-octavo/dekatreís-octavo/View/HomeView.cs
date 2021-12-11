@@ -47,8 +47,10 @@ namespace dekatreís_octavo.View
 
         private void bt_LogOut_Click(object sender, EventArgs e)
         {
+            BaoCaoChamCongNhanVienBus.Instance.ChamCong_Logout();
             DataProvider.Instance.TaiKhoan = null;
             this.Close();
+
             ////LoginView loginView = new LoginView();
             //loginView.Show();
         }
@@ -56,7 +58,10 @@ namespace dekatreís_octavo.View
         private void HomeView_FormClosed(object sender, FormClosedEventArgs e)
         {
             if(DataProvider.Instance.TaiKhoan != null)
+            {
+                BaoCaoChamCongNhanVienBus.Instance.ChamCong_Logout();
                 Application.Exit();
+            }
         }
 
         private void HomeView_Load(object sender, EventArgs e)
@@ -67,7 +72,7 @@ namespace dekatreís_octavo.View
             staffView1.LoadStaffList();
             parkingView1.LoadData();
             
-            BaoCaoChamCongNhanVienBus.Instance.ChamCong();
+            //BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
         private void AddTab()

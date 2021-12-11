@@ -38,5 +38,9 @@ namespace dekatreís_octavo
         public virtual DbSet<BaoCaoChamCongNhanVien> BaoCaoChamCongNhanViens { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public virtual DbSet<BaoCaoTongChi> BaoCaoTongChis { get; set; }
+        public virtual DbSet<BaoCaoTongThu> BaoCaoTongThus { get; set; }
+        public virtual DbSet<CT_BaoCaoTongChi> CT_BaoCaoTongChi { get; set; }
+        public virtual DbSet<CT_BaoCaoTongThu> CT_BaoCaoTongThu { get; set; }
     }
 }
