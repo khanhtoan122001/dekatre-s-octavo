@@ -268,6 +268,12 @@
     <Compile Include="View\EditStaffView.Designer.cs">
       <DependentUpon>EditStaffView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\History.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\HistoryView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -368,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditStaffView.resx">
       <DependentUpon>EditStaffView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\History.resx">
+      <DependentUpon>History.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\HistoryView.resx">
       <DependentUpon>HistoryView.cs</DependentUpon>
