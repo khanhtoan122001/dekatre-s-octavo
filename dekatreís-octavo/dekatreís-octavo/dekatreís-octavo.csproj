@@ -458,6 +458,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Resources\icon.ico" />
     <None Include="Resources\62025.png" />
     <Content Include="Resources\default-avatar-300x300.png" />
     <None Include="Resources\x-button-icon-20.jpg" />

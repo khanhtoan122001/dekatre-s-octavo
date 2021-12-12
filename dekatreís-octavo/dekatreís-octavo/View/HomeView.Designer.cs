@@ -30,6 +30,7 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeView));
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
@@ -171,10 +172,10 @@ namespace dekatreís_octavo.View
             // tabNameLabel
             // 
             this.tabNameLabel.AutoSize = true;
-            this.tabNameLabel.Font = new System.Drawing.Font("Segoe UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabNameLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabNameLabel.Location = new System.Drawing.Point(28, 32);
             this.tabNameLabel.Name = "tabNameLabel";
-            this.tabNameLabel.Size = new System.Drawing.Size(152, 38);
+            this.tabNameLabel.Size = new System.Drawing.Size(171, 38);
             this.tabNameLabel.TabIndex = 13;
             this.tabNameLabel.Text = "Trang chính";
             // 
@@ -325,10 +326,10 @@ namespace dekatreís_octavo.View
             // progressPanel
             // 
             this.progressPanel.Controls.Add(this.progressBar);
-            this.progressPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.progressPanel.Location = new System.Drawing.Point(985, 2);
+            this.progressPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.progressPanel.Location = new System.Drawing.Point(3, 475);
             this.progressPanel.Name = "progressPanel";
-            this.progressPanel.Size = new System.Drawing.Size(89, 546);
+            this.progressPanel.Size = new System.Drawing.Size(1071, 73);
             this.progressPanel.TabIndex = 1;
             // 
             // progressBar
@@ -336,18 +337,35 @@ namespace dekatreís_octavo.View
             this.progressBar.ChangeDelay = 50;
             this.progressBar.CircularWidth = 3.8F;
             this.progressBar.IsIndetermine = false;
-            this.progressBar.Location = new System.Drawing.Point(14, 140);
+            this.progressBar.Location = new System.Drawing.Point(122, 14);
             this.progressBar.Maximum = 100;
             this.progressBar.Minimum = 0;
             this.progressBar.MouseState = MaterialSurface.MouseState.HOVER;
             this.progressBar.Name = "progressBar";
             this.progressBar.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.progressBar.Size = new System.Drawing.Size(55, 40);
+            this.progressBar.Size = new System.Drawing.Size(492, 40);
             this.progressBar.Step = 10;
             this.progressBar.TabIndex = 0;
             this.progressBar.Text = "materialProgressbar1";
             this.progressBar.Type = MaterialSurface.MaterialProgressbar.ProgressBarType.Normal;
-            this.progressBar.Value = 25;
+            this.progressBar.Value = 16;
+            // 
+            // historyPanel
+            // 
+            this.historyPanel.Controls.Add(this.history1);
+            this.historyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historyPanel.Location = new System.Drawing.Point(3, 2);
+            this.historyPanel.Name = "historyPanel";
+            this.historyPanel.Size = new System.Drawing.Size(1071, 546);
+            this.historyPanel.TabIndex = 0;
+            // 
+            // history1
+            // 
+            this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.history1.Location = new System.Drawing.Point(0, 0);
+            this.history1.Name = "history1";
+            this.history1.Size = new System.Drawing.Size(1071, 546);
+            this.history1.TabIndex = 0;
             // 
             // historyPanel
             // 
@@ -507,6 +525,16 @@ namespace dekatreís_octavo.View
             this.historyButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.historyButton.UseVisualStyleBackColor = true;
             this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
+            // 
+            // consistenceReport1
+            // 
+            this.consistenceReport1.BackColor = System.Drawing.Color.White;
+            this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consistenceReport1.Location = new System.Drawing.Point(0, 0);
+            this.consistenceReport1.Name = "consistenceReport1";
+            this.consistenceReport1.Size = new System.Drawing.Size(1071, 446);
+            this.consistenceReport1.TabIndex = 2;
+            this.consistenceReport1.Visible = false;
             // 
             // consistenceReport1
             // 
@@ -731,13 +759,13 @@ namespace dekatreís_octavo.View
             this.tabDrawer.Depth = 0;
             this.tabDrawer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabDrawer.HighlightWithAccent = true;
-            this.tabDrawer.IndicatorWidth = 0;
+            this.tabDrawer.IndicatorWidth = 7;
             this.tabDrawer.IsOpen = true;
             this.tabDrawer.Location = new System.Drawing.Point(0, 0);
             this.tabDrawer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabDrawer.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabDrawer.Name = "tabDrawer";
-            this.tabDrawer.ShowIconsWhenHidden = false;
+            this.tabDrawer.ShowIconsWhenHidden = true;
             this.tabDrawer.Size = new System.Drawing.Size(256, 581);
             this.tabDrawer.TabIndex = 6;
             this.tabDrawer.UseColors = false;
@@ -832,6 +860,7 @@ namespace dekatreís_octavo.View
             this.Controls.Add(this.materialDrawer1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomeView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
