@@ -270,8 +270,7 @@ namespace dekatreís_octavo.View
                 ThamSoBus.Instance.EditThamSo("Sức chứa", succhua);
                 DataProvider.Instance.db.SaveChanges();
                 timer2.Enabled = true;
-                //lb_success.Visible = true;
-                Snackbar.MakeSnackbar(this, "Thành công", "OK");
+                lb_success.Visible = true;
             }
             else
             {
