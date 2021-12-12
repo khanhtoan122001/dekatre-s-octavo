@@ -17,9 +17,11 @@ namespace dekatreís_octavo.View
         {
             InitializeComponent();
         }
-        public void LoadData()
+        public void LoadData(List<CT_BaoCaoLichSuHoatDong> list = null)
         {
-            var result = ReportBus.Instance.GetCT_BaoCaoLichSuHoatDongs(dateTimePicker1.Value.Date);
+            var result = checkbox.Checked? ReportBus.Instance.GetCT_BaoCaoLichSuHoatDongs(dateTimePicker1.Value.Date) : ReportBus.Instance.GetCT_BaoCaoLichSuHoatDongs();
+            if (list != null)
+                result = list;
             historyList.Items.Clear();
             foreach (CT_BaoCaoLichSuHoatDong i in result)
             {
@@ -35,6 +37,24 @@ namespace dekatreís_octavo.View
         }
 
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void searchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            List<CT_BaoCaoLichSuHoatDong> list;
+            if (checkbox.Checked)
+                list = ReportBus.Instance.SearchCT_HoatDong(searchTextBox.Text, dateTimePicker1.Value.Date);
+            else
+                list = ReportBus.Instance.SearchCT_HoatDong(searchTextBox.Text);
+            if (list.Count > 0)
+                LoadData(list);
+            else
+                LoadData();
+        }
+
+        private void materialCheckbox1_CheckedChanged(object sender, EventArgs e)
         {
             LoadData();
         }

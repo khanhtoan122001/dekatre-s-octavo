@@ -113,23 +113,16 @@ namespace dekatreís_octavo.Bus
             var result = from c in db.CT_BaoCaoLichSuHoatDong
                          select c;
 
-            if(date != null)
+            if (date != null)
             {
-                var l = (from c in db.BaoCaoLichSuHoatDongs
-                         where c.Ngay == date
-                         select c).ToList();
-
-                //int id1 = -1, id2 = -1;
-
-                //if (l.Count == 1)
-                //    id1 = l[0].IDBaoCao;
-
-                //if (l.Count == 2)
-                //    id2 = l[1].IDBaoCao;
-
-                //result = result.Where(p => p.IDBaoCao == id1 || p.IDBaoCao == id2);
+                result = result.Where( p => p.BaoCaoLichSuHoatDong.Ngay.Value == date);
             }
 
+            return result.ToList();
+        }
+        public List<CT_BaoCaoLichSuHoatDong> SearchCT_HoatDong(string txt, DateTime? date = null)
+        {
+            var result = db.CT_BaoCaoLichSuHoatDong.Where(p=>p.BienSo.Contains(txt));
             return result.ToList();
         }
         public int GetIdBaoCaoLichSuHoatDong(DateTime time, int hoatDong)

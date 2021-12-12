@@ -40,6 +40,7 @@ namespace dekatreís_octavo.View
             this.refreshButton = new MaterialSurface.ContainedButton();
             this.searchTextBox = new MaterialSkin.Controls.MaterialTextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.mainPanel.SuspendLayout();
             this.listPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -110,6 +111,7 @@ namespace dekatreís_octavo.View
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.checkbox);
             this.topPanel.Controls.Add(this.dateTimePicker1);
             this.topPanel.Controls.Add(this.refreshButton);
             this.topPanel.Controls.Add(this.searchTextBox);
@@ -157,16 +159,36 @@ namespace dekatreís_octavo.View
             this.searchTextBox.TabIndex = 0;
             this.searchTextBox.Text = "";
             this.searchTextBox.TrailingIcon = null;
+            this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(250, 38);
+            this.dateTimePicker1.Location = new System.Drawing.Point(250, 23);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(273, 27);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
+            // 
+            // checkbox
+            // 
+            this.checkbox.AutoSize = true;
+            this.checkbox.Checked = true;
+            this.checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkbox.Depth = 0;
+            this.checkbox.Location = new System.Drawing.Point(250, 53);
+            this.checkbox.Margin = new System.Windows.Forms.Padding(0);
+            this.checkbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkbox.Name = "checkbox";
+            this.checkbox.ReadOnly = false;
+            this.checkbox.Ripple = true;
+            this.checkbox.Size = new System.Drawing.Size(110, 37);
+            this.checkbox.TabIndex = 3;
+            this.checkbox.Text = "Theo ngày";
+            this.checkbox.UseVisualStyleBackColor = true;
+            this.checkbox.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
             // 
             // History
             // 
@@ -178,6 +200,7 @@ namespace dekatreís_octavo.View
             this.mainPanel.ResumeLayout(false);
             this.listPanel.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -195,5 +218,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.ContainedButton refreshButton;
         private MaterialSkin.Controls.MaterialTextBox searchTextBox;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private MaterialSkin.Controls.MaterialCheckbox checkbox;
     }
 }

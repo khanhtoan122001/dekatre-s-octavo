@@ -59,6 +59,7 @@ namespace dekatreís_octavo.View
             }
             if (flag)
             {
+                CardManagementBus.Instance.CheckAllow();
                 flag = false;
                 if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "staff")
                 {
