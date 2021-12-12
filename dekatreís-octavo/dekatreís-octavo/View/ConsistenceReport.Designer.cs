@@ -33,13 +33,13 @@ namespace dekatreís_octavo.View
             this.chartPanel = new System.Windows.Forms.Panel();
             this.rpChart = new LiveCharts.WinForms.CartesianChart();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.rb_Month = new System.Windows.Forms.RadioButton();
+            this.rb_Day = new System.Windows.Forms.RadioButton();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.containedButton1 = new MaterialSurface.ContainedButton();
             this.exportButton = new MaterialSurface.ContainedButton();
             this.yearComboBox = new MaterialSurface.MaterialComboBox();
             this.monthComboBox = new MaterialSurface.MaterialComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.rb_Day = new System.Windows.Forms.RadioButton();
-            this.rb_Month = new System.Windows.Forms.RadioButton();
             this.mainPanel.SuspendLayout();
             this.chartPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -87,6 +87,40 @@ namespace dekatreís_octavo.View
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(854, 100);
             this.topPanel.TabIndex = 0;
+            // 
+            // rb_Month
+            // 
+            this.rb_Month.AutoSize = true;
+            this.rb_Month.Checked = true;
+            this.rb_Month.Location = new System.Drawing.Point(16, 23);
+            this.rb_Month.Name = "rb_Month";
+            this.rb_Month.Size = new System.Drawing.Size(102, 21);
+            this.rb_Month.TabIndex = 7;
+            this.rb_Month.TabStop = true;
+            this.rb_Month.Text = "Theo tháng";
+            this.rb_Month.UseVisualStyleBackColor = true;
+            this.rb_Month.CheckedChanged += new System.EventHandler(this.rb_Month_CheckedChanged);
+            // 
+            // rb_Day
+            // 
+            this.rb_Day.AutoSize = true;
+            this.rb_Day.Location = new System.Drawing.Point(16, 50);
+            this.rb_Day.Name = "rb_Day";
+            this.rb_Day.Size = new System.Drawing.Size(97, 21);
+            this.rb_Day.TabIndex = 6;
+            this.rb_Day.Text = "Theo ngày";
+            this.rb_Day.UseVisualStyleBackColor = true;
+            this.rb_Day.CheckedChanged += new System.EventHandler(this.rb_Day_CheckedChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(157, 44);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(271, 27);
+            this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePicker1.Visible = false;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // containedButton1
             // 
@@ -140,7 +174,7 @@ namespace dekatreís_octavo.View
             this.yearComboBox.FormattingEnabled = true;
             this.yearComboBox.HintText = "Năm";
             this.yearComboBox.ItemHeight = 47;
-            this.yearComboBox.Location = new System.Drawing.Point(159, 23);
+            this.yearComboBox.Location = new System.Drawing.Point(284, 26);
             this.yearComboBox.MaxDropDownItems = 4;
             this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.yearComboBox.Name = "yearComboBox";
@@ -173,7 +207,7 @@ namespace dekatreís_octavo.View
             "10",
             "11",
             "12"});
-            this.monthComboBox.Location = new System.Drawing.Point(32, 23);
+            this.monthComboBox.Location = new System.Drawing.Point(157, 26);
             this.monthComboBox.MaxDropDownItems = 4;
             this.monthComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.monthComboBox.Name = "monthComboBox";
@@ -181,37 +215,6 @@ namespace dekatreís_octavo.View
             this.monthComboBox.Size = new System.Drawing.Size(121, 53);
             this.monthComboBox.TabIndex = 0;
             this.monthComboBox.SelectedIndexChanged += new System.EventHandler(this.monthComboBox_SelectedIndexChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(286, 46);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(271, 27);
-            this.dateTimePicker1.TabIndex = 5;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
-            // rb_Day
-            // 
-            this.rb_Day.AutoSize = true;
-            this.rb_Day.Location = new System.Drawing.Point(427, 14);
-            this.rb_Day.Name = "rb_Day";
-            this.rb_Day.Size = new System.Drawing.Size(97, 21);
-            this.rb_Day.TabIndex = 6;
-            this.rb_Day.Text = "Theo ngày";
-            this.rb_Day.UseVisualStyleBackColor = true;
-            // 
-            // rb_Month
-            // 
-            this.rb_Month.AutoSize = true;
-            this.rb_Month.Checked = true;
-            this.rb_Month.Location = new System.Drawing.Point(286, 14);
-            this.rb_Month.Name = "rb_Month";
-            this.rb_Month.Size = new System.Drawing.Size(102, 21);
-            this.rb_Month.TabIndex = 7;
-            this.rb_Month.TabStop = true;
-            this.rb_Month.Text = "Theo tháng";
-            this.rb_Month.UseVisualStyleBackColor = true;
             // 
             // ConsistenceReport
             // 
