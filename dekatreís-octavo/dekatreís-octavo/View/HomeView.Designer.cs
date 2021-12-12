@@ -519,7 +519,6 @@ namespace dekatreís_octavo.View
             this.historyButton.Text = "Lịch sử";
             this.historyButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.historyButton.UseVisualStyleBackColor = true;
-            this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
             // 
             // consistenceReport1
             // 
