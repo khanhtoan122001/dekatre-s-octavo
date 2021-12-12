@@ -51,8 +51,8 @@ namespace dekatreís_octavo.Bus
         {
             if (db.LoaiThes.Count() == 0)
             {
-                AddLoaiThe("Thẻ thường", ThamSoBus.Instance.GetByTen("Thẻ thường").GiaTri.Value);
-                AddLoaiThe("Thẻ tháng", ThamSoBus.Instance.GetByTen("Thẻ tháng").GiaTri.Value);
+                AddLoaiThe("Thẻ thường", 10000);
+                AddLoaiThe("Thẻ tháng", 200000);
             }
         }
 

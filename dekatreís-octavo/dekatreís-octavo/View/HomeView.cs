@@ -99,6 +99,7 @@ namespace dekatreís_octavo.View
                 tabControl.TabPages.Add(utility);
                 //tabControl.TabPages.Add(statusPage);
                 tabControl.TabPages.Add(setting);
+                lb_stopwatch.Visible = false;
             }
             else
             {
