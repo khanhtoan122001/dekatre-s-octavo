@@ -300,7 +300,7 @@ namespace dekatreís_octavo.View
             float soxe = DataProvider.Instance.SoXeTrongBai;
             progressBar.Value = Convert.ToInt32(Math.Round(soxe / succhua * 100));
             maxLabel.Text = succhua.ToString();
-            SoXe.Left = 264 + progressBar.Value * 4;
+            SoXe.Left = 261 + progressBar.Value * 4;
         }
     }
 }
