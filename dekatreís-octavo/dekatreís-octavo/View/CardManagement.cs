@@ -243,9 +243,9 @@ namespace dekatreís_octavo.View
         {
             if (statusComboBox.SelectedIndex != -1)
             {
-                if (statusComboBox.SelectedIndex == 1)
+                if (statusComboBox.SelectedIndex == 2)
                     sortStatus = "false";
-                else if (statusComboBox.SelectedIndex == 2)
+                else if (statusComboBox.SelectedIndex == 1)
                     sortStatus = "true";
                 else sortStatus = null;
             }

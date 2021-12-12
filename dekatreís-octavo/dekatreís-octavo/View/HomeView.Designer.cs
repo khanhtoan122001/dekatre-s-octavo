@@ -35,6 +35,7 @@ namespace dekatreís_octavo.View
             this.leftPanel = new System.Windows.Forms.Panel();
             this.lb_stopwatch = new MaterialSkin.Controls.MaterialLabel();
             this.tabNameLabel = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.materialCard1 = new MaterialSurface.MaterialCard();
             this.bt_ChangePass = new MaterialSurface.TextButton();
             this.bt_info = new MaterialSurface.TextButton();
@@ -43,14 +44,20 @@ namespace dekatreís_octavo.View
             this.tabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.homePage = new System.Windows.Forms.TabPage();
             this.progressPanel = new System.Windows.Forms.Panel();
-            this.historyPanel = new System.Windows.Forms.Panel();
             this.progressBar = new MaterialSurface.MaterialProgressbar();
+            this.historyPanel = new System.Windows.Forms.Panel();
+            this.history1 = new dekatreís_octavo.View.History();
             this.cardPage = new System.Windows.Forms.TabPage();
+            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.staffPage = new System.Windows.Forms.TabPage();
+            this.staffView1 = new dekatreís_octavo.View.StaffView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.parkingView1 = new dekatreís_octavo.View.ParkingView();
             this.utility = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.statusButton = new MaterialSurface.ContainedButton();
             this.historyButton = new MaterialSurface.ContainedButton();
+            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
             this.statusPage = new System.Windows.Forms.TabPage();
             this.setting = new System.Windows.Forms.TabPage();
             this.lb_success = new System.Windows.Forms.Label();
@@ -70,21 +77,16 @@ namespace dekatreís_octavo.View
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
             this.iconPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.reportPanel = new System.Windows.Forms.Panel();
             this.consistenceButton = new MaterialSurface.ContainedButton();
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
-            this.staffView1 = new dekatreís_octavo.View.StaffView();
-            this.parkingView1 = new dekatreís_octavo.View.ParkingView();
-            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
-            this.history1 = new dekatreís_octavo.View.History();
+            this.SoXe = new MaterialSkin.Controls.MaterialLabel();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.materialCard1.SuspendLayout();
             this.tabPanel.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -95,16 +97,15 @@ namespace dekatreís_octavo.View
             this.staffPage.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.utility.SuspendLayout();
-            this.setting.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.iconPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.setting.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.iconPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -142,6 +143,7 @@ namespace dekatreís_octavo.View
             // 
             // leftPanel
             // 
+            this.leftPanel.Controls.Add(this.SoXe);
             this.leftPanel.Controls.Add(this.lb_stopwatch);
             this.leftPanel.Controls.Add(this.tabNameLabel);
             this.leftPanel.Controls.Add(this.pictureBox2);
@@ -175,6 +177,19 @@ namespace dekatreís_octavo.View
             this.tabNameLabel.Size = new System.Drawing.Size(152, 38);
             this.tabNameLabel.TabIndex = 13;
             this.tabNameLabel.Text = "Trang chính";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources.default_avatar_300x300;
+            this.pictureBox2.Location = new System.Drawing.Point(1044, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.materialButton1_Click);
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // materialCard1
             // 
@@ -316,15 +331,6 @@ namespace dekatreís_octavo.View
             this.progressPanel.Size = new System.Drawing.Size(89, 546);
             this.progressPanel.TabIndex = 1;
             // 
-            // historyPanel
-            // 
-            this.historyPanel.Controls.Add(this.history1);
-            this.historyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.historyPanel.Location = new System.Drawing.Point(3, 2);
-            this.historyPanel.Name = "historyPanel";
-            this.historyPanel.Size = new System.Drawing.Size(1071, 546);
-            this.historyPanel.TabIndex = 0;
-            // 
             // progressBar
             // 
             this.progressBar.ChangeDelay = 50;
@@ -343,6 +349,23 @@ namespace dekatreís_octavo.View
             this.progressBar.Type = MaterialSurface.MaterialProgressbar.ProgressBarType.Normal;
             this.progressBar.Value = 25;
             // 
+            // historyPanel
+            // 
+            this.historyPanel.Controls.Add(this.history1);
+            this.historyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historyPanel.Location = new System.Drawing.Point(3, 2);
+            this.historyPanel.Name = "historyPanel";
+            this.historyPanel.Size = new System.Drawing.Size(1071, 546);
+            this.historyPanel.TabIndex = 0;
+            // 
+            // history1
+            // 
+            this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.history1.Location = new System.Drawing.Point(0, 0);
+            this.history1.Name = "history1";
+            this.history1.Size = new System.Drawing.Size(1071, 546);
+            this.history1.TabIndex = 0;
+            // 
             // cardPage
             // 
             this.cardPage.Controls.Add(this.cardManagement1);
@@ -356,6 +379,19 @@ namespace dekatreís_octavo.View
             this.cardPage.UseVisualStyleBackColor = true;
             this.cardPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
+            // cardManagement1
+            // 
+            this.cardManagement1.AutoSize = true;
+            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cardManagement1.BackColor = System.Drawing.Color.White;
+            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
+            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cardManagement1.Name = "cardManagement1";
+            this.cardManagement1.Size = new System.Drawing.Size(1071, 546);
+            this.cardManagement1.TabIndex = 0;
+            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
             // staffPage
             // 
             this.staffPage.BackColor = System.Drawing.Color.White;
@@ -367,6 +403,17 @@ namespace dekatreís_octavo.View
             this.staffPage.TabIndex = 2;
             this.staffPage.Text = "Nhân viên";
             this.staffPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // staffView1
+            // 
+            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffView1.Location = new System.Drawing.Point(0, 0);
+            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.staffView1.Name = "staffView1";
+            this.staffView1.Size = new System.Drawing.Size(1077, 550);
+            this.staffView1.TabIndex = 0;
+            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // tabPage4
             // 
@@ -380,6 +427,17 @@ namespace dekatreís_octavo.View
             this.tabPage4.Text = "Parking";
             this.tabPage4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
+            // parkingView1
+            // 
+            this.parkingView1.BackColor = System.Drawing.Color.White;
+            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.parkingView1.Location = new System.Drawing.Point(0, 0);
+            this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.parkingView1.Name = "parkingView1";
+            this.parkingView1.Size = new System.Drawing.Size(1077, 550);
+            this.parkingView1.TabIndex = 0;
+            this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
             // utility
             // 
             this.utility.BackColor = System.Drawing.Color.White;
@@ -390,6 +448,25 @@ namespace dekatreís_octavo.View
             this.utility.Size = new System.Drawing.Size(1077, 550);
             this.utility.TabIndex = 4;
             this.utility.Text = "Báo cáo";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.statusButton);
+            this.splitContainer1.Panel1.Controls.Add(this.historyButton);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.consistenceReport1);
+            this.splitContainer1.Size = new System.Drawing.Size(1071, 544);
+            this.splitContainer1.SplitterDistance = 94;
+            this.splitContainer1.TabIndex = 3;
             // 
             // statusButton
             // 
@@ -430,6 +507,16 @@ namespace dekatreís_octavo.View
             this.historyButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.historyButton.UseVisualStyleBackColor = true;
             this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
+            // 
+            // consistenceReport1
+            // 
+            this.consistenceReport1.BackColor = System.Drawing.Color.White;
+            this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consistenceReport1.Location = new System.Drawing.Point(0, 0);
+            this.consistenceReport1.Name = "consistenceReport1";
+            this.consistenceReport1.Size = new System.Drawing.Size(1071, 446);
+            this.consistenceReport1.TabIndex = 2;
+            this.consistenceReport1.Visible = false;
             // 
             // statusPage
             // 
@@ -665,6 +752,18 @@ namespace dekatreís_octavo.View
             this.iconPanel.Size = new System.Drawing.Size(256, 112);
             this.iconPanel.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.icon;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(256, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // reportPanel
             // 
             this.reportPanel.Location = new System.Drawing.Point(2, 0);
@@ -711,102 +810,17 @@ namespace dekatreís_octavo.View
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // pictureBox2
+            // SoXe
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources.default_avatar_300x300;
-            this.pictureBox2.Location = new System.Drawing.Point(1044, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.materialButton1_Click);
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.icon;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.statusButton);
-            this.splitContainer1.Panel1.Controls.Add(this.historyButton);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.consistenceReport1);
-            this.splitContainer1.Size = new System.Drawing.Size(1071, 546);
-            this.splitContainer1.SplitterDistance = 95;
-            this.splitContainer1.TabIndex = 3;
-            // 
-            // cardManagement1
-            // 
-            this.cardManagement1.AutoSize = true;
-            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cardManagement1.BackColor = System.Drawing.Color.White;
-            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
-            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(1071, 548);
-            this.cardManagement1.TabIndex = 0;
-            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // staffView1
-            // 
-            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffView1.Location = new System.Drawing.Point(0, 0);
-            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(1077, 552);
-            this.staffView1.TabIndex = 0;
-            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // parkingView1
-            // 
-            this.parkingView1.BackColor = System.Drawing.Color.White;
-            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parkingView1.Location = new System.Drawing.Point(0, 0);
-            this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.parkingView1.Name = "parkingView1";
-            this.parkingView1.Size = new System.Drawing.Size(1077, 552);
-            this.parkingView1.TabIndex = 0;
-            this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // consistenceReport1
-            // 
-            this.consistenceReport1.BackColor = System.Drawing.Color.White;
-            this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consistenceReport1.Location = new System.Drawing.Point(0, 0);
-            this.consistenceReport1.Name = "consistenceReport1";
-            this.consistenceReport1.Size = new System.Drawing.Size(1071, 447);
-            this.consistenceReport1.TabIndex = 2;
-            this.consistenceReport1.Visible = false;
-            // 
-            // history1
-            // 
-            this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.history1.Location = new System.Drawing.Point(0, 0);
-            this.history1.Name = "history1";
-            this.history1.Size = new System.Drawing.Size(1071, 546);
-            this.history1.TabIndex = 0;
+            this.SoXe.AutoSize = true;
+            this.SoXe.Depth = 0;
+            this.SoXe.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.SoXe.Location = new System.Drawing.Point(380, 32);
+            this.SoXe.MouseState = MaterialSkin.MouseState.HOVER;
+            this.SoXe.Name = "SoXe";
+            this.SoXe.Size = new System.Drawing.Size(107, 19);
+            this.SoXe.TabIndex = 15;
+            this.SoXe.Text = "Số xe trong bãi";
             // 
             // HomeView
             // 
@@ -827,6 +841,7 @@ namespace dekatreís_octavo.View
             this.panel1.ResumeLayout(false);
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.materialCard1.ResumeLayout(false);
             this.tabPanel.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
@@ -838,17 +853,16 @@ namespace dekatreís_octavo.View
             this.staffPage.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.utility.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.setting.ResumeLayout(false);
             this.setting.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.iconPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -908,5 +922,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialProgressbar progressBar;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private History history1;
+        private MaterialSkin.Controls.MaterialLabel SoXe;
     }
 }

@@ -35,7 +35,14 @@ namespace dekatreís_octavo.View
                 {
                     Title = "Day",
                     Labels = s,
-                    FontSize = 15
+                    FontSize = 15,
+                }
+            };
+            rpChart.AxisY = new AxesCollection()
+            {
+                new Axis
+                {
+                    MinValue = 0
                 }
             };
             rpChart.LegendLocation = LegendLocation.Bottom;
@@ -79,12 +86,25 @@ namespace dekatreís_octavo.View
         private void LoadChart(List<BaoCaoMatDoGuiXe> chartValue)
         {
             rpChart.Series.Clear();
-            List<int> vao = new List<int>(), ra = new List<int>();
-            foreach(var i in chartValue)
+            
+            List<int> vao = new List<int>();
+            int maxday = DateTime.DaysInMonth(chartValue[0].Ngay.Value.Year, chartValue[0].Ngay.Value.Month);
+            int max = 0, min = 32;
+            for(int i = 1; i < maxday; i++)
             {
-                vao.Add((int)i.TongXeVao);
-                ra.Add((int)i.TongXeRa);
+                var result = (from c in chartValue
+                              where c.Ngay.Value.Day == i
+                              select c).FirstOrDefault();
+                if (result != null)
+                {
+                    vao.Add(result.TongXeVao.Value);
+                    if (result.Ngay.Value.Day > max) max = result.Ngay.Value.Day;
+                    if (result.Ngay.Value.Day < min) min = result.Ngay.Value.Day;
+                }
+                else
+                    vao.Add(0);
             }
+
             rpChart.Series = new SeriesCollection()
             {
                 new LineSeries
@@ -98,6 +118,10 @@ namespace dekatreís_octavo.View
                 //    Values = new ChartValues<int>(ra)
                 //}
             };
+
+            rpChart.AxisX[0].MinValue = min;
+            rpChart.AxisX[0].MaxValue = max;
+            rpChart.AxisX[0].Separator.Step = 1;
         }
     }
 }

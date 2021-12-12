@@ -251,6 +251,9 @@ namespace dekatreís_octavo.View
                 lb_stopwatch.Text = string.Format("0{0} : 0{1}", a.ToString(), b.ToString());
             else if (a >= 10 && b < 10)
                 lb_stopwatch.Text = string.Format("{0} : 0{1}", a.ToString(), b.ToString());
+
+            SoXe.Text = DataProvider.Instance.SoXeTrongBai.ToString();
+
         }
 
         private void updateButton_Click(object sender, EventArgs e)
