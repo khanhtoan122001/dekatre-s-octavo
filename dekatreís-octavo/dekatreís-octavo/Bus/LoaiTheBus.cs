@@ -27,12 +27,9 @@ namespace dekatreís_octavo.Bus
             db.SaveChanges();
             return result != null;
         }
-        public bool EditLoaiThe(int idLoaiThe, string ten, int gia)
+        public bool EditLoaiThe(string ten, int gia)
         {
-            LoaiThe loai = db.LoaiThes.Find(idLoaiThe);
-            int check = GetIDTheByTen(ten);
-            if (check == -1)
-                return false;
+            LoaiThe loai = db.LoaiThes.Where(p => p.TenLoai == ten).FirstOrDefault();
             if (loai == null)
                 return false;
             loai.TenLoai = ten;

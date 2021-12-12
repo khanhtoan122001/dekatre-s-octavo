@@ -49,9 +49,7 @@ namespace dekatreís_octavo.View
         {
             LoadLoaiThe();
             TheXe the = CardManagementBus.Instance.GetTheXeWithID(selected);
-            tb_TenChuSoHuu.Text = the.ChuSoHuu;
             tb_BienSo.Text = the.BienSoXe;
-            tb_TenXe.Text = the.TenXe;
             cb_LoaiThe.SelectedIndex = (int)the.LoaiThe - 1;
         }
     }

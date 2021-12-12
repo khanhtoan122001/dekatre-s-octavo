@@ -14,18 +14,11 @@ namespace dekatreís_octavo
     
     public partial class BaoCaoDoanhThuThang
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public BaoCaoDoanhThuThang()
-        {
-            this.CT_BaoCaoDoanhThuThang = new HashSet<CT_BaoCaoDoanhThuThang>();
-        }
-    
         public int IDBaoCao { get; set; }
         public Nullable<int> Nam { get; set; }
-        public Nullable<int> LoaiThe { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CT_BaoCaoDoanhThuThang> CT_BaoCaoDoanhThuThang { get; set; }
-        public virtual LoaiThe LoaiThe1 { get; set; }
+        public Nullable<int> Thang { get; set; }
+        public Nullable<int> TongThu { get; set; }
+        public Nullable<int> TongChi { get; set; }
+        public Nullable<int> ChenhLech { get; set; }
     }
 }

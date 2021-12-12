@@ -17,7 +17,6 @@ namespace dekatreís_octavo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LoaiThe()
         {
-            this.BaoCaoDoanhThuThangs = new HashSet<BaoCaoDoanhThuThang>();
             this.TheXes = new HashSet<TheXe>();
         }
     
@@ -25,8 +24,6 @@ namespace dekatreís_octavo
         public string TenLoai { get; set; }
         public Nullable<int> Gia { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BaoCaoDoanhThuThang> BaoCaoDoanhThuThangs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TheXe> TheXes { get; set; }
     }
