@@ -58,6 +58,7 @@ namespace dekatreís_octavo.View
             var list = ReportBus.Instance.GetBaoCaoMatDoGuiXes(thang, nam);
             var years = (from c in DataProvider.Instance.db.BaoCaoMatDoGuiXes
                                         select c.Ngay.Value.Year).Distinct().ToList();
+            yearComboBox.Items.Clear();
             foreach(int i in years)
             {
                 yearComboBox.Items.Add(i.ToString());
@@ -91,11 +92,11 @@ namespace dekatreís_octavo.View
                     Title = "Xe vào",
                     Values = new ChartValues<int>(vao)
                 },
-                new LineSeries
-                {
-                    Title = "Xe ra",
-                    Values = new ChartValues<int>(ra)
-                }
+                //new LineSeries
+                //{
+                //    Title = "Xe ra",
+                //    Values = new ChartValues<int>(ra)
+                //}
             };
         }
     }

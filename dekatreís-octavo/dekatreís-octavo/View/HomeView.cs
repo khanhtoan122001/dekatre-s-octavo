@@ -279,5 +279,10 @@ namespace dekatreís_octavo.View
             timer2.Enabled = false;
             lb_success.Visible = false;
         }
+
+        private void historyButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
