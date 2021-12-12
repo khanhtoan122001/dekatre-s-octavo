@@ -37,6 +37,9 @@ namespace dekatreís_octavo.View
             this.exportButton = new MaterialSurface.ContainedButton();
             this.yearComboBox = new MaterialSurface.MaterialComboBox();
             this.monthComboBox = new MaterialSurface.MaterialComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.rb_Day = new System.Windows.Forms.RadioButton();
+            this.rb_Month = new System.Windows.Forms.RadioButton();
             this.mainPanel.SuspendLayout();
             this.chartPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -72,6 +75,9 @@ namespace dekatreís_octavo.View
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.rb_Month);
+            this.topPanel.Controls.Add(this.rb_Day);
+            this.topPanel.Controls.Add(this.dateTimePicker1);
             this.topPanel.Controls.Add(this.containedButton1);
             this.topPanel.Controls.Add(this.exportButton);
             this.topPanel.Controls.Add(this.yearComboBox);
@@ -84,6 +90,7 @@ namespace dekatreís_octavo.View
             // 
             // containedButton1
             // 
+            this.containedButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.containedButton1.EffectType = MaterialSurface.ET.Custom;
             this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -175,6 +182,37 @@ namespace dekatreís_octavo.View
             this.monthComboBox.TabIndex = 0;
             this.monthComboBox.SelectedIndexChanged += new System.EventHandler(this.monthComboBox_SelectedIndexChanged);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(286, 46);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(271, 27);
+            this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // rb_Day
+            // 
+            this.rb_Day.AutoSize = true;
+            this.rb_Day.Location = new System.Drawing.Point(427, 14);
+            this.rb_Day.Name = "rb_Day";
+            this.rb_Day.Size = new System.Drawing.Size(97, 21);
+            this.rb_Day.TabIndex = 6;
+            this.rb_Day.Text = "Theo ngày";
+            this.rb_Day.UseVisualStyleBackColor = true;
+            // 
+            // rb_Month
+            // 
+            this.rb_Month.AutoSize = true;
+            this.rb_Month.Checked = true;
+            this.rb_Month.Location = new System.Drawing.Point(286, 14);
+            this.rb_Month.Name = "rb_Month";
+            this.rb_Month.Size = new System.Drawing.Size(102, 21);
+            this.rb_Month.TabIndex = 7;
+            this.rb_Month.TabStop = true;
+            this.rb_Month.Text = "Theo tháng";
+            this.rb_Month.UseVisualStyleBackColor = true;
+            // 
             // ConsistenceReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -186,6 +224,7 @@ namespace dekatreís_octavo.View
             this.mainPanel.ResumeLayout(false);
             this.chartPanel.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -200,5 +239,8 @@ namespace dekatreís_octavo.View
         private MaterialSurface.ContainedButton exportButton;
         private LiveCharts.WinForms.CartesianChart rpChart;
         private MaterialSurface.ContainedButton containedButton1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.RadioButton rb_Month;
+        private System.Windows.Forms.RadioButton rb_Day;
     }
 }
