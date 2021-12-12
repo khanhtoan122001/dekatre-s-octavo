@@ -13,14 +13,11 @@ namespace dekatreís_octavo.Bus
 
         public static CardManagementBus Instance { get { if (instance == null) instance = new CardManagementBus(); return instance; } set => instance = value; }
 
-        public bool AddCard(string ChuSoHuu, string TenXe, string BienSo, int LoaiThe)
+        public bool AddCard(int LoaiThe)
         {
             TheXe the = new TheXe();
-            the.ChuSoHuu = ChuSoHuu;
-            the.TenXe = TenXe;
-            the.BienSoXe = BienSo;
             the.LoaiThe = LoaiThe;
-            the.NgayTao = DateTime.Now;
+            //the.NgayTao = DateTime.Now;
             the.Status = true;
             TheXe result = DataProvider.Instance.db.TheXes.Add(the);
             if (result == null)
@@ -31,8 +28,6 @@ namespace dekatreís_octavo.Bus
         public bool EditCard(int IDthe, string ChuSoHuu, string TenXe, string BienSo, int LoaiThe)
         {
             TheXe the = DataProvider.Instance.db.TheXes.Find(IDthe);
-            the.ChuSoHuu = ChuSoHuu;
-            the.TenXe = TenXe;
             the.BienSoXe = BienSo;
             the.LoaiThe = LoaiThe;
             //the.NgayTao = DateTime.Now;
@@ -55,27 +50,11 @@ namespace dekatreís_octavo.Bus
                          select c;
             return result.SingleOrDefault();
         }
-        public IQueryable<TheXe> FindByChuSoHuu(string ChuSoHuu)
-        {
-            QuanLyDoXeEntities1 db = DataProvider.Instance.db;
-            var result = from c in db.TheXes
-                         where c.ChuSoHuu.Contains(ChuSoHuu)
-                         select c;
-            return result;
-        }
         public IQueryable<TheXe> FindByNgayTao(DateTime NgayTao)
         {
             QuanLyDoXeEntities1 db = DataProvider.Instance.db;
             var result = from c in db.TheXes
                          where c.NgayTao == NgayTao
-                         select c;
-            return result;
-        }
-        public IQueryable<TheXe> FindByTenXe(string TenXe)
-        {
-            QuanLyDoXeEntities1 db = DataProvider.Instance.db;
-            var result = from c in db.TheXes
-                         where c.TenXe.Contains(TenXe)
                          select c;
             return result;
         }
@@ -112,10 +91,10 @@ namespace dekatreís_octavo.Bus
             if (db.TheXes.Count() < 19)
             {
                 for (int i = 0; i < 10; i++)
-                {
-                    AddCard("", "", "", LoaiTheBus.Instance.GetIDTheByTen("Thẻ thường"));
-                    AddCard("", "", "", LoaiTheBus.Instance.GetIDTheByTen("Thẻ tháng"));
-                }
+                    AddCard(LoaiTheBus.Instance.GetIDTheByTen("Thẻ thường"));
+                for (int i = 0; i < 10; i++)
+                    AddCard(LoaiTheBus.Instance.GetIDTheByTen("Thẻ tháng"));
+
                 db.SaveChanges();
             }
 

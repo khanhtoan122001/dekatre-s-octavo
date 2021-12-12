@@ -15,14 +15,15 @@ namespace dekatreís_octavo
     public partial class TheXe
     {
         public int IDThe { get; set; }
-        public string ChuSoHuu { get; set; }
         public Nullable<System.DateTime> NgayTao { get; set; }
-        public string TenXe { get; set; }
         public string BienSoXe { get; set; }
         public Nullable<System.DateTime> ThoiGianGui { get; set; }
         public Nullable<int> LoaiThe { get; set; }
         public Nullable<bool> Status { get; set; }
-        public byte[] AnhXe { get; set; }
+        public byte[] AnhXe1 { get; set; }
+        public byte[] AnhXe2 { get; set; }
+        public byte[] AnhXe3 { get; set; }
+        public byte[] AnhXe4 { get; set; }
     
         public virtual LoaiThe LoaiThe1 { get; set; }
     }

@@ -26,18 +26,6 @@ namespace dekatreís_octavo.Bus
             db.SaveChanges();
             return result != null;
         }
-        public bool AddBaoCaoDoanhThuThang(int nam, int loaiThe)
-        {
-            var list = db.BaoCaoDoanhThuThangs.Where(p => p.Nam == nam && p.LoaiThe == loaiThe).ToList();
-            if (list.Count != 0)
-                return true;
-            BaoCaoDoanhThuThang report = new BaoCaoDoanhThuThang();
-            report.LoaiThe = loaiThe;
-            report.Nam = nam;
-            var result = db.BaoCaoDoanhThuThangs.Add(report);
-            db.SaveChanges();
-            return result != null;
-        }
         private bool AddBaoCaoMatDoGuiXe(DateTime time, int XeVao, int XeRa)
         {
             time = time.Date;
@@ -88,17 +76,18 @@ namespace dekatreís_octavo.Bus
                 return true;
             }
         }
-        public bool AddCT_BaoCaoDoanhThuThang(int idBaoCao, int Thang, int TongChi, int TongThu)
+        public bool AddBaoCaoDoanhThuThang(int idBaoCao, int nam, int Thang, int TongChi, int TongThu)
         {
             if (idBaoCao == -1)
                 return false;
-            CT_BaoCaoDoanhThuThang report = new CT_BaoCaoDoanhThuThang();
+            BaoCaoDoanhThuThang report = new BaoCaoDoanhThuThang();
+            report.Nam = nam;
             report.IDBaoCao = idBaoCao;
             report.TongChi = TongChi;
             report.Thang = Thang;
             report.TongThu = TongThu;
             report.ChenhLech = TongThu - TongChi;
-            var result = db.CT_BaoCaoDoanhThuThang.Add(report);
+            var result = db.BaoCaoDoanhThuThangs.Add(report);
             db.SaveChanges();
             return result != null;
         }
