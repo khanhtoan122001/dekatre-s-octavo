@@ -20,8 +20,6 @@ namespace dekatreís_octavo.Bus
             {
                 AddThamSo("Gửi xe", 45);
                 AddThamSo("Nhận xe", 49);
-                AddThamSo("Thẻ tháng", 200000);
-                AddThamSo("Thẻ thường", 10000);
                 AddThamSo("Lương", 4000000);
                 AddThamSo("Tiền mặt bằng", 8000000);
                 AddThamSo("Sức chứa", 200);

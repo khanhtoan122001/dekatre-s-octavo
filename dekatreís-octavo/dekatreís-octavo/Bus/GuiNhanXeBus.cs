@@ -20,7 +20,6 @@ namespace dekatreís_octavo.Bus
             if (the == null || the.Status == false)
                 return false;
             the.BienSoXe = BienSo;
-            the.TenXe = TenXe;
             the.ThoiGianGui = DateTime.Now;
             the.Status = false;
             db.SaveChanges();
@@ -40,7 +39,6 @@ namespace dekatreís_octavo.Bus
             if (the == null || the.Status == true)
                 return false;
             // hoa don
-            HoaDonBus.Instance.AddHoaDon(the.BienSoXe, the.LoaiThe1.Gia.Value);
             //
             // report
             if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Nhận xe").IDThamSo))
@@ -52,7 +50,6 @@ namespace dekatreís_octavo.Bus
             ReportBus.Instance.AddCT_BaoCaoTongThu(the.LoaiThe1.Gia.Value, "Gửi xe");
             //
             the.BienSoXe = "";
-            the.TenXe = "";
             the.ThoiGianGui = null;
             the.Status = true;
             db.SaveChanges();
@@ -82,7 +79,6 @@ namespace dekatreís_octavo.Bus
             if (the == null || the.Status == true)
                 return false;
             // hoa don
-            HoaDonBus.Instance.AddHoaDon(the.BienSoXe, 0);
             //
             // report
             if (ReportBus.Instance.AddBaoCaoLichSuHoatDong(DateTime.Now.Date, ThamSoBus.Instance.GetByTen("Nhận xe").IDThamSo))

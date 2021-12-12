@@ -30,7 +30,11 @@ namespace dekatreís_octavo.View
 
         public void EndWork()
         {
-            BaoCaoChamCongNhanVienBus.Instance.ChamCong_Logout(DataProvider.Instance.ThoiGianLamViec);
+            if(DataProvider.Instance.TaiKhoan.TongGioLam == null)
+                DataProvider.Instance.TaiKhoan.TongGioLam = DataProvider.Instance.ThoiGianLamViec;
+            else
+                DataProvider.Instance.TaiKhoan.TongGioLam += DataProvider.Instance.ThoiGianLamViec;
+            DataProvider.Instance.db.SaveChanges();
             timer1.Enabled = false;
         }
 
@@ -116,8 +120,8 @@ namespace dekatreís_octavo.View
         private void LoadThamSo()
         {
             var listTs = ThamSoBus.Instance.GetThamSos();
-            tb_Vethuong.Text = listTs.Where(p => p.TenThamSo == "Thẻ thường").FirstOrDefault().GiaTri.Value.ToString();
-            tb_Vethang.Text = listTs.Where(p => p.TenThamSo == "Thẻ tháng").FirstOrDefault().GiaTri.Value.ToString();
+            tb_Vethuong.Text = DataProvider.Instance.db.LoaiThes.Where(p => p.TenLoai == "Thẻ thường").FirstOrDefault().Gia.Value.ToString();
+            tb_Vethang.Text = DataProvider.Instance.db.LoaiThes.Where(p => p.TenLoai == "Thẻ tháng").FirstOrDefault().Gia.Value.ToString();
             tb_Luong.Text = listTs.Where(p => p.TenThamSo == "Lương").FirstOrDefault().GiaTri.Value.ToString();
             tb_TienMatBang.Text = listTs.Where(p => p.TenThamSo == "Tiền mặt bằng").FirstOrDefault().GiaTri.Value.ToString();
             tb_SucChua.Text = listTs.Where(p => p.TenThamSo == "Sức chứa").FirstOrDefault().GiaTri.Value.ToString();
@@ -255,8 +259,8 @@ namespace dekatreís_octavo.View
                 && int.TryParse(tb_TienMatBang.Text, out tienmatbang) && int.TryParse(tb_SucChua.Text, out succhua) 
                 && int.TryParse(tb_Luong.Text, out luong))
             {
-                ThamSoBus.Instance.EditThamSo("Thẻ thường", vethuong);
-                ThamSoBus.Instance.EditThamSo("Thẻ tháng", vethang);
+                LoaiTheBus.Instance.EditLoaiThe("Thẻ thường", vethuong);
+                LoaiTheBus.Instance.EditLoaiThe("Thẻ tháng", vethang);
                 ThamSoBus.Instance.EditThamSo("Lương", luong);
                 ThamSoBus.Instance.EditThamSo("Tiền mặt bằng",tienmatbang);
                 ThamSoBus.Instance.EditThamSo("Sức chứa", succhua);
