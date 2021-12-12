@@ -49,7 +49,6 @@ namespace dekatreís_octavo.View
         private void monthComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             thang = monthComboBox.SelectedIndex + 1;
-            LoadData();
         }
 
         public void LoadData()
@@ -64,6 +63,16 @@ namespace dekatreís_octavo.View
                 yearComboBox.Items.Add(i.ToString());
             }
             LoadChart(list);
+        }
+
+        private void containedButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void containedButton1_Click_1(object sender, EventArgs e)
+        {
+            LoadData();
         }
 
         private void LoadChart(List<BaoCaoMatDoGuiXe> chartValue)
