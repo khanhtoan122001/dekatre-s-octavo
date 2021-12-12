@@ -32,21 +32,19 @@ namespace dekatreís_octavo.View
             this.mainPanel = new System.Windows.Forms.Panel();
             this.chartPanel = new System.Windows.Forms.Panel();
             this.rpChart = new LiveCharts.WinForms.CartesianChart();
-            this.rightPanel = new System.Windows.Forms.Panel();
             this.exportButton = new MaterialSurface.ContainedButton();
             this.topPanel = new System.Windows.Forms.Panel();
             this.yearComboBox = new MaterialSurface.MaterialComboBox();
             this.monthComboBox = new MaterialSurface.MaterialComboBox();
+            this.containedButton1 = new MaterialSurface.ContainedButton();
             this.mainPanel.SuspendLayout();
             this.chartPanel.SuspendLayout();
-            this.rightPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainPanel
             // 
             this.mainPanel.Controls.Add(this.chartPanel);
-            this.mainPanel.Controls.Add(this.rightPanel);
             this.mainPanel.Controls.Add(this.topPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
@@ -60,7 +58,7 @@ namespace dekatreís_octavo.View
             this.chartPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chartPanel.Location = new System.Drawing.Point(0, 100);
             this.chartPanel.Name = "chartPanel";
-            this.chartPanel.Size = new System.Drawing.Size(654, 417);
+            this.chartPanel.Size = new System.Drawing.Size(854, 417);
             this.chartPanel.TabIndex = 2;
             // 
             // rpChart
@@ -68,18 +66,9 @@ namespace dekatreís_octavo.View
             this.rpChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rpChart.Location = new System.Drawing.Point(0, 0);
             this.rpChart.Name = "rpChart";
-            this.rpChart.Size = new System.Drawing.Size(654, 417);
+            this.rpChart.Size = new System.Drawing.Size(854, 417);
             this.rpChart.TabIndex = 0;
             this.rpChart.Text = "cartesianChart1";
-            // 
-            // rightPanel
-            // 
-            this.rightPanel.Controls.Add(this.exportButton);
-            this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.rightPanel.Location = new System.Drawing.Point(654, 100);
-            this.rightPanel.Name = "rightPanel";
-            this.rightPanel.Size = new System.Drawing.Size(200, 417);
-            this.rightPanel.TabIndex = 1;
             // 
             // exportButton
             // 
@@ -88,7 +77,7 @@ namespace dekatreís_octavo.View
             this.exportButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exportButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.exportButton.Icon = null;
-            this.exportButton.Location = new System.Drawing.Point(39, 332);
+            this.exportButton.Location = new System.Drawing.Point(703, 26);
             this.exportButton.MouseState = MaterialSurface.MouseState.OUT;
             this.exportButton.Name = "exportButton";
             this.exportButton.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -103,6 +92,8 @@ namespace dekatreís_octavo.View
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.containedButton1);
+            this.topPanel.Controls.Add(this.exportButton);
             this.topPanel.Controls.Add(this.yearComboBox);
             this.topPanel.Controls.Add(this.monthComboBox);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -164,6 +155,25 @@ namespace dekatreís_octavo.View
             this.monthComboBox.TabIndex = 0;
             this.monthComboBox.SelectedIndexChanged += new System.EventHandler(this.monthComboBox_SelectedIndexChanged);
             // 
+            // containedButton1
+            // 
+            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.containedButton1.Icon = null;
+            this.containedButton1.Location = new System.Drawing.Point(286, 26);
+            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
+            this.containedButton1.Name = "containedButton1";
+            this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.containedButton1.Radius = 6;
+            this.containedButton1.ShawdowDepth = 3;
+            this.containedButton1.ShawdowOpacity = 50;
+            this.containedButton1.Size = new System.Drawing.Size(115, 50);
+            this.containedButton1.TabIndex = 4;
+            this.containedButton1.Text = "Xem";
+            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.containedButton1.UseVisualStyleBackColor = true;
+            // 
             // ConsistenceReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -174,7 +184,6 @@ namespace dekatreís_octavo.View
             this.Size = new System.Drawing.Size(854, 517);
             this.mainPanel.ResumeLayout(false);
             this.chartPanel.ResumeLayout(false);
-            this.rightPanel.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -184,11 +193,11 @@ namespace dekatreís_octavo.View
 
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel chartPanel;
-        private System.Windows.Forms.Panel rightPanel;
         private System.Windows.Forms.Panel topPanel;
         private MaterialSurface.MaterialComboBox monthComboBox;
         private MaterialSurface.MaterialComboBox yearComboBox;
         private MaterialSurface.ContainedButton exportButton;
         private LiveCharts.WinForms.CartesianChart rpChart;
+        private MaterialSurface.ContainedButton containedButton1;
     }
 }

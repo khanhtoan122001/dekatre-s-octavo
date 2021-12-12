@@ -29,10 +29,88 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
+            this.yearComboBox = new MaterialSurface.MaterialComboBox();
+            this.containedButton1 = new MaterialSurface.ContainedButton();
+            this.panel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.containedButton1);
+            this.panel1.Controls.Add(this.yearComboBox);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(854, 100);
+            this.panel1.TabIndex = 0;
+            // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartesianChart1.Location = new System.Drawing.Point(0, 100);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(854, 417);
+            this.cartesianChart1.TabIndex = 1;
+            this.cartesianChart1.Text = "cartesianChart1";
+            // 
+            // yearComboBox
+            // 
+            this.yearComboBox.AutoSizing = false;
+            this.yearComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
+            this.yearComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.yearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.yearComboBox.DropDownWidth = 121;
+            this.yearComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.yearComboBox.FormattingEnabled = true;
+            this.yearComboBox.HintText = "Năm";
+            this.yearComboBox.ItemHeight = 47;
+            this.yearComboBox.Location = new System.Drawing.Point(34, 28);
+            this.yearComboBox.MaxDropDownItems = 4;
+            this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
+            this.yearComboBox.Name = "yearComboBox";
+            this.yearComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.yearComboBox.Size = new System.Drawing.Size(121, 53);
+            this.yearComboBox.TabIndex = 2;
+            // 
+            // containedButton1
+            // 
+            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.containedButton1.Icon = null;
+            this.containedButton1.Location = new System.Drawing.Point(177, 31);
+            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
+            this.containedButton1.Name = "containedButton1";
+            this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.containedButton1.Radius = 6;
+            this.containedButton1.ShawdowDepth = 3;
+            this.containedButton1.ShawdowOpacity = 50;
+            this.containedButton1.Size = new System.Drawing.Size(115, 50);
+            this.containedButton1.TabIndex = 3;
+            this.containedButton1.Text = "Xem";
+            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.containedButton1.UseVisualStyleBackColor = true;
+            // 
+            // RevenueReport
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cartesianChart1);
+            this.Controls.Add(this.panel1);
+            this.Name = "RevenueReport";
+            this.Size = new System.Drawing.Size(854, 517);
+            this.panel1.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private LiveCharts.WinForms.CartesianChart cartesianChart1;
+        private MaterialSurface.MaterialComboBox yearComboBox;
+        private MaterialSurface.ContainedButton containedButton1;
     }
 }

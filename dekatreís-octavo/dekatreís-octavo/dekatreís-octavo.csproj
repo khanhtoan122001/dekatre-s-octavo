@@ -384,6 +384,9 @@
     <EmbeddedResource Include="View\ParkingView.resx">
       <DependentUpon>ParkingView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\RevenueReport.resx">
+      <DependentUpon>RevenueReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\StaffDetail.resx">
       <DependentUpon>StaffDetail.cs</DependentUpon>
     </EmbeddedResource>
