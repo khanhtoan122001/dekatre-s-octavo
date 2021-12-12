@@ -84,6 +84,7 @@ namespace dekatreís_octavo.View
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.SoXe = new MaterialSkin.Controls.MaterialLabel();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -143,6 +144,7 @@ namespace dekatreís_octavo.View
             // 
             // leftPanel
             // 
+            this.leftPanel.Controls.Add(this.SoXe);
             this.leftPanel.Controls.Add(this.lb_stopwatch);
             this.leftPanel.Controls.Add(this.tabNameLabel);
             this.leftPanel.Controls.Add(this.pictureBox2);
@@ -365,6 +367,23 @@ namespace dekatreís_octavo.View
             this.history1.Size = new System.Drawing.Size(1071, 546);
             this.history1.TabIndex = 0;
             // 
+            // historyPanel
+            // 
+            this.historyPanel.Controls.Add(this.history1);
+            this.historyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historyPanel.Location = new System.Drawing.Point(3, 2);
+            this.historyPanel.Name = "historyPanel";
+            this.historyPanel.Size = new System.Drawing.Size(1071, 546);
+            this.historyPanel.TabIndex = 0;
+            // 
+            // history1
+            // 
+            this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.history1.Location = new System.Drawing.Point(0, 0);
+            this.history1.Name = "history1";
+            this.history1.Size = new System.Drawing.Size(1071, 546);
+            this.history1.TabIndex = 0;
+            // 
             // cardPage
             // 
             this.cardPage.Controls.Add(this.cardManagement1);
@@ -505,6 +524,17 @@ namespace dekatreís_octavo.View
             this.historyButton.Text = "Lịch sử";
             this.historyButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.historyButton.UseVisualStyleBackColor = true;
+            this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
+            // 
+            // consistenceReport1
+            // 
+            this.consistenceReport1.BackColor = System.Drawing.Color.White;
+            this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consistenceReport1.Location = new System.Drawing.Point(0, 0);
+            this.consistenceReport1.Name = "consistenceReport1";
+            this.consistenceReport1.Size = new System.Drawing.Size(1071, 446);
+            this.consistenceReport1.TabIndex = 2;
+            this.consistenceReport1.Visible = false;
             // 
             // consistenceReport1
             // 
@@ -808,6 +838,18 @@ namespace dekatreís_octavo.View
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // SoXe
+            // 
+            this.SoXe.AutoSize = true;
+            this.SoXe.Depth = 0;
+            this.SoXe.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.SoXe.Location = new System.Drawing.Point(380, 32);
+            this.SoXe.MouseState = MaterialSkin.MouseState.HOVER;
+            this.SoXe.Name = "SoXe";
+            this.SoXe.Size = new System.Drawing.Size(107, 19);
+            this.SoXe.TabIndex = 15;
+            this.SoXe.Text = "Số xe trong bãi";
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -909,5 +951,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialProgressbar progressBar;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private History history1;
+        private MaterialSkin.Controls.MaterialLabel SoXe;
     }
 }

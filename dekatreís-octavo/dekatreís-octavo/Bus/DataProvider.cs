@@ -22,12 +22,15 @@ namespace dekatreís_octavo.Bus
         public bool IsUpdate { get => isUpdate; set => isUpdate = value; }
         public DateTime DateUpdate { get => dateUpdate; set => dateUpdate = value; }
         public int ThoiGianLamViec { get => thoiGianLamViec; set => thoiGianLamViec = value; }
+        public int SoXeTrongBai { get => db.TheXes.Count(p => p.Status == false); }
 
         public TaiKhoan TaiKhoan;
         DataProvider()
         {
             if (db == null)
+            {
                 db = new QuanLyDoXeEntities1();
+            }
         }
 
         public void ReadLog()

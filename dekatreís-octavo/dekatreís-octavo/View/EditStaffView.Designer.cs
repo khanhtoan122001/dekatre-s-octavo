@@ -45,7 +45,7 @@
             this.materialTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
             this.materialTextBox1.Hint = "Họ và tên";
             this.materialTextBox1.LeadingIcon = null;
-            this.materialTextBox1.Location = new System.Drawing.Point(262, 43);
+            this.materialTextBox1.Location = new System.Drawing.Point(72, 30);
             this.materialTextBox1.MaxLength = 50;
             this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox1.Multiline = false;
@@ -64,7 +64,7 @@
             this.materialTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
             this.materialTextBox2.Hint = "CMND";
             this.materialTextBox2.LeadingIcon = null;
-            this.materialTextBox2.Location = new System.Drawing.Point(262, 109);
+            this.materialTextBox2.Location = new System.Drawing.Point(72, 96);
             this.materialTextBox2.MaxLength = 50;
             this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox2.Multiline = false;
@@ -83,7 +83,7 @@
             this.materialTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
             this.materialTextBox3.Hint = "SĐT";
             this.materialTextBox3.LeadingIcon = null;
-            this.materialTextBox3.Location = new System.Drawing.Point(262, 178);
+            this.materialTextBox3.Location = new System.Drawing.Point(72, 165);
             this.materialTextBox3.MaxLength = 50;
             this.materialTextBox3.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox3.Multiline = false;
@@ -103,17 +103,16 @@
             this.materialTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.6F);
             this.materialTextBox4.Hint = "Tên Đăng Nhập";
             this.materialTextBox4.LeadingIcon = null;
-            this.materialTextBox4.Location = new System.Drawing.Point(262, 318);
+            this.materialTextBox4.Location = new System.Drawing.Point(72, 305);
             this.materialTextBox4.MaxLength = 50;
             this.materialTextBox4.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox4.Multiline = false;
             this.materialTextBox4.Name = "materialTextBox4";
             this.materialTextBox4.ReadOnly = true;
-            this.materialTextBox4.Size = new System.Drawing.Size(267, 36);
+            this.materialTextBox4.Size = new System.Drawing.Size(267, 50);
             this.materialTextBox4.TabIndex = 1;
             this.materialTextBox4.Text = "Tên Đăng Nhập";
             this.materialTextBox4.TrailingIcon = null;
-            this.materialTextBox4.UseTallSize = false;
             // 
             // materialButton1
             // 
@@ -124,7 +123,7 @@
             this.materialButton1.Enabled = false;
             this.materialButton1.HighEmphasis = true;
             this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(294, 389);
+            this.materialButton1.Location = new System.Drawing.Point(104, 376);
             this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton1.Name = "materialButton1";
@@ -145,7 +144,7 @@
             this.materialButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.materialButton2.HighEmphasis = true;
             this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(423, 389);
+            this.materialButton2.Location = new System.Drawing.Point(233, 376);
             this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialButton2.Name = "materialButton2";
@@ -175,7 +174,7 @@
             this.materialComboBox1.Items.AddRange(new object[] {
             "Admin",
             "Nhân Viên"});
-            this.materialComboBox1.Location = new System.Drawing.Point(262, 246);
+            this.materialComboBox1.Location = new System.Drawing.Point(72, 233);
             this.materialComboBox1.MaxDropDownItems = 4;
             this.materialComboBox1.MouseState = MaterialSkin.MouseState.OUT;
             this.materialComboBox1.Name = "materialComboBox1";
@@ -188,7 +187,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(407, 439);
             this.Controls.Add(this.materialComboBox1);
             this.Controls.Add(this.materialButton2);
             this.Controls.Add(this.materialButton1);
@@ -196,7 +195,10 @@
             this.Controls.Add(this.materialTextBox3);
             this.Controls.Add(this.materialTextBox2);
             this.Controls.Add(this.materialTextBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "EditStaffView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditStaff";
             this.Load += new System.EventHandler(this.EditStaff_Load);
             this.ResumeLayout(false);

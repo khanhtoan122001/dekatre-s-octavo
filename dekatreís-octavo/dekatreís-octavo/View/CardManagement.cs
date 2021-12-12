@@ -45,7 +45,7 @@ namespace dekatreís_octavo.View
             foreach (TheXe i in result)
             {
                 string trangthai = (bool)i.Status ? "Rảnh" : "Bận";
-                string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? i.NgayTao.Value.Date.ToString() : "";
+                string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? (i.NgayTao == null? "" : i.NgayTao.ToString()): "";
         
                 cardList.Items.Add(new ListViewItem(
                     new string[] { i.IDThe.ToString(), i.BienSoXe, i.LoaiThe1.TenLoai, trangthai, i.ThoiGianGui.ToString(), i.NgayTao.ToString() })
@@ -243,9 +243,9 @@ namespace dekatreís_octavo.View
         {
             if (statusComboBox.SelectedIndex != -1)
             {
-                if (statusComboBox.SelectedIndex == 1)
+                if (statusComboBox.SelectedIndex == 2)
                     sortStatus = "false";
-                else if (statusComboBox.SelectedIndex == 2)
+                else if (statusComboBox.SelectedIndex == 1)
                     sortStatus = "true";
                 else sortStatus = null;
             }

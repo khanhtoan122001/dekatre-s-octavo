@@ -99,6 +99,7 @@ namespace dekatreís_octavo.View
                 tabControl.TabPages.Add(utility);
                 //tabControl.TabPages.Add(statusPage);
                 tabControl.TabPages.Add(setting);
+                lb_stopwatch.Visible = false;
             }
             else
             {
@@ -250,6 +251,9 @@ namespace dekatreís_octavo.View
                 lb_stopwatch.Text = string.Format("0{0} : 0{1}", a.ToString(), b.ToString());
             else if (a >= 10 && b < 10)
                 lb_stopwatch.Text = string.Format("{0} : 0{1}", a.ToString(), b.ToString());
+
+            SoXe.Text = DataProvider.Instance.SoXeTrongBai.ToString();
+
         }
 
         private void updateButton_Click(object sender, EventArgs e)
@@ -279,6 +283,11 @@ namespace dekatreís_octavo.View
         {
             timer2.Enabled = false;
             lb_success.Visible = false;
+        }
+
+        private void historyButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
