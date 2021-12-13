@@ -39,11 +39,11 @@ namespace dekatreís_octavo.View
             this.type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.license = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.topPanel = new System.Windows.Forms.Panel();
+            this.checkbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.searchTextBox = new MaterialSurface.MaterialTextfield();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.checkbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.mainPanel.SuspendLayout();
             this.listPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -106,6 +106,7 @@ namespace dekatreís_octavo.View
             this.historyList.UseCompatibleStateImageBehavior = false;
             this.historyList.View = System.Windows.Forms.View.Details;
             this.historyList.SelectedIndexChanged += new System.EventHandler(this.historyList_SelectedIndexChanged);
+            this.historyList.SizeChanged += new System.EventHandler(this.historyList_SizeChanged);
             // 
             // ID
             // 
@@ -139,6 +140,25 @@ namespace dekatreís_octavo.View
             this.topPanel.Size = new System.Drawing.Size(1084, 145);
             this.topPanel.TabIndex = 0;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
+            // 
+            // checkbox
+            // 
+            this.checkbox.AutoSize = true;
+            this.checkbox.Depth = 0;
+            this.checkbox.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.checkbox.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.checkbox.Location = new System.Drawing.Point(225, 89);
+            this.checkbox.Margin = new System.Windows.Forms.Padding(0);
+            this.checkbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkbox.Name = "checkbox";
+            this.checkbox.ReadOnly = false;
+            this.checkbox.Ripple = true;
+            this.checkbox.Size = new System.Drawing.Size(80, 37);
+            this.checkbox.TabIndex = 11;
+            this.checkbox.Text = "Tất cả";
+            this.checkbox.UseVisualStyleBackColor = true;
+            this.checkbox.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
             // 
             // pictureBox6
             // 
@@ -203,25 +223,6 @@ namespace dekatreís_octavo.View
             this.dateTimePicker1.Size = new System.Drawing.Size(196, 38);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
-            // 
-            // checkbox
-            // 
-            this.checkbox.AutoSize = true;
-            this.checkbox.Depth = 0;
-            this.checkbox.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.checkbox.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.checkbox.Location = new System.Drawing.Point(225, 89);
-            this.checkbox.Margin = new System.Windows.Forms.Padding(0);
-            this.checkbox.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.checkbox.MouseState = MaterialSkin.MouseState.HOVER;
-            this.checkbox.Name = "checkbox";
-            this.checkbox.ReadOnly = false;
-            this.checkbox.Ripple = true;
-            this.checkbox.Size = new System.Drawing.Size(80, 37);
-            this.checkbox.TabIndex = 11;
-            this.checkbox.Text = "Tất cả";
-            this.checkbox.UseVisualStyleBackColor = true;
-            this.checkbox.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
             // 
             // History
             // 

@@ -58,20 +58,21 @@ namespace dekatreís_octavo.View
             this.containedButton2 = new MaterialSurface.ContainedButton();
             this.containedButton1 = new MaterialSurface.ContainedButton();
             this.setting = new System.Windows.Forms.TabPage();
-            this.tb_baotri = new System.Windows.Forms.TextBox();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.lb_success = new System.Windows.Forms.Label();
-            this.tb_SucChua = new System.Windows.Forms.TextBox();
-            this.updateButton = new MaterialSurface.ContainedButton();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.tb_TienMatBang = new System.Windows.Forms.TextBox();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.tb_Luong = new System.Windows.Forms.TextBox();
-            this.tb_Vethang = new System.Windows.Forms.TextBox();
-            this.tb_Vethuong = new System.Windows.Forms.TextBox();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.tb_baotri = new System.Windows.Forms.TextBox();
+            this.updateButton = new MaterialSurface.ContainedButton();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.tb_Vethuong = new System.Windows.Forms.TextBox();
+            this.tb_SucChua = new System.Windows.Forms.TextBox();
+            this.tb_Vethang = new System.Windows.Forms.TextBox();
+            this.tb_Luong = new System.Windows.Forms.TextBox();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.tb_TienMatBang = new System.Windows.Forms.TextBox();
+            this.lb_success = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -83,7 +84,6 @@ namespace dekatreís_octavo.View
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
             this.history1 = new dekatreís_octavo.View.History();
             this.progressBar = new dekatreís_octavo.VerticalProgressBar();
             this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
@@ -109,11 +109,11 @@ namespace dekatreís_octavo.View
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.setting.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.iconPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -364,11 +364,11 @@ namespace dekatreís_octavo.View
             // 
             // SoXe
             // 
-            this.SoXe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SoXe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SoXe.AutoSize = true;
             this.SoXe.Depth = 0;
             this.SoXe.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.SoXe.Location = new System.Drawing.Point(123, 472);
+            this.SoXe.Location = new System.Drawing.Point(118, 447);
             this.SoXe.MouseState = MaterialSkin.MouseState.HOVER;
             this.SoXe.Name = "SoXe";
             this.SoXe.Size = new System.Drawing.Size(20, 19);
@@ -380,7 +380,7 @@ namespace dekatreís_octavo.View
             // 
             this.maxLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maxLabel.AutoSize = true;
-            this.maxLabel.Location = new System.Drawing.Point(110, 69);
+            this.maxLabel.Location = new System.Drawing.Point(118, 87);
             this.maxLabel.Name = "maxLabel";
             this.maxLabel.Size = new System.Drawing.Size(74, 18);
             this.maxLabel.TabIndex = 17;
@@ -389,9 +389,10 @@ namespace dekatreís_octavo.View
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 505);
+            this.label1.Location = new System.Drawing.Point(10, 505);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 32);
             this.label1.TabIndex = 16;
@@ -527,6 +528,43 @@ namespace dekatreís_octavo.View
             this.setting.Text = "Quy định";
             this.setting.Click += new System.EventHandler(this.setting_Click);
             // 
+            // panel5
+            // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel5.Controls.Add(this.materialLabel1);
+            this.panel5.Controls.Add(this.tb_baotri);
+            this.panel5.Controls.Add(this.updateButton);
+            this.panel5.Controls.Add(this.materialLabel2);
+            this.panel5.Controls.Add(this.materialLabel6);
+            this.panel5.Controls.Add(this.materialLabel3);
+            this.panel5.Controls.Add(this.tb_Vethuong);
+            this.panel5.Controls.Add(this.tb_SucChua);
+            this.panel5.Controls.Add(this.tb_Vethang);
+            this.panel5.Controls.Add(this.tb_Luong);
+            this.panel5.Controls.Add(this.materialLabel5);
+            this.panel5.Controls.Add(this.materialLabel4);
+            this.panel5.Controls.Add(this.tb_TienMatBang);
+            this.panel5.Location = new System.Drawing.Point(305, 21);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(466, 502);
+            this.panel5.TabIndex = 20;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(21, 17);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(88, 19);
+            this.materialLabel1.TabIndex = 1;
+            this.materialLabel1.Text = "Giá vé ngày:";
+            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
+            // 
             // tb_baotri
             // 
             this.tb_baotri.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -535,40 +573,6 @@ namespace dekatreís_octavo.View
             this.tb_baotri.Name = "tb_baotri";
             this.tb_baotri.Size = new System.Drawing.Size(174, 28);
             this.tb_baotri.TabIndex = 19;
-            // 
-            // materialLabel6
-            // 
-            this.materialLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(21, 345);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(77, 19);
-            this.materialLabel6.TabIndex = 18;
-            this.materialLabel6.Text = "Phí bảo trì:";
-            // 
-            // lb_success
-            // 
-            this.lb_success.AutoSize = true;
-            this.lb_success.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_success.ForeColor = System.Drawing.Color.Blue;
-            this.lb_success.Location = new System.Drawing.Point(104, 479);
-            this.lb_success.Name = "lb_success";
-            this.lb_success.Size = new System.Drawing.Size(123, 25);
-            this.lb_success.TabIndex = 17;
-            this.lb_success.Text = "Thành công!";
-            this.lb_success.Visible = false;
-            // 
-            // tb_SucChua
-            // 
-            this.tb_SucChua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_SucChua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_SucChua.Location = new System.Drawing.Point(242, 272);
-            this.tb_SucChua.Name = "tb_SucChua";
-            this.tb_SucChua.Size = new System.Drawing.Size(174, 28);
-            this.tb_SucChua.TabIndex = 16;
             // 
             // updateButton
             // 
@@ -591,69 +595,32 @@ namespace dekatreís_octavo.View
             this.updateButton.UseVisualStyleBackColor = true;
             this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
             // 
-            // materialLabel5
+            // materialLabel2
             // 
-            this.materialLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(21, 278);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(129, 19);
-            this.materialLabel5.TabIndex = 11;
-            this.materialLabel5.Text = "Sức chứa của bãi:";
-            this.materialLabel5.Click += new System.EventHandler(this.materialLabel5_Click);
+            this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(21, 79);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(94, 19);
+            this.materialLabel2.TabIndex = 2;
+            this.materialLabel2.Text = "Giá vé tháng:";
+            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
             // 
-            // tb_TienMatBang
+            // materialLabel6
             // 
-            this.tb_TienMatBang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_TienMatBang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_TienMatBang.Location = new System.Drawing.Point(242, 205);
-            this.tb_TienMatBang.Name = "tb_TienMatBang";
-            this.tb_TienMatBang.Size = new System.Drawing.Size(174, 28);
-            this.tb_TienMatBang.TabIndex = 10;
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(21, 211);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(108, 19);
-            this.materialLabel4.TabIndex = 9;
-            this.materialLabel4.Text = "Tiền mặt bằng:";
-            this.materialLabel4.Click += new System.EventHandler(this.materialLabel4_Click);
-            // 
-            // tb_Luong
-            // 
-            this.tb_Luong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_Luong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Luong.Location = new System.Drawing.Point(242, 135);
-            this.tb_Luong.Name = "tb_Luong";
-            this.tb_Luong.Size = new System.Drawing.Size(174, 28);
-            this.tb_Luong.TabIndex = 8;
-            // 
-            // tb_Vethang
-            // 
-            this.tb_Vethang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_Vethang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Vethang.Location = new System.Drawing.Point(242, 73);
-            this.tb_Vethang.Name = "tb_Vethang";
-            this.tb_Vethang.Size = new System.Drawing.Size(174, 28);
-            this.tb_Vethang.TabIndex = 7;
-            // 
-            // tb_Vethuong
-            // 
-            this.tb_Vethuong.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_Vethuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Vethuong.Location = new System.Drawing.Point(242, 11);
-            this.tb_Vethuong.Name = "tb_Vethuong";
-            this.tb_Vethuong.Size = new System.Drawing.Size(174, 28);
-            this.tb_Vethuong.TabIndex = 6;
+            this.materialLabel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel6.Location = new System.Drawing.Point(21, 345);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(77, 19);
+            this.materialLabel6.TabIndex = 18;
+            this.materialLabel6.Text = "Phí bảo trì:";
             // 
             // materialLabel3
             // 
@@ -669,33 +636,90 @@ namespace dekatreís_octavo.View
             this.materialLabel3.Text = "Lương nhân viên:";
             this.materialLabel3.Click += new System.EventHandler(this.materialLabel3_Click);
             // 
-            // materialLabel2
+            // tb_Vethuong
             // 
-            this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(21, 79);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(94, 19);
-            this.materialLabel2.TabIndex = 2;
-            this.materialLabel2.Text = "Giá vé tháng:";
-            this.materialLabel2.Click += new System.EventHandler(this.materialLabel2_Click);
+            this.tb_Vethuong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_Vethuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Vethuong.Location = new System.Drawing.Point(242, 11);
+            this.tb_Vethuong.Name = "tb_Vethuong";
+            this.tb_Vethuong.Size = new System.Drawing.Size(174, 28);
+            this.tb_Vethuong.TabIndex = 6;
             // 
-            // materialLabel1
+            // tb_SucChua
             // 
-            this.materialLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(21, 17);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(88, 19);
-            this.materialLabel1.TabIndex = 1;
-            this.materialLabel1.Text = "Giá vé ngày:";
-            this.materialLabel1.Click += new System.EventHandler(this.materialLabel1_Click);
+            this.tb_SucChua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_SucChua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_SucChua.Location = new System.Drawing.Point(242, 272);
+            this.tb_SucChua.Name = "tb_SucChua";
+            this.tb_SucChua.Size = new System.Drawing.Size(174, 28);
+            this.tb_SucChua.TabIndex = 16;
+            // 
+            // tb_Vethang
+            // 
+            this.tb_Vethang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_Vethang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Vethang.Location = new System.Drawing.Point(242, 73);
+            this.tb_Vethang.Name = "tb_Vethang";
+            this.tb_Vethang.Size = new System.Drawing.Size(174, 28);
+            this.tb_Vethang.TabIndex = 7;
+            // 
+            // tb_Luong
+            // 
+            this.tb_Luong.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_Luong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Luong.Location = new System.Drawing.Point(242, 135);
+            this.tb_Luong.Name = "tb_Luong";
+            this.tb_Luong.Size = new System.Drawing.Size(174, 28);
+            this.tb_Luong.TabIndex = 8;
+            // 
+            // materialLabel5
+            // 
+            this.materialLabel5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.Location = new System.Drawing.Point(21, 278);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(129, 19);
+            this.materialLabel5.TabIndex = 11;
+            this.materialLabel5.Text = "Sức chứa của bãi:";
+            this.materialLabel5.Click += new System.EventHandler(this.materialLabel5_Click);
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.Location = new System.Drawing.Point(21, 211);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(108, 19);
+            this.materialLabel4.TabIndex = 9;
+            this.materialLabel4.Text = "Tiền mặt bằng:";
+            this.materialLabel4.Click += new System.EventHandler(this.materialLabel4_Click);
+            // 
+            // tb_TienMatBang
+            // 
+            this.tb_TienMatBang.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tb_TienMatBang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_TienMatBang.Location = new System.Drawing.Point(242, 205);
+            this.tb_TienMatBang.Name = "tb_TienMatBang";
+            this.tb_TienMatBang.Size = new System.Drawing.Size(174, 28);
+            this.tb_TienMatBang.TabIndex = 10;
+            // 
+            // lb_success
+            // 
+            this.lb_success.AutoSize = true;
+            this.lb_success.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_success.ForeColor = System.Drawing.Color.Blue;
+            this.lb_success.Location = new System.Drawing.Point(104, 479);
+            this.lb_success.Name = "lb_success";
+            this.lb_success.Size = new System.Drawing.Size(123, 25);
+            this.lb_success.TabIndex = 17;
+            this.lb_success.Text = "Thành công!";
+            this.lb_success.Visible = false;
             // 
             // imageList1
             // 
@@ -813,29 +837,6 @@ namespace dekatreís_octavo.View
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // panel5
-            // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.Controls.Add(this.materialLabel1);
-            this.panel5.Controls.Add(this.tb_baotri);
-            this.panel5.Controls.Add(this.updateButton);
-            this.panel5.Controls.Add(this.materialLabel2);
-            this.panel5.Controls.Add(this.materialLabel6);
-            this.panel5.Controls.Add(this.materialLabel3);
-            this.panel5.Controls.Add(this.tb_Vethuong);
-            this.panel5.Controls.Add(this.tb_SucChua);
-            this.panel5.Controls.Add(this.tb_Vethang);
-            this.panel5.Controls.Add(this.tb_Luong);
-            this.panel5.Controls.Add(this.materialLabel5);
-            this.panel5.Controls.Add(this.materialLabel4);
-            this.panel5.Controls.Add(this.tb_TienMatBang);
-            this.panel5.Location = new System.Drawing.Point(305, 21);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(466, 502);
-            this.panel5.TabIndex = 20;
-            // 
             // history1
             // 
             this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -846,10 +847,11 @@ namespace dekatreís_octavo.View
             // 
             // progressBar
             // 
-            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar.Location = new System.Drawing.Point(72, 87);
             this.progressBar.Name = "progressBar";
-            this.progressBar.Size = new System.Drawing.Size(40, 400);
+            this.progressBar.Size = new System.Drawing.Size(40, 379);
             this.progressBar.TabIndex = 1;
             this.progressBar.Value = 25;
             // 
@@ -947,12 +949,12 @@ namespace dekatreís_octavo.View
             this.splitContainer1.ResumeLayout(false);
             this.setting.ResumeLayout(false);
             this.setting.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.iconPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

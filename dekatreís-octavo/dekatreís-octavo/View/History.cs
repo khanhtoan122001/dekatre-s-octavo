@@ -95,5 +95,12 @@ namespace dekatreís_octavo.View
         {
 
         }
+
+        private void historyList_SizeChanged(object sender, EventArgs e)
+        {
+            int space = historyList.Width - (historyList.Columns[0].Width + historyList.Columns[1].Width + historyList.Columns[2].Width + historyList.Columns[3].Width);
+            historyList.Columns[2].Width += space / 2;
+            historyList.Columns[1].Width += space / 2;
+        }
     }
 }
