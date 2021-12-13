@@ -45,10 +45,9 @@ namespace dekatreís_octavo.View
             foreach (TheXe i in result)
             {
                 string trangthai = (bool)i.Status ? "Rảnh" : "Bận";
-                string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? (i.NgayTao == null? "" : i.NgayTao.ToString()): "";
-        
+                string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? (i.NgayTao == null? "" : i.NgayTao.Value.ToShortDateString()): "";
                 cardList.Items.Add(new ListViewItem(
-                    new string[] { i.IDThe.ToString(), i.BienSoXe, i.LoaiThe1.TenLoai, trangthai, i.ThoiGianGui.ToString(), i.NgayTao.ToString() })
+                    new string[] { i.IDThe.ToString(), i.BienSoXe, i.LoaiThe1.TenLoai, trangthai, i.ThoiGianGui.ToString(), date })
                 { Tag = i });
             }
             List<string> list = db.LoaiThes.Select(p => p.TenLoai).ToList();

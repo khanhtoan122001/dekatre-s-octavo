@@ -162,6 +162,7 @@ namespace dekatreís_octavo.View
             this.exportButton.Text = "Xuất";
             this.exportButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.exportButton.UseVisualStyleBackColor = true;
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
             // 
             // yearComboBox
             // 
