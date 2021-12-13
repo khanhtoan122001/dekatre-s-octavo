@@ -41,8 +41,8 @@ namespace dekatreís_octavo.View
             this.type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.license = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.topPanel = new System.Windows.Forms.Panel();
-            this.checkbox = new MaterialSurface.MaterialRadioButton();
             this.searchTextBox = new MaterialSurface.MaterialTextfield();
+            this.checkbox = new MaterialSurface.MaterialCheckbox();
             this.mainPanel.SuspendLayout();
             this.listPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -88,7 +88,7 @@ namespace dekatreís_octavo.View
             this.refreshButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.refreshButton.Icon = null;
-            this.refreshButton.Location = new System.Drawing.Point(27, 183);
+            this.refreshButton.Location = new System.Drawing.Point(17, 216);
             this.refreshButton.MouseState = MaterialSurface.MouseState.OUT;
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.PrimaryColor = System.Drawing.Color.DodgerBlue;
@@ -175,23 +175,6 @@ namespace dekatreís_octavo.View
             this.topPanel.Size = new System.Drawing.Size(775, 100);
             this.topPanel.TabIndex = 0;
             // 
-            // checkbox
-            // 
-            this.checkbox.AutoSize = true;
-            this.checkbox.Checked = true;
-            this.checkbox.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.checkbox.Location = new System.Drawing.Point(27, 148);
-            this.checkbox.MinimumSize = new System.Drawing.Size(25, 24);
-            this.checkbox.MouseState = MaterialSurface.MouseState.OUT;
-            this.checkbox.Name = "checkbox";
-            this.checkbox.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.checkbox.Size = new System.Drawing.Size(121, 29);
-            this.checkbox.TabIndex = 4;
-            this.checkbox.TabStop = true;
-            this.checkbox.Text = "Theo ngày";
-            this.checkbox.UseVisualStyleBackColor = true;
-            this.checkbox.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
-            // 
             // searchTextBox
             // 
             this.searchTextBox.AutoScaleColor = true;
@@ -219,6 +202,25 @@ namespace dekatreís_octavo.View
             this.searchTextBox.TabIndex = 2;
             this.searchTextBox.UseSystemPasswordChar = false;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
+            // 
+            // checkbox
+            // 
+            this.checkbox.AutoSize = true;
+            this.checkbox.BorderColor = System.Drawing.Color.Gray;
+            this.checkbox.Checked = true;
+            this.checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkbox.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.checkbox.Location = new System.Drawing.Point(17, 181);
+            this.checkbox.MarkColor = System.Drawing.Color.White;
+            this.checkbox.MinimumSize = new System.Drawing.Size(25, 24);
+            this.checkbox.MouseState = MaterialSurface.MouseState.OUT;
+            this.checkbox.Name = "checkbox";
+            this.checkbox.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.checkbox.Size = new System.Drawing.Size(122, 29);
+            this.checkbox.TabIndex = 5;
+            this.checkbox.Text = "Theo ngày";
+            this.checkbox.UseVisualStyleBackColor = true;
+            this.checkbox.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
             // 
             // History
             // 
@@ -251,7 +253,7 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private MaterialSurface.MaterialRadioButton checkbox;
         private MaterialSurface.MaterialTextfield searchTextBox;
+        private MaterialSurface.MaterialCheckbox checkbox;
     }
 }
