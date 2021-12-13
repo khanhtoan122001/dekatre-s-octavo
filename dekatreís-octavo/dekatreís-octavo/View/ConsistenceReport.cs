@@ -10,12 +10,15 @@ using System.Windows.Forms;
 using LiveCharts;
 using LiveCharts.Wpf;
 using dekatreís_octavo.Bus;
+using System.IO;
+using OfficeOpenXml;
 
 namespace dekatreís_octavo.View
 {
     public partial class ConsistenceReport : UserControl
     {
         int thang, nam;
+        List<BaoCaoMatDoGuiXe> list;
         public ConsistenceReport()
         {
             InitializeComponent();
@@ -50,7 +53,7 @@ namespace dekatreís_octavo.View
         {
             if (nam == 0) nam = DateTime.Now.Year;
             if (thang == 0) thang = DateTime.Now.Month;
-            var list = ReportBus.Instance.GetBaoCaoMatDoGuiXes(thang, nam);
+            list = ReportBus.Instance.GetBaoCaoMatDoGuiXes(thang, nam);
             var years = (from c in DataProvider.Instance.db.BaoCaoMatDoGuiXes
                                         select c.Ngay.Value.Year).Distinct().ToList();
             yearComboBox.Items.Clear();
@@ -180,6 +183,80 @@ namespace dekatreís_octavo.View
                 monthComboBox.Visible = false;
                 dateTimePicker1.Visible = true;
             }
+        }
+
+        private void exportButton_Click(object sender, EventArgs e)
+        {
+            ExcelPackage file;
+            if (rb_Month.Checked)
+            {
+                List<BaoCaoMatDoTheoNgay> listBaoCao = new List<BaoCaoMatDoTheoNgay>();
+                for (int y = 1; y < 32; y++)
+                {
+                    var result = (from c in list
+                                  where c.Ngay.Value.Day == y
+                                  select c).ToList();
+                    if (result.Count != 0)
+                    {
+                        int count = 0;
+                        foreach (var c in result)
+                        {
+                            count += (c.TongXeVao.Value);
+                        }
+                        listBaoCao.Add(new BaoCaoMatDoTheoNgay() { Id = result[0].IDBaoCao, Date = result[0].Ngay.Value.ToShortDateString(), XeVao = count });
+                    }
+                }
+                file = ExcelHelper.CreateExcelFileByDay(listBaoCao);
+            }
+            else
+            {
+                List<BaoCaoMatDoTheoGio> listBaoCao = new List<BaoCaoMatDoTheoGio>();
+                for (int i = 0; i <= 24; i++)
+                {
+                    var result = (from c in list
+                                  where c.Gio == i
+                                  select c).FirstOrDefault();
+                    if (result != null)
+                    {
+                        listBaoCao.Add(new BaoCaoMatDoTheoGio() { Id = result.IDBaoCao, Date = result.Ngay.Value.ToShortDateString(), Hour = result.Gio.Value, XeVao = result.TongXeVao.Value, XeRa = result.TongXeRa.Value });
+                    }
+                }
+                file = ExcelHelper.CreateExcelFileByHour(listBaoCao);
+            }
+
+            string filePath = "";
+            // tạo SaveFileDialog để lưu file excel
+            SaveFileDialog dialog = new SaveFileDialog();
+
+            // chỉ lọc ra các file có định dạng Excel
+            dialog.Filter = "Excel 2003 | *.xls";
+
+            // Nếu mở file và chọn nơi lưu file thành công sẽ lưu đường dẫn lại dùng
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                filePath = dialog.FileName;
+            }
+            if (string.IsNullOrEmpty(filePath))
+            {
+                MessageBox.Show("Đường dẫn báo cáo không hợp lệ");
+                return;
+            }
+
+            try
+            {
+                //File.WriteAllText(filePath, file.Stream.ToString());
+                FileStream objFileStrm = File.Create(filePath);
+                
+                objFileStrm.Close();
+
+                // Write content to excel file 
+                File.WriteAllBytes(filePath, file.GetAsByteArray());
+            }
+            catch (Exception EE)
+            {
+                MessageBox.Show("Có lỗi khi lưu file!");
+            }
+
         }
 
         private void LoadChartByDay(List<BaoCaoMatDoGuiXe> chartValue)
