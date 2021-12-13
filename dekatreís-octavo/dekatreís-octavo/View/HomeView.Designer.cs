@@ -36,7 +36,6 @@ namespace dekatreís_octavo.View
             this.leftPanel = new System.Windows.Forms.Panel();
             this.lb_stopwatch = new MaterialSkin.Controls.MaterialLabel();
             this.tabNameLabel = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.materialCard1 = new MaterialSurface.MaterialCard();
             this.bt_ChangePass = new MaterialSurface.TextButton();
             this.bt_info = new MaterialSurface.TextButton();
@@ -50,24 +49,17 @@ namespace dekatreís_octavo.View
             this.SoXe = new MaterialSkin.Controls.MaterialLabel();
             this.progressBar = new MaterialSurface.MaterialProgressbar();
             this.historyPanel = new System.Windows.Forms.Panel();
-            this.history1 = new dekatreís_octavo.View.History();
             this.cardPage = new System.Windows.Forms.TabPage();
-            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.staffPage = new System.Windows.Forms.TabPage();
-            this.staffView1 = new dekatreís_octavo.View.StaffView();
             this.utility = new System.Windows.Forms.TabPage();
-            this.revenueMonthlyReport1 = new dekatreís_octavo.View.RevenueMonthlyReport();
             this.containedButton2 = new MaterialSurface.ContainedButton();
-            this.revenueReport1 = new dekatreís_octavo.View.RevenueReport();
             this.containedButton1 = new MaterialSurface.ContainedButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.statusButton = new MaterialSurface.ContainedButton();
             this.historyButton = new MaterialSurface.ContainedButton();
-            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
             this.setting = new System.Windows.Forms.TabPage();
             this.lb_success = new System.Windows.Forms.Label();
             this.tb_SucChua = new System.Windows.Forms.TextBox();
-            this.choiceChip1 = new MaterialSurface.ChoiceChip();
             this.updateButton = new MaterialSurface.ContainedButton();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
             this.tb_TienMatBang = new System.Windows.Forms.TextBox();
@@ -83,15 +75,22 @@ namespace dekatreís_octavo.View
             this.panel3 = new System.Windows.Forms.Panel();
             this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
             this.iconPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.reportPanel = new System.Windows.Forms.Panel();
             this.consistenceButton = new MaterialSurface.ContainedButton();
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.history1 = new dekatreís_octavo.View.History();
+            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
+            this.staffView1 = new dekatreís_octavo.View.StaffView();
+            this.revenueMonthlyReport1 = new dekatreís_octavo.View.RevenueMonthlyReport();
+            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
+            this.revenueReport1 = new dekatreís_octavo.View.RevenueReport();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.materialCard1.SuspendLayout();
             this.tabPanel.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -109,6 +108,8 @@ namespace dekatreís_octavo.View
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.iconPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,6 +148,7 @@ namespace dekatreís_octavo.View
             // 
             // leftPanel
             // 
+            this.leftPanel.Controls.Add(this.pictureBox3);
             this.leftPanel.Controls.Add(this.lb_stopwatch);
             this.leftPanel.Controls.Add(this.tabNameLabel);
             this.leftPanel.Controls.Add(this.pictureBox2);
@@ -180,19 +182,6 @@ namespace dekatreís_octavo.View
             this.tabNameLabel.Size = new System.Drawing.Size(171, 38);
             this.tabNameLabel.TabIndex = 13;
             this.tabNameLabel.Text = "Trang chính";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources.default_avatar_300x300;
-            this.pictureBox2.Location = new System.Drawing.Point(1044, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.materialButton1_Click);
-            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // materialCard1
             // 
@@ -397,14 +386,6 @@ namespace dekatreís_octavo.View
             this.historyPanel.Size = new System.Drawing.Size(1071, 453);
             this.historyPanel.TabIndex = 0;
             // 
-            // history1
-            // 
-            this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.history1.Location = new System.Drawing.Point(0, 0);
-            this.history1.Name = "history1";
-            this.history1.Size = new System.Drawing.Size(1071, 453);
-            this.history1.TabIndex = 0;
-            // 
             // cardPage
             // 
             this.cardPage.Controls.Add(this.cardManagement1);
@@ -418,19 +399,6 @@ namespace dekatreís_octavo.View
             this.cardPage.UseVisualStyleBackColor = true;
             this.cardPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
-            // cardManagement1
-            // 
-            this.cardManagement1.AutoSize = true;
-            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cardManagement1.BackColor = System.Drawing.Color.White;
-            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
-            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(1067, 538);
-            this.cardManagement1.TabIndex = 0;
-            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
             // staffPage
             // 
             this.staffPage.BackColor = System.Drawing.Color.White;
@@ -443,42 +411,20 @@ namespace dekatreís_octavo.View
             this.staffPage.Text = "Nhân viên";
             this.staffPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
-            // staffView1
-            // 
-            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffView1.Location = new System.Drawing.Point(0, 0);
-            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(1073, 542);
-            this.staffView1.TabIndex = 0;
-            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
             // utility
             // 
             this.utility.BackColor = System.Drawing.Color.White;
             this.utility.Controls.Add(this.revenueMonthlyReport1);
             this.utility.Controls.Add(this.containedButton2);
-            this.utility.Controls.Add(this.revenueReport1);
             this.utility.Controls.Add(this.containedButton1);
             this.utility.Controls.Add(this.splitContainer1);
+            this.utility.Controls.Add(this.revenueReport1);
             this.utility.Location = new System.Drawing.Point(4, 31);
             this.utility.Name = "utility";
             this.utility.Padding = new System.Windows.Forms.Padding(3);
             this.utility.Size = new System.Drawing.Size(1073, 542);
             this.utility.TabIndex = 4;
             this.utility.Text = "Báo cáo";
-            // 
-            // revenueMonthlyReport1
-            // 
-            this.revenueMonthlyReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.revenueMonthlyReport1.Location = new System.Drawing.Point(3, 80);
-            this.revenueMonthlyReport1.Name = "revenueMonthlyReport1";
-            this.revenueMonthlyReport1.Size = new System.Drawing.Size(1071, 463);
-            this.revenueMonthlyReport1.TabIndex = 6;
-            this.revenueMonthlyReport1.Visible = false;
             // 
             // containedButton2
             // 
@@ -499,17 +445,6 @@ namespace dekatreís_octavo.View
             this.containedButton2.TextAlignment = System.Drawing.StringAlignment.Center;
             this.containedButton2.UseVisualStyleBackColor = true;
             this.containedButton2.Click += new System.EventHandler(this.containedButton2_Click);
-            // 
-            // revenueReport1
-            // 
-            this.revenueReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.revenueReport1.Location = new System.Drawing.Point(3, 80);
-            this.revenueReport1.Name = "revenueReport1";
-            this.revenueReport1.Size = new System.Drawing.Size(1071, 463);
-            this.revenueReport1.TabIndex = 4;
-            this.revenueReport1.Visible = false;
             // 
             // containedButton1
             // 
@@ -590,22 +525,11 @@ namespace dekatreís_octavo.View
             this.historyButton.UseVisualStyleBackColor = true;
             this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
             // 
-            // consistenceReport1
-            // 
-            this.consistenceReport1.BackColor = System.Drawing.Color.White;
-            this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consistenceReport1.Location = new System.Drawing.Point(0, 0);
-            this.consistenceReport1.Name = "consistenceReport1";
-            this.consistenceReport1.Size = new System.Drawing.Size(1067, 441);
-            this.consistenceReport1.TabIndex = 2;
-            this.consistenceReport1.Visible = false;
-            // 
             // setting
             // 
             this.setting.BackColor = System.Drawing.Color.White;
             this.setting.Controls.Add(this.lb_success);
             this.setting.Controls.Add(this.tb_SucChua);
-            this.setting.Controls.Add(this.choiceChip1);
             this.setting.Controls.Add(this.updateButton);
             this.setting.Controls.Add(this.materialLabel5);
             this.setting.Controls.Add(this.tb_TienMatBang);
@@ -642,22 +566,6 @@ namespace dekatreís_octavo.View
             this.tb_SucChua.Name = "tb_SucChua";
             this.tb_SucChua.Size = new System.Drawing.Size(174, 28);
             this.tb_SucChua.TabIndex = 16;
-            // 
-            // choiceChip1
-            // 
-            this.choiceChip1.AutoSize = true;
-            this.choiceChip1.ChipType = MaterialSurface.ChoiceChip.ChipStyle.Filled;
-            this.choiceChip1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.choiceChip1.Location = new System.Drawing.Point(315, 381);
-            this.choiceChip1.MinimumSize = new System.Drawing.Size(28, 27);
-            this.choiceChip1.MouseState = MaterialSurface.MouseState.OUT;
-            this.choiceChip1.Name = "choiceChip1";
-            this.choiceChip1.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.choiceChip1.Size = new System.Drawing.Size(418, 29);
-            this.choiceChip1.TabIndex = 14;
-            this.choiceChip1.TabStop = true;
-            this.choiceChip1.Text = "Lương nhân viên có hiệu lực từ đầu tháng sau";
-            this.choiceChip1.UseVisualStyleBackColor = true;
             // 
             // updateButton
             // 
@@ -834,18 +742,6 @@ namespace dekatreís_octavo.View
             this.iconPanel.Size = new System.Drawing.Size(256, 112);
             this.iconPanel.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.icon;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(256, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // reportPanel
             // 
             this.reportPanel.Location = new System.Drawing.Point(2, 0);
@@ -892,6 +788,105 @@ namespace dekatreís_octavo.View
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // history1
+            // 
+            this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.history1.Location = new System.Drawing.Point(0, 0);
+            this.history1.Name = "history1";
+            this.history1.Size = new System.Drawing.Size(1071, 453);
+            this.history1.TabIndex = 0;
+            // 
+            // cardManagement1
+            // 
+            this.cardManagement1.AutoSize = true;
+            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cardManagement1.BackColor = System.Drawing.Color.White;
+            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
+            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cardManagement1.Name = "cardManagement1";
+            this.cardManagement1.Size = new System.Drawing.Size(1067, 538);
+            this.cardManagement1.TabIndex = 0;
+            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // staffView1
+            // 
+            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffView1.Location = new System.Drawing.Point(0, 0);
+            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.staffView1.Name = "staffView1";
+            this.staffView1.Size = new System.Drawing.Size(1073, 542);
+            this.staffView1.TabIndex = 0;
+            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // revenueMonthlyReport1
+            // 
+            this.revenueMonthlyReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.revenueMonthlyReport1.Location = new System.Drawing.Point(3, 80);
+            this.revenueMonthlyReport1.Name = "revenueMonthlyReport1";
+            this.revenueMonthlyReport1.Size = new System.Drawing.Size(1071, 463);
+            this.revenueMonthlyReport1.TabIndex = 6;
+            this.revenueMonthlyReport1.Visible = false;
+            // 
+            // consistenceReport1
+            // 
+            this.consistenceReport1.BackColor = System.Drawing.Color.White;
+            this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consistenceReport1.Location = new System.Drawing.Point(0, 0);
+            this.consistenceReport1.Name = "consistenceReport1";
+            this.consistenceReport1.Size = new System.Drawing.Size(1067, 441);
+            this.consistenceReport1.TabIndex = 2;
+            this.consistenceReport1.Visible = false;
+            // 
+            // revenueReport1
+            // 
+            this.revenueReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.revenueReport1.Location = new System.Drawing.Point(3, 80);
+            this.revenueReport1.Name = "revenueReport1";
+            this.revenueReport1.Size = new System.Drawing.Size(1071, 463);
+            this.revenueReport1.TabIndex = 4;
+            this.revenueReport1.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::dekatreís_octavo.Properties.Resources.baseline_home_black_36dp;
+            this.pictureBox3.Location = new System.Drawing.Point(205, 32);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources.default_avatar_300x300;
+            this.pictureBox2.Location = new System.Drawing.Point(1044, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.materialButton1_Click);
+            this.pictureBox2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.icon;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(256, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -911,7 +906,6 @@ namespace dekatreís_octavo.View
             this.panel1.ResumeLayout(false);
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.materialCard1.ResumeLayout(false);
             this.tabPanel.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
@@ -932,6 +926,8 @@ namespace dekatreís_octavo.View
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.iconPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -973,7 +969,6 @@ namespace dekatreís_octavo.View
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private System.Windows.Forms.TextBox tb_TienMatBang;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
-        private MaterialSurface.ChoiceChip choiceChip1;
         private MaterialSurface.ContainedButton updateButton;
         private ConsistenceReport consistenceReport1;
         public System.Windows.Forms.PictureBox pictureBox2;
@@ -997,5 +992,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
         private MaterialSkin.Controls.MaterialDrawer tabDrawer;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
