@@ -32,14 +32,14 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe = new MaterialSurface.MaterialComboBox();
             this.tb_BienSo = new MaterialSurface.MaterialTextfield();
             this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.bt_Confirm = new MaterialSurface.ContainedButton();
+            this.editButton = new MaterialSurface.ContainedButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.anhXe1 = new System.Windows.Forms.PictureBox();
             this.inTime = new MaterialSurface.MaterialTextfield();
             this.startDate = new MaterialSurface.MaterialTextfield();
-            this.editButton = new MaterialSurface.ContainedButton();
-            this.bt_Confirm = new MaterialSurface.ContainedButton();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,7 +85,7 @@ namespace dekatreís_octavo.View
             this.tb_BienSo.Name = "tb_BienSo";
             this.tb_BienSo.PasswordChar = '\0';
             this.tb_BienSo.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.tb_BienSo.ReadOnly = false;
+            this.tb_BienSo.ReadOnly = true;
             this.tb_BienSo.ShortcutsEnable = true;
             this.tb_BienSo.ShowCaret = true;
             this.tb_BienSo.Size = new System.Drawing.Size(224, 49);
@@ -120,6 +120,46 @@ namespace dekatreís_octavo.View
             this.materialCard1.Size = new System.Drawing.Size(669, 459);
             this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.materialCard1.TabIndex = 15;
+            // 
+            // bt_Confirm
+            // 
+            this.bt_Confirm.EffectType = MaterialSurface.ET.Custom;
+            this.bt_Confirm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Confirm.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_Confirm.Icon = null;
+            this.bt_Confirm.Location = new System.Drawing.Point(152, 370);
+            this.bt_Confirm.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_Confirm.Name = "bt_Confirm";
+            this.bt_Confirm.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.bt_Confirm.Radius = 6;
+            this.bt_Confirm.ShawdowDepth = 3;
+            this.bt_Confirm.ShawdowOpacity = 50;
+            this.bt_Confirm.Size = new System.Drawing.Size(180, 50);
+            this.bt_Confirm.TabIndex = 27;
+            this.bt_Confirm.Text = "Xác nhận";
+            this.bt_Confirm.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_Confirm.UseVisualStyleBackColor = true;
+            this.bt_Confirm.Click += new System.EventHandler(this.bt_Confirm_Click);
+            // 
+            // editButton
+            // 
+            this.editButton.EffectType = MaterialSurface.ET.Custom;
+            this.editButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.editButton.Icon = null;
+            this.editButton.Location = new System.Drawing.Point(338, 370);
+            this.editButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.editButton.Name = "editButton";
+            this.editButton.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.editButton.Radius = 6;
+            this.editButton.ShawdowDepth = 3;
+            this.editButton.ShawdowOpacity = 50;
+            this.editButton.Size = new System.Drawing.Size(180, 50);
+            this.editButton.TabIndex = 26;
+            this.editButton.Text = "Chỉnh sửa";
+            this.editButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // pictureBox3
             // 
@@ -176,7 +216,7 @@ namespace dekatreís_octavo.View
             this.inTime.Name = "inTime";
             this.inTime.PasswordChar = '\0';
             this.inTime.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.inTime.ReadOnly = false;
+            this.inTime.ReadOnly = true;
             this.inTime.ShortcutsEnable = true;
             this.inTime.ShowCaret = true;
             this.inTime.Size = new System.Drawing.Size(224, 49);
@@ -203,53 +243,13 @@ namespace dekatreís_octavo.View
             this.startDate.Name = "startDate";
             this.startDate.PasswordChar = '\0';
             this.startDate.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.startDate.ReadOnly = false;
+            this.startDate.ReadOnly = true;
             this.startDate.ShortcutsEnable = true;
             this.startDate.ShowCaret = true;
             this.startDate.Size = new System.Drawing.Size(224, 49);
             this.startDate.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.startDate.TabIndex = 15;
             this.startDate.UseSystemPasswordChar = false;
-            // 
-            // editButton
-            // 
-            this.editButton.EffectType = MaterialSurface.ET.Custom;
-            this.editButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.editButton.Icon = null;
-            this.editButton.Location = new System.Drawing.Point(338, 370);
-            this.editButton.MouseState = MaterialSurface.MouseState.OUT;
-            this.editButton.Name = "editButton";
-            this.editButton.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.editButton.Radius = 6;
-            this.editButton.ShawdowDepth = 3;
-            this.editButton.ShawdowOpacity = 50;
-            this.editButton.Size = new System.Drawing.Size(180, 50);
-            this.editButton.TabIndex = 26;
-            this.editButton.Text = "Chỉnh sửa";
-            this.editButton.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.editButton.UseVisualStyleBackColor = true;
-            this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
-            // bt_Confirm
-            // 
-            this.bt_Confirm.EffectType = MaterialSurface.ET.Custom;
-            this.bt_Confirm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Confirm.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bt_Confirm.Icon = null;
-            this.bt_Confirm.Location = new System.Drawing.Point(152, 370);
-            this.bt_Confirm.MouseState = MaterialSurface.MouseState.OUT;
-            this.bt_Confirm.Name = "bt_Confirm";
-            this.bt_Confirm.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.bt_Confirm.Radius = 6;
-            this.bt_Confirm.ShawdowDepth = 3;
-            this.bt_Confirm.ShawdowOpacity = 50;
-            this.bt_Confirm.Size = new System.Drawing.Size(180, 50);
-            this.bt_Confirm.TabIndex = 27;
-            this.bt_Confirm.Text = "Xác nhận";
-            this.bt_Confirm.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.bt_Confirm.UseVisualStyleBackColor = true;
-            this.bt_Confirm.Click += new System.EventHandler(this.bt_Confirm_Click);
             // 
             // EditCard
             // 
@@ -259,6 +259,7 @@ namespace dekatreís_octavo.View
             this.Controls.Add(this.materialCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditCard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditCard";
             this.Load += new System.EventHandler(this.EditCard_Load);
             this.materialCard1.ResumeLayout(false);

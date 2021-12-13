@@ -58,7 +58,7 @@ namespace dekatreís_octavo.View
         {
             if (!editting)
             {
-                editButton.Text = "Lưu";
+                editButton.Text = "Tắt chỉnh sửa";
                 startDate.ReadOnly = false;
                 tb_BienSo.ReadOnly = false;
                 inTime.ReadOnly = false;
