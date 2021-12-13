@@ -39,14 +39,20 @@ namespace dekatreís_octavo.View
 
         private void yearComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(rb_Month.Checked)
+            if (rb_Month.Checked)
+            {
                 nam = Convert.ToInt32(yearComboBox.SelectedItem);
+                bt_refresh.Enabled = true;
+            }
         }
 
         private void monthComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(rb_Month.Checked)
+            if (rb_Month.Checked)
+            {
                 thang = monthComboBox.SelectedIndex + 1;
+                bt_refresh.Enabled = true;
+            }
         }
 
         public void LoadData()
@@ -89,7 +95,7 @@ namespace dekatreís_octavo.View
         {
             rpChart.Series.Clear();
             rpChart.AxisX.Clear();
-            if (chartValue == null)
+            if (chartValue.Count == 0)
             {
                 rpChart.Series = new SeriesCollection()
                 {

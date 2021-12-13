@@ -68,8 +68,6 @@ namespace dekatreís_octavo.View
                     addButton.Visible = false;
                     delButton.Visible = false;
                 }
-                if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
-                    inOutButton.Visible = false;
             }
         }
 
@@ -289,6 +287,17 @@ namespace dekatreís_octavo.View
                 image = Image.FromFile(openFileDialog1.FileName);
             }
             
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            var i = LoaiTheBus.Instance.GetIDTheByTen(cb_LoaiThe.SelectedItem.ToString());
+            if (i == -1)
+                return;
+            CardManagementBus.Instance.AddCard(i);
+            MessageBox.Show("Thêm thẻ thành công");
+            addCard.Visible = false;
+            LoadData();
         }
 
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
