@@ -196,7 +196,7 @@ namespace dekatreís_octavo.View
             this.searchTextBox.HelperText = "";
             this.searchTextBox.HideSelection = true;
             this.searchTextBox.HintText = "Tìm kiếm";
-            this.searchTextBox.Location = new System.Drawing.Point(17, 18);
+            this.searchTextBox.Location = new System.Drawing.Point(3, 17);
             this.searchTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchTextBox.MaxLength = 32767;
             this.searchTextBox.MouseState = MaterialSurface.MouseState.OUT;
@@ -209,7 +209,7 @@ namespace dekatreís_octavo.View
             this.searchTextBox.ShowCaret = true;
             this.searchTextBox.Size = new System.Drawing.Size(1078, 65);
             this.searchTextBox.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.searchTextBox.TabIndex = 0;
+            this.searchTextBox.TabIndex = 6;
             this.searchTextBox.UseSystemPasswordChar = false;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
