@@ -17,6 +17,7 @@ namespace dekatreís_octavo.View
         QuanLyDoXeEntities1 db = DataProvider.Instance.db;
         string sortType, sortStatus;
         bool flag = true;
+        Image image;
         public CardManagement()
         {
             InitializeComponent();
@@ -169,6 +170,7 @@ namespace dekatreís_octavo.View
                     GuiNhanXeBus.Instance.NhanXeThuong(the.IDThe);
                 else
                     GuiNhanXeBus.Instance.NhanXeTheThang(the.IDThe);
+                the.AnhXe1 = null;
             }
             else
             {
@@ -176,6 +178,7 @@ namespace dekatreís_octavo.View
                     GuiNhanXeBus.Instance.GuiXeThuong(the.IDThe, bienSo, "");
                 else
                     GuiNhanXeBus.Instance.GuiXeTheThang(the.IDThe);
+                the.AnhXe1 = ImageHelper.imageToByteArray(image);
             }
             db.SaveChanges();
             this.LoadData();
@@ -274,12 +277,12 @@ namespace dekatreís_octavo.View
         }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp";
-            saveFileDialog1.Title = "Save an Image File";
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp";
+            openFileDialog1.Title = "Save an Image File";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
+                image = Image.FromFile(openFileDialog1.FileName);
             }
             
         }
