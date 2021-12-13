@@ -32,8 +32,6 @@ namespace dekatreís_octavo.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History));
             this.mainPanel = new System.Windows.Forms.Panel();
             this.listPanel = new System.Windows.Forms.Panel();
-            this.checkbox = new MaterialSurface.MaterialCheckbox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.historyList = new MaterialSkin.Controls.MaterialListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,15 +39,17 @@ namespace dekatreís_octavo.View
             this.type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.license = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.topPanel = new System.Windows.Forms.Panel();
-            this.searchTextBox = new MaterialSurface.MaterialTextfield();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.searchTextBox = new MaterialSurface.MaterialTextfield();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.checkbox = new MaterialSkin.Controls.MaterialCheckbox();
             this.mainPanel.SuspendLayout();
             this.listPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainPanel
@@ -70,34 +70,6 @@ namespace dekatreís_octavo.View
             this.listPanel.Name = "listPanel";
             this.listPanel.Size = new System.Drawing.Size(1084, 420);
             this.listPanel.TabIndex = 1;
-            // 
-            // checkbox
-            // 
-            this.checkbox.AutoSize = true;
-            this.checkbox.BorderColor = System.Drawing.Color.Gray;
-            this.checkbox.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.checkbox.Location = new System.Drawing.Point(228, 88);
-            this.checkbox.MarkColor = System.Drawing.Color.White;
-            this.checkbox.MinimumSize = new System.Drawing.Size(25, 24);
-            this.checkbox.MouseState = MaterialSurface.MouseState.OUT;
-            this.checkbox.Name = "checkbox";
-            this.checkbox.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.checkbox.Size = new System.Drawing.Size(143, 29);
-            this.checkbox.TabIndex = 5;
-            this.checkbox.Text = "Hiện toàn bộ";
-            this.checkbox.UseVisualStyleBackColor = true;
-            this.checkbox.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(17, 88);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(196, 38);
-            this.dateTimePicker1.TabIndex = 2;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
             // panel1
             // 
@@ -156,10 +128,10 @@ namespace dekatreís_octavo.View
             // 
             // topPanel
             // 
+            this.topPanel.Controls.Add(this.checkbox);
             this.topPanel.Controls.Add(this.pictureBox6);
             this.topPanel.Controls.Add(this.pictureBox1);
             this.topPanel.Controls.Add(this.searchTextBox);
-            this.topPanel.Controls.Add(this.checkbox);
             this.topPanel.Controls.Add(this.dateTimePicker1);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
@@ -167,6 +139,28 @@ namespace dekatreís_octavo.View
             this.topPanel.Size = new System.Drawing.Size(1084, 145);
             this.topPanel.TabIndex = 0;
             this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(1047, 33);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.refresh;
+            this.pictureBox1.Location = new System.Drawing.Point(326, 91);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.bt_refresh_Click);
             // 
             // searchTextBox
             // 
@@ -199,27 +193,35 @@ namespace dekatreís_octavo.View
             this.searchTextBox.UseSystemPasswordChar = false;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
-            // pictureBox1
+            // dateTimePicker1
             // 
-            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.refresh;
-            this.pictureBox1.Location = new System.Drawing.Point(400, 88);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.bt_refresh_Click);
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(17, 88);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(196, 38);
+            this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker_ValueChanged);
             // 
-            // pictureBox6
+            // checkbox
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1047, 33);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
+            this.checkbox.AutoSize = true;
+            this.checkbox.Depth = 0;
+            this.checkbox.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.checkbox.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.checkbox.Location = new System.Drawing.Point(225, 89);
+            this.checkbox.Margin = new System.Windows.Forms.Padding(0);
+            this.checkbox.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.checkbox.MouseState = MaterialSkin.MouseState.HOVER;
+            this.checkbox.Name = "checkbox";
+            this.checkbox.ReadOnly = false;
+            this.checkbox.Ripple = true;
+            this.checkbox.Size = new System.Drawing.Size(80, 37);
+            this.checkbox.TabIndex = 11;
+            this.checkbox.Text = "Tất cả";
+            this.checkbox.UseVisualStyleBackColor = true;
+            this.checkbox.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
             // 
             // History
             // 
@@ -233,8 +235,8 @@ namespace dekatreís_octavo.View
             this.panel1.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -251,9 +253,9 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.ColumnHeader license;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
-        private MaterialSurface.MaterialCheckbox checkbox;
         private MaterialSurface.MaterialTextfield searchTextBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox6;
+        private MaterialSkin.Controls.MaterialCheckbox checkbox;
     }
 }
