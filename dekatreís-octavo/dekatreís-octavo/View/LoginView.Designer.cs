@@ -118,6 +118,7 @@ namespace dekatreís_octavo.View
             this.bt_Login.ShawdowOpacity = 50;
             this.bt_Login.Size = new System.Drawing.Size(216, 50);
             this.bt_Login.TabIndex = 3;
+            this.bt_Login.TabStop = false;
             this.bt_Login.Text = "Đăng nhập";
             this.bt_Login.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_Login.UseVisualStyleBackColor = true;
