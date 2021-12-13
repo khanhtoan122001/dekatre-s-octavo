@@ -235,69 +235,6 @@ namespace dekatreís_octavo.View
             this.flowLayoutPanel1.Size = new System.Drawing.Size(675, 73);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
-            // addCard
-            // 
-            this.addCard.BackColor = System.Drawing.Color.White;
-            this.addCard.CardColor = System.Drawing.Color.White;
-            this.addCard.Controls.Add(this.pictureBox5);
-            this.addCard.Controls.Add(this.pictureBox4);
-//            this.addCard.Controls.Add(this.materialComboBox1);
-            this.addCard.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCard.Location = new System.Drawing.Point(5, 66);
-            this.addCard.Margin = new System.Windows.Forms.Padding(5);
-            this.addCard.MouseInteract = false;
-            this.addCard.MouseState = MaterialSurface.MouseState.OUT;
-            this.addCard.Name = "addCard";
-            this.addCard.Radius = 8;
-            this.addCard.ShawdowDepth = 2;
-            this.addCard.ShawdowOpacity = 50;
-            this.addCard.Size = new System.Drawing.Size(281, 80);
-            this.addCard.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
-            this.addCard.TabIndex = 6;
-            this.addCard.Visible = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::dekatreís_octavo.Properties.Resources.x_button_icon_20;
-            this.pictureBox5.Location = new System.Drawing.Point(232, 27);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::dekatreís_octavo.Properties.Resources._62025;
-            this.pictureBox4.Location = new System.Drawing.Point(190, 27);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            // 
-            // materialComboBox1
-            // 
-            //this.materialComboBox1.AutoSizing = false;
-            //this.materialComboBox1.ComboBoxType = MaterialSurface.BoxType.Normal;
-            //this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            //this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            //this.materialComboBox1.DropDownWidth = 121;
-            //this.materialComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            //this.materialComboBox1.FormattingEnabled = true;
-            //this.materialComboBox1.HintText = "Loại thẻ";
-            //this.materialComboBox1.ItemHeight = 47;
-            //this.materialComboBox1.Items.AddRange(new object[] {
-            //"Thẻ thường",
-            //"Thẻ tháng"});
-            //this.materialComboBox1.Location = new System.Drawing.Point(16, 12);
-            //this.materialComboBox1.MaxDropDownItems = 4;
-            //this.materialComboBox1.MouseState = MaterialSurface.MouseState.OUT;
-            //this.materialComboBox1.Name = "materialComboBox1";
-            //this.materialComboBox1.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            //this.materialComboBox1.Size = new System.Drawing.Size(155, 53);
-            //this.materialComboBox1.TabIndex = 0;
-            // 
             // createButton
             // 
             this.createButton.EffectType = MaterialSurface.ET.Custom;
@@ -371,7 +308,7 @@ namespace dekatreís_octavo.View
             this.tb_search.ShowCaret = true;
             this.tb_search.Size = new System.Drawing.Size(1162, 65);
             this.tb_search.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_search.TabIndex = 8;
+            this.tb_search.TabIndex = 0;
             this.tb_search.UseSystemPasswordChar = false;
             this.tb_search.TextChanged += new System.EventHandler(this.materialTextfield1_TextChanged);
             // 
