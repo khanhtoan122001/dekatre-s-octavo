@@ -1,4 +1,5 @@
 ﻿using dekatreís_octavo.Bus;
+using ListViewSortAnyColumn;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -53,7 +54,33 @@ namespace dekatreís_octavo.View
             else
                 LoadData();
         }
+        private void listViewSample_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            ItemComparer sorter = historyList.ListViewItemSorter as ItemComparer;
 
+            if (sorter == null)
+            {
+                sorter = new ItemComparer(e.Column);
+                sorter.Order = SortOrder.Ascending;
+                historyList.ListViewItemSorter = sorter;
+            }
+            // if clicked column is already the column that is being sorted
+            if (e.Column == sorter.Column)
+            {
+                // Reverse the current sort direction
+                if (sorter.Order == SortOrder.Ascending)
+                    sorter.Order = SortOrder.Descending;
+                else
+                    sorter.Order = SortOrder.Ascending;
+            }
+            else
+            {
+                // Set the column number that is to be sorted; default to ascending.
+                sorter.Column = e.Column;
+                sorter.Order = SortOrder.Ascending;
+            }
+            historyList.Sort();
+        }
         private void materialCheckbox1_CheckedChanged(object sender, EventArgs e)
         {
             LoadData();

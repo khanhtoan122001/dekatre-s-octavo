@@ -115,14 +115,14 @@ namespace dekatreís_octavo.Bus
 
             if (date != null)
             {
-                result = result.Where( p => p.BaoCaoLichSuHoatDong.Ngay.Value == date);
+                result = result.Where(p => p.BaoCaoLichSuHoatDong.Ngay.Value == date);
             }
 
             return result.ToList();
         }
         public List<CT_BaoCaoLichSuHoatDong> SearchCT_HoatDong(string txt, DateTime? date = null)
         {
-            var result = db.CT_BaoCaoLichSuHoatDong.Where(p=>p.BienSo.Contains(txt));
+            var result = db.CT_BaoCaoLichSuHoatDong.Where(p => p.BienSo.Contains(txt));
             return result.ToList();
         }
         public int GetIdBaoCaoLichSuHoatDong(DateTime time, int hoatDong)
@@ -137,11 +137,11 @@ namespace dekatreís_octavo.Bus
         {
             var result = (from c in db.BaoCaoMatDoGuiXes
                           select c);
-            if(Thang != 0 && Nam != 0)
+            if (Thang != 0 && Nam != 0)
             {
                 result = result.Where(p => p.Ngay.Value.Month == Thang.Value && p.Ngay.Value.Year == Nam.Value);
             }
-            if(Thang == 0 && Nam != 0)
+            if (Thang == 0 && Nam != 0)
             {
                 result = result.Where(p => p.Ngay.Value.Year == Nam.Value);
             }
@@ -191,8 +191,18 @@ namespace dekatreís_octavo.Bus
                 id = AddBaoCaoTongThu();
             else
                 id = baocao.First().IDBaoCaoThu;
-            CT_BaoCaoTongThu ct_baocao = new CT_BaoCaoTongThu() { IDBaoCao = id, GiaTri = GiaTri, HoatDong = HoatDong, ThoiGian = DateTime.Now };
-            db.CT_BaoCaoTongThu.Add(ct_baocao);
+            CT_BaoCaoTongThu ct_bc = db.CT_BaoCaoTongThu.Where(p => p.HoatDong == HoatDong).FirstOrDefault();
+            CT_BaoCaoTongThu ct_baocao;
+            if (ct_bc == null)
+            {
+                ct_baocao = new CT_BaoCaoTongThu() { IDBaoCao = id, GiaTri = GiaTri, HoatDong = HoatDong, ThoiGian = DateTime.Now };
+                db.CT_BaoCaoTongThu.Add(ct_baocao);
+
+            }
+            else
+            {
+                ct_bc.GiaTri += GiaTri;
+            }
 
             db.SaveChanges();
         }
@@ -205,10 +215,55 @@ namespace dekatreís_octavo.Bus
                 id = AddBaoCaoTongChi();
             else
                 id = baocao.First().IDBaoCaoChi;
-            CT_BaoCaoTongChi ct_baocao = new CT_BaoCaoTongChi() { IDBaoCao = id, GiaTri = GiaTri, HoatDong = HoatDong, ThoiGian = DateTime.Now };
-            db.CT_BaoCaoTongChi.Add(ct_baocao);
+            CT_BaoCaoTongChi ct_bc = db.CT_BaoCaoTongChi.Where(p => p.HoatDong == HoatDong).FirstOrDefault();
+            CT_BaoCaoTongChi ct_baocao;
+            if (ct_bc == null)
+            {
+                ct_baocao = new CT_BaoCaoTongChi() { IDBaoCao = id, GiaTri = GiaTri, HoatDong = HoatDong, ThoiGian = DateTime.Now };
+                db.CT_BaoCaoTongChi.Add(ct_baocao);
+            }
+            else
+            {
+                ct_bc.GiaTri += GiaTri;
+            }
 
             db.SaveChanges();
+        }
+
+        public List<BaoCaoDoanhThuThang> GetBaoCaoDoanhThuThangs(int Nam)
+        {
+            List<BaoCaoDoanhThuThang> baoCaoDoanhThuThangList = new List<BaoCaoDoanhThuThang>(DataProvider.Instance.db.BaoCaoDoanhThuThangs.Where(x => x.Nam == Nam).OrderBy(v => v.Thang));
+            var baoCaoDoanhThuThangCount = baoCaoDoanhThuThangList.Count();
+            if (baoCaoDoanhThuThangCount < 1)
+            {
+                return null;
+            }
+
+
+
+            return baoCaoDoanhThuThangList;
+        }
+
+        public List<CT_BaoCaoTongThu> GetCTBaoCaoTongThus(int Thang, int Nam)
+        {
+            List<BaoCaoTongThu> baoCaoTongThuList = new List<BaoCaoTongThu>(DataProvider.Instance.db.BaoCaoTongThus.Where(x => x.Nam == Nam && x.Thang == Thang));
+            var count = baoCaoTongThuList.Count();
+            if (count < 1)
+                return null;
+            BaoCaoTongThu baoCaoTongThu = baoCaoTongThuList.FirstOrDefault();
+            List<CT_BaoCaoTongThu> baoCaoList = new List<CT_BaoCaoTongThu>(DataProvider.Instance.db.CT_BaoCaoTongThu.Where(x => x.IDBaoCao == baoCaoTongThu.IDBaoCaoThu).OrderBy(v => v.HoatDong));
+            return baoCaoList;
+        }
+
+        public List<CT_BaoCaoTongChi> GetCTBaoCaoTongChis(int Thang, int Nam)
+        {
+            List<BaoCaoTongChi> baoCaoTongChiList = new List<BaoCaoTongChi>(DataProvider.Instance.db.BaoCaoTongChis.Where(x => x.Nam == Nam && x.Thang == Thang));
+            var count = baoCaoTongChiList.Count();
+            if (count < 1)
+                return null;
+            BaoCaoTongChi baoCaoTongChi = baoCaoTongChiList.FirstOrDefault();
+            List<CT_BaoCaoTongChi> baoCaoList = new List<CT_BaoCaoTongChi>(DataProvider.Instance.db.CT_BaoCaoTongChi.Where(x => x.IDBaoCao == baoCaoTongChi.IDBaoCaoChi).OrderBy(v => v.HoatDong));
+            return baoCaoList;
         }
     }
 }

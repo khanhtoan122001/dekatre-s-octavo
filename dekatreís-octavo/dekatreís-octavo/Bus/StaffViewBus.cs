@@ -49,12 +49,31 @@ namespace dekatreís_octavo.Bus
             TaiKhoan test = db.TaiKhoans.Where((p) => p.TenDangNhap == TenDangNhap).FirstOrDefault();
             return test;
         }
-        public List<TaiKhoan> Search(string txt)
+        public List<TaiKhoan> Search(string txt, int? sortType)
         {
             var result = from c in db.TaiKhoans
                          where c.LoaiTaiKhoan1.TenLoai == "staff"
                          select c;
-            result = result.Where(p => p.TenDangNhap.Contains(txt) || p.SDT.Contains(txt) || p.CMND.Contains(txt) || p.TenThat.Contains(txt));
+            switch (sortType)
+            {
+                case -1:
+                case 0:
+                    result = result.Where(p => p.TenDangNhap.Contains(txt) || p.SDT.Contains(txt) || p.CMND.Contains(txt) || p.TenThat.Contains(txt));
+                    break;
+                case 1:
+                    result = result.Where(p => p.TenDangNhap.Contains(txt));
+                    break;
+                case 2:
+                    result = result.Where(p => p.TenThat.Contains(txt));
+                    break;
+                case 3:
+                    result = result.Where(p => p.SDT.Contains(txt));
+                    break;
+                case 4:
+                    result = result.Where(p => p.CMND.Contains(txt));
+                    break;
+            }
+            
 
             return result.ToList();
         }
