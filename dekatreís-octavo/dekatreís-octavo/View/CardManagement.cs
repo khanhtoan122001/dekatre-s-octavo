@@ -239,6 +239,18 @@ namespace dekatreís_octavo.View
             }
         }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp";
+            saveFileDialog1.Title = "Save an Image File";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+            
+        }
+
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (statusComboBox.SelectedIndex != -1)
