@@ -56,7 +56,7 @@ namespace dekatreís_octavo.View
             this.containedButton1.Location = new System.Drawing.Point(177, 31);
             this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton1.Name = "containedButton1";
-            this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.containedButton1.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.containedButton1.Radius = 6;
             this.containedButton1.ShawdowDepth = 3;
             this.containedButton1.ShawdowOpacity = 50;

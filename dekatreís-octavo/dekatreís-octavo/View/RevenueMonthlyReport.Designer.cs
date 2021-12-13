@@ -82,7 +82,7 @@
             this.yearComboBox.MaxDropDownItems = 4;
             this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.yearComboBox.Name = "yearComboBox";
-            this.yearComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.yearComboBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.yearComboBox.Size = new System.Drawing.Size(121, 53);
             this.yearComboBox.TabIndex = 4;
             // 
@@ -95,7 +95,7 @@
             this.containedButton1.Location = new System.Drawing.Point(335, 28);
             this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton1.Name = "containedButton1";
-            this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.containedButton1.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.containedButton1.Radius = 6;
             this.containedButton1.ShawdowDepth = 3;
             this.containedButton1.ShawdowOpacity = 50;
@@ -134,7 +134,7 @@
             this.monthComboBox.MaxDropDownItems = 4;
             this.monthComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.monthComboBox.Name = "monthComboBox";
-            this.monthComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.monthComboBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.monthComboBox.Size = new System.Drawing.Size(121, 53);
             this.monthComboBox.TabIndex = 2;
             // 
