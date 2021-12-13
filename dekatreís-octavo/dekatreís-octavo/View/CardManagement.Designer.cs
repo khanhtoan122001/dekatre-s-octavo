@@ -241,7 +241,7 @@ namespace dekatreís_octavo.View
             this.addCard.CardColor = System.Drawing.Color.White;
             this.addCard.Controls.Add(this.pictureBox5);
             this.addCard.Controls.Add(this.pictureBox4);
-            this.addCard.Controls.Add(this.materialComboBox1);
+//            this.addCard.Controls.Add(this.materialComboBox1);
             this.addCard.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addCard.Location = new System.Drawing.Point(5, 66);
             this.addCard.Margin = new System.Windows.Forms.Padding(5);
@@ -278,25 +278,25 @@ namespace dekatreís_octavo.View
             // 
             // materialComboBox1
             // 
-            this.materialComboBox1.AutoSizing = false;
-            this.materialComboBox1.ComboBoxType = MaterialSurface.BoxType.Normal;
-            this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.materialComboBox1.DropDownWidth = 121;
-            this.materialComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.materialComboBox1.FormattingEnabled = true;
-            this.materialComboBox1.HintText = "Loại thẻ";
-            this.materialComboBox1.ItemHeight = 47;
-            this.materialComboBox1.Items.AddRange(new object[] {
-            "Thẻ thường",
-            "Thẻ tháng"});
-            this.materialComboBox1.Location = new System.Drawing.Point(16, 12);
-            this.materialComboBox1.MaxDropDownItems = 4;
-            this.materialComboBox1.MouseState = MaterialSurface.MouseState.OUT;
-            this.materialComboBox1.Name = "materialComboBox1";
-            this.materialComboBox1.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.materialComboBox1.Size = new System.Drawing.Size(155, 53);
-            this.materialComboBox1.TabIndex = 0;
+            //this.materialComboBox1.AutoSizing = false;
+            //this.materialComboBox1.ComboBoxType = MaterialSurface.BoxType.Normal;
+            //this.materialComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            //this.materialComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            //this.materialComboBox1.DropDownWidth = 121;
+            //this.materialComboBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            //this.materialComboBox1.FormattingEnabled = true;
+            //this.materialComboBox1.HintText = "Loại thẻ";
+            //this.materialComboBox1.ItemHeight = 47;
+            //this.materialComboBox1.Items.AddRange(new object[] {
+            //"Thẻ thường",
+            //"Thẻ tháng"});
+            //this.materialComboBox1.Location = new System.Drawing.Point(16, 12);
+            //this.materialComboBox1.MaxDropDownItems = 4;
+            //this.materialComboBox1.MouseState = MaterialSurface.MouseState.OUT;
+            //this.materialComboBox1.Name = "materialComboBox1";
+            //this.materialComboBox1.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            //this.materialComboBox1.Size = new System.Drawing.Size(155, 53);
+            //this.materialComboBox1.TabIndex = 0;
             // 
             // createButton
             // 

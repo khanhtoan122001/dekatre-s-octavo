@@ -50,7 +50,9 @@ namespace dekatreís_octavo.View
             this.SoXe = new MaterialSkin.Controls.MaterialLabel();
             this.progressBar = new MaterialSurface.MaterialProgressbar();
             this.historyPanel = new System.Windows.Forms.Panel();
+            this.history1 = new dekatreís_octavo.View.History();
             this.cardPage = new System.Windows.Forms.TabPage();
+            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.staffPage = new System.Windows.Forms.TabPage();
             this.staffView1 = new dekatreís_octavo.View.StaffView();
             this.utility = new System.Windows.Forms.TabPage();
@@ -79,6 +81,7 @@ namespace dekatreís_octavo.View
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
             this.iconPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.reportPanel = new System.Windows.Forms.Panel();
@@ -86,9 +89,6 @@ namespace dekatreís_octavo.View
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.history1 = new dekatreís_octavo.View.History();
-            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
-            this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -320,7 +320,7 @@ namespace dekatreís_octavo.View
             this.homePage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage.Name = "homePage";
             this.homePage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.homePage.Size = new System.Drawing.Size(1077, 546);
+            this.homePage.Size = new System.Drawing.Size(1073, 542);
             this.homePage.TabIndex = 0;
             this.homePage.Text = "Trang chính";
             this.homePage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
@@ -381,7 +381,7 @@ namespace dekatreís_octavo.View
             this.progressBar.Minimum = 0;
             this.progressBar.MouseState = MaterialSurface.MouseState.HOVER;
             this.progressBar.Name = "progressBar";
-            this.progressBar.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.progressBar.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.progressBar.Size = new System.Drawing.Size(396, 40);
             this.progressBar.Step = 10;
             this.progressBar.TabIndex = 0;
@@ -412,7 +412,7 @@ namespace dekatreís_octavo.View
             this.cardPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cardPage.Name = "cardPage";
             this.cardPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cardPage.Size = new System.Drawing.Size(1077, 546);
+            this.cardPage.Size = new System.Drawing.Size(1073, 542);
             this.cardPage.TabIndex = 1;
             this.cardPage.Text = "Thẻ";
             this.cardPage.UseVisualStyleBackColor = true;
@@ -427,7 +427,7 @@ namespace dekatreís_octavo.View
             this.cardManagement1.Location = new System.Drawing.Point(3, 2);
             this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(1071, 542);
+            this.cardManagement1.Size = new System.Drawing.Size(1067, 538);
             this.cardManagement1.TabIndex = 0;
             this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
@@ -438,7 +438,7 @@ namespace dekatreís_octavo.View
             this.staffPage.Location = new System.Drawing.Point(4, 31);
             this.staffPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.staffPage.Name = "staffPage";
-            this.staffPage.Size = new System.Drawing.Size(1077, 546);
+            this.staffPage.Size = new System.Drawing.Size(1073, 542);
             this.staffPage.TabIndex = 2;
             this.staffPage.Text = "Nhân viên";
             this.staffPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
@@ -450,7 +450,7 @@ namespace dekatreís_octavo.View
             this.staffView1.Location = new System.Drawing.Point(0, 0);
             this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(1077, 546);
+            this.staffView1.Size = new System.Drawing.Size(1073, 542);
             this.staffView1.TabIndex = 0;
             this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
@@ -465,7 +465,7 @@ namespace dekatreís_octavo.View
             this.utility.Location = new System.Drawing.Point(4, 31);
             this.utility.Name = "utility";
             this.utility.Padding = new System.Windows.Forms.Padding(3);
-            this.utility.Size = new System.Drawing.Size(1077, 546);
+            this.utility.Size = new System.Drawing.Size(1073, 542);
             this.utility.TabIndex = 4;
             this.utility.Text = "Báo cáo";
             // 
@@ -546,8 +546,8 @@ namespace dekatreís_octavo.View
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.consistenceReport1);
-            this.splitContainer1.Size = new System.Drawing.Size(1071, 540);
-            this.splitContainer1.SplitterDistance = 92;
+            this.splitContainer1.Size = new System.Drawing.Size(1067, 536);
+            this.splitContainer1.SplitterDistance = 91;
             this.splitContainer1.TabIndex = 3;
             // 
             // statusButton
@@ -596,7 +596,7 @@ namespace dekatreís_octavo.View
             this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.consistenceReport1.Location = new System.Drawing.Point(0, 0);
             this.consistenceReport1.Name = "consistenceReport1";
-            this.consistenceReport1.Size = new System.Drawing.Size(1071, 444);
+            this.consistenceReport1.Size = new System.Drawing.Size(1067, 441);
             this.consistenceReport1.TabIndex = 2;
             this.consistenceReport1.Visible = false;
             // 
@@ -618,7 +618,7 @@ namespace dekatreís_octavo.View
             this.setting.Controls.Add(this.materialLabel1);
             this.setting.Location = new System.Drawing.Point(4, 31);
             this.setting.Name = "setting";
-            this.setting.Size = new System.Drawing.Size(1077, 546);
+            this.setting.Size = new System.Drawing.Size(1073, 542);
             this.setting.TabIndex = 6;
             this.setting.Text = "Quy định";
             this.setting.Click += new System.EventHandler(this.setting_Click);
@@ -805,6 +805,26 @@ namespace dekatreís_octavo.View
             this.panel3.Size = new System.Drawing.Size(256, 581);
             this.panel3.TabIndex = 1;
             // 
+            // tabDrawer
+            // 
+            this.tabDrawer.AutoHide = false;
+            this.tabDrawer.AutoShow = false;
+            this.tabDrawer.BackgroundWithAccent = false;
+            this.tabDrawer.BaseTabControl = this.tabControl;
+            this.tabDrawer.Depth = 0;
+            this.tabDrawer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabDrawer.HighlightWithAccent = true;
+            this.tabDrawer.IndicatorWidth = 5;
+            this.tabDrawer.IsOpen = true;
+            this.tabDrawer.Location = new System.Drawing.Point(0, 0);
+            this.tabDrawer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabDrawer.Name = "tabDrawer";
+            this.tabDrawer.ShowIconsWhenHidden = false;
+            this.tabDrawer.Size = new System.Drawing.Size(256, 581);
+            this.tabDrawer.TabIndex = 0;
+            this.tabDrawer.Text = "tabDrawer";
+            this.tabDrawer.UseColors = false;
+            // 
             // iconPanel
             // 
             this.iconPanel.Controls.Add(this.pictureBox1);
@@ -871,26 +891,6 @@ namespace dekatreís_octavo.View
             // 
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // tabDrawer
-            // 
-            this.tabDrawer.AutoHide = false;
-            this.tabDrawer.AutoShow = false;
-            this.tabDrawer.BackgroundWithAccent = false;
-            this.tabDrawer.BaseTabControl = this.tabControl;
-            this.tabDrawer.Depth = 0;
-            this.tabDrawer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabDrawer.HighlightWithAccent = true;
-            this.tabDrawer.IndicatorWidth = 5;
-            this.tabDrawer.IsOpen = true;
-            this.tabDrawer.Location = new System.Drawing.Point(0, 0);
-            this.tabDrawer.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tabDrawer.Name = "tabDrawer";
-            this.tabDrawer.ShowIconsWhenHidden = false;
-            this.tabDrawer.Size = new System.Drawing.Size(256, 581);
-            this.tabDrawer.TabIndex = 0;
-            this.tabDrawer.Text = "tabDrawer";
-            this.tabDrawer.UseColors = false;
             // 
             // HomeView
             // 

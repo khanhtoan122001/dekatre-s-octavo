@@ -33,13 +33,13 @@ namespace dekatreís_octavo.View
             this.chartPanel = new System.Windows.Forms.Panel();
             this.rpChart = new LiveCharts.WinForms.CartesianChart();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.rb_Day = new MaterialSurface.MaterialRadioButton();
+            this.rb_Month = new MaterialSurface.MaterialRadioButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.bt_refresh = new MaterialSurface.ContainedButton();
             this.exportButton = new MaterialSurface.ContainedButton();
             this.yearComboBox = new MaterialSurface.MaterialComboBox();
             this.monthComboBox = new MaterialSurface.MaterialComboBox();
-            this.rb_Month = new MaterialSurface.MaterialRadioButton();
-            this.rb_Day = new MaterialSurface.MaterialRadioButton();
             this.mainPanel.SuspendLayout();
             this.chartPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -88,6 +88,38 @@ namespace dekatreís_octavo.View
             this.topPanel.Size = new System.Drawing.Size(854, 100);
             this.topPanel.TabIndex = 0;
             // 
+            // rb_Day
+            // 
+            this.rb_Day.AutoSize = true;
+            this.rb_Day.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.rb_Day.Location = new System.Drawing.Point(12, 50);
+            this.rb_Day.MinimumSize = new System.Drawing.Size(25, 24);
+            this.rb_Day.MouseState = MaterialSurface.MouseState.OUT;
+            this.rb_Day.Name = "rb_Day";
+            this.rb_Day.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.rb_Day.Size = new System.Drawing.Size(121, 29);
+            this.rb_Day.TabIndex = 7;
+            this.rb_Day.Text = "Theo ngày";
+            this.rb_Day.UseVisualStyleBackColor = true;
+            this.rb_Day.CheckedChanged += new System.EventHandler(this.rb_Day_CheckedChanged);
+            // 
+            // rb_Month
+            // 
+            this.rb_Month.AutoSize = true;
+            this.rb_Month.Checked = true;
+            this.rb_Month.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.rb_Month.Location = new System.Drawing.Point(12, 15);
+            this.rb_Month.MinimumSize = new System.Drawing.Size(25, 24);
+            this.rb_Month.MouseState = MaterialSurface.MouseState.OUT;
+            this.rb_Month.Name = "rb_Month";
+            this.rb_Month.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.rb_Month.Size = new System.Drawing.Size(129, 29);
+            this.rb_Month.TabIndex = 6;
+            this.rb_Month.TabStop = true;
+            this.rb_Month.Text = "Theo tháng";
+            this.rb_Month.UseVisualStyleBackColor = true;
+            this.rb_Month.CheckedChanged += new System.EventHandler(this.rb_Month_CheckedChanged);
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -109,7 +141,7 @@ namespace dekatreís_octavo.View
             this.bt_refresh.Location = new System.Drawing.Point(587, 23);
             this.bt_refresh.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_refresh.Name = "bt_refresh";
-            this.bt_refresh.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.bt_refresh.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.bt_refresh.Radius = 6;
             this.bt_refresh.ShawdowDepth = 3;
             this.bt_refresh.ShawdowOpacity = 50;
@@ -193,38 +225,6 @@ namespace dekatreís_octavo.View
             this.monthComboBox.Size = new System.Drawing.Size(121, 53);
             this.monthComboBox.TabIndex = 0;
             this.monthComboBox.SelectedIndexChanged += new System.EventHandler(this.monthComboBox_SelectedIndexChanged);
-            // 
-            // rb_Month
-            // 
-            this.rb_Month.AutoSize = true;
-            this.rb_Month.Checked = true;
-            this.rb_Month.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.rb_Month.Location = new System.Drawing.Point(12, 15);
-            this.rb_Month.MinimumSize = new System.Drawing.Size(25, 24);
-            this.rb_Month.MouseState = MaterialSurface.MouseState.OUT;
-            this.rb_Month.Name = "rb_Month";
-            this.rb_Month.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.rb_Month.Size = new System.Drawing.Size(129, 29);
-            this.rb_Month.TabIndex = 6;
-            this.rb_Month.TabStop = true;
-            this.rb_Month.Text = "Theo tháng";
-            this.rb_Month.UseVisualStyleBackColor = true;
-            this.rb_Month.CheckedChanged += new System.EventHandler(this.rb_Month_CheckedChanged);
-            // 
-            // rb_Day
-            // 
-            this.rb_Day.AutoSize = true;
-            this.rb_Day.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.rb_Day.Location = new System.Drawing.Point(12, 50);
-            this.rb_Day.MinimumSize = new System.Drawing.Size(25, 24);
-            this.rb_Day.MouseState = MaterialSurface.MouseState.OUT;
-            this.rb_Day.Name = "rb_Day";
-            this.rb_Day.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.rb_Day.Size = new System.Drawing.Size(121, 29);
-            this.rb_Day.TabIndex = 7;
-            this.rb_Day.Text = "Theo ngày";
-            this.rb_Day.UseVisualStyleBackColor = true;
-            this.rb_Day.CheckedChanged += new System.EventHandler(this.rb_Day_CheckedChanged);
             // 
             // ConsistenceReport
             // 
