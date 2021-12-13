@@ -298,6 +298,12 @@
     <Compile Include="View\ParkingView.Designer.cs">
       <DependentUpon>ParkingView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\RevenueMonthlyReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\RevenueMonthlyReport.Designer.cs">
+      <DependentUpon>RevenueMonthlyReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\RevenueReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -383,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ParkingView.resx">
       <DependentUpon>ParkingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RevenueMonthlyReport.resx">
+      <DependentUpon>RevenueMonthlyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\RevenueReport.resx">
       <DependentUpon>RevenueReport.cs</DependentUpon>

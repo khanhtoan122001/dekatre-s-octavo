@@ -213,5 +213,41 @@ namespace dekatreís_octavo.Bus
 
             db.SaveChanges();
         }
+
+        public List<BaoCaoDoanhThuThang> GetBaoCaoDoanhThuThangs(int Nam)
+        {
+            List<BaoCaoDoanhThuThang> baoCaoDoanhThuThangList = new List<BaoCaoDoanhThuThang>(DataProvider.Instance.db.BaoCaoDoanhThuThangs.Where(x => x.Nam == Nam).OrderBy(v => v.Thang));
+            var baoCaoDoanhThuThangCount = baoCaoDoanhThuThangList.Count();
+            if (baoCaoDoanhThuThangCount < 1)
+            {
+                return null;
+            }
+            
+            
+
+            return baoCaoDoanhThuThangList;
+        }
+
+        public List<CT_BaoCaoTongThu> GetCTBaoCaoTongThus(int Thang, int Nam)
+        {
+            List<BaoCaoTongThu> baoCaoTongThuList = new List<BaoCaoTongThu>(DataProvider.Instance.db.BaoCaoTongThus.Where(x => x.Nam == Nam && x.Thang == Thang));
+            var count = baoCaoTongThuList.Count();
+            if (count < 1)
+                return null;
+            BaoCaoTongThu baoCaoTongThu = baoCaoTongThuList.FirstOrDefault();
+            List<CT_BaoCaoTongThu> baoCaoList = new List<CT_BaoCaoTongThu>(DataProvider.Instance.db.CT_BaoCaoTongThu.Where(x => x.IDBaoCao == baoCaoTongThu.IDBaoCaoThu).OrderBy(v => v.HoatDong));
+            return baoCaoList;
+        }
+
+        public List<CT_BaoCaoTongChi> GetCTBaoCaoTongChis(int Thang, int Nam)
+        {
+            List<BaoCaoTongChi> baoCaoTongChiList = new List<BaoCaoTongChi>(DataProvider.Instance.db.BaoCaoTongChis.Where(x => x.Nam == Nam && x.Thang == Thang));
+            var count = baoCaoTongChiList.Count();
+            if (count < 1)
+                return null;
+            BaoCaoTongChi baoCaoTongChi = baoCaoTongChiList.FirstOrDefault();
+            List<CT_BaoCaoTongChi> baoCaoList = new List<CT_BaoCaoTongChi>(DataProvider.Instance.db.CT_BaoCaoTongChi.Where(x => x.IDBaoCao == baoCaoTongChi.IDBaoCaoChi).OrderBy(v => v.HoatDong));
+            return baoCaoList;
+        }
     }
 }

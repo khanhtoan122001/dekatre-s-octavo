@@ -53,9 +53,13 @@ namespace dekatreís_octavo.View
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.parkingView1 = new dekatreís_octavo.View.ParkingView();
             this.utility = new System.Windows.Forms.TabPage();
-            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
+            this.revenueMonthlyReport1 = new dekatreís_octavo.View.RevenueMonthlyReport();
+            this.containedButton2 = new MaterialSurface.ContainedButton();
+            this.revenueReport1 = new dekatreís_octavo.View.RevenueReport();
+            this.containedButton1 = new MaterialSurface.ContainedButton();
             this.statusButton = new MaterialSurface.ContainedButton();
             this.historyButton = new MaterialSurface.ContainedButton();
+            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
             this.statusPage = new System.Windows.Forms.TabPage();
             this.setting = new System.Windows.Forms.TabPage();
             this.lb_success = new System.Windows.Forms.Label();
@@ -422,9 +426,13 @@ namespace dekatreís_octavo.View
             // utility
             // 
             this.utility.BackColor = System.Drawing.Color.White;
-            this.utility.Controls.Add(this.consistenceReport1);
+            this.utility.Controls.Add(this.revenueMonthlyReport1);
+            this.utility.Controls.Add(this.containedButton2);
+            this.utility.Controls.Add(this.revenueReport1);
+            this.utility.Controls.Add(this.containedButton1);
             this.utility.Controls.Add(this.statusButton);
             this.utility.Controls.Add(this.historyButton);
+            this.utility.Controls.Add(this.consistenceReport1);
             this.utility.Location = new System.Drawing.Point(4, 27);
             this.utility.Name = "utility";
             this.utility.Padding = new System.Windows.Forms.Padding(3);
@@ -432,15 +440,67 @@ namespace dekatreís_octavo.View
             this.utility.TabIndex = 4;
             this.utility.Text = "Báo cáo";
             // 
-            // consistenceReport1
+            // revenueMonthlyReport1
             // 
-            this.consistenceReport1.BackColor = System.Drawing.Color.White;
-            this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.consistenceReport1.Location = new System.Drawing.Point(3, 80);
-            this.consistenceReport1.Name = "consistenceReport1";
-            this.consistenceReport1.Size = new System.Drawing.Size(1071, 467);
-            this.consistenceReport1.TabIndex = 2;
-            this.consistenceReport1.Visible = false;
+            this.revenueMonthlyReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.revenueMonthlyReport1.Location = new System.Drawing.Point(3, 80);
+            this.revenueMonthlyReport1.Name = "revenueMonthlyReport1";
+            this.revenueMonthlyReport1.Size = new System.Drawing.Size(1071, 467);
+            this.revenueMonthlyReport1.TabIndex = 6;
+            this.revenueMonthlyReport1.Visible = false;
+            // 
+            // containedButton2
+            // 
+            this.containedButton2.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containedButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.containedButton2.Icon = null;
+            this.containedButton2.Location = new System.Drawing.Point(632, 6);
+            this.containedButton2.MouseState = MaterialSurface.MouseState.OUT;
+            this.containedButton2.Name = "containedButton2";
+            this.containedButton2.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.containedButton2.Radius = 6;
+            this.containedButton2.ShawdowDepth = 3;
+            this.containedButton2.ShawdowOpacity = 50;
+            this.containedButton2.Size = new System.Drawing.Size(189, 56);
+            this.containedButton2.TabIndex = 5;
+            this.containedButton2.Text = "Thu Chi Tháng";
+            this.containedButton2.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.containedButton2.UseVisualStyleBackColor = true;
+            this.containedButton2.Click += new System.EventHandler(this.containedButton2_Click);
+            // 
+            // revenueReport1
+            // 
+            this.revenueReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.revenueReport1.Location = new System.Drawing.Point(3, 80);
+            this.revenueReport1.Name = "revenueReport1";
+            this.revenueReport1.Size = new System.Drawing.Size(1071, 467);
+            this.revenueReport1.TabIndex = 4;
+            this.revenueReport1.Visible = false;
+            // 
+            // containedButton1
+            // 
+            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.containedButton1.Icon = null;
+            this.containedButton1.Location = new System.Drawing.Point(424, 7);
+            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
+            this.containedButton1.Name = "containedButton1";
+            this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.containedButton1.Radius = 6;
+            this.containedButton1.ShawdowDepth = 3;
+            this.containedButton1.ShawdowOpacity = 50;
+            this.containedButton1.Size = new System.Drawing.Size(202, 56);
+            this.containedButton1.TabIndex = 3;
+            this.containedButton1.Text = "Tổng Doanh Thu";
+            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.containedButton1.UseVisualStyleBackColor = true;
+            this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
             // 
             // statusButton
             // 
@@ -480,6 +540,18 @@ namespace dekatreís_octavo.View
             this.historyButton.Text = "Lịch sử";
             this.historyButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.historyButton.UseVisualStyleBackColor = true;
+            // 
+            // consistenceReport1
+            // 
+            this.consistenceReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.consistenceReport1.BackColor = System.Drawing.Color.White;
+            this.consistenceReport1.Location = new System.Drawing.Point(3, 80);
+            this.consistenceReport1.Name = "consistenceReport1";
+            this.consistenceReport1.Size = new System.Drawing.Size(1071, 467);
+            this.consistenceReport1.TabIndex = 2;
+            this.consistenceReport1.Visible = false;
             // 
             // statusPage
             // 
@@ -694,7 +766,7 @@ namespace dekatreís_octavo.View
             this.tabDrawer.Depth = 0;
             this.tabDrawer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabDrawer.HighlightWithAccent = true;
-            this.tabDrawer.IndicatorWidth = 0;
+            this.tabDrawer.IndicatorWidth = 5;
             this.tabDrawer.IsOpen = true;
             this.tabDrawer.Location = new System.Drawing.Point(0, 0);
             this.tabDrawer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -866,5 +938,9 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.Panel progressPanel;
         private System.Windows.Forms.Panel historyPanel;
         private MaterialSurface.MaterialProgressbar progressBar;
+        private MaterialSurface.ContainedButton containedButton1;
+        private RevenueReport revenueReport1;
+        private MaterialSurface.ContainedButton containedButton2;
+        private RevenueMonthlyReport revenueMonthlyReport1;
     }
 }

@@ -30,9 +30,9 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
-            this.yearComboBox = new MaterialSurface.MaterialComboBox();
             this.containedButton1 = new MaterialSurface.ContainedButton();
+            this.yearComboBox = new MaterialSurface.MaterialComboBox();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,37 +46,10 @@ namespace dekatreís_octavo.View
             this.panel1.Size = new System.Drawing.Size(854, 100);
             this.panel1.TabIndex = 0;
             // 
-            // cartesianChart1
-            // 
-            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChart1.Location = new System.Drawing.Point(0, 100);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(854, 417);
-            this.cartesianChart1.TabIndex = 1;
-            this.cartesianChart1.Text = "cartesianChart1";
-            // 
-            // yearComboBox
-            // 
-            this.yearComboBox.AutoSizing = false;
-            this.yearComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
-            this.yearComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.yearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.yearComboBox.DropDownWidth = 121;
-            this.yearComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.yearComboBox.FormattingEnabled = true;
-            this.yearComboBox.HintText = "Năm";
-            this.yearComboBox.ItemHeight = 47;
-            this.yearComboBox.Location = new System.Drawing.Point(34, 28);
-            this.yearComboBox.MaxDropDownItems = 4;
-            this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
-            this.yearComboBox.Name = "yearComboBox";
-            this.yearComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.yearComboBox.Size = new System.Drawing.Size(121, 53);
-            this.yearComboBox.TabIndex = 2;
-            // 
             // containedButton1
             // 
             this.containedButton1.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton1.Enabled = false;
             this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton1.Icon = null;
@@ -92,6 +65,40 @@ namespace dekatreís_octavo.View
             this.containedButton1.Text = "Xem";
             this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
             this.containedButton1.UseVisualStyleBackColor = true;
+            this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
+            // 
+            // yearComboBox
+            // 
+            this.yearComboBox.AutoSizing = false;
+            this.yearComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
+            this.yearComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.yearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.yearComboBox.DropDownWidth = 121;
+            this.yearComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.yearComboBox.FormattingEnabled = true;
+            this.yearComboBox.HintText = "Năm";
+            this.yearComboBox.ItemHeight = 47;
+            this.yearComboBox.Items.AddRange(new object[] {
+            "2019",
+            "2020",
+            "2021"});
+            this.yearComboBox.Location = new System.Drawing.Point(34, 28);
+            this.yearComboBox.MaxDropDownItems = 4;
+            this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
+            this.yearComboBox.Name = "yearComboBox";
+            this.yearComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.yearComboBox.Size = new System.Drawing.Size(121, 53);
+            this.yearComboBox.TabIndex = 2;
+            this.yearComboBox.SelectedIndexChanged += new System.EventHandler(this.yearComboBox_SelectedIndexChanged);
+            // 
+            // cartesianChart1
+            // 
+            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartesianChart1.Location = new System.Drawing.Point(0, 100);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(854, 417);
+            this.cartesianChart1.TabIndex = 1;
+            this.cartesianChart1.Text = "cartesianChart1";
             // 
             // RevenueReport
             // 
@@ -101,6 +108,7 @@ namespace dekatreís_octavo.View
             this.Controls.Add(this.panel1);
             this.Name = "RevenueReport";
             this.Size = new System.Drawing.Size(854, 517);
+            this.Load += new System.EventHandler(this.RevenueReport_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
