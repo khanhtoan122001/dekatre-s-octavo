@@ -29,7 +29,7 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffView));
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
             this.staffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -71,7 +71,7 @@ namespace dekatreís_octavo.View
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HideSelection = false;
             this.materialListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.materialListView1.Location = new System.Drawing.Point(0, 0);
             this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
             this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -301,6 +301,7 @@ namespace dekatreís_octavo.View
             this.Name = "StaffView";
             this.Size = new System.Drawing.Size(1209, 644);
             this.Load += new System.EventHandler(this.StaffView_Load);
+            this.SizeChanged += new System.EventHandler(this.StaffView_SizeChanged);
             this.mainPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);

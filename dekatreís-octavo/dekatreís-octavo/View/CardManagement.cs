@@ -307,6 +307,14 @@ namespace dekatreís_octavo.View
             addCard.Visible = false;
         }
 
+        private void CardManagement_SizeChanged(object sender, EventArgs e)
+        {
+            int space = cardList.Width - (cardList.Columns[0].Width + cardList.Columns[1].Width + cardList.Columns[2].Width + cardList.Columns[3].Width + cardList.Columns[4].Width + cardList.Columns[5].Width);
+            cardList.Columns[4].Width += space / 3;
+            cardList.Columns[5].Width += space / 3;
+            cardList.Columns[1].Width += space / 3;
+        }
+
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (statusComboBox.SelectedIndex != -1)

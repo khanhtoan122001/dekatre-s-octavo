@@ -517,6 +517,7 @@ namespace dekatreís_octavo.View
             this.Name = "CardManagement";
             this.Size = new System.Drawing.Size(1269, 637);
             this.Load += new System.EventHandler(this.CardManagement_Load);
+            this.SizeChanged += new System.EventHandler(this.CardManagement_SizeChanged);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();

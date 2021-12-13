@@ -125,5 +125,12 @@ namespace dekatreís_octavo.View
             detail.ShowDialog();
             LoadStaffList();
         }
+
+        private void StaffView_SizeChanged(object sender, EventArgs e)
+        {
+            int space = materialListView1.Width - (materialListView1.Columns[0].Width + materialListView1.Columns[1].Width + materialListView1.Columns[2].Width + materialListView1.Columns[3].Width + materialListView1.Columns[4].Width);
+            materialListView1.Columns[4].Width += space / 3;
+            materialListView1.Columns[1].Width += space / 2;
+        }
     }
 }
