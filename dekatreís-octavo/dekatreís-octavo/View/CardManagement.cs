@@ -242,6 +242,8 @@ namespace dekatreís_octavo.View
 
         private void materialTextfield1_TextChanged(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(tb_search.Text))
+                return;
             var result = CardManagementBus.Instance.Search(tb_search.Text).ToList();
             //if(result.Count > 0)
             {

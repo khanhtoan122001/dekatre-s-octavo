@@ -83,7 +83,8 @@ namespace dekatreís_octavo.View
 
         private void materialTextfield1_TextChanged(object sender, EventArgs e)
         {
-            LoadStaffList(StaffViewBus.Instance.Search(materialTextfield1.Text, cb_typeSearch.SelectedIndex));
+            if(!string.IsNullOrEmpty(materialTextfield1.Text))
+                LoadStaffList(StaffViewBus.Instance.Search(materialTextfield1.Text, cb_typeSearch.SelectedIndex));
         }
         private void listViewSample_ColumnClick(object sender, ColumnClickEventArgs e)
         {
