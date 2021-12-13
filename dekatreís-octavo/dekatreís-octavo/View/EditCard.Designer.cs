@@ -30,10 +30,21 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.cb_LoaiThe = new MaterialSurface.MaterialComboBox();
-            this.bt_Confirm = new MaterialSkin.Controls.MaterialButton();
-            this.tb_TenChuSoHuu = new MaterialSurface.MaterialTextfield();
-            this.tb_TenXe = new MaterialSurface.MaterialTextfield();
             this.tb_BienSo = new MaterialSurface.MaterialTextfield();
+            this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.anhXe1 = new System.Windows.Forms.PictureBox();
+            this.inTime = new MaterialSurface.MaterialTextfield();
+            this.startDate = new MaterialSurface.MaterialTextfield();
+            this.editButton = new MaterialSurface.ContainedButton();
+            this.bt_Confirm = new MaterialSurface.ContainedButton();
+            this.materialCard1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anhXe1)).BeginInit();
             this.SuspendLayout();
             // 
             // cb_LoaiThe
@@ -47,92 +58,18 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.FormattingEnabled = true;
             this.cb_LoaiThe.HintText = "Loại thẻ";
             this.cb_LoaiThe.ItemHeight = 47;
-            this.cb_LoaiThe.Location = new System.Drawing.Point(228, 271);
+            this.cb_LoaiThe.Location = new System.Drawing.Point(40, 268);
             this.cb_LoaiThe.MaxDropDownItems = 4;
             this.cb_LoaiThe.MouseState = MaterialSurface.MouseState.OUT;
             this.cb_LoaiThe.Name = "cb_LoaiThe";
-            this.cb_LoaiThe.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.cb_LoaiThe.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.cb_LoaiThe.Size = new System.Drawing.Size(221, 53);
             this.cb_LoaiThe.TabIndex = 9;
-            // 
-            // bt_Confirm
-            // 
-            this.bt_Confirm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.bt_Confirm.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.bt_Confirm.Depth = 0;
-            this.bt_Confirm.HighEmphasis = true;
-            this.bt_Confirm.Icon = null;
-            this.bt_Confirm.Location = new System.Drawing.Point(228, 365);
-            this.bt_Confirm.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.bt_Confirm.MouseState = MaterialSkin.MouseState.HOVER;
-            this.bt_Confirm.Name = "bt_Confirm";
-            this.bt_Confirm.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.bt_Confirm.Size = new System.Drawing.Size(95, 36);
-            this.bt_Confirm.TabIndex = 7;
-            this.bt_Confirm.Text = "Xác nhận";
-            this.bt_Confirm.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.bt_Confirm.UseAccentColor = false;
-            this.bt_Confirm.UseVisualStyleBackColor = true;
-            this.bt_Confirm.Click += new System.EventHandler(this.bt_Confirm_Click);
-            // 
-            // tb_TenChuSoHuu
-            // 
-            this.tb_TenChuSoHuu.AutoScaleColor = true;
-            this.tb_TenChuSoHuu.BackColor = System.Drawing.SystemColors.Control;
-            this.tb_TenChuSoHuu.CountText = false;
-            this.tb_TenChuSoHuu.FieldType = MaterialSurface.BoxType.Normal;
-            this.tb_TenChuSoHuu.FloatingLabelText = "FloatingLabel";
-            this.tb_TenChuSoHuu.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.tb_TenChuSoHuu.HandleError = false;
-            this.tb_TenChuSoHuu.HelperText = "";
-            this.tb_TenChuSoHuu.HideSelection = true;
-            this.tb_TenChuSoHuu.HintText = "Tên chủ sở hữu";
-            this.tb_TenChuSoHuu.Location = new System.Drawing.Point(228, 61);
-            this.tb_TenChuSoHuu.MaxLength = 32767;
-            this.tb_TenChuSoHuu.MouseState = MaterialSurface.MouseState.OUT;
-            this.tb_TenChuSoHuu.Multiline = false;
-            this.tb_TenChuSoHuu.Name = "tb_TenChuSoHuu";
-            this.tb_TenChuSoHuu.PasswordChar = '\0';
-            this.tb_TenChuSoHuu.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.tb_TenChuSoHuu.ReadOnly = false;
-            this.tb_TenChuSoHuu.ShortcutsEnable = true;
-            this.tb_TenChuSoHuu.ShowCaret = true;
-            this.tb_TenChuSoHuu.Size = new System.Drawing.Size(221, 49);
-            this.tb_TenChuSoHuu.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_TenChuSoHuu.TabIndex = 10;
-            this.tb_TenChuSoHuu.UseSystemPasswordChar = false;
-            // 
-            // tb_TenXe
-            // 
-            this.tb_TenXe.AutoScaleColor = true;
-            this.tb_TenXe.BackColor = System.Drawing.SystemColors.Control;
-            this.tb_TenXe.CountText = false;
-            this.tb_TenXe.FieldType = MaterialSurface.BoxType.Normal;
-            this.tb_TenXe.FloatingLabelText = "FloatingLabel";
-            this.tb_TenXe.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.tb_TenXe.HandleError = false;
-            this.tb_TenXe.HelperText = "";
-            this.tb_TenXe.HideSelection = true;
-            this.tb_TenXe.HintText = "Tên xe";
-            this.tb_TenXe.Location = new System.Drawing.Point(228, 135);
-            this.tb_TenXe.MaxLength = 32767;
-            this.tb_TenXe.MouseState = MaterialSurface.MouseState.OUT;
-            this.tb_TenXe.Multiline = false;
-            this.tb_TenXe.Name = "tb_TenXe";
-            this.tb_TenXe.PasswordChar = '\0';
-            this.tb_TenXe.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.tb_TenXe.ReadOnly = false;
-            this.tb_TenXe.ShortcutsEnable = true;
-            this.tb_TenXe.ShowCaret = true;
-            this.tb_TenXe.Size = new System.Drawing.Size(221, 49);
-            this.tb_TenXe.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_TenXe.TabIndex = 13;
-            this.tb_TenXe.UseSystemPasswordChar = false;
             // 
             // tb_BienSo
             // 
             this.tb_BienSo.AutoScaleColor = true;
-            this.tb_BienSo.BackColor = System.Drawing.SystemColors.Control;
+            this.tb_BienSo.BackColor = System.Drawing.Color.White;
             this.tb_BienSo.CountText = false;
             this.tb_BienSo.FieldType = MaterialSurface.BoxType.Normal;
             this.tb_BienSo.FloatingLabelText = "FloatingLabel";
@@ -141,13 +78,13 @@ namespace dekatreís_octavo.View
             this.tb_BienSo.HelperText = "";
             this.tb_BienSo.HideSelection = true;
             this.tb_BienSo.HintText = "Biển số";
-            this.tb_BienSo.Location = new System.Drawing.Point(225, 216);
+            this.tb_BienSo.Location = new System.Drawing.Point(40, 98);
             this.tb_BienSo.MaxLength = 32767;
             this.tb_BienSo.MouseState = MaterialSurface.MouseState.OUT;
             this.tb_BienSo.Multiline = false;
             this.tb_BienSo.Name = "tb_BienSo";
             this.tb_BienSo.PasswordChar = '\0';
-            this.tb_BienSo.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.tb_BienSo.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.tb_BienSo.ReadOnly = false;
             this.tb_BienSo.ShortcutsEnable = true;
             this.tb_BienSo.ShowCaret = true;
@@ -156,30 +93,195 @@ namespace dekatreís_octavo.View
             this.tb_BienSo.TabIndex = 14;
             this.tb_BienSo.UseSystemPasswordChar = false;
             // 
+            // materialCard1
+            // 
+            this.materialCard1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialCard1.CardColor = System.Drawing.Color.White;
+            this.materialCard1.Controls.Add(this.bt_Confirm);
+            this.materialCard1.Controls.Add(this.editButton);
+            this.materialCard1.Controls.Add(this.pictureBox3);
+            this.materialCard1.Controls.Add(this.pictureBox2);
+            this.materialCard1.Controls.Add(this.pictureBox1);
+            this.materialCard1.Controls.Add(this.anhXe1);
+            this.materialCard1.Controls.Add(this.inTime);
+            this.materialCard1.Controls.Add(this.startDate);
+            this.materialCard1.Controls.Add(this.cb_LoaiThe);
+            this.materialCard1.Controls.Add(this.tb_BienSo);
+            this.materialCard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialCard1.Location = new System.Drawing.Point(0, 0);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
+            this.materialCard1.MouseInteract = false;
+            this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Radius = 8;
+            this.materialCard1.ShawdowDepth = 2;
+            this.materialCard1.ShawdowOpacity = 50;
+            this.materialCard1.Size = new System.Drawing.Size(669, 459);
+            this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
+            this.materialCard1.TabIndex = 15;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(497, 194);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(320, 194);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(497, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
+            // anhXe1
+            // 
+            this.anhXe1.Location = new System.Drawing.Point(320, 26);
+            this.anhXe1.Name = "anhXe1";
+            this.anhXe1.Size = new System.Drawing.Size(150, 150);
+            this.anhXe1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.anhXe1.TabIndex = 17;
+            this.anhXe1.TabStop = false;
+            // 
+            // inTime
+            // 
+            this.inTime.AutoScaleColor = true;
+            this.inTime.BackColor = System.Drawing.Color.White;
+            this.inTime.CountText = false;
+            this.inTime.FieldType = MaterialSurface.BoxType.Normal;
+            this.inTime.FloatingLabelText = "FloatingLabel";
+            this.inTime.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.inTime.HandleError = false;
+            this.inTime.HelperText = "";
+            this.inTime.HideSelection = true;
+            this.inTime.HintText = "Thời gian gửi";
+            this.inTime.Location = new System.Drawing.Point(40, 185);
+            this.inTime.MaxLength = 32767;
+            this.inTime.MouseState = MaterialSurface.MouseState.OUT;
+            this.inTime.Multiline = false;
+            this.inTime.Name = "inTime";
+            this.inTime.PasswordChar = '\0';
+            this.inTime.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.inTime.ReadOnly = false;
+            this.inTime.ShortcutsEnable = true;
+            this.inTime.ShowCaret = true;
+            this.inTime.Size = new System.Drawing.Size(224, 49);
+            this.inTime.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.inTime.TabIndex = 16;
+            this.inTime.UseSystemPasswordChar = false;
+            // 
+            // startDate
+            // 
+            this.startDate.AutoScaleColor = true;
+            this.startDate.BackColor = System.Drawing.Color.White;
+            this.startDate.CountText = false;
+            this.startDate.FieldType = MaterialSurface.BoxType.Normal;
+            this.startDate.FloatingLabelText = "FloatingLabel";
+            this.startDate.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.startDate.HandleError = false;
+            this.startDate.HelperText = "";
+            this.startDate.HideSelection = true;
+            this.startDate.HintText = "Ngày bắt đầu";
+            this.startDate.Location = new System.Drawing.Point(40, 26);
+            this.startDate.MaxLength = 32767;
+            this.startDate.MouseState = MaterialSurface.MouseState.OUT;
+            this.startDate.Multiline = false;
+            this.startDate.Name = "startDate";
+            this.startDate.PasswordChar = '\0';
+            this.startDate.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.startDate.ReadOnly = false;
+            this.startDate.ShortcutsEnable = true;
+            this.startDate.ShowCaret = true;
+            this.startDate.Size = new System.Drawing.Size(224, 49);
+            this.startDate.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.startDate.TabIndex = 15;
+            this.startDate.UseSystemPasswordChar = false;
+            // 
+            // editButton
+            // 
+            this.editButton.EffectType = MaterialSurface.ET.Custom;
+            this.editButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.editButton.Icon = null;
+            this.editButton.Location = new System.Drawing.Point(338, 370);
+            this.editButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.editButton.Name = "editButton";
+            this.editButton.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.editButton.Radius = 6;
+            this.editButton.ShawdowDepth = 3;
+            this.editButton.ShawdowOpacity = 50;
+            this.editButton.Size = new System.Drawing.Size(180, 50);
+            this.editButton.TabIndex = 26;
+            this.editButton.Text = "Chỉnh sửa";
+            this.editButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
+            // 
+            // bt_Confirm
+            // 
+            this.bt_Confirm.EffectType = MaterialSurface.ET.Custom;
+            this.bt_Confirm.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Confirm.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.bt_Confirm.Icon = null;
+            this.bt_Confirm.Location = new System.Drawing.Point(152, 370);
+            this.bt_Confirm.MouseState = MaterialSurface.MouseState.OUT;
+            this.bt_Confirm.Name = "bt_Confirm";
+            this.bt_Confirm.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.bt_Confirm.Radius = 6;
+            this.bt_Confirm.ShawdowDepth = 3;
+            this.bt_Confirm.ShawdowOpacity = 50;
+            this.bt_Confirm.Size = new System.Drawing.Size(180, 50);
+            this.bt_Confirm.TabIndex = 27;
+            this.bt_Confirm.Text = "Xác nhận";
+            this.bt_Confirm.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.bt_Confirm.UseVisualStyleBackColor = true;
+            this.bt_Confirm.Click += new System.EventHandler(this.bt_Confirm_Click);
+            // 
             // EditCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tb_BienSo);
-            this.Controls.Add(this.tb_TenXe);
-            this.Controls.Add(this.tb_TenChuSoHuu);
-            this.Controls.Add(this.cb_LoaiThe);
-            this.Controls.Add(this.bt_Confirm);
+            this.ClientSize = new System.Drawing.Size(669, 459);
+            this.Controls.Add(this.materialCard1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EditCard";
             this.Text = "EditCard";
             this.Load += new System.EventHandler(this.EditCard_Load);
+            this.materialCard1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anhXe1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private MaterialSurface.MaterialComboBox cb_LoaiThe;
-        private MaterialSkin.Controls.MaterialButton bt_Confirm;
-        private MaterialSurface.MaterialTextfield tb_TenChuSoHuu;
-        private MaterialSurface.MaterialTextfield tb_TenXe;
         private MaterialSurface.MaterialTextfield tb_BienSo;
+        private MaterialSurface.MaterialCard materialCard1;
+        private System.Windows.Forms.PictureBox anhXe1;
+        private MaterialSurface.MaterialTextfield inTime;
+        private MaterialSurface.MaterialTextfield startDate;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private MaterialSurface.ContainedButton bt_Confirm;
+        private MaterialSurface.ContainedButton editButton;
     }
 }

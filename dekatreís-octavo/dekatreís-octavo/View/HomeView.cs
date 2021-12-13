@@ -93,7 +93,6 @@ namespace dekatreís_octavo.View
                 LoginViewBus.Instance.ChangeAvatar(Resources.default_avatar_300x300);
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
-            parkingView1.LoadData();
             history1.LoadData();
             ReportBus.Instance.AddCT_TongChiCacPhiKhac();
             //BaoCaoChamCongNhanVienBus.Instance.ChamCong();
@@ -116,7 +115,6 @@ namespace dekatreís_octavo.View
             {
                 tabControl.TabPages.Add(homePage);
                 tabControl.TabPages.Add(cardPage);
-                tabControl.TabPages.Add(statusPage);
             }
         }
 

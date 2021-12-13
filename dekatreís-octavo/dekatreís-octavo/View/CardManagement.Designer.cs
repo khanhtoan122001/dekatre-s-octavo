@@ -30,6 +30,7 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CardManagement));
             this.addButton = new MaterialSurface.ContainedButton();
             this.delButton = new MaterialSurface.ContainedButton();
             this.cardList = new MaterialSkin.Controls.MaterialListView();
@@ -41,15 +42,16 @@ namespace dekatreís_octavo.View
             this.Start_date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.inOutButton = new MaterialSurface.ContainedButton();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.createButton = new MaterialSurface.ContainedButton();
+            this.typeComboBox = new MaterialSurface.MaterialComboBox();
+            this.tb_search = new MaterialSurface.MaterialTextfield();
+            this.statusComboBox = new MaterialSurface.MaterialComboBox();
             this.addCard = new MaterialSurface.MaterialCard();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.cb_LoaiThe = new MaterialSurface.MaterialComboBox();
-            this.createButton = new MaterialSurface.ContainedButton();
-            this.tb_search = new MaterialSurface.MaterialTextfield();
-            this.typeComboBox = new MaterialSurface.MaterialComboBox();
-            this.statusComboBox = new MaterialSurface.MaterialComboBox();
             this.inputCard = new MaterialSurface.MaterialCard();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -58,10 +60,8 @@ namespace dekatreís_octavo.View
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.flowLayoutPanel1.SuspendLayout();
             this.addCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -79,14 +79,14 @@ namespace dekatreís_octavo.View
             this.addButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.addButton.Icon = null;
-            this.addButton.Location = new System.Drawing.Point(3, 11);
+            this.addButton.Location = new System.Drawing.Point(3, 3);
             this.addButton.MouseState = MaterialSurface.MouseState.OUT;
             this.addButton.Name = "addButton";
-            this.addButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.addButton.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.addButton.Radius = 6;
             this.addButton.ShawdowDepth = 3;
             this.addButton.ShawdowOpacity = 50;
-            this.addButton.Size = new System.Drawing.Size(126, 50);
+            this.addButton.Size = new System.Drawing.Size(150, 64);
             this.addButton.TabIndex = 2;
             this.addButton.Text = "Thêm";
             this.addButton.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -100,14 +100,14 @@ namespace dekatreís_octavo.View
             this.delButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.delButton.Icon = null;
-            this.delButton.Location = new System.Drawing.Point(135, 11);
+            this.delButton.Location = new System.Drawing.Point(159, 3);
             this.delButton.MouseState = MaterialSurface.MouseState.OUT;
             this.delButton.Name = "delButton";
-            this.delButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.delButton.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.delButton.Radius = 6;
             this.delButton.ShawdowDepth = 3;
             this.delButton.ShawdowOpacity = 50;
-            this.delButton.Size = new System.Drawing.Size(126, 50);
+            this.delButton.Size = new System.Drawing.Size(150, 64);
             this.delButton.TabIndex = 3;
             this.delButton.Text = "Xóa";
             this.delButton.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -182,54 +182,160 @@ namespace dekatreís_octavo.View
             // inOutButton
             // 
             this.inOutButton.EffectType = MaterialSurface.ET.Custom;
-            this.inOutButton.Enabled = false;
             this.inOutButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inOutButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.inOutButton.Icon = null;
-            this.inOutButton.Location = new System.Drawing.Point(267, 11);
+            this.inOutButton.Location = new System.Drawing.Point(315, 3);
             this.inOutButton.MouseState = MaterialSurface.MouseState.OUT;
             this.inOutButton.Name = "inOutButton";
-            this.inOutButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.inOutButton.PrimaryColor = System.Drawing.Color.Crimson;
             this.inOutButton.Radius = 6;
             this.inOutButton.ShawdowDepth = 3;
             this.inOutButton.ShawdowOpacity = 50;
-            this.inOutButton.Size = new System.Drawing.Size(119, 50);
+            this.inOutButton.Size = new System.Drawing.Size(150, 64);
             this.inOutButton.TabIndex = 2;
             this.inOutButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.inOutButton.UseVisualStyleBackColor = true;
+            this.inOutButton.Visible = false;
             this.inOutButton.Click += new System.EventHandler(this.inOutButton_Click);
             // 
             // topPanel
             // 
-            this.topPanel.Controls.Add(this.splitContainer1);
+            this.topPanel.Controls.Add(this.pictureBox6);
+            this.topPanel.Controls.Add(this.flowLayoutPanel1);
+            this.topPanel.Controls.Add(this.typeComboBox);
+            this.topPanel.Controls.Add(this.tb_search);
+            this.topPanel.Controls.Add(this.statusComboBox);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1269, 151);
             this.topPanel.TabIndex = 6;
             // 
-            // splitContainer1
+            // pictureBox6
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Name = "splitContainer1";
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(1145, 29);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
             // 
-            // splitContainer1.Panel1
+            // flowLayoutPanel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.addCard);
-            this.splitContainer1.Panel1.Controls.Add(this.createButton);
-            this.splitContainer1.Panel1.Controls.Add(this.addButton);
-            this.splitContainer1.Panel1.Controls.Add(this.delButton);
-            this.splitContainer1.Panel1.Controls.Add(this.inOutButton);
+            this.flowLayoutPanel1.Controls.Add(this.addButton);
+            this.flowLayoutPanel1.Controls.Add(this.delButton);
+            this.flowLayoutPanel1.Controls.Add(this.inOutButton);
+            this.flowLayoutPanel1.Controls.Add(this.createButton);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 67);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(100);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(675, 73);
+            this.flowLayoutPanel1.TabIndex = 2;
             // 
-            // splitContainer1.Panel2
+            // createButton
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.tb_search);
-            this.splitContainer1.Panel2.Controls.Add(this.typeComboBox);
-            this.splitContainer1.Panel2.Controls.Add(this.statusComboBox);
-            this.splitContainer1.Size = new System.Drawing.Size(1269, 151);
-            this.splitContainer1.SplitterDistance = 659;
-            this.splitContainer1.TabIndex = 0;
+            this.createButton.EffectType = MaterialSurface.ET.Custom;
+            this.createButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.createButton.Icon = null;
+            this.createButton.Location = new System.Drawing.Point(471, 3);
+            this.createButton.MouseState = MaterialSurface.MouseState.OUT;
+            this.createButton.Name = "createButton";
+            this.createButton.PrimaryColor = System.Drawing.Color.Crimson;
+            this.createButton.Radius = 6;
+            this.createButton.ShawdowDepth = 3;
+            this.createButton.ShawdowOpacity = 50;
+            this.createButton.Size = new System.Drawing.Size(150, 64);
+            this.createButton.TabIndex = 5;
+            this.createButton.Text = "Đăng Ký";
+            this.createButton.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Visible = false;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
+            // 
+            // typeComboBox
+            // 
+            this.typeComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.typeComboBox.AutoSizing = false;
+            this.typeComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
+            this.typeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.typeComboBox.DropDownWidth = 121;
+            this.typeComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.typeComboBox.FormattingEnabled = true;
+            this.typeComboBox.HintText = "Loại thẻ";
+            this.typeComboBox.ItemHeight = 47;
+            this.typeComboBox.Items.AddRange(new object[] {
+            "All",
+            "Thẻ thường",
+            "Thẻ tháng"});
+            this.typeComboBox.Location = new System.Drawing.Point(994, 70);
+            this.typeComboBox.MaxDropDownItems = 4;
+            this.typeComboBox.MouseState = MaterialSurface.MouseState.OUT;
+            this.typeComboBox.Name = "typeComboBox";
+            this.typeComboBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.typeComboBox.Size = new System.Drawing.Size(189, 53);
+            this.typeComboBox.TabIndex = 7;
+            this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
+            // 
+            // tb_search
+            // 
+            this.tb_search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_search.AutoScaleColor = true;
+            this.tb_search.BackColor = System.Drawing.Color.White;
+            this.tb_search.CountText = false;
+            this.tb_search.FieldType = MaterialSurface.BoxType.Outlined;
+            this.tb_search.FloatingLabelText = "FloatingLabel";
+            this.tb_search.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.tb_search.HandleError = true;
+            this.tb_search.HelperText = "";
+            this.tb_search.HideSelection = true;
+            this.tb_search.HintText = "Tìm kiếm";
+            this.tb_search.Location = new System.Drawing.Point(21, 14);
+            this.tb_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tb_search.MaxLength = 32767;
+            this.tb_search.MouseState = MaterialSurface.MouseState.OUT;
+            this.tb_search.Multiline = false;
+            this.tb_search.Name = "tb_search";
+            this.tb_search.PasswordChar = '\0';
+            this.tb_search.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.tb_search.ReadOnly = false;
+            this.tb_search.ShortcutsEnable = true;
+            this.tb_search.ShowCaret = true;
+            this.tb_search.Size = new System.Drawing.Size(1162, 65);
+            this.tb_search.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
+            this.tb_search.TabIndex = 0;
+            this.tb_search.UseSystemPasswordChar = false;
+            this.tb_search.TextChanged += new System.EventHandler(this.materialTextfield1_TextChanged);
+            // 
+            // statusComboBox
+            // 
+            this.statusComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.statusComboBox.AutoSizing = false;
+            this.statusComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
+            this.statusComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.statusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.statusComboBox.DropDownWidth = 121;
+            this.statusComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.statusComboBox.FormattingEnabled = true;
+            this.statusComboBox.HintText = "Trạng thái";
+            this.statusComboBox.ItemHeight = 47;
+            this.statusComboBox.Items.AddRange(new object[] {
+            "All",
+            "Rảnh",
+            "Bận"});
+            this.statusComboBox.Location = new System.Drawing.Point(791, 70);
+            this.statusComboBox.MaxDropDownItems = 4;
+            this.statusComboBox.MouseState = MaterialSurface.MouseState.OUT;
+            this.statusComboBox.Name = "statusComboBox";
+            this.statusComboBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.statusComboBox.Size = new System.Drawing.Size(171, 53);
+            this.statusComboBox.TabIndex = 6;
+            this.statusComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
             // 
             // addCard
             // 
@@ -239,7 +345,7 @@ namespace dekatreís_octavo.View
             this.addCard.Controls.Add(this.pictureBox4);
             this.addCard.Controls.Add(this.cb_LoaiThe);
             this.addCard.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addCard.Location = new System.Drawing.Point(5, 66);
+            this.addCard.Location = new System.Drawing.Point(30, 125);
             this.addCard.Margin = new System.Windows.Forms.Padding(5);
             this.addCard.MouseInteract = false;
             this.addCard.MouseState = MaterialSurface.MouseState.OUT;
@@ -288,111 +394,13 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.Items.AddRange(new object[] {
             "Thẻ thường",
             "Thẻ tháng"});
-            this.cb_LoaiThe.Location = new System.Drawing.Point(16, 12);
+            this.cb_LoaiThe.Location = new System.Drawing.Point(25, 12);
             this.cb_LoaiThe.MaxDropDownItems = 4;
             this.cb_LoaiThe.MouseState = MaterialSurface.MouseState.OUT;
             this.cb_LoaiThe.Name = "cb_LoaiThe";
             this.cb_LoaiThe.PrimaryColor = System.Drawing.Color.BlueViolet;
             this.cb_LoaiThe.Size = new System.Drawing.Size(121, 53);
             this.cb_LoaiThe.TabIndex = 0;
-            // 
-            // createButton
-            // 
-            this.createButton.EffectType = MaterialSurface.ET.Custom;
-            this.createButton.Enabled = false;
-            this.createButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.createButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.createButton.Icon = null;
-            this.createButton.Location = new System.Drawing.Point(392, 11);
-            this.createButton.MouseState = MaterialSurface.MouseState.OUT;
-            this.createButton.Name = "createButton";
-            this.createButton.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.createButton.Radius = 6;
-            this.createButton.ShawdowDepth = 3;
-            this.createButton.ShawdowOpacity = 50;
-            this.createButton.Size = new System.Drawing.Size(119, 50);
-            this.createButton.TabIndex = 5;
-            this.createButton.Text = "Tạo";
-            this.createButton.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.createButton.UseVisualStyleBackColor = true;
-            this.createButton.Click += new System.EventHandler(this.createButton_Click);
-            // 
-            // tb_search
-            // 
-            this.tb_search.AutoScaleColor = true;
-            this.tb_search.BackColor = System.Drawing.Color.White;
-            this.tb_search.CountText = false;
-            this.tb_search.FieldType = MaterialSurface.BoxType.Normal;
-            this.tb_search.FloatingLabelText = "FloatingLabel";
-            this.tb_search.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.tb_search.HandleError = false;
-            this.tb_search.HelperText = "";
-            this.tb_search.HideSelection = true;
-            this.tb_search.HintText = "Tìm kiếm";
-            this.tb_search.Location = new System.Drawing.Point(16, 13);
-            this.tb_search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tb_search.MaxLength = 32767;
-            this.tb_search.MouseState = MaterialSurface.MouseState.OUT;
-            this.tb_search.Multiline = false;
-            this.tb_search.Name = "tb_search";
-            this.tb_search.PasswordChar = '\0';
-            this.tb_search.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.tb_search.ReadOnly = false;
-            this.tb_search.ShortcutsEnable = true;
-            this.tb_search.ShowCaret = true;
-            this.tb_search.Size = new System.Drawing.Size(341, 49);
-            this.tb_search.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_search.TabIndex = 8;
-            this.tb_search.UseSystemPasswordChar = false;
-            this.tb_search.TextChanged += new System.EventHandler(this.materialTextfield1_TextChanged);
-            // 
-            // typeComboBox
-            // 
-            this.typeComboBox.AutoSizing = false;
-            this.typeComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
-            this.typeComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.typeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.typeComboBox.DropDownWidth = 121;
-            this.typeComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.typeComboBox.FormattingEnabled = true;
-            this.typeComboBox.HintText = "Loại thẻ";
-            this.typeComboBox.ItemHeight = 47;
-            this.typeComboBox.Items.AddRange(new object[] {
-            "All",
-            "Thẻ thường",
-            "Thẻ tháng"});
-            this.typeComboBox.Location = new System.Drawing.Point(162, 66);
-            this.typeComboBox.MaxDropDownItems = 4;
-            this.typeComboBox.MouseState = MaterialSurface.MouseState.OUT;
-            this.typeComboBox.Name = "typeComboBox";
-            this.typeComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.typeComboBox.Size = new System.Drawing.Size(140, 53);
-            this.typeComboBox.TabIndex = 7;
-            this.typeComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
-            // 
-            // statusComboBox
-            // 
-            this.statusComboBox.AutoSizing = false;
-            this.statusComboBox.ComboBoxType = MaterialSurface.BoxType.Normal;
-            this.statusComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.statusComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.statusComboBox.DropDownWidth = 121;
-            this.statusComboBox.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.statusComboBox.FormattingEnabled = true;
-            this.statusComboBox.HintText = "Trạng thái";
-            this.statusComboBox.ItemHeight = 47;
-            this.statusComboBox.Items.AddRange(new object[] {
-            "All",
-            "Rảnh",
-            "Bận"});
-            this.statusComboBox.Location = new System.Drawing.Point(16, 67);
-            this.statusComboBox.MaxDropDownItems = 4;
-            this.statusComboBox.MouseState = MaterialSurface.MouseState.OUT;
-            this.statusComboBox.Name = "statusComboBox";
-            this.statusComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.statusComboBox.Size = new System.Drawing.Size(140, 53);
-            this.statusComboBox.TabIndex = 6;
-            this.statusComboBox.SelectedIndexChanged += new System.EventHandler(this.typeComboBox_SelectedIndexChanged);
             // 
             // inputCard
             // 
@@ -403,7 +411,7 @@ namespace dekatreís_octavo.View
             this.inputCard.Controls.Add(this.pictureBox1);
             this.inputCard.Controls.Add(this.inputTextBox);
             this.inputCard.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputCard.Location = new System.Drawing.Point(267, 67);
+            this.inputCard.Location = new System.Drawing.Point(338, 126);
             this.inputCard.Margin = new System.Windows.Forms.Padding(5);
             this.inputCard.MouseInteract = false;
             this.inputCard.MouseState = MaterialSurface.MouseState.OUT;
@@ -467,7 +475,7 @@ namespace dekatreís_octavo.View
             this.inputTextBox.Multiline = false;
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.PasswordChar = '\0';
-            this.inputTextBox.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.inputTextBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.inputTextBox.ReadOnly = false;
             this.inputTextBox.ShortcutsEnable = true;
             this.inputTextBox.ShowCaret = true;
@@ -481,6 +489,7 @@ namespace dekatreís_octavo.View
             // mainPanel
             // 
             this.mainPanel.Controls.Add(this.inputCard);
+            this.mainPanel.Controls.Add(this.addCard);
             this.mainPanel.Controls.Add(this.panel1);
             this.mainPanel.Controls.Add(this.topPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -509,10 +518,9 @@ namespace dekatreís_octavo.View
             this.Size = new System.Drawing.Size(1269, 637);
             this.Load += new System.EventHandler(this.CardManagement_Load);
             this.topPanel.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.topPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.addCard.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -539,7 +547,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private MaterialSurface.MaterialCard inputCard;
         private System.Windows.Forms.PictureBox pictureBox1;
         private MaterialSurface.MaterialTextfield inputTextBox;
@@ -554,5 +561,7 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private MaterialSurface.MaterialComboBox cb_LoaiThe;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.PictureBox pictureBox6;
     }
 }

@@ -34,9 +34,9 @@ namespace dekatreís_octavo.View
             this.bt_Login = new MaterialSurface.ContainedButton();
             this.CloseBox = new System.Windows.Forms.PictureBox();
             this.MainPictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CloseBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -64,7 +64,7 @@ namespace dekatreís_octavo.View
             this.tb_Username.Multiline = false;
             this.tb_Username.Name = "tb_Username";
             this.tb_Username.PasswordChar = '\0';
-            this.tb_Username.PrimaryColor = System.Drawing.Color.SteelBlue;
+            this.tb_Username.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.tb_Username.ReadOnly = false;
             this.tb_Username.ShortcutsEnable = true;
             this.tb_Username.ShowCaret = true;
@@ -72,7 +72,6 @@ namespace dekatreís_octavo.View
             this.tb_Username.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_Username.TabIndex = 0;
             this.tb_Username.UseSystemPasswordChar = false;
-            this.tb_Username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_Username_KeyDown);
             // 
             // tb_Password
             // 
@@ -93,7 +92,7 @@ namespace dekatreís_octavo.View
             this.tb_Password.Multiline = false;
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.PasswordChar = '●';
-            this.tb_Password.PrimaryColor = System.Drawing.Color.SteelBlue;
+            this.tb_Password.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.tb_Password.ReadOnly = false;
             this.tb_Password.ShortcutsEnable = true;
             this.tb_Password.ShowCaret = true;
@@ -113,12 +112,13 @@ namespace dekatreís_octavo.View
             this.bt_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Login.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_Login.Name = "bt_Login";
-            this.bt_Login.PrimaryColor = System.Drawing.Color.SteelBlue;
+            this.bt_Login.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.bt_Login.Radius = 6;
             this.bt_Login.ShawdowDepth = 3;
             this.bt_Login.ShawdowOpacity = 50;
             this.bt_Login.Size = new System.Drawing.Size(216, 50);
-            this.bt_Login.TabIndex = 2;
+            this.bt_Login.TabIndex = 3;
+            this.bt_Login.TabStop = false;
             this.bt_Login.Text = "Đăng nhập";
             this.bt_Login.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_Login.UseVisualStyleBackColor = true;
@@ -148,16 +148,6 @@ namespace dekatreís_octavo.View
             this.MainPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MainPictureBox.TabIndex = 0;
             this.MainPictureBox.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 41);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Xin Chào";
             // 
             // label2
             // 
@@ -193,6 +183,16 @@ namespace dekatreís_octavo.View
             this.splitContainer1.TabIndex = 9;
             this.splitContainer1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblMoveForm_MouseDown);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(163, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 41);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Xin Chào";
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,8 +225,8 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialTextfield tb_Password;
         private MaterialSurface.ContainedButton bt_Login;
         private System.Windows.Forms.PictureBox CloseBox;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Label label1;
     }
 }

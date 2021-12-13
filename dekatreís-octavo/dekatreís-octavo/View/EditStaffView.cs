@@ -49,16 +49,18 @@ namespace dekatreís_octavo.View
 
         private void materialTextBox1_TextChanged(object sender, EventArgs e)
         {
-            if (HasBeenChanged())
-                materialButton1.Enabled = true;
-            else
-                materialButton1.Enabled = false;
+
         }
         private bool HasBeenChanged()
         {
             if (!(materialTextBox1.Text == selectedTaiKhoan.TenThat) || !(materialTextBox2.Text == selectedTaiKhoan.CMND) || !(materialTextBox3.Text == selectedTaiKhoan.SDT) || !(materialComboBox1.SelectedIndex == materialComboBox1.FindStringExact("Admin")))
                 return true;
             return false;
+        }
+
+        private void containedButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

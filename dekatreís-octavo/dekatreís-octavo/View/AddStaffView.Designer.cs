@@ -28,60 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.materialTextfield1 = new MaterialSurface.MaterialTextfield();
             this.materialTextfield2 = new MaterialSurface.MaterialTextfield();
             this.materialTextBox2 = new MaterialSurface.MaterialTextfield();
             this.materialTextBox1 = new MaterialSurface.MaterialTextfield();
+            this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.containedButton1 = new MaterialSurface.ContainedButton();
+            this.containedButton2 = new MaterialSurface.ContainedButton();
+            this.materialCard1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // materialButton1
-            // 
-            this.materialButton1.AutoSize = false;
-            this.materialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton1.Depth = 0;
-            this.materialButton1.HighEmphasis = true;
-            this.materialButton1.Icon = null;
-            this.materialButton1.Location = new System.Drawing.Point(152, 374);
-            this.materialButton1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton1.Name = "materialButton1";
-            this.materialButton1.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton1.Size = new System.Drawing.Size(113, 36);
-            this.materialButton1.TabIndex = 0;
-            this.materialButton1.Text = "OK";
-            this.materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton1.UseAccentColor = false;
-            this.materialButton1.UseVisualStyleBackColor = true;
-            this.materialButton1.Click += new System.EventHandler(this.materialButton1_Click);
-            // 
-            // materialButton2
-            // 
-            this.materialButton2.AutoSize = false;
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(313, 374);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(113, 36);
-            this.materialButton2.TabIndex = 0;
-            this.materialButton2.Text = "Cancel";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = true;
-            this.materialButton2.UseVisualStyleBackColor = true;
             // 
             // materialTextfield1
             // 
             this.materialTextfield1.AutoScaleColor = true;
-            this.materialTextfield1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialTextfield1.BackColor = System.Drawing.Color.White;
             this.materialTextfield1.CountText = false;
             this.materialTextfield1.FieldType = MaterialSurface.BoxType.Normal;
             this.materialTextfield1.FloatingLabelText = "FloatingLabel";
@@ -90,13 +50,13 @@
             this.materialTextfield1.HelperText = "";
             this.materialTextfield1.HideSelection = true;
             this.materialTextfield1.HintText = "Mật Khẩu";
-            this.materialTextfield1.Location = new System.Drawing.Point(127, 215);
+            this.materialTextfield1.Location = new System.Drawing.Point(127, 223);
             this.materialTextfield1.MaxLength = 32767;
             this.materialTextfield1.MouseState = MaterialSurface.MouseState.OUT;
             this.materialTextfield1.Multiline = false;
             this.materialTextfield1.Name = "materialTextfield1";
             this.materialTextfield1.PasswordChar = '●';
-            this.materialTextfield1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.materialTextfield1.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.materialTextfield1.ReadOnly = false;
             this.materialTextfield1.ShortcutsEnable = true;
             this.materialTextfield1.ShowCaret = true;
@@ -108,7 +68,7 @@
             // materialTextfield2
             // 
             this.materialTextfield2.AutoScaleColor = true;
-            this.materialTextfield2.BackColor = System.Drawing.SystemColors.Control;
+            this.materialTextfield2.BackColor = System.Drawing.Color.White;
             this.materialTextfield2.CountText = false;
             this.materialTextfield2.FieldType = MaterialSurface.BoxType.Normal;
             this.materialTextfield2.FloatingLabelText = "FloatingLabel";
@@ -117,13 +77,13 @@
             this.materialTextfield2.HelperText = "";
             this.materialTextfield2.HideSelection = true;
             this.materialTextfield2.HintText = "Xác Nhận Mật Khẩu";
-            this.materialTextfield2.Location = new System.Drawing.Point(127, 287);
+            this.materialTextfield2.Location = new System.Drawing.Point(127, 298);
             this.materialTextfield2.MaxLength = 32767;
             this.materialTextfield2.MouseState = MaterialSurface.MouseState.OUT;
             this.materialTextfield2.Multiline = false;
             this.materialTextfield2.Name = "materialTextfield2";
             this.materialTextfield2.PasswordChar = '●';
-            this.materialTextfield2.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.materialTextfield2.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.materialTextfield2.ReadOnly = false;
             this.materialTextfield2.ShortcutsEnable = true;
             this.materialTextfield2.ShowCaret = true;
@@ -135,7 +95,7 @@
             // materialTextBox2
             // 
             this.materialTextBox2.AutoScaleColor = true;
-            this.materialTextBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.materialTextBox2.BackColor = System.Drawing.Color.White;
             this.materialTextBox2.CountText = false;
             this.materialTextBox2.FieldType = MaterialSurface.BoxType.Normal;
             this.materialTextBox2.FloatingLabelText = "FloatingLabel";
@@ -144,13 +104,13 @@
             this.materialTextBox2.HelperText = "";
             this.materialTextBox2.HideSelection = true;
             this.materialTextBox2.HintText = "Tên đăng nhập";
-            this.materialTextBox2.Location = new System.Drawing.Point(127, 68);
+            this.materialTextBox2.Location = new System.Drawing.Point(127, 69);
             this.materialTextBox2.MaxLength = 32767;
             this.materialTextBox2.MouseState = MaterialSurface.MouseState.OUT;
             this.materialTextBox2.Multiline = false;
             this.materialTextBox2.Name = "materialTextBox2";
             this.materialTextBox2.PasswordChar = '\0';
-            this.materialTextBox2.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.materialTextBox2.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.materialTextBox2.ReadOnly = false;
             this.materialTextBox2.ShortcutsEnable = true;
             this.materialTextBox2.ShowCaret = true;
@@ -162,7 +122,7 @@
             // materialTextBox1
             // 
             this.materialTextBox1.AutoScaleColor = true;
-            this.materialTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialTextBox1.BackColor = System.Drawing.Color.White;
             this.materialTextBox1.CountText = false;
             this.materialTextBox1.FieldType = MaterialSurface.BoxType.Normal;
             this.materialTextBox1.FloatingLabelText = "FloatingLabel";
@@ -171,13 +131,13 @@
             this.materialTextBox1.HelperText = "";
             this.materialTextBox1.HideSelection = true;
             this.materialTextBox1.HintText = "Họ và tên";
-            this.materialTextBox1.Location = new System.Drawing.Point(127, 148);
+            this.materialTextBox1.Location = new System.Drawing.Point(127, 144);
             this.materialTextBox1.MaxLength = 32767;
             this.materialTextBox1.MouseState = MaterialSurface.MouseState.OUT;
             this.materialTextBox1.Multiline = false;
             this.materialTextBox1.Name = "materialTextBox1";
             this.materialTextBox1.PasswordChar = '\0';
-            this.materialTextBox1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.materialTextBox1.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.materialTextBox1.ReadOnly = false;
             this.materialTextBox1.ShortcutsEnable = true;
             this.materialTextBox1.ShowCaret = true;
@@ -186,30 +146,92 @@
             this.materialTextBox1.TabIndex = 6;
             this.materialTextBox1.UseSystemPasswordChar = false;
             // 
+            // materialCard1
+            // 
+            this.materialCard1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.materialCard1.CardColor = System.Drawing.Color.White;
+            this.materialCard1.Controls.Add(this.containedButton2);
+            this.materialCard1.Controls.Add(this.containedButton1);
+            this.materialCard1.Controls.Add(this.materialTextBox2);
+            this.materialCard1.Controls.Add(this.materialTextfield2);
+            this.materialCard1.Controls.Add(this.materialTextBox1);
+            this.materialCard1.Controls.Add(this.materialTextfield1);
+            this.materialCard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.materialCard1.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialCard1.Location = new System.Drawing.Point(0, 0);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(5);
+            this.materialCard1.MouseInteract = false;
+            this.materialCard1.MouseState = MaterialSurface.MouseState.OUT;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Radius = 8;
+            this.materialCard1.ShawdowDepth = 2;
+            this.materialCard1.ShawdowOpacity = 50;
+            this.materialCard1.Size = new System.Drawing.Size(573, 479);
+            this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
+            this.materialCard1.TabIndex = 7;
+            // 
+            // containedButton1
+            // 
+            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.containedButton1.Icon = null;
+            this.containedButton1.Location = new System.Drawing.Point(115, 393);
+            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
+            this.containedButton1.Name = "containedButton1";
+            this.containedButton1.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.containedButton1.Radius = 6;
+            this.containedButton1.ShawdowDepth = 3;
+            this.containedButton1.ShawdowOpacity = 50;
+            this.containedButton1.Size = new System.Drawing.Size(180, 50);
+            this.containedButton1.TabIndex = 7;
+            this.containedButton1.Text = "OK";
+            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.containedButton1.UseVisualStyleBackColor = true;
+            this.containedButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            // 
+            // containedButton2
+            // 
+            this.containedButton2.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containedButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.containedButton2.Icon = null;
+            this.containedButton2.Location = new System.Drawing.Point(301, 393);
+            this.containedButton2.MouseState = MaterialSurface.MouseState.OUT;
+            this.containedButton2.Name = "containedButton2";
+            this.containedButton2.PrimaryColor = System.Drawing.Color.DeepPink;
+            this.containedButton2.Radius = 6;
+            this.containedButton2.ShawdowDepth = 3;
+            this.containedButton2.ShawdowOpacity = 50;
+            this.containedButton2.Size = new System.Drawing.Size(180, 50);
+            this.containedButton2.TabIndex = 8;
+            this.containedButton2.Text = "CANCEL";
+            this.containedButton2.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.containedButton2.UseVisualStyleBackColor = true;
+            this.containedButton2.Click += new System.EventHandler(this.containedButton2_Click);
+            // 
             // AddStaffView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(573, 479);
-            this.Controls.Add(this.materialTextBox1);
-            this.Controls.Add(this.materialTextBox2);
-            this.Controls.Add(this.materialTextfield2);
-            this.Controls.Add(this.materialTextfield1);
-            this.Controls.Add(this.materialButton2);
-            this.Controls.Add(this.materialButton1);
+            this.Controls.Add(this.materialCard1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddStaffView";
             this.Text = "AddStaffView";
+            this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private MaterialSkin.Controls.MaterialButton materialButton2;
         private MaterialSurface.MaterialTextfield materialTextfield1;
         private MaterialSurface.MaterialTextfield materialTextfield2;
         private MaterialSurface.MaterialTextfield materialTextBox2;
         private MaterialSurface.MaterialTextfield materialTextBox1;
+        private MaterialSurface.MaterialCard materialCard1;
+        private MaterialSurface.ContainedButton containedButton2;
+        private MaterialSurface.ContainedButton containedButton1;
     }
 }

@@ -86,7 +86,7 @@ namespace dekatreís_octavo.View
             this.yearComboBox.MaxDropDownItems = 4;
             this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.yearComboBox.Name = "yearComboBox";
-            this.yearComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.yearComboBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.yearComboBox.Size = new System.Drawing.Size(121, 53);
             this.yearComboBox.TabIndex = 2;
             this.yearComboBox.SelectedIndexChanged += new System.EventHandler(this.yearComboBox_SelectedIndexChanged);
