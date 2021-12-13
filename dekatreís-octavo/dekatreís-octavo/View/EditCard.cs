@@ -81,6 +81,7 @@ namespace dekatreís_octavo.View
                 startDate.ReadOnly = false;
                 tb_BienSo.ReadOnly = false;
                 inTime.ReadOnly = false;
+                cb_LoaiThe.Enabled = false;
                 anhXe1.Enabled = anhXe2.Enabled = anhXe3.Enabled = anhXe4.Enabled = false;
                 editting = true;
             }
@@ -89,6 +90,7 @@ namespace dekatreís_octavo.View
                 editting = false;
                 startDate.ReadOnly = true;
                 tb_BienSo.ReadOnly = true;
+                cb_LoaiThe.Enabled = false;
                 anhXe1.Enabled = anhXe2.Enabled = anhXe3.Enabled = anhXe4.Enabled = true;
                 inTime.ReadOnly = true;
                 editButton.Text = "Chỉnh sửa";
