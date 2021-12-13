@@ -30,6 +30,7 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeView));
             this.materialDrawer1 = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1 = new System.Windows.Forms.Panel();
             this.leftPanel = new System.Windows.Forms.Panel();
@@ -61,10 +62,10 @@ namespace dekatreís_octavo.View
             this.containedButton2 = new MaterialSurface.ContainedButton();
             this.revenueReport1 = new dekatreís_octavo.View.RevenueReport();
             this.containedButton1 = new MaterialSurface.ContainedButton();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.statusButton = new MaterialSurface.ContainedButton();
             this.historyButton = new MaterialSurface.ContainedButton();
             this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.statusPage = new System.Windows.Forms.TabPage();
             this.setting = new System.Windows.Forms.TabPage();
             this.lb_success = new System.Windows.Forms.Label();
@@ -82,7 +83,6 @@ namespace dekatreís_octavo.View
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
             this.iconPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.reportPanel = new System.Windows.Forms.Panel();
@@ -90,6 +90,7 @@ namespace dekatreís_octavo.View
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -109,7 +110,6 @@ namespace dekatreís_octavo.View
             this.splitContainer1.SuspendLayout();
             this.setting.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.iconPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -301,6 +301,7 @@ namespace dekatreís_octavo.View
             this.tabControl.Controls.Add(this.setting);
             this.tabControl.Depth = 0;
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.ImageList = this.imageList1;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl.MouseState = MaterialSkin.MouseState.HOVER;
@@ -404,7 +405,7 @@ namespace dekatreís_octavo.View
             this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.history1.Location = new System.Drawing.Point(0, 0);
             this.history1.Name = "history1";
-            this.history1.Size = new System.Drawing.Size(1071, 546);
+            this.history1.Size = new System.Drawing.Size(1071, 453);
             this.history1.TabIndex = 0;
             // 
             // cardPage
@@ -486,9 +487,6 @@ namespace dekatreís_octavo.View
             this.utility.Controls.Add(this.containedButton2);
             this.utility.Controls.Add(this.revenueReport1);
             this.utility.Controls.Add(this.containedButton1);
-            this.utility.Controls.Add(this.statusButton);
-            this.utility.Controls.Add(this.historyButton);
-            this.utility.Controls.Add(this.consistenceReport1);
             this.utility.Controls.Add(this.splitContainer1);
             this.utility.Location = new System.Drawing.Point(4, 27);
             this.utility.Name = "utility";
@@ -558,24 +556,6 @@ namespace dekatreís_octavo.View
             this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
             this.containedButton1.UseVisualStyleBackColor = true;
             this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.statusButton);
-            this.splitContainer1.Panel1.Controls.Add(this.historyButton);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.consistenceReport1);
-            this.splitContainer1.Size = new System.Drawing.Size(1071, 544);
-            this.splitContainer1.SplitterDistance = 93;
-            this.splitContainer1.TabIndex = 3;
             // 
             // statusButton
             // 
@@ -627,17 +607,24 @@ namespace dekatreís_octavo.View
             this.consistenceReport1.TabIndex = 2;
             this.consistenceReport1.Visible = false;
             // 
-            // consistenceReport1
+            // splitContainer1
             // 
-            this.consistenceReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.consistenceReport1.BackColor = System.Drawing.Color.White;
-            this.consistenceReport1.Location = new System.Drawing.Point(3, 80);
-            this.consistenceReport1.Name = "consistenceReport1";
-            this.consistenceReport1.Size = new System.Drawing.Size(1071, 467);
-            this.consistenceReport1.TabIndex = 2;
-            this.consistenceReport1.Visible = false;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.statusButton);
+            this.splitContainer1.Panel1.Controls.Add(this.historyButton);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.consistenceReport1);
+            this.splitContainer1.Size = new System.Drawing.Size(1071, 544);
+            this.splitContainer1.SplitterDistance = 93;
+            this.splitContainer1.TabIndex = 3;
             // 
             // statusPage
             // 
@@ -836,33 +823,11 @@ namespace dekatreís_octavo.View
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.tabDrawer);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 112);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(256, 581);
             this.panel3.TabIndex = 1;
-            // 
-            // tabDrawer
-            // 
-            this.tabDrawer.AutoHide = false;
-            this.tabDrawer.AutoShow = false;
-            this.tabDrawer.BackgroundWithAccent = false;
-            this.tabDrawer.BaseTabControl = this.tabControl;
-            this.tabDrawer.Depth = 0;
-            this.tabDrawer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabDrawer.HighlightWithAccent = true;
-            this.tabDrawer.IndicatorWidth = 5;
-            this.tabDrawer.IsOpen = true;
-            this.tabDrawer.Location = new System.Drawing.Point(0, 0);
-            this.tabDrawer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabDrawer.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tabDrawer.Name = "tabDrawer";
-            this.tabDrawer.ShowIconsWhenHidden = false;
-            this.tabDrawer.Size = new System.Drawing.Size(256, 581);
-            this.tabDrawer.TabIndex = 6;
-            this.tabDrawer.UseColors = false;
-            this.tabDrawer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // iconPanel
             // 
@@ -931,58 +896,15 @@ namespace dekatreís_octavo.View
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // history1
+            // imageList1
             // 
-            this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.history1.Location = new System.Drawing.Point(0, 0);
-            this.history1.Name = "history1";
-            this.history1.Size = new System.Drawing.Size(1071, 453);
-            this.history1.TabIndex = 0;
-            // 
-            // cardManagement1
-            // 
-            this.cardManagement1.AutoSize = true;
-            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cardManagement1.BackColor = System.Drawing.Color.White;
-            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
-            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(1071, 546);
-            this.cardManagement1.TabIndex = 0;
-            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // staffView1
-            // 
-            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffView1.Location = new System.Drawing.Point(0, 0);
-            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(1077, 550);
-            this.staffView1.TabIndex = 0;
-            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // parkingView1
-            // 
-            this.parkingView1.BackColor = System.Drawing.Color.White;
-            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parkingView1.Location = new System.Drawing.Point(0, 0);
-            this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.parkingView1.Name = "parkingView1";
-            this.parkingView1.Size = new System.Drawing.Size(1077, 552);
-            this.parkingView1.TabIndex = 0;
-            this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // consistenceReport1
-            // 
-            this.consistenceReport1.BackColor = System.Drawing.Color.White;
-            this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consistenceReport1.Location = new System.Drawing.Point(0, 0);
-            this.consistenceReport1.Name = "consistenceReport1";
-            this.consistenceReport1.Size = new System.Drawing.Size(1071, 449);
-            this.consistenceReport1.TabIndex = 2;
-            this.consistenceReport1.Visible = false;
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "outline_analytics_black_24dp.png");
+            this.imageList1.Images.SetKeyName(1, "outline_home_black_24dp.png");
+            this.imageList1.Images.SetKeyName(2, "outline_manage_accounts_black_24dp.png");
+            this.imageList1.Images.SetKeyName(3, "outline_settings_black_24dp.png");
+            this.imageList1.Images.SetKeyName(4, "outline_two_wheeler_black_24dp.png");
             // 
             // HomeView
             // 
@@ -1023,7 +945,6 @@ namespace dekatreís_octavo.View
             this.setting.ResumeLayout(false);
             this.setting.PerformLayout();
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.iconPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -1034,7 +955,6 @@ namespace dekatreís_octavo.View
 
         private MaterialSkin.Controls.MaterialDrawer materialDrawer1;
         private System.Windows.Forms.Panel panel1;
-        private MaterialSkin.Controls.MaterialDrawer tabDrawer;
         private MaterialSkin.Controls.MaterialTabControl tabControl;
         private System.Windows.Forms.TabPage cardPage;
         private MaterialSurface.MaterialCard materialCard1;
@@ -1092,5 +1012,6 @@ namespace dekatreís_octavo.View
         private MaterialSkin.Controls.MaterialLabel SoXe;
         private System.Windows.Forms.Label maxLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }
