@@ -86,6 +86,7 @@ namespace dekatreís_octavo.View
             this.materialListView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewSample_ColumnClick);
             this.materialListView1.SelectedIndexChanged += new System.EventHandler(this.materialListView1_SelectedIndexChanged);
             this.materialListView1.DoubleClick += new System.EventHandler(this.materialListView1_DoubleClick);
+            this.materialListView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.materialListView1_MouseDoubleClick);
             // 
             // staffName
             // 
@@ -287,7 +288,7 @@ namespace dekatreís_octavo.View
             this.cb_typeSearch.DropDownHeight = 174;
             this.cb_typeSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_typeSearch.DropDownWidth = 121;
-            this.cb_typeSearch.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cb_typeSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.cb_typeSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.cb_typeSearch.FormattingEnabled = true;
             this.cb_typeSearch.Hint = "Tìm kiếm theo...";

@@ -57,7 +57,7 @@ namespace dekatreís_octavo.View
             this.tb_Username.HelperText = "";
             this.tb_Username.HideSelection = true;
             this.tb_Username.HintText = "Tài khoản";
-            this.tb_Username.Location = new System.Drawing.Point(98, 250);
+            this.tb_Username.Location = new System.Drawing.Point(136, 332);
             this.tb_Username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Username.MaxLength = 32767;
             this.tb_Username.MouseState = MaterialSurface.MouseState.OUT;
@@ -85,7 +85,7 @@ namespace dekatreís_octavo.View
             this.tb_Password.HelperText = "";
             this.tb_Password.HideSelection = true;
             this.tb_Password.HintText = "Mật khẩu";
-            this.tb_Password.Location = new System.Drawing.Point(98, 315);
+            this.tb_Password.Location = new System.Drawing.Point(136, 406);
             this.tb_Password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Password.MaxLength = 32767;
             this.tb_Password.MouseState = MaterialSurface.MouseState.OUT;
@@ -108,7 +108,7 @@ namespace dekatreís_octavo.View
             this.bt_Login.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Login.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_Login.Icon = null;
-            this.bt_Login.Location = new System.Drawing.Point(134, 409);
+            this.bt_Login.Location = new System.Drawing.Point(170, 493);
             this.bt_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Login.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_Login.Name = "bt_Login";
@@ -118,6 +118,7 @@ namespace dekatreís_octavo.View
             this.bt_Login.ShawdowOpacity = 50;
             this.bt_Login.Size = new System.Drawing.Size(216, 50);
             this.bt_Login.TabIndex = 3;
+            this.bt_Login.TabStop = false;
             this.bt_Login.Text = "Đăng nhập";
             this.bt_Login.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_Login.UseVisualStyleBackColor = true;
@@ -127,7 +128,7 @@ namespace dekatreís_octavo.View
             // 
             this.CloseBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CloseBox.Image = global::dekatreís_octavo.Properties.Resources.close__3_;
-            this.CloseBox.Location = new System.Drawing.Point(403, 2);
+            this.CloseBox.Location = new System.Drawing.Point(468, 2);
             this.CloseBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CloseBox.Name = "CloseBox";
             this.CloseBox.Size = new System.Drawing.Size(53, 49);
@@ -143,7 +144,7 @@ namespace dekatreís_octavo.View
             this.MainPictureBox.Location = new System.Drawing.Point(0, 0);
             this.MainPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MainPictureBox.Name = "MainPictureBox";
-            this.MainPictureBox.Size = new System.Drawing.Size(496, 552);
+            this.MainPictureBox.Size = new System.Drawing.Size(565, 637);
             this.MainPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MainPictureBox.TabIndex = 0;
             this.MainPictureBox.TabStop = false;
@@ -152,7 +153,7 @@ namespace dekatreís_octavo.View
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 96);
+            this.label1.Location = new System.Drawing.Point(201, 139);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(137, 41);
             this.label1.TabIndex = 7;
@@ -163,7 +164,7 @@ namespace dekatreís_octavo.View
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(93, 151);
+            this.label2.Location = new System.Drawing.Point(131, 206);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(282, 28);
             this.label2.TabIndex = 8;
@@ -187,8 +188,8 @@ namespace dekatreís_octavo.View
             this.splitContainer1.Panel2.Controls.Add(this.bt_Login);
             this.splitContainer1.Panel2.Controls.Add(this.tb_Username);
             this.splitContainer1.Panel2.Controls.Add(this.tb_Password);
-            this.splitContainer1.Size = new System.Drawing.Size(956, 552);
-            this.splitContainer1.SplitterDistance = 496;
+            this.splitContainer1.Size = new System.Drawing.Size(1090, 637);
+            this.splitContainer1.SplitterDistance = 565;
             this.splitContainer1.TabIndex = 9;
             // 
             // LoginView
@@ -196,7 +197,7 @@ namespace dekatreís_octavo.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(956, 552);
+            this.ClientSize = new System.Drawing.Size(1090, 637);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
