@@ -89,7 +89,17 @@ namespace dekatreís_octavo.View
         {
             rpChart.Series.Clear();
             rpChart.AxisX.Clear();
-
+            if (chartValue == null)
+            {
+                rpChart.Series = new SeriesCollection()
+                {
+                    new LineSeries
+                    {
+                        Title = "Xe vào",
+                    },
+                };
+                return;
+            }
             List<string> s = new List<string>();
             for (int i = 1; i <= 31; i++)
             {

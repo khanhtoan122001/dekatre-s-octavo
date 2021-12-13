@@ -187,7 +187,6 @@ namespace dekatreís_octavo.View
             revenueMonthlyReport1.Visible = false;
             revenueReport1.Visible = false;
             consistenceReport1.Visible = true;
-            consistenceReport1.LoadData();
         }
 
 
