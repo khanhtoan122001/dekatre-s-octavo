@@ -39,7 +39,6 @@ namespace dekatreís_octavo.View
         public void LoadData(List<TheXe> thes = null)
         {
             cardList.Items.Clear();
-            typeComboBox.Items.Clear();
             List<TheXe> result;
             if(thes != null)
                 result = thes;
@@ -53,14 +52,16 @@ namespace dekatreís_octavo.View
                     new string[] { i.IDThe.ToString(), i.BienSoXe, i.LoaiThe1.TenLoai, trangthai, i.ThoiGianGui.ToString(), date })
                 { Tag = i });
             }
-            List<string> list = db.LoaiThes.Select(p => p.TenLoai).ToList();
-            typeComboBox.Items.Add("All");
-            foreach (string i in list)
-            {
-                typeComboBox.Items.Add(i);
-            }
+            
             if (flag)
             {
+                typeComboBox.Items.Clear();
+                List<string> list = db.LoaiThes.Select(p => p.TenLoai).ToList();
+                typeComboBox.Items.Add("All");
+                foreach (string i in list)
+                {
+                    typeComboBox.Items.Add(i);
+                }
                 CardManagementBus.Instance.CheckAllow();
                 flag = false;
                 if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "staff")
@@ -241,14 +242,11 @@ namespace dekatreís_octavo.View
         private void materialTextfield1_TextChanged(object sender, EventArgs e)
         {
             var result = CardManagementBus.Instance.Search(tb_search.Text).ToList();
-            if(result.Count > 0)
+            //if(result.Count > 0)
             {
                 LoadData(result);
             }
-            else
-            {
-                LoadData();
-            }
+    
         }
 
         private void listViewSample_ColumnClick(object sender, ColumnClickEventArgs e)
@@ -301,6 +299,11 @@ namespace dekatreís_octavo.View
             LoadData();
         }
 
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            addCard.Visible = false;
+        }
+
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (statusComboBox.SelectedIndex != -1)
@@ -312,6 +315,7 @@ namespace dekatreís_octavo.View
                 else sortStatus = null;
             }
             else sortStatus = null;
+
             if (typeComboBox.SelectedIndex != -1)
             {
                 sortType = typeComboBox.SelectedItem.ToString();
