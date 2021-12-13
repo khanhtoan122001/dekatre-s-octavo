@@ -78,12 +78,12 @@
             "2019",
             "2020",
             "2021"});
-            this.yearComboBox.Location = new System.Drawing.Point(171, 28);
+            this.yearComboBox.Location = new System.Drawing.Point(182, 28);
             this.yearComboBox.MaxDropDownItems = 4;
             this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.yearComboBox.Name = "yearComboBox";
             this.yearComboBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.yearComboBox.Size = new System.Drawing.Size(121, 53);
+            this.yearComboBox.Size = new System.Drawing.Size(147, 53);
             this.yearComboBox.TabIndex = 4;
             // 
             // containedButton1
@@ -135,7 +135,7 @@
             this.monthComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.monthComboBox.Name = "monthComboBox";
             this.monthComboBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.monthComboBox.Size = new System.Drawing.Size(121, 53);
+            this.monthComboBox.Size = new System.Drawing.Size(142, 53);
             this.monthComboBox.TabIndex = 2;
             // 
             // splitContainer1

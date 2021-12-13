@@ -272,7 +272,7 @@ namespace dekatreís_octavo.View
             "All",
             "Thẻ thường",
             "Thẻ tháng"});
-            this.typeComboBox.Location = new System.Drawing.Point(994, 70);
+            this.typeComboBox.Location = new System.Drawing.Point(994, 81);
             this.typeComboBox.MaxDropDownItems = 4;
             this.typeComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.typeComboBox.Name = "typeComboBox";
@@ -328,7 +328,7 @@ namespace dekatreís_octavo.View
             "All",
             "Rảnh",
             "Bận"});
-            this.statusComboBox.Location = new System.Drawing.Point(791, 70);
+            this.statusComboBox.Location = new System.Drawing.Point(799, 81);
             this.statusComboBox.MaxDropDownItems = 4;
             this.statusComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.statusComboBox.Name = "statusComboBox";

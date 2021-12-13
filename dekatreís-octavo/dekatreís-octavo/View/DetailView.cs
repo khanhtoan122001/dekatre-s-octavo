@@ -30,11 +30,11 @@ namespace dekatreís_octavo.View
             idTextBox.Text = taiKhoan.CMND;
             if (taiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
             {
-                positionTextBox.Text = "admin";
+                positionComboBox.SelectedIndex = 0;
             }
             else
             {
-                positionTextBox.Text = "staff";
+                positionComboBox.SelectedIndex = 1;
             }
             if (taiKhoan.Avatar != null)
                 avatar.Image = ImageHelper.byteArrayToImage(taiKhoan.Avatar);
@@ -75,8 +75,8 @@ namespace dekatreís_octavo.View
                 nameTextBox.Enabled = true;
                 idTextBox.Enabled = true;
                 phoneTextBox.Enabled = true;
-                editButton.Text = "Save";
-                closeButton.Text = "Save & exit";
+                positionComboBox.Enabled = true;
+                editButton.Text = "Lưu";
                 editing = true;
             }
             else
@@ -84,12 +84,12 @@ namespace dekatreís_octavo.View
                 nameTextBox.Enabled = false;
                 idTextBox.Enabled = false;
                 phoneTextBox.Enabled = false;
+                positionComboBox.Enabled = false;
                 taiKhoan.TenThat = nameTextBox.Text;
                 taiKhoan.SDT = phoneTextBox.Text;
                 taiKhoan.CMND = idTextBox.Text;
                 DataProvider.Instance.db.SaveChanges();
-                editButton.Text = "Edit";
-                closeButton.Text = "Close";
+                editButton.Text = "Chỉnh sửa";
                 editing = false;
             }
         }

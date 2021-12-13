@@ -85,5 +85,10 @@ namespace dekatreís_octavo.View
         {
             LoadData();
         }
+
+        private void historyList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

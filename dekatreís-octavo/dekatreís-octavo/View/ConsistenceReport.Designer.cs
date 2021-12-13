@@ -184,6 +184,8 @@ namespace dekatreís_octavo.View
             this.yearComboBox.FormattingEnabled = true;
             this.yearComboBox.HintText = "Năm";
             this.yearComboBox.ItemHeight = 47;
+            this.yearComboBox.Items.AddRange(new object[] {
+            "2021"});
             this.yearComboBox.Location = new System.Drawing.Point(348, 23);
             this.yearComboBox.MaxDropDownItems = 4;
             this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;

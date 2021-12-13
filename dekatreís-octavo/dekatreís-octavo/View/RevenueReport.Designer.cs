@@ -53,7 +53,7 @@ namespace dekatreís_octavo.View
             this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton1.Icon = null;
-            this.containedButton1.Location = new System.Drawing.Point(177, 31);
+            this.containedButton1.Location = new System.Drawing.Point(194, 31);
             this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton1.Name = "containedButton1";
             this.containedButton1.PrimaryColor = System.Drawing.Color.DodgerBlue;
@@ -82,12 +82,12 @@ namespace dekatreís_octavo.View
             "2019",
             "2020",
             "2021"});
-            this.yearComboBox.Location = new System.Drawing.Point(34, 28);
+            this.yearComboBox.Location = new System.Drawing.Point(25, 28);
             this.yearComboBox.MaxDropDownItems = 4;
             this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.yearComboBox.Name = "yearComboBox";
             this.yearComboBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.yearComboBox.Size = new System.Drawing.Size(121, 53);
+            this.yearComboBox.Size = new System.Drawing.Size(146, 53);
             this.yearComboBox.TabIndex = 2;
             this.yearComboBox.SelectedIndexChanged += new System.EventHandler(this.yearComboBox_SelectedIndexChanged);
             // 

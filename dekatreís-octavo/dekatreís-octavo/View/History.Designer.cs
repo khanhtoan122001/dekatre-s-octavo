@@ -32,6 +32,7 @@ namespace dekatreís_octavo.View
             this.mainPanel = new System.Windows.Forms.Panel();
             this.listPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.checkbox = new MaterialSurface.MaterialCheckbox();
             this.refreshButton = new MaterialSurface.ContainedButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -42,7 +43,6 @@ namespace dekatreís_octavo.View
             this.license = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.topPanel = new System.Windows.Forms.Panel();
             this.searchTextBox = new MaterialSurface.MaterialTextfield();
-            this.checkbox = new MaterialSurface.MaterialCheckbox();
             this.mainPanel.SuspendLayout();
             this.listPanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -57,7 +57,7 @@ namespace dekatreís_octavo.View
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(775, 446);
+            this.mainPanel.Size = new System.Drawing.Size(1067, 571);
             this.mainPanel.TabIndex = 0;
             // 
             // listPanel
@@ -67,7 +67,7 @@ namespace dekatreís_octavo.View
             this.listPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listPanel.Location = new System.Drawing.Point(0, 100);
             this.listPanel.Name = "listPanel";
-            this.listPanel.Size = new System.Drawing.Size(775, 346);
+            this.listPanel.Size = new System.Drawing.Size(1067, 471);
             this.listPanel.TabIndex = 1;
             // 
             // panel2
@@ -75,11 +75,30 @@ namespace dekatreís_octavo.View
             this.panel2.Controls.Add(this.checkbox);
             this.panel2.Controls.Add(this.refreshButton);
             this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(575, 0);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(868, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 346);
+            this.panel2.Size = new System.Drawing.Size(199, 471);
             this.panel2.TabIndex = 2;
+            // 
+            // checkbox
+            // 
+            this.checkbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkbox.BorderColor = System.Drawing.Color.Gray;
+            this.checkbox.Checked = true;
+            this.checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkbox.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.checkbox.Location = new System.Drawing.Point(17, 181);
+            this.checkbox.MarkColor = System.Drawing.Color.White;
+            this.checkbox.MinimumSize = new System.Drawing.Size(25, 24);
+            this.checkbox.MouseState = MaterialSurface.MouseState.OUT;
+            this.checkbox.Name = "checkbox";
+            this.checkbox.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.checkbox.Size = new System.Drawing.Size(140, 29);
+            this.checkbox.TabIndex = 5;
+            this.checkbox.Text = "Theo ngày";
+            this.checkbox.UseVisualStyleBackColor = true;
+            this.checkbox.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
             // 
             // refreshButton
             // 
@@ -88,7 +107,7 @@ namespace dekatreís_octavo.View
             this.refreshButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.refreshButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.refreshButton.Icon = null;
-            this.refreshButton.Location = new System.Drawing.Point(17, 216);
+            this.refreshButton.Location = new System.Drawing.Point(16, 216);
             this.refreshButton.MouseState = MaterialSurface.MouseState.OUT;
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.PrimaryColor = System.Drawing.Color.DodgerBlue;
@@ -104,6 +123,7 @@ namespace dekatreís_octavo.View
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -116,10 +136,10 @@ namespace dekatreís_octavo.View
             // panel1
             // 
             this.panel1.Controls.Add(this.historyList);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(775, 346);
+            this.panel1.Size = new System.Drawing.Size(868, 471);
             this.panel1.TabIndex = 1;
             // 
             // historyList
@@ -134,7 +154,9 @@ namespace dekatreís_octavo.View
             this.license});
             this.historyList.Depth = 0;
             this.historyList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.historyList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.historyList.FullRowSelect = true;
+            this.historyList.GridLines = true;
             this.historyList.HideSelection = false;
             this.historyList.Location = new System.Drawing.Point(0, 0);
             this.historyList.MinimumSize = new System.Drawing.Size(200, 100);
@@ -142,10 +164,11 @@ namespace dekatreís_octavo.View
             this.historyList.MouseState = MaterialSkin.MouseState.OUT;
             this.historyList.Name = "historyList";
             this.historyList.OwnerDraw = true;
-            this.historyList.Size = new System.Drawing.Size(775, 346);
+            this.historyList.Size = new System.Drawing.Size(868, 471);
             this.historyList.TabIndex = 0;
             this.historyList.UseCompatibleStateImageBehavior = false;
             this.historyList.View = System.Windows.Forms.View.Details;
+            this.historyList.SelectedIndexChanged += new System.EventHandler(this.historyList_SelectedIndexChanged);
             // 
             // ID
             // 
@@ -172,7 +195,7 @@ namespace dekatreís_octavo.View
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(775, 100);
+            this.topPanel.Size = new System.Drawing.Size(1067, 100);
             this.topPanel.TabIndex = 0;
             // 
             // searchTextBox
@@ -203,36 +226,16 @@ namespace dekatreís_octavo.View
             this.searchTextBox.UseSystemPasswordChar = false;
             this.searchTextBox.TextChanged += new System.EventHandler(this.searchTextBox_TextChanged);
             // 
-            // checkbox
-            // 
-            this.checkbox.AutoSize = true;
-            this.checkbox.BorderColor = System.Drawing.Color.Gray;
-            this.checkbox.Checked = true;
-            this.checkbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkbox.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.checkbox.Location = new System.Drawing.Point(17, 181);
-            this.checkbox.MarkColor = System.Drawing.Color.White;
-            this.checkbox.MinimumSize = new System.Drawing.Size(25, 24);
-            this.checkbox.MouseState = MaterialSurface.MouseState.OUT;
-            this.checkbox.Name = "checkbox";
-            this.checkbox.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.checkbox.Size = new System.Drawing.Size(122, 29);
-            this.checkbox.TabIndex = 5;
-            this.checkbox.Text = "Theo ngày";
-            this.checkbox.UseVisualStyleBackColor = true;
-            this.checkbox.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
-            // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.mainPanel);
             this.Name = "History";
-            this.Size = new System.Drawing.Size(775, 446);
+            this.Size = new System.Drawing.Size(1067, 571);
             this.mainPanel.ResumeLayout(false);
             this.listPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.ResumeLayout(false);

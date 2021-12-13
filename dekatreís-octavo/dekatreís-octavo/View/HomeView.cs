@@ -305,6 +305,7 @@ namespace dekatreís_octavo.View
                 timer2.Enabled = true;
                 //lb_success.Visible = true;
                 Snackbar.MakeSnackbar(this, "Thành công", "OK");
+                maxLabel.Text = succhua.ToString();
             }
             else
             {

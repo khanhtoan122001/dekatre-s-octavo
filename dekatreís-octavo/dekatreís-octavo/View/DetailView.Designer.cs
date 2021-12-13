@@ -32,7 +32,6 @@ namespace dekatreís_octavo.View
             this.materialCard1 = new MaterialSurface.MaterialCard();
             this.accountLabel = new System.Windows.Forms.Label();
             this.editButton = new MaterialSurface.ContainedButton();
-            this.positionTextBox = new System.Windows.Forms.TextBox();
             this.closeButton = new MaterialSurface.ContainedButton();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
@@ -43,6 +42,7 @@ namespace dekatreís_octavo.View
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cirPictureBox2 = new dekatreís_octavo.CirPictureBox();
             this.avatar = new dekatreís_octavo.CirPictureBox();
+            this.positionComboBox = new System.Windows.Forms.ComboBox();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -56,9 +56,9 @@ namespace dekatreís_octavo.View
             // 
             this.materialCard1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.materialCard1.CardColor = System.Drawing.SystemColors.ControlLightLight;
+            this.materialCard1.Controls.Add(this.positionComboBox);
             this.materialCard1.Controls.Add(this.accountLabel);
             this.materialCard1.Controls.Add(this.editButton);
-            this.materialCard1.Controls.Add(this.positionTextBox);
             this.materialCard1.Controls.Add(this.cirPictureBox2);
             this.materialCard1.Controls.Add(this.closeButton);
             this.materialCard1.Controls.Add(this.avatar);
@@ -105,20 +105,12 @@ namespace dekatreís_octavo.View
             this.editButton.Radius = 6;
             this.editButton.ShawdowDepth = 3;
             this.editButton.ShawdowOpacity = 50;
-            this.editButton.Size = new System.Drawing.Size(197, 44);
+            this.editButton.Size = new System.Drawing.Size(197, 55);
             this.editButton.TabIndex = 6;
-            this.editButton.Text = "Edit";
+            this.editButton.Text = "Chỉnh sửa";
             this.editButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
-            // positionTextBox
-            // 
-            this.positionTextBox.Enabled = false;
-            this.positionTextBox.Location = new System.Drawing.Point(188, 349);
-            this.positionTextBox.Name = "positionTextBox";
-            this.positionTextBox.Size = new System.Drawing.Size(232, 31);
-            this.positionTextBox.TabIndex = 10;
             // 
             // closeButton
             // 
@@ -133,9 +125,9 @@ namespace dekatreís_octavo.View
             this.closeButton.Radius = 6;
             this.closeButton.ShawdowDepth = 3;
             this.closeButton.ShawdowOpacity = 50;
-            this.closeButton.Size = new System.Drawing.Size(197, 44);
+            this.closeButton.Size = new System.Drawing.Size(197, 55);
             this.closeButton.TabIndex = 5;
-            this.closeButton.Text = "Close";
+            this.closeButton.Text = "OK";
             this.closeButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.containedButton1_Click);
@@ -229,6 +221,17 @@ namespace dekatreís_octavo.View
             this.avatar.TabIndex = 1;
             this.avatar.TabStop = false;
             // 
+            // positionComboBox
+            // 
+            this.positionComboBox.FormattingEnabled = true;
+            this.positionComboBox.Items.AddRange(new object[] {
+            "admin",
+            "staff"});
+            this.positionComboBox.Location = new System.Drawing.Point(188, 349);
+            this.positionComboBox.Name = "positionComboBox";
+            this.positionComboBox.Size = new System.Drawing.Size(232, 31);
+            this.positionComboBox.TabIndex = 12;
+            // 
             // DetailView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -264,11 +267,11 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private MaterialSurface.ContainedButton closeButton;
-        private System.Windows.Forms.TextBox positionTextBox;
         private System.Windows.Forms.TextBox idTextBox;
         private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.TextBox nameTextBox;
         private MaterialSurface.ContainedButton editButton;
         private System.Windows.Forms.Label accountLabel;
+        private System.Windows.Forms.ComboBox positionComboBox;
     }
 }
