@@ -275,15 +275,16 @@ namespace dekatreís_octavo.Bus
 
         public void AddCT_TongChiCacPhiKhac()
         {
-            if (db.CT_BaoCaoTongChi.Where(p => p.HoatDong == "Tiền mặt bằng").FirstOrDefault() == null)
+            int month = DateTime.Now.Month;
+            if (db.CT_BaoCaoTongChi.Where(p => p.HoatDong == "Tiền mặt bằng" && p.ThoiGian.Value.Month == month).FirstOrDefault() == null)
             {
                 ReportBus.Instance.AddCT_BaoCaoTongChi(ThamSoBus.Instance.GetByTen("Tiền mặt bằng").GiaTri.Value, "Tiền mặt bằng");
                 ReportBus.instance.AddBaoCaoDoanhThuThang(DateTime.Now.Year, DateTime.Now.Month, ThamSoBus.Instance.GetByTen("Tiền mặt bằng").GiaTri.Value, 0);
             }
-            if (db.CT_BaoCaoTongChi.Where(p => p.HoatDong == "Phí bảo trì").FirstOrDefault() == null)
+            if (db.CT_BaoCaoTongChi.Where(x => x.HoatDong.ToLower() == "Phí khác" && x.ThoiGian.Value.Month == month).FirstOrDefault() == null)
             {
-                ReportBus.Instance.AddCT_BaoCaoTongChi(ThamSoBus.Instance.GetByTen("Phí bảo trì").GiaTri.Value, "Phí bảo trì");
-                ReportBus.instance.AddBaoCaoDoanhThuThang(DateTime.Now.Year, DateTime.Now.Month, ThamSoBus.Instance.GetByTen("Phí bảo trì").GiaTri.Value, 0);
+                ReportBus.Instance.AddCT_BaoCaoTongChi(ThamSoBus.Instance.GetByTen("Phí khác").GiaTri.Value, "Phí khác");
+                ReportBus.instance.AddBaoCaoDoanhThuThang(DateTime.Now.Year, DateTime.Now.Month, ThamSoBus.Instance.GetByTen(@"Phí khác").GiaTri.Value, 0);
             }
         }
     }
