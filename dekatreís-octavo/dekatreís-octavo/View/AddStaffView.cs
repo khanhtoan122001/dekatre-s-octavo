@@ -41,5 +41,10 @@ namespace dekatreís_octavo.View
                     MessageBox.Show("Tên đăng nhập đã tồn tại");
             }
         }
+
+        private void containedButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

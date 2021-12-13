@@ -30,9 +30,9 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
-            this.yearComboBox = new MaterialSurface.MaterialComboBox();
             this.containedButton1 = new MaterialSurface.ContainedButton();
+            this.yearComboBox = new MaterialSurface.MaterialComboBox();
+            this.cartesianChart1 = new LiveCharts.WinForms.CartesianChart();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,14 +46,24 @@ namespace dekatreís_octavo.View
             this.panel1.Size = new System.Drawing.Size(854, 100);
             this.panel1.TabIndex = 0;
             // 
-            // cartesianChart1
+            // containedButton1
             // 
-            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cartesianChart1.Location = new System.Drawing.Point(0, 100);
-            this.cartesianChart1.Name = "cartesianChart1";
-            this.cartesianChart1.Size = new System.Drawing.Size(854, 417);
-            this.cartesianChart1.TabIndex = 1;
-            this.cartesianChart1.Text = "cartesianChart1";
+            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.containedButton1.Icon = null;
+            this.containedButton1.Location = new System.Drawing.Point(177, 31);
+            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
+            this.containedButton1.Name = "containedButton1";
+            this.containedButton1.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.containedButton1.Radius = 6;
+            this.containedButton1.ShawdowDepth = 3;
+            this.containedButton1.ShawdowOpacity = 50;
+            this.containedButton1.Size = new System.Drawing.Size(115, 50);
+            this.containedButton1.TabIndex = 3;
+            this.containedButton1.Text = "Xem";
+            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.containedButton1.UseVisualStyleBackColor = true;
             // 
             // yearComboBox
             // 
@@ -70,28 +80,18 @@ namespace dekatreís_octavo.View
             this.yearComboBox.MaxDropDownItems = 4;
             this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.yearComboBox.Name = "yearComboBox";
-            this.yearComboBox.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.yearComboBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.yearComboBox.Size = new System.Drawing.Size(121, 53);
             this.yearComboBox.TabIndex = 2;
             // 
-            // containedButton1
+            // cartesianChart1
             // 
-            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
-            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.containedButton1.Icon = null;
-            this.containedButton1.Location = new System.Drawing.Point(177, 31);
-            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
-            this.containedButton1.Name = "containedButton1";
-            this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.containedButton1.Radius = 6;
-            this.containedButton1.ShawdowDepth = 3;
-            this.containedButton1.ShawdowOpacity = 50;
-            this.containedButton1.Size = new System.Drawing.Size(115, 50);
-            this.containedButton1.TabIndex = 3;
-            this.containedButton1.Text = "Xem";
-            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.containedButton1.UseVisualStyleBackColor = true;
+            this.cartesianChart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cartesianChart1.Location = new System.Drawing.Point(0, 100);
+            this.cartesianChart1.Name = "cartesianChart1";
+            this.cartesianChart1.Size = new System.Drawing.Size(854, 417);
+            this.cartesianChart1.TabIndex = 1;
+            this.cartesianChart1.Text = "cartesianChart1";
             // 
             // RevenueReport
             // 

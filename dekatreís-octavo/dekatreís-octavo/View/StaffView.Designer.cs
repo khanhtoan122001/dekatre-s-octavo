@@ -121,7 +121,7 @@ namespace dekatreís_octavo.View
             this.bt_add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_add.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_add.Name = "bt_add";
-            this.bt_add.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.bt_add.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.bt_add.Radius = 6;
             this.bt_add.ShawdowDepth = 3;
             this.bt_add.ShawdowOpacity = 50;
@@ -143,7 +143,7 @@ namespace dekatreís_octavo.View
             this.bt_edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_edit.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_edit.Name = "bt_edit";
-            this.bt_edit.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.bt_edit.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.bt_edit.Radius = 6;
             this.bt_edit.ShawdowDepth = 3;
             this.bt_edit.ShawdowOpacity = 50;
@@ -165,7 +165,7 @@ namespace dekatreís_octavo.View
             this.bt_remove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_remove.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_remove.Name = "bt_remove";
-            this.bt_remove.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.bt_remove.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.bt_remove.Radius = 6;
             this.bt_remove.ShawdowDepth = 3;
             this.bt_remove.ShawdowOpacity = 50;
@@ -195,7 +195,7 @@ namespace dekatreís_octavo.View
             this.materialTextfield1.Multiline = false;
             this.materialTextfield1.Name = "materialTextfield1";
             this.materialTextfield1.PasswordChar = '\0';
-            this.materialTextfield1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.materialTextfield1.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.materialTextfield1.ReadOnly = false;
             this.materialTextfield1.ShortcutsEnable = true;
             this.materialTextfield1.ShowCaret = true;
@@ -264,7 +264,7 @@ namespace dekatreís_octavo.View
             this.passResetButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passResetButton.MouseState = MaterialSurface.MouseState.OUT;
             this.passResetButton.Name = "passResetButton";
-            this.passResetButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.passResetButton.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.passResetButton.Radius = 6;
             this.passResetButton.ShawdowDepth = 3;
             this.passResetButton.ShawdowOpacity = 50;

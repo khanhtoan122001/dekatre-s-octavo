@@ -30,11 +30,10 @@ namespace dekatreís_octavo.View
         private void InitializeComponent()
         {
             this.materialCard1 = new MaterialSurface.MaterialCard();
+            this.accountLabel = new System.Windows.Forms.Label();
             this.editButton = new MaterialSurface.ContainedButton();
             this.positionTextBox = new System.Windows.Forms.TextBox();
-            this.cirPictureBox2 = new dekatreís_octavo.CirPictureBox();
             this.closeButton = new MaterialSurface.ContainedButton();
-            this.avatar = new dekatreís_octavo.CirPictureBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
             this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.nameTextBox = new System.Windows.Forms.TextBox();
@@ -42,14 +41,15 @@ namespace dekatreís_octavo.View
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.accountLabel = new System.Windows.Forms.Label();
+            this.cirPictureBox2 = new dekatreís_octavo.CirPictureBox();
+            this.avatar = new dekatreís_octavo.CirPictureBox();
             this.materialCard1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cirPictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cirPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.SuspendLayout();
             // 
             // materialCard1
@@ -83,6 +83,15 @@ namespace dekatreís_octavo.View
             this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.materialCard1.TabIndex = 3;
             // 
+            // accountLabel
+            // 
+            this.accountLabel.AutoSize = true;
+            this.accountLabel.Location = new System.Drawing.Point(183, 88);
+            this.accountLabel.Name = "accountLabel";
+            this.accountLabel.Size = new System.Drawing.Size(63, 25);
+            this.accountLabel.TabIndex = 11;
+            this.accountLabel.Text = "label1";
+            // 
             // editButton
             // 
             this.editButton.EffectType = MaterialSurface.ET.Custom;
@@ -92,7 +101,7 @@ namespace dekatreís_octavo.View
             this.editButton.Location = new System.Drawing.Point(284, 438);
             this.editButton.MouseState = MaterialSurface.MouseState.OUT;
             this.editButton.Name = "editButton";
-            this.editButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.editButton.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.editButton.Radius = 6;
             this.editButton.ShawdowDepth = 3;
             this.editButton.ShawdowOpacity = 50;
@@ -111,17 +120,6 @@ namespace dekatreís_octavo.View
             this.positionTextBox.Size = new System.Drawing.Size(232, 31);
             this.positionTextBox.TabIndex = 10;
             // 
-            // cirPictureBox2
-            // 
-            this.cirPictureBox2.Image = global::dekatreís_octavo.Properties.Resources.pencil;
-            this.cirPictureBox2.Location = new System.Drawing.Point(113, 89);
-            this.cirPictureBox2.Name = "cirPictureBox2";
-            this.cirPictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.cirPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.cirPictureBox2.TabIndex = 2;
-            this.cirPictureBox2.TabStop = false;
-            this.cirPictureBox2.Click += new System.EventHandler(this.cirPictureBox2_Click);
-            // 
             // closeButton
             // 
             this.closeButton.EffectType = MaterialSurface.ET.Custom;
@@ -131,7 +129,7 @@ namespace dekatreís_octavo.View
             this.closeButton.Location = new System.Drawing.Point(81, 438);
             this.closeButton.MouseState = MaterialSurface.MouseState.OUT;
             this.closeButton.Name = "closeButton";
-            this.closeButton.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.closeButton.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.closeButton.Radius = 6;
             this.closeButton.ShawdowDepth = 3;
             this.closeButton.ShawdowOpacity = 50;
@@ -141,16 +139,6 @@ namespace dekatreís_octavo.View
             this.closeButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.closeButton.UseVisualStyleBackColor = true;
             this.closeButton.Click += new System.EventHandler(this.containedButton1_Click);
-            // 
-            // avatar
-            // 
-            this.avatar.Image = global::dekatreís_octavo.Properties.Resources.icon;
-            this.avatar.Location = new System.Drawing.Point(57, 33);
-            this.avatar.Name = "avatar";
-            this.avatar.Size = new System.Drawing.Size(80, 80);
-            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.avatar.TabIndex = 1;
-            this.avatar.TabStop = false;
             // 
             // idTextBox
             // 
@@ -220,14 +208,26 @@ namespace dekatreís_octavo.View
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // accountLabel
+            // cirPictureBox2
             // 
-            this.accountLabel.AutoSize = true;
-            this.accountLabel.Location = new System.Drawing.Point(183, 88);
-            this.accountLabel.Name = "accountLabel";
-            this.accountLabel.Size = new System.Drawing.Size(63, 25);
-            this.accountLabel.TabIndex = 11;
-            this.accountLabel.Text = "label1";
+            this.cirPictureBox2.Image = global::dekatreís_octavo.Properties.Resources.pencil;
+            this.cirPictureBox2.Location = new System.Drawing.Point(113, 89);
+            this.cirPictureBox2.Name = "cirPictureBox2";
+            this.cirPictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.cirPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.cirPictureBox2.TabIndex = 2;
+            this.cirPictureBox2.TabStop = false;
+            this.cirPictureBox2.Click += new System.EventHandler(this.cirPictureBox2_Click);
+            // 
+            // avatar
+            // 
+            this.avatar.Image = global::dekatreís_octavo.Properties.Resources.icon;
+            this.avatar.Location = new System.Drawing.Point(57, 33);
+            this.avatar.Name = "avatar";
+            this.avatar.Size = new System.Drawing.Size(80, 80);
+            this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.avatar.TabIndex = 1;
+            this.avatar.TabStop = false;
             // 
             // DetailView
             // 
@@ -244,12 +244,12 @@ namespace dekatreís_octavo.View
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DetailView_FormClosed);
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cirPictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cirPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.avatar)).EndInit();
             this.ResumeLayout(false);
 
         }

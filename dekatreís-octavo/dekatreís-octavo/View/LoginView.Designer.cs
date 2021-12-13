@@ -64,15 +64,14 @@ namespace dekatreís_octavo.View
             this.tb_Username.Multiline = false;
             this.tb_Username.Name = "tb_Username";
             this.tb_Username.PasswordChar = '\0';
-            this.tb_Username.PrimaryColor = System.Drawing.Color.SteelBlue;
+            this.tb_Username.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.tb_Username.ReadOnly = false;
             this.tb_Username.ShortcutsEnable = true;
             this.tb_Username.ShowCaret = true;
             this.tb_Username.Size = new System.Drawing.Size(277, 49);
             this.tb_Username.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_Username.TabIndex = 0;
+            this.tb_Username.TabIndex = 1;
             this.tb_Username.UseSystemPasswordChar = false;
-            this.tb_Username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_Username_KeyDown);
             // 
             // tb_Password
             // 
@@ -93,13 +92,13 @@ namespace dekatreís_octavo.View
             this.tb_Password.Multiline = false;
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.PasswordChar = '●';
-            this.tb_Password.PrimaryColor = System.Drawing.Color.SteelBlue;
+            this.tb_Password.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.tb_Password.ReadOnly = false;
             this.tb_Password.ShortcutsEnable = true;
             this.tb_Password.ShowCaret = true;
             this.tb_Password.Size = new System.Drawing.Size(277, 49);
             this.tb_Password.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.tb_Password.TabIndex = 1;
+            this.tb_Password.TabIndex = 2;
             this.tb_Password.UseSystemPasswordChar = true;
             this.tb_Password.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_Password_KeyDown);
             // 
@@ -113,12 +112,12 @@ namespace dekatreís_octavo.View
             this.bt_Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_Login.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_Login.Name = "bt_Login";
-            this.bt_Login.PrimaryColor = System.Drawing.Color.SteelBlue;
+            this.bt_Login.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.bt_Login.Radius = 6;
             this.bt_Login.ShawdowDepth = 3;
             this.bt_Login.ShawdowOpacity = 50;
             this.bt_Login.Size = new System.Drawing.Size(216, 50);
-            this.bt_Login.TabIndex = 2;
+            this.bt_Login.TabIndex = 3;
             this.bt_Login.Text = "Đăng nhập";
             this.bt_Login.TextAlignment = System.Drawing.StringAlignment.Center;
             this.bt_Login.UseVisualStyleBackColor = true;

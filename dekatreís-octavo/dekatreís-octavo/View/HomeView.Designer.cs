@@ -49,18 +49,13 @@ namespace dekatreís_octavo.View
             this.SoXe = new MaterialSkin.Controls.MaterialLabel();
             this.progressBar = new MaterialSurface.MaterialProgressbar();
             this.historyPanel = new System.Windows.Forms.Panel();
-            this.history1 = new dekatreís_octavo.View.History();
             this.cardPage = new System.Windows.Forms.TabPage();
-            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.staffPage = new System.Windows.Forms.TabPage();
-            this.staffView1 = new dekatreís_octavo.View.StaffView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.parkingView1 = new dekatreís_octavo.View.ParkingView();
             this.utility = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.statusButton = new MaterialSurface.ContainedButton();
             this.historyButton = new MaterialSurface.ContainedButton();
-            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
             this.statusPage = new System.Windows.Forms.TabPage();
             this.setting = new System.Windows.Forms.TabPage();
             this.lb_success = new System.Windows.Forms.Label();
@@ -86,6 +81,11 @@ namespace dekatreís_octavo.View
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.history1 = new dekatreís_octavo.View.History();
+            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
+            this.staffView1 = new dekatreís_octavo.View.StaffView();
+            this.parkingView1 = new dekatreís_octavo.View.ParkingView();
+            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -172,10 +172,10 @@ namespace dekatreís_octavo.View
             // tabNameLabel
             // 
             this.tabNameLabel.AutoSize = true;
-            this.tabNameLabel.Font = new System.Drawing.Font("Segoe UI Light", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabNameLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabNameLabel.Location = new System.Drawing.Point(28, 32);
             this.tabNameLabel.Name = "tabNameLabel";
-            this.tabNameLabel.Size = new System.Drawing.Size(152, 38);
+            this.tabNameLabel.Size = new System.Drawing.Size(171, 38);
             this.tabNameLabel.TabIndex = 13;
             this.tabNameLabel.Text = "Trang chính";
             // 
@@ -396,14 +396,6 @@ namespace dekatreís_octavo.View
             this.historyPanel.Size = new System.Drawing.Size(1071, 453);
             this.historyPanel.TabIndex = 0;
             // 
-            // history1
-            // 
-            this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.history1.Location = new System.Drawing.Point(0, 0);
-            this.history1.Name = "history1";
-            this.history1.Size = new System.Drawing.Size(1071, 453);
-            this.history1.TabIndex = 0;
-            // 
             // cardPage
             // 
             this.cardPage.Controls.Add(this.cardManagement1);
@@ -411,24 +403,11 @@ namespace dekatreís_octavo.View
             this.cardPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cardPage.Name = "cardPage";
             this.cardPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cardPage.Size = new System.Drawing.Size(1077, 550);
+            this.cardPage.Size = new System.Drawing.Size(1073, 546);
             this.cardPage.TabIndex = 1;
             this.cardPage.Text = "Thẻ";
             this.cardPage.UseVisualStyleBackColor = true;
             this.cardPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // cardManagement1
-            // 
-            this.cardManagement1.AutoSize = true;
-            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.cardManagement1.BackColor = System.Drawing.Color.White;
-            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
-            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cardManagement1.Name = "cardManagement1";
-            this.cardManagement1.Size = new System.Drawing.Size(1071, 546);
-            this.cardManagement1.TabIndex = 0;
-            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // staffPage
             // 
@@ -437,21 +416,10 @@ namespace dekatreís_octavo.View
             this.staffPage.Location = new System.Drawing.Point(4, 27);
             this.staffPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.staffPage.Name = "staffPage";
-            this.staffPage.Size = new System.Drawing.Size(1077, 550);
+            this.staffPage.Size = new System.Drawing.Size(1073, 546);
             this.staffPage.TabIndex = 2;
             this.staffPage.Text = "Nhân viên";
             this.staffPage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // staffView1
-            // 
-            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.staffView1.Location = new System.Drawing.Point(0, 0);
-            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(1077, 550);
-            this.staffView1.TabIndex = 0;
-            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // tabPage4
             // 
@@ -460,21 +428,10 @@ namespace dekatreís_octavo.View
             this.tabPage4.Location = new System.Drawing.Point(4, 27);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1077, 550);
+            this.tabPage4.Size = new System.Drawing.Size(1073, 546);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Parking";
             this.tabPage4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
-            // 
-            // parkingView1
-            // 
-            this.parkingView1.BackColor = System.Drawing.Color.White;
-            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.parkingView1.Location = new System.Drawing.Point(0, 0);
-            this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.parkingView1.Name = "parkingView1";
-            this.parkingView1.Size = new System.Drawing.Size(1077, 550);
-            this.parkingView1.TabIndex = 0;
-            this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
             // utility
             // 
@@ -483,7 +440,7 @@ namespace dekatreís_octavo.View
             this.utility.Location = new System.Drawing.Point(4, 27);
             this.utility.Name = "utility";
             this.utility.Padding = new System.Windows.Forms.Padding(3);
-            this.utility.Size = new System.Drawing.Size(1077, 550);
+            this.utility.Size = new System.Drawing.Size(1073, 546);
             this.utility.TabIndex = 4;
             this.utility.Text = "Báo cáo";
             // 
@@ -502,8 +459,8 @@ namespace dekatreís_octavo.View
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.consistenceReport1);
-            this.splitContainer1.Size = new System.Drawing.Size(1071, 544);
-            this.splitContainer1.SplitterDistance = 93;
+            this.splitContainer1.Size = new System.Drawing.Size(1067, 542);
+            this.splitContainer1.SplitterDistance = 92;
             this.splitContainer1.TabIndex = 3;
             // 
             // statusButton
@@ -546,21 +503,11 @@ namespace dekatreís_octavo.View
             this.historyButton.UseVisualStyleBackColor = true;
             this.historyButton.Click += new System.EventHandler(this.historyButton_Click);
             // 
-            // consistenceReport1
-            // 
-            this.consistenceReport1.BackColor = System.Drawing.Color.White;
-            this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.consistenceReport1.Location = new System.Drawing.Point(0, 0);
-            this.consistenceReport1.Name = "consistenceReport1";
-            this.consistenceReport1.Size = new System.Drawing.Size(1071, 447);
-            this.consistenceReport1.TabIndex = 2;
-            this.consistenceReport1.Visible = false;
-            // 
             // statusPage
             // 
             this.statusPage.Location = new System.Drawing.Point(4, 27);
             this.statusPage.Name = "statusPage";
-            this.statusPage.Size = new System.Drawing.Size(1077, 550);
+            this.statusPage.Size = new System.Drawing.Size(1073, 546);
             this.statusPage.TabIndex = 5;
             this.statusPage.Text = "Trạng thái";
             this.statusPage.UseVisualStyleBackColor = true;
@@ -583,7 +530,7 @@ namespace dekatreís_octavo.View
             this.setting.Controls.Add(this.materialLabel1);
             this.setting.Location = new System.Drawing.Point(4, 27);
             this.setting.Name = "setting";
-            this.setting.Size = new System.Drawing.Size(1077, 550);
+            this.setting.Size = new System.Drawing.Size(1073, 546);
             this.setting.TabIndex = 6;
             this.setting.Text = "Quy định";
             this.setting.Click += new System.EventHandler(this.setting_Click);
@@ -847,6 +794,59 @@ namespace dekatreís_octavo.View
             // 
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // history1
+            // 
+            this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.history1.Location = new System.Drawing.Point(0, 0);
+            this.history1.Name = "history1";
+            this.history1.Size = new System.Drawing.Size(1071, 453);
+            this.history1.TabIndex = 0;
+            // 
+            // cardManagement1
+            // 
+            this.cardManagement1.AutoSize = true;
+            this.cardManagement1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.cardManagement1.BackColor = System.Drawing.Color.White;
+            this.cardManagement1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cardManagement1.Location = new System.Drawing.Point(3, 2);
+            this.cardManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cardManagement1.Name = "cardManagement1";
+            this.cardManagement1.Size = new System.Drawing.Size(1067, 544);
+            this.cardManagement1.TabIndex = 0;
+            this.cardManagement1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // staffView1
+            // 
+            this.staffView1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.staffView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.staffView1.Location = new System.Drawing.Point(0, 0);
+            this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.staffView1.Name = "staffView1";
+            this.staffView1.Size = new System.Drawing.Size(1073, 548);
+            this.staffView1.TabIndex = 0;
+            this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // parkingView1
+            // 
+            this.parkingView1.BackColor = System.Drawing.Color.White;
+            this.parkingView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.parkingView1.Location = new System.Drawing.Point(0, 0);
+            this.parkingView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.parkingView1.Name = "parkingView1";
+            this.parkingView1.Size = new System.Drawing.Size(1073, 548);
+            this.parkingView1.TabIndex = 0;
+            this.parkingView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
+            // 
+            // consistenceReport1
+            // 
+            this.consistenceReport1.BackColor = System.Drawing.Color.White;
+            this.consistenceReport1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.consistenceReport1.Location = new System.Drawing.Point(0, 0);
+            this.consistenceReport1.Name = "consistenceReport1";
+            this.consistenceReport1.Size = new System.Drawing.Size(1067, 446);
+            this.consistenceReport1.TabIndex = 2;
+            this.consistenceReport1.Visible = false;
             // 
             // HomeView
             // 

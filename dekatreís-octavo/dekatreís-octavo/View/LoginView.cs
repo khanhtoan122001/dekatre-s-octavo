@@ -103,10 +103,7 @@ namespace dekatreís_octavo.View
 
         private void tb_Username_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
-            {
-                tb_Password.Focus();
-            }
+
         }
 
         private void tb_Password_KeyDown(object sender, KeyEventArgs e)
