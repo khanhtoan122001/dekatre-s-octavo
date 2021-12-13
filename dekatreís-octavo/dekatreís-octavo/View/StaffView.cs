@@ -82,14 +82,12 @@ namespace dekatreís_octavo.View
 
         private void materialTextfield1_TextChanged(object sender, EventArgs e)
         {
-            if(StaffViewBus.Instance.Search(materialTextfield1.Text).Count > 0)
-            {
-                LoadStaffList(StaffViewBus.Instance.Search(materialTextfield1.Text));
-            }
-            else
-            {
-                LoadStaffList();
-            }
+            LoadStaffList(StaffViewBus.Instance.Search(materialTextfield1.Text, cb_typeSearch.SelectedIndex));
+        }
+
+        private void materialComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

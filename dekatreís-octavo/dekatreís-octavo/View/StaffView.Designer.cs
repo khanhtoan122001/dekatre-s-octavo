@@ -29,7 +29,7 @@ namespace dekatreís_octavo.View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
             this.staffName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffCMND = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -45,6 +45,7 @@ namespace dekatreís_octavo.View
             this.topPanel = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.passResetButton = new MaterialSurface.ContainedButton();
+            this.cb_typeSearch = new MaterialSkin.Controls.MaterialComboBox();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
@@ -71,7 +72,7 @@ namespace dekatreís_octavo.View
             this.materialListView1.FullRowSelect = true;
             this.materialListView1.HideSelection = false;
             this.materialListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem4});
             this.materialListView1.Location = new System.Drawing.Point(0, 0);
             this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
             this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
@@ -188,7 +189,7 @@ namespace dekatreís_octavo.View
             this.materialTextfield1.HelperText = "";
             this.materialTextfield1.HideSelection = true;
             this.materialTextfield1.HintText = "Tìm kiếm";
-            this.materialTextfield1.Location = new System.Drawing.Point(3, 27);
+            this.materialTextfield1.Location = new System.Drawing.Point(3, 26);
             this.materialTextfield1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.materialTextfield1.MaxLength = 32767;
             this.materialTextfield1.MouseState = MaterialSurface.MouseState.OUT;
@@ -248,6 +249,7 @@ namespace dekatreís_octavo.View
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.cb_typeSearch);
             this.splitContainer1.Panel2.Controls.Add(this.materialTextfield1);
             this.splitContainer1.Size = new System.Drawing.Size(1209, 141);
             this.splitContainer1.SplitterDistance = 688;
@@ -274,6 +276,36 @@ namespace dekatreís_octavo.View
             this.passResetButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.passResetButton.UseVisualStyleBackColor = true;
             this.passResetButton.Click += new System.EventHandler(this.passResetButton_Click);
+            // 
+            // cb_typeSearch
+            // 
+            this.cb_typeSearch.AutoResize = false;
+            this.cb_typeSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cb_typeSearch.Depth = 0;
+            this.cb_typeSearch.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cb_typeSearch.DropDownHeight = 174;
+            this.cb_typeSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_typeSearch.DropDownWidth = 121;
+            this.cb_typeSearch.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cb_typeSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cb_typeSearch.FormattingEnabled = true;
+            this.cb_typeSearch.Hint = "Tìm kiếm theo...";
+            this.cb_typeSearch.IntegralHeight = false;
+            this.cb_typeSearch.ItemHeight = 43;
+            this.cb_typeSearch.Items.AddRange(new object[] {
+            "All",
+            "Tên đăng nhập",
+            "Tên thật",
+            "Số điện thoại",
+            "CMND"});
+            this.cb_typeSearch.Location = new System.Drawing.Point(12, 80);
+            this.cb_typeSearch.MaxDropDownItems = 4;
+            this.cb_typeSearch.MouseState = MaterialSkin.MouseState.OUT;
+            this.cb_typeSearch.Name = "cb_typeSearch";
+            this.cb_typeSearch.Size = new System.Drawing.Size(193, 49);
+            this.cb_typeSearch.StartIndex = 0;
+            this.cb_typeSearch.TabIndex = 5;
+            this.cb_typeSearch.SelectedIndexChanged += new System.EventHandler(this.materialComboBox1_SelectedIndexChanged);
             // 
             // StaffView
             // 
@@ -313,5 +345,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private MaterialSurface.ContainedButton passResetButton;
+        private MaterialSkin.Controls.MaterialComboBox cb_typeSearch;
     }
 }

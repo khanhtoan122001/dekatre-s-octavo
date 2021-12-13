@@ -251,6 +251,7 @@ namespace dekatreís_octavo.View
 
                 // Write content to excel file 
                 File.WriteAllBytes(filePath, file.GetAsByteArray());
+                MessageBox.Show("Xuất file thành công");
             }
             catch (Exception EE)
             {

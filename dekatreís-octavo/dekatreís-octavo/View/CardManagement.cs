@@ -207,12 +207,16 @@ namespace dekatreís_octavo.View
             {
                 if (the.LoaiThe1.TenLoai == "Thẻ tháng" && string.IsNullOrEmpty(the.BienSoXe))
                 {
+                    //if()
                     CardManagementBus.Instance.DangKyTheThang(the.IDThe, inputTextBox.Text);
                     LoadData();
                 }
                 else
                 {
-                    GuiNhan(the, inputTextBox.Text);
+                    if (CardManagementBus.Instance.FindByBienSo(inputTextBox.Text) == null)
+                        GuiNhan(the, inputTextBox.Text);
+                    else
+                        MessageBox.Show("Xe này đang ở trong bãi hoặc đã đăng ký thẻ tháng");
                 }
             }
             inputTextBox.Text = "";

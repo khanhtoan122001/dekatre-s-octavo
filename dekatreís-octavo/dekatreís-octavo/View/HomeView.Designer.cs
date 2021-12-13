@@ -799,7 +799,7 @@ namespace dekatreís_octavo.View
             this.staffView1.Location = new System.Drawing.Point(0, 0);
             this.staffView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.staffView1.Name = "staffView1";
-            this.staffView1.Size = new System.Drawing.Size(1077, 552);
+            this.staffView1.Size = new System.Drawing.Size(1077, 550);
             this.staffView1.TabIndex = 0;
             this.staffView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
             // 
