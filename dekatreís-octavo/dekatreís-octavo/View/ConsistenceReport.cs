@@ -107,7 +107,7 @@ namespace dekatreís_octavo.View
                 return;
             }
             List<string> s = new List<string>();
-            for (int i = 1; i <= 31; i++)
+            for (int i = 1; i <= 33; i++)
             {
                 s.Add(i.ToString());
             }
@@ -136,7 +136,7 @@ namespace dekatreís_octavo.View
             List<int> vao = new List<int>();
             int maxday = DateTime.DaysInMonth(chartValue[0].Ngay.Value.Year, chartValue[0].Ngay.Value.Month);
             int max = 0, min = 32;
-            for(int i = 1; i < maxday; i++)
+            for(int i = 1; i <= maxday; i++)
             {
                 var result = (from c in chartValue
                               where c.Ngay.Value.Day == i
@@ -171,7 +171,10 @@ namespace dekatreís_octavo.View
             };
 
             
-
+            if(min == max)
+            {
+                min = min - 1;
+            }
             rpChart.AxisX[0].MinValue = min;
             rpChart.AxisX[0].MaxValue = max;
             rpChart.AxisX[0].Separator.Step = 1;

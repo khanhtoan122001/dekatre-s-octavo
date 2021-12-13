@@ -176,7 +176,8 @@ namespace dekatreís_octavo.View
                     GuiNhanXeBus.Instance.GuiXeThuong(the.IDThe, bienSo, "");
                 else
                     GuiNhanXeBus.Instance.GuiXeTheThang(the.IDThe);
-                the.AnhXe1 = ImageHelper.imageToByteArray(image);
+                if (image != null)
+                    the.AnhXe1 = ImageHelper.imageToByteArray(image);
             }
             db.SaveChanges();
             this.LoadData();
@@ -220,7 +221,7 @@ namespace dekatreís_octavo.View
                 }
                 else
                 {
-                    if (CardManagementBus.Instance.FindByBienSo(inputTextBox.Text) == null)
+                    if (CardManagementBus.Instance.FindByBienSo(inputTextBox.Text).Count() == 0)
                         GuiNhan(the, inputTextBox.Text);
                     else
                         MessageBox.Show("Xe này đang ở trong bãi hoặc đã đăng ký thẻ tháng");
