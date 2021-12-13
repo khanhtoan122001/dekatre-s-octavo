@@ -116,5 +116,10 @@ namespace dekatreís_octavo.View
         {
             
         }
+
+        private void materialListView1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            DetailView detail = new DetailView();
+        }
     }
 }

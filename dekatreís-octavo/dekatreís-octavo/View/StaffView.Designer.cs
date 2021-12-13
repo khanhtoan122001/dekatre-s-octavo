@@ -86,6 +86,7 @@ namespace dekatreís_octavo.View
             this.materialListView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewSample_ColumnClick);
             this.materialListView1.SelectedIndexChanged += new System.EventHandler(this.materialListView1_SelectedIndexChanged);
             this.materialListView1.DoubleClick += new System.EventHandler(this.materialListView1_DoubleClick);
+            this.materialListView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.materialListView1_MouseDoubleClick);
             // 
             // staffName
             // 
