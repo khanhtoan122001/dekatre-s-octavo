@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using dekatreís_octavo.Bus;
-using ListViewSortAnyColumn;
 
 namespace dekatreís_octavo.View
 {
@@ -83,38 +82,14 @@ namespace dekatreís_octavo.View
 
         private void materialTextfield1_TextChanged(object sender, EventArgs e)
         {
-            LoadStaffList(StaffViewBus.Instance.Search(materialTextfield1.Text, cb_typeSearch.SelectedIndex));
-        }
-        private void listViewSample_ColumnClick(object sender, ColumnClickEventArgs e)
-        {
-            ItemComparer sorter = materialListView1.ListViewItemSorter as ItemComparer;
-
-            if (sorter == null)
+            if(StaffViewBus.Instance.Search(materialTextfield1.Text).Count > 0)
             {
-                sorter = new ItemComparer(e.Column);
-                sorter.Order = SortOrder.Ascending;
-                materialListView1.ListViewItemSorter = sorter;
-            }
-            // if clicked column is already the column that is being sorted
-            if (e.Column == sorter.Column)
-            {
-                // Reverse the current sort direction
-                if (sorter.Order == SortOrder.Ascending)
-                    sorter.Order = SortOrder.Descending;
-                else
-                    sorter.Order = SortOrder.Ascending;
+                LoadStaffList(StaffViewBus.Instance.Search(materialTextfield1.Text));
             }
             else
             {
-                // Set the column number that is to be sorted; default to ascending.
-                sorter.Column = e.Column;
-                sorter.Order = SortOrder.Ascending;
+                LoadStaffList();
             }
-            materialListView1.Sort();
-        }
-        private void materialComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

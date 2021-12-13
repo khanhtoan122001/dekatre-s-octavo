@@ -73,10 +73,7 @@ namespace dekatreís_octavo.Bus
         }
         public int GetIDTheByTen(string Ten)
         {
-            Ten = Ten.ToLower();
-            var i = db.LoaiThes.Where(p => p.TenLoai.ToLower() == Ten).SingleOrDefault();
-            if (i != null) return i.IDLoai;
-            else return -1;
+            return (db.LoaiThes.Where(p => p.TenLoai == Ten).SingleOrDefault().IDLoai);
         }
     }
 }

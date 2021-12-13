@@ -87,7 +87,8 @@ namespace dekatreís_octavo.View
                 LoginViewBus.Instance.ChangeAvatar(Resources.default_avatar_300x300);
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
-            history1.LoadData();
+            parkingView1.LoadData();
+            
             //BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
@@ -108,6 +109,7 @@ namespace dekatreís_octavo.View
             {
                 tabControl.TabPages.Add(homePage);
                 tabControl.TabPages.Add(cardPage);
+                tabControl.TabPages.Add(statusPage);
             }
         }
 
@@ -182,8 +184,6 @@ namespace dekatreís_octavo.View
 
         private void statusButton_Click(object sender, EventArgs e)
         {
-            revenueMonthlyReport1.Visible = false;
-            revenueReport1.Visible = false;
             consistenceReport1.Visible = true;
             consistenceReport1.LoadData();
         }
@@ -289,19 +289,6 @@ namespace dekatreís_octavo.View
             lb_success.Visible = false;
         }
 
-        private void containedButton1_Click(object sender, EventArgs e)
-        {
-            revenueMonthlyReport1.Visible = false;
-            consistenceReport1.Visible = false;
-            revenueReport1.Visible = true;
-        }
-
-        private void containedButton2_Click(object sender, EventArgs e)
-        {
-            consistenceReport1.Visible = false;
-            revenueReport1.Visible = false;
-            revenueMonthlyReport1.Visible = true;
-        }
         private void historyButton_Click(object sender, EventArgs e)
         {
 

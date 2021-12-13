@@ -34,7 +34,7 @@ namespace dekatreís_octavo.View
             this.rpChart = new LiveCharts.WinForms.CartesianChart();
             this.topPanel = new System.Windows.Forms.Panel();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.bt_refresh = new MaterialSurface.ContainedButton();
+            this.containedButton1 = new MaterialSurface.ContainedButton();
             this.exportButton = new MaterialSurface.ContainedButton();
             this.yearComboBox = new MaterialSurface.MaterialComboBox();
             this.monthComboBox = new MaterialSurface.MaterialComboBox();
@@ -78,7 +78,7 @@ namespace dekatreís_octavo.View
             this.topPanel.Controls.Add(this.rb_Day);
             this.topPanel.Controls.Add(this.rb_Month);
             this.topPanel.Controls.Add(this.dateTimePicker1);
-            this.topPanel.Controls.Add(this.bt_refresh);
+            this.topPanel.Controls.Add(this.containedButton1);
             this.topPanel.Controls.Add(this.exportButton);
             this.topPanel.Controls.Add(this.yearComboBox);
             this.topPanel.Controls.Add(this.monthComboBox);
@@ -98,27 +98,26 @@ namespace dekatreís_octavo.View
             this.dateTimePicker1.Visible = false;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // bt_refresh
+            // containedButton1
             // 
-            this.bt_refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_refresh.EffectType = MaterialSurface.ET.Custom;
-            this.bt_refresh.Enabled = false;
-            this.bt_refresh.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_refresh.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bt_refresh.Icon = null;
-            this.bt_refresh.Location = new System.Drawing.Point(587, 23);
-            this.bt_refresh.MouseState = MaterialSurface.MouseState.OUT;
-            this.bt_refresh.Name = "bt_refresh";
-            this.bt_refresh.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.bt_refresh.Radius = 6;
-            this.bt_refresh.ShawdowDepth = 3;
-            this.bt_refresh.ShawdowOpacity = 50;
-            this.bt_refresh.Size = new System.Drawing.Size(115, 50);
-            this.bt_refresh.TabIndex = 4;
-            this.bt_refresh.Text = "Xem";
-            this.bt_refresh.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.bt_refresh.UseVisualStyleBackColor = true;
-            this.bt_refresh.Click += new System.EventHandler(this.containedButton1_Click_1);
+            this.containedButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.containedButton1.Icon = null;
+            this.containedButton1.Location = new System.Drawing.Point(587, 23);
+            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
+            this.containedButton1.Name = "containedButton1";
+            this.containedButton1.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.containedButton1.Radius = 6;
+            this.containedButton1.ShawdowDepth = 3;
+            this.containedButton1.ShawdowOpacity = 50;
+            this.containedButton1.Size = new System.Drawing.Size(115, 50);
+            this.containedButton1.TabIndex = 4;
+            this.containedButton1.Text = "Xem";
+            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.containedButton1.UseVisualStyleBackColor = true;
+            this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click_1);
             // 
             // exportButton
             // 
@@ -251,7 +250,7 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialComboBox yearComboBox;
         private MaterialSurface.ContainedButton exportButton;
         private LiveCharts.WinForms.CartesianChart rpChart;
-        private MaterialSurface.ContainedButton bt_refresh;
+        private MaterialSurface.ContainedButton containedButton1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private MaterialSurface.MaterialRadioButton rb_Day;
         private MaterialSurface.MaterialRadioButton rb_Month;

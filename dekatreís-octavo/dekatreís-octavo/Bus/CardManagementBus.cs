@@ -62,7 +62,7 @@ namespace dekatreís_octavo.Bus
         {
             QuanLyDoXeEntities1 db = DataProvider.Instance.db;
             var result = from c in db.TheXes
-                         where c.BienSoXe == BienSo
+                         where c.BienSoXe.Contains(BienSo)
                          select c;
             return result;
         }

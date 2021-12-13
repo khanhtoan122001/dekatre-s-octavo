@@ -49,14 +49,13 @@ namespace dekatreís_octavo.View
             // containedButton1
             // 
             this.containedButton1.EffectType = MaterialSurface.ET.Custom;
-            this.containedButton1.Enabled = false;
             this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton1.Icon = null;
             this.containedButton1.Location = new System.Drawing.Point(177, 31);
             this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton1.Name = "containedButton1";
-            this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
+            this.containedButton1.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.containedButton1.Radius = 6;
             this.containedButton1.ShawdowDepth = 3;
             this.containedButton1.ShawdowOpacity = 50;
@@ -65,7 +64,6 @@ namespace dekatreís_octavo.View
             this.containedButton1.Text = "Xem";
             this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
             this.containedButton1.UseVisualStyleBackColor = true;
-            this.containedButton1.Click += new System.EventHandler(this.containedButton1_Click);
             // 
             // yearComboBox
             // 
@@ -78,10 +76,6 @@ namespace dekatreís_octavo.View
             this.yearComboBox.FormattingEnabled = true;
             this.yearComboBox.HintText = "Năm";
             this.yearComboBox.ItemHeight = 47;
-            this.yearComboBox.Items.AddRange(new object[] {
-            "2019",
-            "2020",
-            "2021"});
             this.yearComboBox.Location = new System.Drawing.Point(34, 28);
             this.yearComboBox.MaxDropDownItems = 4;
             this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
@@ -89,7 +83,6 @@ namespace dekatreís_octavo.View
             this.yearComboBox.PrimaryColor = System.Drawing.Color.DodgerBlue;
             this.yearComboBox.Size = new System.Drawing.Size(121, 53);
             this.yearComboBox.TabIndex = 2;
-            this.yearComboBox.SelectedIndexChanged += new System.EventHandler(this.yearComboBox_SelectedIndexChanged);
             // 
             // cartesianChart1
             // 
@@ -108,7 +101,6 @@ namespace dekatreís_octavo.View
             this.Controls.Add(this.panel1);
             this.Name = "RevenueReport";
             this.Size = new System.Drawing.Size(854, 517);
-            this.Load += new System.EventHandler(this.RevenueReport_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
