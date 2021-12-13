@@ -20,6 +20,10 @@ namespace dekatreís_octavo.View
         {
             InitializeComponent();
             if (TaiKhoan != null) initHomeView();
+            int succhua = ThamSoBus.Instance.GetByTen("Sức chứa").GiaTri.Value;
+            progressBar.Value = DataProvider.Instance.SoXeTrongBai / succhua;
+            maxLabel.Text = succhua.ToString();
+            SoXe.Left = 264 + progressBar.Value*4;
         }
 
         public void StartWork()
@@ -288,6 +292,15 @@ namespace dekatreís_octavo.View
         private void historyButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void SoXe_TextAlignChanged(object sender, EventArgs e)
+        {
+            float succhua = ThamSoBus.Instance.GetByTen("Sức chứa").GiaTri.Value;
+            float soxe = DataProvider.Instance.SoXeTrongBai;
+            progressBar.Value = Convert.ToInt32(Math.Round(soxe / succhua * 100));
+            maxLabel.Text = succhua.ToString();
+            SoXe.Left = 261 + progressBar.Value * 4;
         }
     }
 }

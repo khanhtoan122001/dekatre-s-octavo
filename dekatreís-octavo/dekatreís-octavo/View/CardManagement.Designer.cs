@@ -44,24 +44,26 @@ namespace dekatreís_octavo.View
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.createButton = new MaterialSurface.ContainedButton();
             this.inputCard = new MaterialSurface.MaterialCard();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.inputTextBox = new MaterialSurface.MaterialTextfield();
             this.tb_search = new MaterialSurface.MaterialTextfield();
             this.typeComboBox = new MaterialSurface.MaterialComboBox();
             this.statusComboBox = new MaterialSurface.MaterialComboBox();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.inputCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // addButton
@@ -208,7 +210,6 @@ namespace dekatreís_octavo.View
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.createButton);
-            this.splitContainer1.Panel1.Controls.Add(this.inputCard);
             this.splitContainer1.Panel1.Controls.Add(this.addButton);
             this.splitContainer1.Panel1.Controls.Add(this.delButton);
             this.splitContainer1.Panel1.Controls.Add(this.inOutButton);
@@ -247,6 +248,7 @@ namespace dekatreís_octavo.View
             // 
             this.inputCard.BackColor = System.Drawing.Color.White;
             this.inputCard.CardColor = System.Drawing.Color.White;
+            this.inputCard.Controls.Add(this.pictureBox3);
             this.inputCard.Controls.Add(this.pictureBox2);
             this.inputCard.Controls.Add(this.pictureBox1);
             this.inputCard.Controls.Add(this.inputTextBox);
@@ -259,32 +261,10 @@ namespace dekatreís_octavo.View
             this.inputCard.Radius = 8;
             this.inputCard.ShawdowDepth = 2;
             this.inputCard.ShawdowOpacity = 50;
-            this.inputCard.Size = new System.Drawing.Size(338, 79);
+            this.inputCard.Size = new System.Drawing.Size(378, 79);
             this.inputCard.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.inputCard.TabIndex = 4;
             this.inputCard.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources._62025;
-            this.pictureBox2.Location = new System.Drawing.Point(241, 26);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.x_button_icon_20;
-            this.pictureBox1.Location = new System.Drawing.Point(283, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // inputTextBox
             // 
@@ -297,7 +277,7 @@ namespace dekatreís_octavo.View
             this.inputTextBox.HandleError = false;
             this.inputTextBox.HelperText = "";
             this.inputTextBox.HideSelection = true;
-            this.inputTextBox.HintText = "";
+            this.inputTextBox.HintText = "Biển số xe";
             this.inputTextBox.Location = new System.Drawing.Point(15, 15);
             this.inputTextBox.MaxLength = 32767;
             this.inputTextBox.MouseState = MaterialSurface.MouseState.OUT;
@@ -309,7 +289,7 @@ namespace dekatreís_octavo.View
             this.inputTextBox.ShortcutsEnable = true;
             this.inputTextBox.ShowCaret = true;
             this.inputTextBox.Size = new System.Drawing.Size(211, 49);
-            this.inputTextBox.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.None;
+            this.inputTextBox.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.inputTextBox.TabIndex = 0;
             this.inputTextBox.UseSystemPasswordChar = false;
             this.inputTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.inputTextBox_KeyUp);
@@ -394,6 +374,7 @@ namespace dekatreís_octavo.View
             // 
             // mainPanel
             // 
+            this.mainPanel.Controls.Add(this.inputCard);
             this.mainPanel.Controls.Add(this.panel1);
             this.mainPanel.Controls.Add(this.topPanel);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -411,6 +392,39 @@ namespace dekatreís_octavo.View
             this.panel1.Size = new System.Drawing.Size(1269, 486);
             this.panel1.TabIndex = 7;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::dekatreís_octavo.Properties.Resources.photo;
+            this.pictureBox3.Location = new System.Drawing.Point(242, 26);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::dekatreís_octavo.Properties.Resources._62025;
+            this.pictureBox2.Location = new System.Drawing.Point(287, 26);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::dekatreís_octavo.Properties.Resources.x_button_icon_20;
+            this.pictureBox1.Location = new System.Drawing.Point(331, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // CardManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -427,10 +441,11 @@ namespace dekatreís_octavo.View
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.inputCard.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -458,5 +473,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.PictureBox pictureBox2;
         private MaterialSurface.ContainedButton createButton;
         private MaterialSurface.MaterialTextfield tb_search;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
