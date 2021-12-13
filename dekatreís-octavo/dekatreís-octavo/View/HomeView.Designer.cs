@@ -390,10 +390,9 @@ namespace dekatreís_octavo.View
             // historyPanel
             // 
             this.historyPanel.Controls.Add(this.history1);
-            this.historyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.historyPanel.Location = new System.Drawing.Point(3, 2);
+            this.historyPanel.Location = new System.Drawing.Point(3, 95);
             this.historyPanel.Name = "historyPanel";
-            this.historyPanel.Size = new System.Drawing.Size(1071, 546);
+            this.historyPanel.Size = new System.Drawing.Size(1071, 453);
             this.historyPanel.TabIndex = 0;
             // 
             // history1
