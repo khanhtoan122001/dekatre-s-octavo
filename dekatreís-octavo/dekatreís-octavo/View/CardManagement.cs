@@ -170,7 +170,7 @@ namespace dekatreís_octavo.View
                     GuiNhanXeBus.Instance.NhanXeThuong(the.IDThe);
                 else
                     GuiNhanXeBus.Instance.NhanXeTheThang(the.IDThe);
-                the.AnhXe1 = null;
+                the.AnhXe1 = the.AnhXe2 = the.AnhXe3 = the.AnhXe4 = null;
             }
             else
             {
@@ -216,7 +216,10 @@ namespace dekatreís_octavo.View
                     //if()
                     var list = CardManagementBus.Instance.FindByBienSo(inputTextBox.Text);
                     if (list.Where(p => p.LoaiThe1.TenLoai == "Thẻ tháng").Count() == 0)
+                    {
+                        if (image != null) the.AnhXe1 = ImageHelper.imageToByteArray(image);
                         CardManagementBus.Instance.DangKyTheThang(the.IDThe, inputTextBox.Text);
+                    }
                     else
                         MessageBox.Show("Biển số này đã đăng ký thẻ tháng");
                     LoadData();
