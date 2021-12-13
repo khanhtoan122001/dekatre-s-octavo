@@ -64,7 +64,7 @@ namespace dekatreís_octavo.View
             this.historyButton = new MaterialSurface.ContainedButton();
             this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.statusPage = new System.Windows.Forms.TabPage();
+            //this.statusPage = new System.Windows.Forms.TabPage();
             this.setting = new System.Windows.Forms.TabPage();
             this.lb_success = new System.Windows.Forms.Label();
             this.tb_SucChua = new System.Windows.Forms.TextBox();
@@ -621,15 +621,6 @@ namespace dekatreís_octavo.View
             this.splitContainer1.Size = new System.Drawing.Size(1071, 544);
             this.splitContainer1.SplitterDistance = 93;
             this.splitContainer1.TabIndex = 3;
-            // 
-            // statusPage
-            // 
-            this.statusPage.Location = new System.Drawing.Point(4, 27);
-            this.statusPage.Name = "statusPage";
-            this.statusPage.Size = new System.Drawing.Size(1077, 550);
-            this.statusPage.TabIndex = 5;
-            this.statusPage.Text = "Trạng thái";
-            this.statusPage.UseVisualStyleBackColor = true;
             // 
             // setting
             // 
