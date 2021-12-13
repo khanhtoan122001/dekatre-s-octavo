@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dekatreís_octavo.Bus;
+using ListViewSortAnyColumn;
 
 namespace dekatreís_octavo.View
 {
@@ -16,6 +17,7 @@ namespace dekatreís_octavo.View
         QuanLyDoXeEntities1 db = DataProvider.Instance.db;
         string sortType, sortStatus;
         bool flag = true;
+        Image image;
         public CardManagement()
         {
             InitializeComponent();
@@ -24,6 +26,7 @@ namespace dekatreís_octavo.View
         private void CardManagement_Load(object sender, EventArgs e)
         {
             //this.LoadData();
+            pictureBox6.Left = tb_search.Size.Width - 10;
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -66,8 +69,6 @@ namespace dekatreís_octavo.View
                     addButton.Visible = false;
                     delButton.Visible = false;
                 }
-                if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "admin")
-                    inOutButton.Visible = false;
             }
         }
 
@@ -101,28 +102,28 @@ namespace dekatreís_octavo.View
         {
             if (cardList.SelectedItems.Count == 0)
             {
-                inOutButton.Enabled = false;
-                createButton.Enabled = false;
+                inOutButton.Visible = false;
+                createButton.Visible = false;
             }
             else
             {
                 TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
                 if (the.LoaiThe1.TenLoai != "Thẻ tháng")
                 {
-                    inOutButton.Enabled = true;
-                    createButton.Enabled = false;
+                    inOutButton.Visible = true;
+                    createButton.Visible = false;
                 }
                 else
                 {
                     if (string.IsNullOrEmpty(the.BienSoXe))
                     {
-                        createButton.Enabled = true;
-                        inOutButton.Enabled = false;
+                        createButton.Visible = true;
+                        inOutButton.Visible = false;
                     }
                     else
                     {
-                        inOutButton.Enabled = true;
-                        createButton.Enabled = false;
+                        inOutButton.Visible = true;
+                        createButton.Visible = false;
                     }
                 }
                 if (the.Status.Value)
@@ -168,6 +169,7 @@ namespace dekatreís_octavo.View
                     GuiNhanXeBus.Instance.NhanXeThuong(the.IDThe);
                 else
                     GuiNhanXeBus.Instance.NhanXeTheThang(the.IDThe);
+                the.AnhXe1 = null;
             }
             else
             {
@@ -175,6 +177,7 @@ namespace dekatreís_octavo.View
                     GuiNhanXeBus.Instance.GuiXeThuong(the.IDThe, bienSo, "");
                 else
                     GuiNhanXeBus.Instance.GuiXeTheThang(the.IDThe);
+                the.AnhXe1 = ImageHelper.imageToByteArray(image);
             }
             db.SaveChanges();
             this.LoadData();
@@ -208,12 +211,20 @@ namespace dekatreís_octavo.View
             {
                 if (the.LoaiThe1.TenLoai == "Thẻ tháng" && string.IsNullOrEmpty(the.BienSoXe))
                 {
-                    CardManagementBus.Instance.DangKyTheThang(the.IDThe, inputTextBox.Text);
+                    //if()
+                    var list = CardManagementBus.Instance.FindByBienSo(inputTextBox.Text);
+                    if (list.Where(p => p.LoaiThe1.TenLoai == "Thẻ tháng").Count() == 0)
+                        CardManagementBus.Instance.DangKyTheThang(the.IDThe, inputTextBox.Text);
+                    else
+                        MessageBox.Show("Biển số này đã đăng ký thẻ tháng");
                     LoadData();
                 }
                 else
                 {
-                    GuiNhan(the, inputTextBox.Text);
+                    if (CardManagementBus.Instance.FindByBienSo(inputTextBox.Text) == null)
+                        GuiNhan(the, inputTextBox.Text);
+                    else
+                        MessageBox.Show("Xe này đang ở trong bãi hoặc đã đăng ký thẻ tháng");
                 }
             }
             inputTextBox.Text = "";
@@ -240,16 +251,54 @@ namespace dekatreís_octavo.View
             }
         }
 
+        private void listViewSample_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            ItemComparer sorter = cardList.ListViewItemSorter as ItemComparer;
+
+            if (sorter == null)
+            {
+                sorter = new ItemComparer(e.Column);
+                sorter.Order = SortOrder.Ascending;
+                cardList.ListViewItemSorter = sorter;
+            }
+            // if clicked column is already the column that is being sorted
+            if (e.Column == sorter.Column)
+            {
+                // Reverse the current sort direction
+                if (sorter.Order == SortOrder.Ascending)
+                    sorter.Order = SortOrder.Descending;
+                else
+                    sorter.Order = SortOrder.Ascending;
+            }
+            else
+            {
+                // Set the column number that is to be sorted; default to ascending.
+                sorter.Column = e.Column;
+                sorter.Order = SortOrder.Ascending;
+            }
+            cardList.Sort();
+        }
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
-            saveFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp";
-            saveFileDialog1.Title = "Save an Image File";
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp";
+            openFileDialog1.Title = "Save an Image File";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
+                image = Image.FromFile(openFileDialog1.FileName);
             }
             
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            var i = LoaiTheBus.Instance.GetIDTheByTen(cb_LoaiThe.SelectedItem.ToString());
+            if (i == -1)
+                return;
+            CardManagementBus.Instance.AddCard(i);
+            MessageBox.Show("Thêm thẻ thành công");
+            addCard.Visible = false;
+            LoadData();
         }
 
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)

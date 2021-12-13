@@ -179,6 +179,7 @@
     <Compile Include="Bus\ExcelHelper.cs" />
     <Compile Include="Bus\GuiNhanXeBus.cs" />
     <Compile Include="Bus\ImageHelper.cs" />
+    <Compile Include="Bus\ItemComparer.cs" />
     <Compile Include="Bus\LoaiTaiKhoanBus.cs" />
     <Compile Include="Bus\LoginViewBus.cs" />
     <Compile Include="Bus\ReportBus.cs" />
@@ -343,6 +344,12 @@
     <Compile Include="View\ParkingView.Designer.cs">
       <DependentUpon>ParkingView.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\RevenueMonthlyReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\RevenueMonthlyReport.Designer.cs">
+      <DependentUpon>RevenueMonthlyReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\RevenueReport.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -431,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ParkingView.resx">
       <DependentUpon>ParkingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RevenueMonthlyReport.resx">
+      <DependentUpon>RevenueMonthlyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\RevenueReport.resx">
       <DependentUpon>RevenueReport.cs</DependentUpon>
