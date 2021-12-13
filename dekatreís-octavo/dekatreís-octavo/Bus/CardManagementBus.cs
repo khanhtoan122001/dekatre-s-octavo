@@ -25,7 +25,7 @@ namespace dekatreís_octavo.Bus
             DataProvider.Instance.db.SaveChanges();
             return true;
         }
-        public bool EditCard(int IDthe, string ChuSoHuu, string TenXe, string BienSo, int LoaiThe)
+        public bool EditCard(int IDthe, string BienSo, int LoaiThe)
         {
             TheXe the = DataProvider.Instance.db.TheXes.Find(IDthe);
             the.BienSoXe = BienSo;

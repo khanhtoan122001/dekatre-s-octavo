@@ -34,7 +34,7 @@ namespace dekatreís_octavo.View
             if (cb_LoaiThe.SelectedIndex == -1)
                 return;
             int idLoai = LoaiTheBus.Instance.GetIDTheByTen(cb_LoaiThe.SelectedItem.ToString());
-            var result = CardManagementBus.Instance.EditCard(selected, tb_TenChuSoHuu.Text, tb_TenXe.Text, tb_BienSo.Text, idLoai);
+            var result = CardManagementBus.Instance.EditCard(selected, tb_BienSo.Text, idLoai);
             if (result)
             {
                 MessageBox.Show("Thành công");

@@ -280,6 +280,7 @@ namespace dekatreís_octavo.View
             this.tabPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabPanel.Controls.Add(this.tabControl);
             this.tabPanel.Location = new System.Drawing.Point(3, 112);
             this.tabPanel.Name = "tabPanel";
@@ -303,7 +304,7 @@ namespace dekatreís_octavo.View
             this.tabControl.Multiline = true;
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(1085, 581);
+            this.tabControl.Size = new System.Drawing.Size(1081, 577);
             this.tabControl.TabIndex = 7;
             this.tabControl.SelectedIndexChanged += new System.EventHandler(this.tabControl_SelectedIndexChanged);
             this.tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl_Selected);
@@ -318,7 +319,7 @@ namespace dekatreís_octavo.View
             this.homePage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homePage.Name = "homePage";
             this.homePage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.homePage.Size = new System.Drawing.Size(1077, 550);
+            this.homePage.Size = new System.Drawing.Size(1073, 546);
             this.homePage.TabIndex = 0;
             this.homePage.Text = "Trang chính";
             this.homePage.MouseDown += new System.Windows.Forms.MouseEventHandler(this.materialDrawer1_MouseDown);
@@ -332,7 +333,7 @@ namespace dekatreís_octavo.View
             this.progressPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.progressPanel.Location = new System.Drawing.Point(3, 2);
             this.progressPanel.Name = "progressPanel";
-            this.progressPanel.Size = new System.Drawing.Size(1071, 87);
+            this.progressPanel.Size = new System.Drawing.Size(1067, 87);
             this.progressPanel.TabIndex = 1;
             // 
             // maxLabel
@@ -380,7 +381,7 @@ namespace dekatreís_octavo.View
             this.progressBar.MouseState = MaterialSurface.MouseState.HOVER;
             this.progressBar.Name = "progressBar";
             this.progressBar.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.progressBar.Size = new System.Drawing.Size(400, 40);
+            this.progressBar.Size = new System.Drawing.Size(396, 40);
             this.progressBar.Step = 10;
             this.progressBar.TabIndex = 0;
             this.progressBar.Text = "materialProgressbar1";
@@ -400,7 +401,7 @@ namespace dekatreís_octavo.View
             this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.history1.Location = new System.Drawing.Point(0, 0);
             this.history1.Name = "history1";
-            this.history1.Size = new System.Drawing.Size(1071, 546);
+            this.history1.Size = new System.Drawing.Size(1071, 453);
             this.history1.TabIndex = 0;
             // 
             // cardPage
