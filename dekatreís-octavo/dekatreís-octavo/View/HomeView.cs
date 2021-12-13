@@ -324,5 +324,10 @@ namespace dekatreís_octavo.View
             maxLabel.Text = succhua.ToString();
             SoXe.Left = 261 + progressBar.Value * 4;
         }
+
+        private void tabControl_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+
+        }
     }
 }
