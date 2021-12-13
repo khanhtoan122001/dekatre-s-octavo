@@ -208,43 +208,49 @@ namespace dekatreís_octavo.View
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (tabControl.SelectedTab.Name)
+            if (tabControl.SelectedTab != null)
             {
-                case "homePage":
-                    {
-                        tabNameLabel.Text = "Trang chính";
+                switch (tabControl.SelectedTab.Name)
+                {
+                    case "homePage":
+                        {
+                            tabNameLabel.Text = "Trang chính";
+                            break;
+                        }
+                    case "cardPage":
+                        {
+                            tabNameLabel.Text = "Quản lý thẻ";
+                            break;
+                        }
+                    case "staffPage":
+                        {
+                            tabNameLabel.Text = "Quản lý nhân viên";
+                            break;
+                        }
+                    case "utility":
+                        {
+                            tabNameLabel.Text = "Báo cáo";
+                            break;
+                        }
+                    case "statusPage":
+                        {
+                            tabNameLabel.Text = "Tình trạng bãi";
+                            break;
+                        }
+                    case "setting":
+                        {
+                            tabNameLabel.Text = "Quản lý quy định";
+                            break;
+                        }
+                    default:
                         break;
-                    }
-                case "cardPage":
-                    {
-                        tabNameLabel.Text = "Quản lý thẻ";
-                        break;
-                    }
-                case "staffPage":
-                    {
-                        tabNameLabel.Text = "Quản lý nhân viên";
-                        break;
-                    }
-                case "utility":
-                    {
-                        tabNameLabel.Text = "Báo cáo";
-                        break;
-                    }
-                case "statusPage":
-                    {
-                        tabNameLabel.Text = "Tình trạng bãi";
-                        break;
-                    }
-                case "setting":
-                    {
-                        tabNameLabel.Text = "Quản lý quy định";
-                        break;
-                    }
-                default:
-                    break;
-            };
-                
-
+                };
+            }
+            else
+            {
+                tabControl.SelectedTab = homePage;
+                tabNameLabel.Text = "Trang chính";
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)

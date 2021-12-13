@@ -23,7 +23,6 @@ namespace dekatreís_octavo.View
         {
             InitializeComponent();
             DataProvider.Instance.CreateDataDefault();
-            home = new HomeView();
         }
 
         private void containedButton1_Click(object sender, EventArgs e)
@@ -38,6 +37,7 @@ namespace dekatreís_octavo.View
                 TaiKhoan = LoginViewBus.Instance.Login(tb_Username.Text, tb_Password.Text);
                 if (TaiKhoan != null)
                 {
+                    home = new HomeView();
                     home.initHomeView(TaiKhoan);
                     home.StartWork();
                     this.Hide();
