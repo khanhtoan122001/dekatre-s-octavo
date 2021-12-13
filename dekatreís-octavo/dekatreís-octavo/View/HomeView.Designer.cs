@@ -86,6 +86,8 @@ namespace dekatreís_octavo.View
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.history1 = new dekatreís_octavo.View.History();
+            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
