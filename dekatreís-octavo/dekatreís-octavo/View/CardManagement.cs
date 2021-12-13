@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dekatreís_octavo.Bus;
+using ListViewSortAnyColumn;
 
 namespace dekatreís_octavo.View
 {
@@ -16,6 +17,7 @@ namespace dekatreís_octavo.View
         QuanLyDoXeEntities1 db = DataProvider.Instance.db;
         string sortType, sortStatus;
         bool flag = true;
+        Image image;
         public CardManagement()
         {
             InitializeComponent();
@@ -28,8 +30,9 @@ namespace dekatreís_octavo.View
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            var addCard = new AddCardForm();
-            addCard.ShowDialog();
+            //var addCard = new AddCardForm();
+            //addCard.ShowDialog();
+            addCard.Visible = true;
             this.LoadData();
         }
 
@@ -45,10 +48,9 @@ namespace dekatreís_octavo.View
             foreach (TheXe i in result)
             {
                 string trangthai = (bool)i.Status ? "Rảnh" : "Bận";
-                string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? i.NgayTao.ToString() : null;
-        
+                string date = i.LoaiThe1.TenLoai == "Thẻ tháng" ? (i.NgayTao == null? "" : i.NgayTao.Value.ToShortDateString()): "";
                 cardList.Items.Add(new ListViewItem(
-                    new string[] { i.IDThe.ToString(), i.BienSoXe, i.LoaiThe1.TenLoai, trangthai, i.ThoiGianGui.ToString(), i.NgayTao.ToString() })
+                    new string[] { i.IDThe.ToString(), i.BienSoXe, i.LoaiThe1.TenLoai, trangthai, i.ThoiGianGui.ToString(), date })
                 { Tag = i });
             }
             List<string> list = db.LoaiThes.Select(p => p.TenLoai).ToList();
@@ -59,6 +61,7 @@ namespace dekatreís_octavo.View
             }
             if (flag)
             {
+                CardManagementBus.Instance.CheckAllow();
                 flag = false;
                 if (DataProvider.Instance.TaiKhoan.LoaiTaiKhoan1.TenLoai == "staff")
                 {
@@ -167,6 +170,7 @@ namespace dekatreís_octavo.View
                     GuiNhanXeBus.Instance.NhanXeThuong(the.IDThe);
                 else
                     GuiNhanXeBus.Instance.NhanXeTheThang(the.IDThe);
+                the.AnhXe1 = null;
             }
             else
             {
@@ -174,6 +178,7 @@ namespace dekatreís_octavo.View
                     GuiNhanXeBus.Instance.GuiXeThuong(the.IDThe, bienSo, "");
                 else
                     GuiNhanXeBus.Instance.GuiXeTheThang(the.IDThe);
+                the.AnhXe1 = ImageHelper.imageToByteArray(image);
             }
             db.SaveChanges();
             this.LoadData();
@@ -207,12 +212,20 @@ namespace dekatreís_octavo.View
             {
                 if (the.LoaiThe1.TenLoai == "Thẻ tháng" && string.IsNullOrEmpty(the.BienSoXe))
                 {
-                    CardManagementBus.Instance.DangKyTheThang(the.IDThe, inputTextBox.Text);
+                    //if()
+                    var list = CardManagementBus.Instance.FindByBienSo(inputTextBox.Text);
+                    if (list.Where(p => p.LoaiThe1.TenLoai == "Thẻ tháng").Count() == 0)
+                        CardManagementBus.Instance.DangKyTheThang(the.IDThe, inputTextBox.Text);
+                    else
+                        MessageBox.Show("Biển số này đã đăng ký thẻ tháng");
                     LoadData();
                 }
                 else
                 {
-                    GuiNhan(the, inputTextBox.Text);
+                    if (CardManagementBus.Instance.FindByBienSo(inputTextBox.Text) == null)
+                        GuiNhan(the, inputTextBox.Text);
+                    else
+                        MessageBox.Show("Xe này đang ở trong bãi hoặc đã đăng ký thẻ tháng");
                 }
             }
             inputTextBox.Text = "";
@@ -239,13 +252,52 @@ namespace dekatreís_octavo.View
             }
         }
 
+        private void listViewSample_ColumnClick(object sender, ColumnClickEventArgs e)
+        {
+            ItemComparer sorter = cardList.ListViewItemSorter as ItemComparer;
+
+            if (sorter == null)
+            {
+                sorter = new ItemComparer(e.Column);
+                sorter.Order = SortOrder.Ascending;
+                cardList.ListViewItemSorter = sorter;
+            }
+            // if clicked column is already the column that is being sorted
+            if (e.Column == sorter.Column)
+            {
+                // Reverse the current sort direction
+                if (sorter.Order == SortOrder.Ascending)
+                    sorter.Order = SortOrder.Descending;
+                else
+                    sorter.Order = SortOrder.Ascending;
+            }
+            else
+            {
+                // Set the column number that is to be sorted; default to ascending.
+                sorter.Column = e.Column;
+                sorter.Order = SortOrder.Ascending;
+            }
+            cardList.Sort();
+        }
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp";
+            openFileDialog1.Title = "Save an Image File";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                image = Image.FromFile(openFileDialog1.FileName);
+            }
+            
+        }
+
         private void typeComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (statusComboBox.SelectedIndex != -1)
             {
-                if (statusComboBox.SelectedIndex == 1)
+                if (statusComboBox.SelectedIndex == 2)
                     sortStatus = "false";
-                else if (statusComboBox.SelectedIndex == 2)
+                else if (statusComboBox.SelectedIndex == 1)
                     sortStatus = "true";
                 else sortStatus = null;
             }

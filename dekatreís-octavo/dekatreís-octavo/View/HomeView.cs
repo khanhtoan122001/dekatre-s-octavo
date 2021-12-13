@@ -20,6 +20,10 @@ namespace dekatreís_octavo.View
         {
             InitializeComponent();
             if (TaiKhoan != null) initHomeView();
+            int succhua = ThamSoBus.Instance.GetByTen("Sức chứa").GiaTri.Value;
+            progressBar.Value = DataProvider.Instance.SoXeTrongBai / succhua;
+            maxLabel.Text = succhua.ToString();
+            SoXe.Left = 264 + progressBar.Value*4;
         }
 
         public void StartWork()
@@ -84,7 +88,7 @@ namespace dekatreís_octavo.View
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
             parkingView1.LoadData();
-            
+            history1.LoadData();
             //BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
@@ -99,6 +103,7 @@ namespace dekatreís_octavo.View
                 tabControl.TabPages.Add(utility);
                 //tabControl.TabPages.Add(statusPage);
                 tabControl.TabPages.Add(setting);
+                lb_stopwatch.Visible = false;
             }
             else
             {
@@ -252,6 +257,9 @@ namespace dekatreís_octavo.View
                 lb_stopwatch.Text = string.Format("0{0} : 0{1}", a.ToString(), b.ToString());
             else if (a >= 10 && b < 10)
                 lb_stopwatch.Text = string.Format("{0} : 0{1}", a.ToString(), b.ToString());
+
+            SoXe.Text = DataProvider.Instance.SoXeTrongBai.ToString();
+
         }
 
         private void updateButton_Click(object sender, EventArgs e)
@@ -268,7 +276,8 @@ namespace dekatreís_octavo.View
                 ThamSoBus.Instance.EditThamSo("Sức chứa", succhua);
                 DataProvider.Instance.db.SaveChanges();
                 timer2.Enabled = true;
-                lb_success.Visible = true;
+                //lb_success.Visible = true;
+                Snackbar.MakeSnackbar(this, "Thành công", "OK");
             }
             else
             {
@@ -294,6 +303,19 @@ namespace dekatreís_octavo.View
             consistenceReport1.Visible = false;
             revenueReport1.Visible = false;
             revenueMonthlyReport1.Visible = true;
+        }
+        private void historyButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SoXe_TextAlignChanged(object sender, EventArgs e)
+        {
+            float succhua = ThamSoBus.Instance.GetByTen("Sức chứa").GiaTri.Value;
+            float soxe = DataProvider.Instance.SoXeTrongBai;
+            progressBar.Value = Convert.ToInt32(Math.Round(soxe / succhua * 100));
+            maxLabel.Text = succhua.ToString();
+            SoXe.Left = 261 + progressBar.Value * 4;
         }
     }
 }

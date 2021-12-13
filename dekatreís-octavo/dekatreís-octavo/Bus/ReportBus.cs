@@ -28,14 +28,16 @@ namespace dekatreís_octavo.Bus
         }
         private bool AddBaoCaoMatDoGuiXe(DateTime time, int XeVao, int XeRa)
         {
+            int gio = time.Hour;
             time = time.Date;
-            var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay == time).ToList();
+
+            var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay == time && p.Gio == gio).ToList();
             if (list.Count != 0)
                 return true;
             BaoCaoMatDoGuiXe report = new BaoCaoMatDoGuiXe();
             report.TongXeVao = XeVao;
             report.Ngay = time;
-            report.Gio = time.Hour;
+            report.Gio = gio;
             report.TongXeRa = XeRa;
             report.ChenhLech = Math.Abs(XeVao - XeRa);
             var result = db.BaoCaoMatDoGuiXes.Add(report);
@@ -45,10 +47,11 @@ namespace dekatreís_octavo.Bus
         public bool GuiXe_BaoCaoMatDoGuiXe()
         {
             DateTime time = DateTime.Now.Date;
-            var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay == time).ToList();
+            int gio = DateTime.Now.Hour;
+            var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay == time && p.Gio == gio).ToList();
             if (list.Count == 0)
             {
-                AddBaoCaoMatDoGuiXe(time, 1, 0);
+                AddBaoCaoMatDoGuiXe(DateTime.Now, 1, 0);
                 return true;
             }
             else
@@ -62,10 +65,11 @@ namespace dekatreís_octavo.Bus
         public bool NhanXe_BaoCaoMatDoGuiXe()
         {
             DateTime time = DateTime.Now.Date;
-            var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay == time).ToList();
+            int gio = DateTime.Now.Hour;
+            var list = db.BaoCaoMatDoGuiXes.Where(p => p.Ngay == time && p.Gio == gio).ToList();
             if (list.Count == 0)
             {
-                AddBaoCaoMatDoGuiXe(time, 0, 1);
+                AddBaoCaoMatDoGuiXe(DateTime.Now, 0, 1);
                 return true;
             }
             else
@@ -109,23 +113,16 @@ namespace dekatreís_octavo.Bus
             var result = from c in db.CT_BaoCaoLichSuHoatDong
                          select c;
 
-            if(date != null)
+            if (date != null)
             {
-                var l = (from c in db.BaoCaoLichSuHoatDongs
-                         where c.Ngay == date
-                         select c).ToList();
-
-                int id1 = -1, id2 = -1;
-
-                if (l.Count == 1)
-                    id1 = l[0].IDBaoCao;
-
-                if (l.Count == 2)
-                    id2 = l[1].IDBaoCao;
-
-                result = result.Where(p => p.IDBaoCao == id1 || p.IDBaoCao == id2);
+                result = result.Where( p => p.BaoCaoLichSuHoatDong.Ngay.Value == date);
             }
 
+            return result.ToList();
+        }
+        public List<CT_BaoCaoLichSuHoatDong> SearchCT_HoatDong(string txt, DateTime? date = null)
+        {
+            var result = db.CT_BaoCaoLichSuHoatDong.Where(p=>p.BienSo.Contains(txt));
             return result.ToList();
         }
         public int GetIdBaoCaoLichSuHoatDong(DateTime time, int hoatDong)

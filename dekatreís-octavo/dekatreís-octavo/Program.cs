@@ -15,12 +15,9 @@ namespace dekatreís_octavo
         [STAThread]
         static void Main()
         {
-            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var loginForm = new LoginView();
-            loginForm.Show();
-            Application.Run();
+            Application.Run(new LoginView());
         }
     }
 }

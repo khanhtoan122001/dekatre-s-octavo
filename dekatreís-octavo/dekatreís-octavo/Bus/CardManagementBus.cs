@@ -62,9 +62,28 @@ namespace dekatreís_octavo.Bus
         {
             QuanLyDoXeEntities1 db = DataProvider.Instance.db;
             var result = from c in db.TheXes
-                         where c.BienSoXe.Contains(BienSo)
+                         where c.BienSoXe == BienSo
                          select c;
             return result;
+        }
+
+        public void CheckAllow()
+        {
+            QuanLyDoXeEntities1 db = DataProvider.Instance.db;
+            var listTheThang = db.TheXes.Where(p => p.LoaiThe1.TenLoai == "Thẻ tháng").ToList();
+            foreach(var i in listTheThang)
+            {
+                if(i.NgayTao.HasValue)
+                    if(i.NgayTao.Value.AddDays(30) < DateTime.Now)
+                    {
+                        i.NgayTao = null;
+                        if (i.Status.Value)
+                        {
+                            i.BienSoXe = null;
+                        }
+                    }
+            }
+            db.SaveChanges();
         }
         public IQueryable<TheXe> GetTheXes(string sortType = null, string sortStatus = null)
         {
