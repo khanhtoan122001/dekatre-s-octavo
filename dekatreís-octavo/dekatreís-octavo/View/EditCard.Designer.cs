@@ -34,16 +34,16 @@ namespace dekatreís_octavo.View
             this.materialCard1 = new MaterialSurface.MaterialCard();
             this.bt_Confirm = new MaterialSurface.ContainedButton();
             this.editButton = new MaterialSurface.ContainedButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.anhXe4 = new System.Windows.Forms.PictureBox();
+            this.anhXe3 = new System.Windows.Forms.PictureBox();
+            this.anhXe2 = new System.Windows.Forms.PictureBox();
             this.anhXe1 = new System.Windows.Forms.PictureBox();
             this.inTime = new MaterialSurface.MaterialTextfield();
             this.startDate = new MaterialSurface.MaterialTextfield();
             this.materialCard1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anhXe4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anhXe3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anhXe2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anhXe1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,9 +99,9 @@ namespace dekatreís_octavo.View
             this.materialCard1.CardColor = System.Drawing.Color.White;
             this.materialCard1.Controls.Add(this.bt_Confirm);
             this.materialCard1.Controls.Add(this.editButton);
-            this.materialCard1.Controls.Add(this.pictureBox3);
-            this.materialCard1.Controls.Add(this.pictureBox2);
-            this.materialCard1.Controls.Add(this.pictureBox1);
+            this.materialCard1.Controls.Add(this.anhXe4);
+            this.materialCard1.Controls.Add(this.anhXe3);
+            this.materialCard1.Controls.Add(this.anhXe2);
             this.materialCard1.Controls.Add(this.anhXe1);
             this.materialCard1.Controls.Add(this.inTime);
             this.materialCard1.Controls.Add(this.startDate);
@@ -161,32 +161,35 @@ namespace dekatreís_octavo.View
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
-            // pictureBox3
+            // anhXe4
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(497, 194);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 24;
-            this.pictureBox3.TabStop = false;
+            this.anhXe4.Location = new System.Drawing.Point(497, 194);
+            this.anhXe4.Name = "anhXe4";
+            this.anhXe4.Size = new System.Drawing.Size(150, 150);
+            this.anhXe4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.anhXe4.TabIndex = 24;
+            this.anhXe4.TabStop = false;
+            this.anhXe4.Click += new System.EventHandler(this.anhXe4_Click);
             // 
-            // pictureBox2
+            // anhXe3
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(320, 194);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
+            this.anhXe3.Location = new System.Drawing.Point(320, 194);
+            this.anhXe3.Name = "anhXe3";
+            this.anhXe3.Size = new System.Drawing.Size(150, 150);
+            this.anhXe3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.anhXe3.TabIndex = 23;
+            this.anhXe3.TabStop = false;
+            this.anhXe3.Click += new System.EventHandler(this.anhXe3_Click);
             // 
-            // pictureBox1
+            // anhXe2
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(497, 26);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
+            this.anhXe2.Location = new System.Drawing.Point(497, 26);
+            this.anhXe2.Name = "anhXe2";
+            this.anhXe2.Size = new System.Drawing.Size(150, 150);
+            this.anhXe2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.anhXe2.TabIndex = 22;
+            this.anhXe2.TabStop = false;
+            this.anhXe2.Click += new System.EventHandler(this.anhXe2_Click);
             // 
             // anhXe1
             // 
@@ -196,6 +199,7 @@ namespace dekatreís_octavo.View
             this.anhXe1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.anhXe1.TabIndex = 17;
             this.anhXe1.TabStop = false;
+            this.anhXe1.Click += new System.EventHandler(this.anhXe1_Click);
             // 
             // inTime
             // 
@@ -263,9 +267,9 @@ namespace dekatreís_octavo.View
             this.Text = "EditCard";
             this.Load += new System.EventHandler(this.EditCard_Load);
             this.materialCard1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anhXe4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anhXe3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.anhXe2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.anhXe1)).EndInit();
             this.ResumeLayout(false);
 
@@ -279,9 +283,9 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.PictureBox anhXe1;
         private MaterialSurface.MaterialTextfield inTime;
         private MaterialSurface.MaterialTextfield startDate;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox anhXe4;
+        private System.Windows.Forms.PictureBox anhXe3;
+        private System.Windows.Forms.PictureBox anhXe2;
         private MaterialSurface.ContainedButton bt_Confirm;
         private MaterialSurface.ContainedButton editButton;
     }

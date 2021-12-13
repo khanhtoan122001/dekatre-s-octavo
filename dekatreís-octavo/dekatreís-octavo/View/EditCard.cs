@@ -35,6 +35,17 @@ namespace dekatreís_octavo.View
                 return;
             int idLoai = LoaiTheBus.Instance.GetIDTheByTen(cb_LoaiThe.SelectedItem.ToString());
             var result = CardManagementBus.Instance.EditCard(selected, tb_BienSo.Text, idLoai);
+            TheXe the = CardManagementBus.Instance.GetTheXeWithID(selected);
+            if (anhXe1.Image != null)
+                the.AnhXe1 = ImageHelper.imageToByteArray(anhXe1.Image);
+            if (anhXe2.Image != null)
+                the.AnhXe2 = ImageHelper.imageToByteArray(anhXe2.Image);
+            if (anhXe3.Image != null)
+                the.AnhXe3 = ImageHelper.imageToByteArray(anhXe3.Image);
+            if (anhXe4.Image != null)
+                the.AnhXe4 = ImageHelper.imageToByteArray(anhXe4.Image);
+            DataProvider.Instance.db.SaveChanges();
+
             if (result)
             {
                 MessageBox.Show("Thành công");
@@ -52,6 +63,14 @@ namespace dekatreís_octavo.View
             TheXe the = CardManagementBus.Instance.GetTheXeWithID(selected);
             tb_BienSo.Text = the.BienSoXe;
             cb_LoaiThe.SelectedIndex = (int)the.LoaiThe - 1;
+            if (the.AnhXe1 != null)
+                anhXe1.Image = ImageHelper.byteArrayToImage(the.AnhXe1);
+            if (the.AnhXe2 != null)
+                anhXe2.Image = ImageHelper.byteArrayToImage(the.AnhXe2);
+            if (the.AnhXe3 != null)
+                anhXe3.Image = ImageHelper.byteArrayToImage(the.AnhXe3);
+            if (the.AnhXe4 != null)
+                anhXe4.Image = ImageHelper.byteArrayToImage(the.AnhXe4);
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -62,6 +81,7 @@ namespace dekatreís_octavo.View
                 startDate.ReadOnly = false;
                 tb_BienSo.ReadOnly = false;
                 inTime.ReadOnly = false;
+                anhXe1.Enabled = anhXe2.Enabled = anhXe3.Enabled = anhXe4.Enabled = false;
                 editting = true;
             }
             else
@@ -69,9 +89,54 @@ namespace dekatreís_octavo.View
                 editting = false;
                 startDate.ReadOnly = true;
                 tb_BienSo.ReadOnly = true;
+                anhXe1.Enabled = anhXe2.Enabled = anhXe3.Enabled = anhXe4.Enabled = true;
                 inTime.ReadOnly = true;
                 editButton.Text = "Chỉnh sửa";
             }    
+        }
+
+        private void anhXe1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp";
+            openFileDialog1.Title = "Save an Image File";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                anhXe1.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+        }
+
+        private void anhXe2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp";
+            openFileDialog1.Title = "Save an Image File";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                anhXe2.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+        }
+
+        private void anhXe3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp";
+            openFileDialog1.Title = "Save an Image File";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                anhXe3.Image = Image.FromFile(openFileDialog1.FileName);
+            }
+        }
+
+        private void anhXe4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.Filter = "JPeg Image|*.jpg|Bitmap Image|*.bmp";
+            openFileDialog1.Title = "Save an Image File";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                anhXe4.Image = Image.FromFile(openFileDialog1.FileName);
+            }
         }
     }
 }
