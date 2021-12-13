@@ -89,7 +89,7 @@ namespace dekatreís_octavo.View
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
             history1.LoadData();
-            pictureBox3.Left = tabNameLabel.Width + 30;
+            pictureBox3.Left = tabNameLabel.Location.X - 40;
             //BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
@@ -187,7 +187,6 @@ namespace dekatreís_octavo.View
             revenueMonthlyReport1.Visible = false;
             revenueReport1.Visible = false;
             consistenceReport1.Visible = true;
-            consistenceReport1.LoadData();
         }
 
 
@@ -208,42 +207,42 @@ namespace dekatreís_octavo.View
                     {
                         tabNameLabel.Text = "Trang chính";
                         pictureBox3.Image = Resources.baseline_home_black_36dp;
-                        pictureBox3.Left = tabNameLabel.Width + 30;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
                         break;
                     }
                 case "cardPage":
                     {
                         tabNameLabel.Text = "Quản lý thẻ";
                         pictureBox3.Image = Resources.baseline_two_wheeler_black_36dp;
-                        pictureBox3.Left = tabNameLabel.Width + 30;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
                         break;
                     }
                 case "staffPage":
                     {
                         tabNameLabel.Text = "Quản lý nhân viên";
                         pictureBox3.Image = Resources.baseline_manage_accounts_black_36dp;
-                        pictureBox3.Left = tabNameLabel.Width + 30;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
                         break;
                     }
                 case "utility":
                     {
                         tabNameLabel.Text = "Báo cáo";
                         pictureBox3.Image = Resources.baseline_analytics_black_36dp;
-                        pictureBox3.Left = tabNameLabel.Width + 30;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
                         break;
                     }
                 case "statusPage":
                     {
                         tabNameLabel.Text = "Tình trạng bãi";
                         pictureBox3.Image = Resources.baseline_home_black_36dp;
-                        pictureBox3.Left = tabNameLabel.Width + 30;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
                         break;
                     }
                 case "setting":
                     {
                         tabNameLabel.Text = "Quản lý quy định";
                         pictureBox3.Image = Resources.baseline_settings_black_36dp;
-                        pictureBox3.Left = tabNameLabel.Width + 30;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
                         break;
                     }
                 default:

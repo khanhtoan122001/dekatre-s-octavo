@@ -83,6 +83,7 @@ namespace dekatreís_octavo.View
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.history1 = new dekatreís_octavo.View.History();
             this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.staffView1 = new dekatreís_octavo.View.StaffView();
@@ -110,6 +111,7 @@ namespace dekatreís_octavo.View
             this.panel3.SuspendLayout();
             this.iconPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // materialDrawer1
@@ -147,6 +149,7 @@ namespace dekatreís_octavo.View
             // 
             // leftPanel
             // 
+            this.leftPanel.Controls.Add(this.pictureBox3);
             this.leftPanel.Controls.Add(this.lb_stopwatch);
             this.leftPanel.Controls.Add(this.tabNameLabel);
             this.leftPanel.Controls.Add(this.pictureBox2);
@@ -175,7 +178,7 @@ namespace dekatreís_octavo.View
             // 
             this.tabNameLabel.AutoSize = true;
             this.tabNameLabel.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabNameLabel.Location = new System.Drawing.Point(28, 32);
+            this.tabNameLabel.Location = new System.Drawing.Point(85, 30);
             this.tabNameLabel.Name = "tabNameLabel";
             this.tabNameLabel.Size = new System.Drawing.Size(171, 38);
             this.tabNameLabel.TabIndex = 13;
@@ -423,11 +426,7 @@ namespace dekatreís_octavo.View
             // utility
             // 
             this.utility.BackColor = System.Drawing.Color.White;
-            this.utility.Controls.Add(this.revenueMonthlyReport1);
-            this.utility.Controls.Add(this.containedButton2);
-            this.utility.Controls.Add(this.containedButton1);
             this.utility.Controls.Add(this.splitContainer1);
-            this.utility.Controls.Add(this.revenueReport1);
             this.utility.Location = new System.Drawing.Point(4, 31);
             this.utility.Name = "utility";
             this.utility.Padding = new System.Windows.Forms.Padding(3);
@@ -441,7 +440,7 @@ namespace dekatreís_octavo.View
             this.containedButton2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton2.Icon = null;
-            this.containedButton2.Location = new System.Drawing.Point(632, 6);
+            this.containedButton2.Location = new System.Drawing.Point(627, 21);
             this.containedButton2.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton2.Name = "containedButton2";
             this.containedButton2.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -461,7 +460,7 @@ namespace dekatreís_octavo.View
             this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.containedButton1.Icon = null;
-            this.containedButton1.Location = new System.Drawing.Point(424, 7);
+            this.containedButton1.Location = new System.Drawing.Point(419, 21);
             this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
             this.containedButton1.Name = "containedButton1";
             this.containedButton1.PrimaryColor = System.Drawing.Color.BlueViolet;
@@ -485,10 +484,14 @@ namespace dekatreís_octavo.View
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.statusButton);
+            this.splitContainer1.Panel1.Controls.Add(this.containedButton2);
             this.splitContainer1.Panel1.Controls.Add(this.historyButton);
+            this.splitContainer1.Panel1.Controls.Add(this.containedButton1);
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.revenueReport1);
+            this.splitContainer1.Panel2.Controls.Add(this.revenueMonthlyReport1);
             this.splitContainer1.Panel2.Controls.Add(this.consistenceReport1);
             this.splitContainer1.Size = new System.Drawing.Size(1067, 536);
             this.splitContainer1.SplitterDistance = 91;
@@ -826,6 +829,16 @@ namespace dekatreís_octavo.View
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::dekatreís_octavo.Properties.Resources.baseline_home_black_36dp;
+            this.pictureBox3.Location = new System.Drawing.Point(43, 32);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 15;
+            this.pictureBox3.TabStop = false;
+            // 
             // history1
             // 
             this.history1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -863,9 +876,9 @@ namespace dekatreís_octavo.View
             this.revenueMonthlyReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.revenueMonthlyReport1.Location = new System.Drawing.Point(3, 80);
+            this.revenueMonthlyReport1.Location = new System.Drawing.Point(0, 0);
             this.revenueMonthlyReport1.Name = "revenueMonthlyReport1";
-            this.revenueMonthlyReport1.Size = new System.Drawing.Size(1071, 463);
+            this.revenueMonthlyReport1.Size = new System.Drawing.Size(1071, 464);
             this.revenueMonthlyReport1.TabIndex = 6;
             this.revenueMonthlyReport1.Visible = false;
             // 
@@ -884,9 +897,9 @@ namespace dekatreís_octavo.View
             this.revenueReport1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.revenueReport1.Location = new System.Drawing.Point(3, 80);
+            this.revenueReport1.Location = new System.Drawing.Point(0, 0);
             this.revenueReport1.Name = "revenueReport1";
-            this.revenueReport1.Size = new System.Drawing.Size(1071, 463);
+            this.revenueReport1.Size = new System.Drawing.Size(1071, 464);
             this.revenueReport1.TabIndex = 4;
             this.revenueReport1.Visible = false;
             // 
@@ -931,6 +944,7 @@ namespace dekatreís_octavo.View
             this.panel3.ResumeLayout(false);
             this.iconPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -995,5 +1009,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
         private MaterialSkin.Controls.MaterialDrawer tabDrawer;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
