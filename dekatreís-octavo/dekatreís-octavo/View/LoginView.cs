@@ -23,11 +23,11 @@ namespace dekatreís_octavo.View
         {
             InitializeComponent();
             DataProvider.Instance.CreateDataDefault();
-            home = new HomeView();
         }
 
         private void containedButton1_Click(object sender, EventArgs e)
         {
+            home = new HomeView();
             if (string.IsNullOrEmpty(tb_Username.Text) || string.IsNullOrEmpty(tb_Password.Text))
             {
                 Dialog.Show(this, "Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!", "Đăng nhập thất bại");
