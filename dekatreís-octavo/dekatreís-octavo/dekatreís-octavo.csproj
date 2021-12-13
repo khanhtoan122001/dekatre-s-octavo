@@ -179,6 +179,7 @@
     <Compile Include="Bus\ExcelHelper.cs" />
     <Compile Include="Bus\GuiNhanXeBus.cs" />
     <Compile Include="Bus\ImageHelper.cs" />
+    <Compile Include="Bus\ItemComparer.cs" />
     <Compile Include="Bus\LoaiTaiKhoanBus.cs" />
     <Compile Include="Bus\LoginViewBus.cs" />
     <Compile Include="Bus\ReportBus.cs" />

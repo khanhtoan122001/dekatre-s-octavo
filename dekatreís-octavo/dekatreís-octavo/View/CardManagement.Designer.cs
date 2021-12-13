@@ -136,6 +136,7 @@ namespace dekatreís_octavo.View
             this.cardList.TabIndex = 1;
             this.cardList.UseCompatibleStateImageBehavior = false;
             this.cardList.View = System.Windows.Forms.View.Details;
+            this.cardList.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewSample_ColumnClick);
             this.cardList.SelectedIndexChanged += new System.EventHandler(this.cardList_SelectedIndexChanged);
             this.cardList.DoubleClick += new System.EventHandler(this.cardList_DoubleClick);
             // 

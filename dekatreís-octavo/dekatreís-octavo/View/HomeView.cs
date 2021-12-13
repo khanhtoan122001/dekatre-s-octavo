@@ -84,7 +84,7 @@ namespace dekatreís_octavo.View
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
             parkingView1.LoadData();
-            
+            history1.LoadData();
             //BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
