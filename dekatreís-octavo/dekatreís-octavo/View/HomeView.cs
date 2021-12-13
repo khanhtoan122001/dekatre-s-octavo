@@ -89,12 +89,14 @@ namespace dekatreís_octavo.View
 
         private void HomeView_Load(object sender, EventArgs e)
         {
+
             if (DataProvider.Instance.TaiKhoan.Avatar == null)
                 LoginViewBus.Instance.ChangeAvatar(Resources.default_avatar_300x300);
             cardManagement1.LoadData();
             staffView1.LoadStaffList();
             history1.LoadData();
             ReportBus.Instance.AddCT_TongChiCacPhiKhac();
+            pictureBox3.Left = tabNameLabel.Location.X - 40;
             //BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
@@ -213,37 +215,49 @@ namespace dekatreís_octavo.View
                 switch (tabControl.SelectedTab.Name)
                 {
                     case "homePage":
-                        {
-                            tabNameLabel.Text = "Trang chính";
-                            break;
-                        }
-                    case "cardPage":
-                        {
-                            tabNameLabel.Text = "Quản lý thẻ";
-                            break;
-                        }
-                    case "staffPage":
-                        {
-                            tabNameLabel.Text = "Quản lý nhân viên";
-                            break;
-                        }
-                    case "utility":
-                        {
-                            tabNameLabel.Text = "Báo cáo";
-                            break;
-                        }
-                    case "statusPage":
-                        {
-                            tabNameLabel.Text = "Tình trạng bãi";
-                            break;
-                        }
-                    case "setting":
-                        {
-                            tabNameLabel.Text = "Quản lý quy định";
-                            break;
-                        }
-                    default:
+                    {
+                        tabNameLabel.Text = "Trang chính";
+                        pictureBox3.Image = Resources.baseline_home_black_36dp;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
                         break;
+                    }
+                case "cardPage":
+                    {
+                        tabNameLabel.Text = "Quản lý thẻ";
+                        pictureBox3.Image = Resources.baseline_two_wheeler_black_36dp;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
+                        break;
+                    }
+                case "staffPage":
+                    {
+                        tabNameLabel.Text = "Quản lý nhân viên";
+                        pictureBox3.Image = Resources.baseline_manage_accounts_black_36dp;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
+                        break;
+                    }
+                case "utility":
+                    {
+                        tabNameLabel.Text = "Báo cáo";
+                        pictureBox3.Image = Resources.baseline_analytics_black_36dp;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
+                        break;
+                    }
+                case "statusPage":
+                    {
+                        tabNameLabel.Text = "Tình trạng bãi";
+                        pictureBox3.Image = Resources.baseline_home_black_36dp;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
+                        break;
+                    }
+                case "setting":
+                    {
+                        tabNameLabel.Text = "Quản lý quy định";
+                        pictureBox3.Image = Resources.baseline_settings_black_36dp;
+                        pictureBox3.Left = tabNameLabel.Location.X - 40;
+                        break;
+                    }
+                default:
+                    break;
                 };
             }
             else

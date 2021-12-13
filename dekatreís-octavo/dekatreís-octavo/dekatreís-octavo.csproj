@@ -509,6 +509,16 @@
     </Content>
     <None Include="Resources\photo.png" />
     <None Include="Resources\62025.png" />
+    <None Include="Resources\baseline_analytics_black_24dp.png" />
+    <None Include="Resources\baseline_home_black_24dp.png" />
+    <None Include="Resources\baseline_manage_accounts_black_24dp.png" />
+    <None Include="Resources\baseline_settings_black_24dp.png" />
+    <None Include="Resources\baseline_two_wheeler_black_24dp.png" />
+    <None Include="Resources\baseline_analytics_black_36dp.png" />
+    <None Include="Resources\baseline_home_black_36dp.png" />
+    <None Include="Resources\baseline_manage_accounts_black_36dp.png" />
+    <None Include="Resources\baseline_settings_black_36dp.png" />
+    <None Include="Resources\baseline_two_wheeler_black_36dp.png" />
     <Content Include="Resources\default-avatar-300x300.png" />
     <None Include="Resources\x-button-icon-20.jpg" />
     <None Include="Resources\arrow_cloud_up_upload_icon_123722.png" />
