@@ -126,6 +126,7 @@ namespace dekatreís_octavo.View
             // 
             this.bt_refresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_refresh.EffectType = MaterialSurface.ET.Custom;
+            this.bt_refresh.Enabled = false;
             this.bt_refresh.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_refresh.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_refresh.Icon = null;
