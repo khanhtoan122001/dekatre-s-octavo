@@ -103,7 +103,7 @@ namespace dekatreís_octavo.View
 
         private void tb_Username_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if(e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 tb_Password.Focus();
             }
@@ -114,6 +114,10 @@ namespace dekatreís_octavo.View
             if (e.KeyCode == Keys.Enter)
             {
                 this.containedButton1_Click(null, null);
+            }
+            if(e.KeyCode == Keys.Tab)
+            {
+                bt_Login.Focus();
             }
         }
 

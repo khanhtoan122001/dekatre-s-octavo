@@ -191,6 +191,7 @@ namespace dekatreís_octavo.View
             this.splitContainer1.Size = new System.Drawing.Size(956, 552);
             this.splitContainer1.SplitterDistance = 496;
             this.splitContainer1.TabIndex = 9;
+            this.splitContainer1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lblMoveForm_MouseDown);
             // 
             // LoginView
             // 
