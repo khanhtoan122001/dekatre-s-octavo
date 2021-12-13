@@ -72,6 +72,7 @@ namespace dekatreís_octavo.View
             this.tb_Username.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
             this.tb_Username.TabIndex = 0;
             this.tb_Username.UseSystemPasswordChar = false;
+            this.tb_Username.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tb_Username_KeyDown);
             // 
             // tb_Password
             // 
