@@ -26,6 +26,7 @@ namespace dekatreís_octavo.View
         private void CardManagement_Load(object sender, EventArgs e)
         {
             //this.LoadData();
+            pictureBox6.Left = tb_search.Size.Width - 10;
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -101,28 +102,28 @@ namespace dekatreís_octavo.View
         {
             if (cardList.SelectedItems.Count == 0)
             {
-                inOutButton.Enabled = false;
-                createButton.Enabled = false;
+                inOutButton.Visible = false;
+                createButton.Visible = false;
             }
             else
             {
                 TheXe the = (TheXe)cardList.SelectedItems[0].Tag;
                 if (the.LoaiThe1.TenLoai != "Thẻ tháng")
                 {
-                    inOutButton.Enabled = true;
-                    createButton.Enabled = false;
+                    inOutButton.Visible = true;
+                    createButton.Visible = false;
                 }
                 else
                 {
                     if (string.IsNullOrEmpty(the.BienSoXe))
                     {
-                        createButton.Enabled = true;
-                        inOutButton.Enabled = false;
+                        createButton.Visible = true;
+                        inOutButton.Visible = false;
                     }
                     else
                     {
-                        inOutButton.Enabled = true;
-                        createButton.Enabled = false;
+                        inOutButton.Visible = true;
+                        createButton.Visible = false;
                     }
                 }
                 if (the.Status.Value)

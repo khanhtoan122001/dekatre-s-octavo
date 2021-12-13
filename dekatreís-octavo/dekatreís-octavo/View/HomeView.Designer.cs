@@ -88,6 +88,7 @@ namespace dekatreís_octavo.View
             this.schedule = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.tabDrawer = new MaterialSkin.Controls.MaterialDrawer();
             this.panel1.SuspendLayout();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -106,6 +107,7 @@ namespace dekatreís_octavo.View
             this.splitContainer1.SuspendLayout();
             this.setting.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.iconPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -795,6 +797,7 @@ namespace dekatreís_octavo.View
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.tabDrawer);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 112);
             this.panel3.Name = "panel3";
@@ -868,6 +871,26 @@ namespace dekatreís_octavo.View
             this.timer2.Interval = 2000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // tabDrawer
+            // 
+            this.tabDrawer.AutoHide = false;
+            this.tabDrawer.AutoShow = false;
+            this.tabDrawer.BackgroundWithAccent = false;
+            this.tabDrawer.BaseTabControl = this.tabControl;
+            this.tabDrawer.Depth = 0;
+            this.tabDrawer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabDrawer.HighlightWithAccent = true;
+            this.tabDrawer.IndicatorWidth = 5;
+            this.tabDrawer.IsOpen = true;
+            this.tabDrawer.Location = new System.Drawing.Point(0, 0);
+            this.tabDrawer.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tabDrawer.Name = "tabDrawer";
+            this.tabDrawer.ShowIconsWhenHidden = false;
+            this.tabDrawer.Size = new System.Drawing.Size(256, 581);
+            this.tabDrawer.TabIndex = 0;
+            this.tabDrawer.Text = "tabDrawer";
+            this.tabDrawer.UseColors = false;
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -906,6 +929,7 @@ namespace dekatreís_octavo.View
             this.setting.ResumeLayout(false);
             this.setting.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.iconPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -971,5 +995,6 @@ namespace dekatreís_octavo.View
         private System.Windows.Forms.Label maxLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ImageList imageList1;
+        private MaterialSkin.Controls.MaterialDrawer tabDrawer;
     }
 }
