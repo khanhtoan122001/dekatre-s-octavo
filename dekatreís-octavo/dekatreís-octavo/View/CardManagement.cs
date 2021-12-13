@@ -28,8 +28,9 @@ namespace dekatreís_octavo.View
 
         private void addButton_Click(object sender, EventArgs e)
         {
-            var addCard = new AddCardForm();
-            addCard.ShowDialog();
+            //var addCard = new AddCardForm();
+            //addCard.ShowDialog();
+            addCard.Visible = true;
             this.LoadData();
         }
 
