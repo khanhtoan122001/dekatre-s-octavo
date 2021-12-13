@@ -1,4 +1,5 @@
 ﻿using dekatreís_octavo.Bus;
+using dekatreís_octavo.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,15 @@ namespace dekatreís_octavo.View
     public partial class DetailView : Form
     {
         bool editing = false;
-        public TaiKhoan taiKhoan = DataProvider.Instance.TaiKhoan;
+        public TaiKhoan taiKhoan;// DataProvider.Instance.TaiKhoan;
         public DetailView()
         {
             InitializeComponent();
+        }
+
+        public void LoadTaiKhoan(TaiKhoan taiKhoan)
+        {
+            this.taiKhoan = taiKhoan;
             accountLabel.Text = taiKhoan.TenDangNhap;
             nameTextBox.Text = taiKhoan.TenThat;
             phoneTextBox.Text = taiKhoan.SDT;
@@ -30,18 +36,20 @@ namespace dekatreís_octavo.View
             {
                 positionTextBox.Text = "staff";
             }
-            avatar.Image = ImageHelper.byteArrayToImage(taiKhoan.Avatar);
+            if (taiKhoan.Avatar != null)
+                avatar.Image = ImageHelper.byteArrayToImage(taiKhoan.Avatar);
+            else
+                avatar.Image = Resources.default_avatar_300x300;
         }
 
         private void containedButton1_Click(object sender, EventArgs e)
         {
             if (editing)
             {
-                TaiKhoan tk = new TaiKhoan();
-                tk.TenThat = nameTextBox.Text;
-                tk.SDT = phoneTextBox.Text;
-                tk.CMND = idTextBox.Text;
-                LoginViewBus.Instance.SaveChange(tk);
+                taiKhoan.TenThat = nameTextBox.Text;
+                taiKhoan.SDT = phoneTextBox.Text;
+                taiKhoan.CMND = idTextBox.Text;
+                DataProvider.Instance.db.SaveChanges();
                 editing = false;
             }
             this.Close();
@@ -76,11 +84,10 @@ namespace dekatreís_octavo.View
                 nameTextBox.Enabled = false;
                 idTextBox.Enabled = false;
                 phoneTextBox.Enabled = false;
-                TaiKhoan tk = new TaiKhoan();
-                tk.TenThat = nameTextBox.Text;
-                tk.SDT = phoneTextBox.Text;
-                tk.CMND = idTextBox.Text;
-                LoginViewBus.Instance.SaveChange(tk);
+                taiKhoan.TenThat = nameTextBox.Text;
+                taiKhoan.SDT = phoneTextBox.Text;
+                taiKhoan.CMND = idTextBox.Text;
+                DataProvider.Instance.db.SaveChanges();
                 editButton.Text = "Edit";
                 closeButton.Text = "Close";
                 editing = false;

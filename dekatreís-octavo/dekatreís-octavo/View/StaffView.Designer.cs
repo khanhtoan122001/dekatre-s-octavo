@@ -38,21 +38,20 @@ namespace dekatreís_octavo.View
             this.staffType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.staffUsername = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.bt_add = new MaterialSurface.ContainedButton();
-            this.bt_edit = new MaterialSurface.ContainedButton();
             this.bt_remove = new MaterialSurface.ContainedButton();
             this.materialTextfield1 = new MaterialSurface.MaterialTextfield();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.passResetButton = new MaterialSurface.ContainedButton();
-            this.cb_typeSearch = new MaterialSkin.Controls.MaterialComboBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.passResetButton = new MaterialSurface.ContainedButton();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.cb_typeSearch = new MaterialSkin.Controls.MaterialComboBox();
             this.mainPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // materialListView1
@@ -85,7 +84,6 @@ namespace dekatreís_octavo.View
             this.materialListView1.View = System.Windows.Forms.View.Details;
             this.materialListView1.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.listViewSample_ColumnClick);
             this.materialListView1.SelectedIndexChanged += new System.EventHandler(this.materialListView1_SelectedIndexChanged);
-            this.materialListView1.DoubleClick += new System.EventHandler(this.materialListView1_DoubleClick);
             this.materialListView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.materialListView1_MouseDoubleClick);
             // 
             // staffName
@@ -135,28 +133,6 @@ namespace dekatreís_octavo.View
             this.bt_add.UseVisualStyleBackColor = true;
             this.bt_add.Click += new System.EventHandler(this.containedButton1_Click);
             // 
-            // bt_edit
-            // 
-            this.bt_edit.EffectType = MaterialSurface.ET.Custom;
-            this.bt_edit.Enabled = false;
-            this.bt_edit.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_edit.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.bt_edit.Icon = null;
-            this.bt_edit.Location = new System.Drawing.Point(159, 2);
-            this.bt_edit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bt_edit.MouseState = MaterialSurface.MouseState.OUT;
-            this.bt_edit.Name = "bt_edit";
-            this.bt_edit.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.bt_edit.Radius = 6;
-            this.bt_edit.ShawdowDepth = 3;
-            this.bt_edit.ShawdowOpacity = 50;
-            this.bt_edit.Size = new System.Drawing.Size(150, 64);
-            this.bt_edit.TabIndex = 2;
-            this.bt_edit.Text = "Sửa";
-            this.bt_edit.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.bt_edit.UseVisualStyleBackColor = true;
-            this.bt_edit.Click += new System.EventHandler(this.containedButton2_Click);
-            // 
             // bt_remove
             // 
             this.bt_remove.EffectType = MaterialSurface.ET.Custom;
@@ -164,7 +140,7 @@ namespace dekatreís_octavo.View
             this.bt_remove.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_remove.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.bt_remove.Icon = null;
-            this.bt_remove.Location = new System.Drawing.Point(315, 2);
+            this.bt_remove.Location = new System.Drawing.Point(159, 2);
             this.bt_remove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bt_remove.MouseState = MaterialSurface.MouseState.OUT;
             this.bt_remove.Name = "bt_remove";
@@ -241,6 +217,16 @@ namespace dekatreís_octavo.View
             this.topPanel.Size = new System.Drawing.Size(1209, 141);
             this.topPanel.TabIndex = 6;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.bt_add);
+            this.flowLayoutPanel1.Controls.Add(this.bt_remove);
+            this.flowLayoutPanel1.Controls.Add(this.passResetButton);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 67);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(675, 73);
+            this.flowLayoutPanel1.TabIndex = 11;
+            // 
             // passResetButton
             // 
             this.passResetButton.EffectType = MaterialSurface.ET.Custom;
@@ -248,7 +234,7 @@ namespace dekatreís_octavo.View
             this.passResetButton.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passResetButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.passResetButton.Icon = null;
-            this.passResetButton.Location = new System.Drawing.Point(471, 2);
+            this.passResetButton.Location = new System.Drawing.Point(315, 2);
             this.passResetButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.passResetButton.MouseState = MaterialSurface.MouseState.OUT;
             this.passResetButton.Name = "passResetButton";
@@ -262,6 +248,17 @@ namespace dekatreís_octavo.View
             this.passResetButton.TextAlignment = System.Drawing.StringAlignment.Center;
             this.passResetButton.UseVisualStyleBackColor = true;
             this.passResetButton.Click += new System.EventHandler(this.passResetButton_Click);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(920, 29);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 10;
+            this.pictureBox6.TabStop = false;
             // 
             // cb_typeSearch
             // 
@@ -294,28 +291,6 @@ namespace dekatreís_octavo.View
             this.cb_typeSearch.TabIndex = 5;
             this.cb_typeSearch.SelectedIndexChanged += new System.EventHandler(this.materialComboBox1_SelectedIndexChanged);
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(920, 29);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 10;
-            this.pictureBox6.TabStop = false;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.bt_add);
-            this.flowLayoutPanel1.Controls.Add(this.bt_edit);
-            this.flowLayoutPanel1.Controls.Add(this.bt_remove);
-            this.flowLayoutPanel1.Controls.Add(this.passResetButton);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(21, 67);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(675, 73);
-            this.flowLayoutPanel1.TabIndex = 11;
-            // 
             // StaffView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -330,8 +305,8 @@ namespace dekatreís_octavo.View
             this.panel1.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,7 +316,6 @@ namespace dekatreís_octavo.View
         private MaterialSkin.Controls.MaterialListView materialListView1;
         private System.Windows.Forms.ColumnHeader staffName;
         private MaterialSurface.ContainedButton bt_add;
-        private MaterialSurface.ContainedButton bt_edit;
         private MaterialSurface.ContainedButton bt_remove;
         private MaterialSurface.MaterialTextfield materialTextfield1;
         private System.Windows.Forms.ColumnHeader staffCMND;

@@ -200,6 +200,7 @@ namespace dekatreís_octavo.View
         {
             materialCard1.Visible = false;
             DetailView detailView = new DetailView();
+            detailView.LoadTaiKhoan(DataProvider.Instance.TaiKhoan);
             detailView.ShowDialog();
             if (TaiKhoan != null)
                 pictureBox2.Image = ImageHelper.byteArrayToImage(TaiKhoan.Avatar);

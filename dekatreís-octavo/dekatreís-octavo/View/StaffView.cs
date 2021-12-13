@@ -48,7 +48,7 @@ namespace dekatreís_octavo.View
                 return;
             //Select an account
             passResetButton.Enabled = true;
-            bt_edit.Enabled = true;
+            //bt_edit.Enabled = true;
             bt_remove.Enabled = true;
             selectedTaiKhoan = StaffViewBus.Instance.SelectTaiKhoan(materialListView1.SelectedItems[0].SubItems[4].Text);
         }
@@ -120,6 +120,9 @@ namespace dekatreís_octavo.View
         private void materialListView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             DetailView detail = new DetailView();
+            detail.LoadTaiKhoan(selectedTaiKhoan);
+            detail.ShowDialog();
+            LoadStaffList();
         }
     }
 }
