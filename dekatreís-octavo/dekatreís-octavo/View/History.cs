@@ -20,7 +20,7 @@ namespace dekatreís_octavo.View
         }
         public void LoadData(List<CT_BaoCaoLichSuHoatDong> list = null)
         {
-            var result = checkbox.Checked? ReportBus.Instance.GetCT_BaoCaoLichSuHoatDongs(dateTimePicker1.Value.Date) : ReportBus.Instance.GetCT_BaoCaoLichSuHoatDongs();
+            var result = !checkbox.Checked ? ReportBus.Instance.GetCT_BaoCaoLichSuHoatDongs(dateTimePicker1.Value.Date) : ReportBus.Instance.GetCT_BaoCaoLichSuHoatDongs();
             if (list != null)
                 result = list;
             historyList.Items.Clear();
@@ -45,7 +45,7 @@ namespace dekatreís_octavo.View
         private void searchTextBox_TextChanged(object sender, EventArgs e)
         {
             List<CT_BaoCaoLichSuHoatDong> list;
-            if (checkbox.Checked)
+            if (!checkbox.Checked)
                 list = ReportBus.Instance.SearchCT_HoatDong(searchTextBox.Text, dateTimePicker1.Value.Date);
             else
                 list = ReportBus.Instance.SearchCT_HoatDong(searchTextBox.Text);
@@ -87,6 +87,11 @@ namespace dekatreís_octavo.View
         }
 
         private void historyList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void topPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
