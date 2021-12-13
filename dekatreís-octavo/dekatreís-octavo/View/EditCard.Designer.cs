@@ -54,6 +54,7 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.cb_LoaiThe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_LoaiThe.DropDownWidth = 121;
+            this.cb_LoaiThe.Enabled = false;
             this.cb_LoaiThe.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cb_LoaiThe.FormattingEnabled = true;
             this.cb_LoaiThe.HintText = "Loại thẻ";
@@ -163,40 +164,44 @@ namespace dekatreís_octavo.View
             // 
             // anhXe4
             // 
+            this.anhXe4.Enabled = false;
             this.anhXe4.Location = new System.Drawing.Point(497, 194);
             this.anhXe4.Name = "anhXe4";
             this.anhXe4.Size = new System.Drawing.Size(150, 150);
-            this.anhXe4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.anhXe4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.anhXe4.TabIndex = 24;
             this.anhXe4.TabStop = false;
             this.anhXe4.Click += new System.EventHandler(this.anhXe4_Click);
             // 
             // anhXe3
             // 
+            this.anhXe3.Enabled = false;
             this.anhXe3.Location = new System.Drawing.Point(320, 194);
             this.anhXe3.Name = "anhXe3";
             this.anhXe3.Size = new System.Drawing.Size(150, 150);
-            this.anhXe3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.anhXe3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.anhXe3.TabIndex = 23;
             this.anhXe3.TabStop = false;
             this.anhXe3.Click += new System.EventHandler(this.anhXe3_Click);
             // 
             // anhXe2
             // 
+            this.anhXe2.Enabled = false;
             this.anhXe2.Location = new System.Drawing.Point(497, 26);
             this.anhXe2.Name = "anhXe2";
             this.anhXe2.Size = new System.Drawing.Size(150, 150);
-            this.anhXe2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.anhXe2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.anhXe2.TabIndex = 22;
             this.anhXe2.TabStop = false;
             this.anhXe2.Click += new System.EventHandler(this.anhXe2_Click);
             // 
             // anhXe1
             // 
+            this.anhXe1.Enabled = false;
             this.anhXe1.Location = new System.Drawing.Point(320, 26);
             this.anhXe1.Name = "anhXe1";
             this.anhXe1.Size = new System.Drawing.Size(150, 150);
-            this.anhXe1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.anhXe1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.anhXe1.TabIndex = 17;
             this.anhXe1.TabStop = false;
             this.anhXe1.Click += new System.EventHandler(this.anhXe1_Click);
