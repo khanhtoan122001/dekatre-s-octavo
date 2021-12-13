@@ -81,7 +81,7 @@
             // materialTextfield1
             // 
             this.materialTextfield1.AutoScaleColor = true;
-            this.materialTextfield1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialTextfield1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.materialTextfield1.CountText = false;
             this.materialTextfield1.FieldType = MaterialSurface.BoxType.Normal;
             this.materialTextfield1.FloatingLabelText = "FloatingLabel";
@@ -108,7 +108,7 @@
             // materialTextfield2
             // 
             this.materialTextfield2.AutoScaleColor = true;
-            this.materialTextfield2.BackColor = System.Drawing.SystemColors.Control;
+            this.materialTextfield2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.materialTextfield2.CountText = false;
             this.materialTextfield2.FieldType = MaterialSurface.BoxType.Normal;
             this.materialTextfield2.FloatingLabelText = "FloatingLabel";
@@ -135,7 +135,7 @@
             // materialTextBox2
             // 
             this.materialTextBox2.AutoScaleColor = true;
-            this.materialTextBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.materialTextBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.materialTextBox2.CountText = false;
             this.materialTextBox2.FieldType = MaterialSurface.BoxType.Normal;
             this.materialTextBox2.FloatingLabelText = "FloatingLabel";
@@ -162,7 +162,7 @@
             // materialTextBox1
             // 
             this.materialTextBox1.AutoScaleColor = true;
-            this.materialTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.materialTextBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.materialTextBox1.CountText = false;
             this.materialTextBox1.FieldType = MaterialSurface.BoxType.Normal;
             this.materialTextBox1.FloatingLabelText = "FloatingLabel";
@@ -190,6 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(573, 479);
             this.Controls.Add(this.materialTextBox1);
             this.Controls.Add(this.materialTextBox2);

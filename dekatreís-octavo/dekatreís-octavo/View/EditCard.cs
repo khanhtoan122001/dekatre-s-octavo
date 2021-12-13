@@ -14,6 +14,7 @@ namespace dekatreís_octavo.View
     public partial class EditCard : Form
     {
         public int selected;
+        bool editting = false;
         public EditCard()
         {
             InitializeComponent();
@@ -51,6 +52,26 @@ namespace dekatreís_octavo.View
             TheXe the = CardManagementBus.Instance.GetTheXeWithID(selected);
             tb_BienSo.Text = the.BienSoXe;
             cb_LoaiThe.SelectedIndex = (int)the.LoaiThe - 1;
+        }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            if (!editting)
+            {
+                editButton.Text = "Lưu";
+                startDate.ReadOnly = false;
+                tb_BienSo.ReadOnly = false;
+                inTime.ReadOnly = false;
+                editting = true;
+            }
+            else
+            {
+                editting = false;
+                startDate.ReadOnly = true;
+                tb_BienSo.ReadOnly = true;
+                inTime.ReadOnly = true;
+                editButton.Text = "Chỉnh sửa";
+            }    
         }
     }
 }
