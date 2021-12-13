@@ -123,7 +123,7 @@ namespace dekatreís_octavo.View
             // dateTimePicker1
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(157, 44);
+            this.dateTimePicker1.Location = new System.Drawing.Point(221, 41);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(271, 27);
             this.dateTimePicker1.TabIndex = 5;
@@ -184,7 +184,7 @@ namespace dekatreís_octavo.View
             this.yearComboBox.FormattingEnabled = true;
             this.yearComboBox.HintText = "Năm";
             this.yearComboBox.ItemHeight = 47;
-            this.yearComboBox.Location = new System.Drawing.Point(284, 26);
+            this.yearComboBox.Location = new System.Drawing.Point(348, 23);
             this.yearComboBox.MaxDropDownItems = 4;
             this.yearComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.yearComboBox.Name = "yearComboBox";
@@ -217,7 +217,7 @@ namespace dekatreís_octavo.View
             "10",
             "11",
             "12"});
-            this.monthComboBox.Location = new System.Drawing.Point(157, 26);
+            this.monthComboBox.Location = new System.Drawing.Point(221, 23);
             this.monthComboBox.MaxDropDownItems = 4;
             this.monthComboBox.MouseState = MaterialSurface.MouseState.OUT;
             this.monthComboBox.Name = "monthComboBox";

@@ -50,19 +50,13 @@ namespace dekatreís_octavo.View
             this.SoXe = new MaterialSkin.Controls.MaterialLabel();
             this.progressBar = new MaterialSurface.MaterialProgressbar();
             this.historyPanel = new System.Windows.Forms.Panel();
-            this.history1 = new dekatreís_octavo.View.History();
             this.cardPage = new System.Windows.Forms.TabPage();
-            this.cardManagement1 = new dekatreís_octavo.View.CardManagement();
             this.staffPage = new System.Windows.Forms.TabPage();
-            this.staffView1 = new dekatreís_octavo.View.StaffView();
             this.utility = new System.Windows.Forms.TabPage();
-            this.revenueMonthlyReport1 = new dekatreís_octavo.View.RevenueMonthlyReport();
             this.containedButton2 = new MaterialSurface.ContainedButton();
             this.containedButton1 = new MaterialSurface.ContainedButton();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.statusButton = new MaterialSurface.ContainedButton();
-            this.consistenceReport1 = new dekatreís_octavo.View.ConsistenceReport();
-            this.revenueReport1 = new dekatreís_octavo.View.RevenueReport();
             this.setting = new System.Windows.Forms.TabPage();
             this.tb_baotri = new System.Windows.Forms.TextBox();
             this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
@@ -535,7 +529,6 @@ namespace dekatreís_octavo.View
             // 
             this.splitContainer1.Panel1.Controls.Add(this.statusButton);
             this.splitContainer1.Panel1.Controls.Add(this.containedButton2);
-            this.splitContainer1.Panel1.Controls.Add(this.historyButton);
             this.splitContainer1.Panel1.Controls.Add(this.containedButton1);
             // 
             // splitContainer1.Panel2
