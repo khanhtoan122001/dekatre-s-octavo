@@ -124,13 +124,14 @@ namespace dekatreís_octavo.Bus
             var result = from c in DataProvider.Instance.db.TheXes
                          select c;
             return result.Where(p => p.BienSoXe.ToLower().Contains(txt.ToLower()));
-
         }
         public void DangKyTheThang(int id, string bienso)
         {
             TheXe the = DataProvider.Instance.db.TheXes.Where(p => p.IDThe == id).FirstOrDefault();
             the.BienSoXe = bienso;
             the.NgayTao = DateTime.Now.Date;
+            ReportBus.Instance.AddBaoCaoDoanhThuThang(DateTime.Now.Year, DateTime.Now.Month, 0, the.LoaiThe1.Gia.Value);
+            ReportBus.Instance.AddCT_BaoCaoTongThu(the.LoaiThe1.Gia.Value, "Thẻ tháng");
             DataProvider.Instance.db.SaveChanges();
         }
     }

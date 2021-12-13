@@ -47,7 +47,8 @@ namespace dekatreís_octavo.Bus
                 ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
             }
             ReportBus.Instance.NhanXe_BaoCaoMatDoGuiXe();
-            ReportBus.Instance.AddCT_BaoCaoTongThu(the.LoaiThe1.Gia.Value, "Gửi xe");
+            ReportBus.Instance.AddCT_BaoCaoTongThu(the.LoaiThe1.Gia.Value, "Vé thường");
+            ReportBus.Instance.AddBaoCaoDoanhThuThang(DateTime.Now.Year, DateTime.Now.Month, 0, the.LoaiThe1.Gia.Value);
             //
             the.BienSoXe = "";
             the.ThoiGianGui = null;
@@ -87,7 +88,6 @@ namespace dekatreís_octavo.Bus
                 ReportBus.Instance.AddCT_BaoCaoLichSuHoatDong(idBaoCao, DateTime.Now, the.BienSoXe);
             }
             ReportBus.Instance.NhanXe_BaoCaoMatDoGuiXe();
-            ReportBus.Instance.AddCT_BaoCaoTongThu(the.LoaiThe1.Gia.Value, "Gửi xe");
             //
             the.Status = true;
             the.ThoiGianGui = null;

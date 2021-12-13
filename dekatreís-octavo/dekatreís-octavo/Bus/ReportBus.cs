@@ -80,20 +80,28 @@ namespace dekatreís_octavo.Bus
                 return true;
             }
         }
-        public bool AddBaoCaoDoanhThuThang(int idBaoCao, int nam, int Thang, int TongChi, int TongThu)
+        public bool AddBaoCaoDoanhThuThang(int Nam, int Thang, int TongChi, int TongThu)
         {
-            if (idBaoCao == -1)
-                return false;
-            BaoCaoDoanhThuThang report = new BaoCaoDoanhThuThang();
-            report.Nam = nam;
-            report.IDBaoCao = idBaoCao;
-            report.TongChi = TongChi;
-            report.Thang = Thang;
-            report.TongThu = TongThu;
-            report.ChenhLech = TongThu - TongChi;
-            var result = db.BaoCaoDoanhThuThangs.Add(report);
+            var check = db.BaoCaoDoanhThuThangs.Where(p => p.Nam == Nam && p.Thang == Thang).FirstOrDefault();
+            BaoCaoDoanhThuThang report;
+            if (check == null)
+            {
+                report = new BaoCaoDoanhThuThang();
+                report.Nam = Nam;
+                report.TongChi = TongChi;
+                report.Thang = Thang;
+                report.TongThu = TongThu;
+                report.ChenhLech = TongThu - TongChi;
+                db.BaoCaoDoanhThuThangs.Add(report);
+            }
+            else
+            {
+                check.TongChi += TongChi;
+                check.TongThu += TongThu;
+                check.ChenhLech = Math.Abs(check.TongThu.Value - check.TongChi.Value);
+            }
             db.SaveChanges();
-            return result != null;
+            return true;
         }
         public bool AddCT_BaoCaoLichSuHoatDong(int idBaoCao, DateTime Time, string BienSo)
         {
@@ -197,7 +205,6 @@ namespace dekatreís_octavo.Bus
             {
                 ct_baocao = new CT_BaoCaoTongThu() { IDBaoCao = id, GiaTri = GiaTri, HoatDong = HoatDong, ThoiGian = DateTime.Now };
                 db.CT_BaoCaoTongThu.Add(ct_baocao);
-
             }
             else
             {
@@ -264,6 +271,20 @@ namespace dekatreís_octavo.Bus
             BaoCaoTongChi baoCaoTongChi = baoCaoTongChiList.FirstOrDefault();
             List<CT_BaoCaoTongChi> baoCaoList = new List<CT_BaoCaoTongChi>(DataProvider.Instance.db.CT_BaoCaoTongChi.Where(x => x.IDBaoCao == baoCaoTongChi.IDBaoCaoChi).OrderBy(v => v.HoatDong));
             return baoCaoList;
+        }
+
+        public void AddCT_TongChiCacPhiKhac()
+        {
+            if (db.CT_BaoCaoTongChi.Where(p => p.HoatDong == "Tiền mặt bằng").FirstOrDefault() == null)
+            {
+                ReportBus.Instance.AddCT_BaoCaoTongChi(ThamSoBus.Instance.GetByTen("Tiền mặt bằng").GiaTri.Value, "Tiền mặt bằng");
+                ReportBus.instance.AddBaoCaoDoanhThuThang(DateTime.Now.Year, DateTime.Now.Month, ThamSoBus.Instance.GetByTen("Tiền mặt bằng").GiaTri.Value, 0);
+            }
+            if (db.CT_BaoCaoTongChi.Where(p => p.HoatDong == "Phí bảo trì").FirstOrDefault() == null)
+            {
+                ReportBus.Instance.AddCT_BaoCaoTongChi(ThamSoBus.Instance.GetByTen("Phí bảo trì").GiaTri.Value, "Phí bảo trì");
+                ReportBus.instance.AddBaoCaoDoanhThuThang(DateTime.Now.Year, DateTime.Now.Month, ThamSoBus.Instance.GetByTen("Phí bảo trì").GiaTri.Value, 0);
+            }
         }
     }
 }

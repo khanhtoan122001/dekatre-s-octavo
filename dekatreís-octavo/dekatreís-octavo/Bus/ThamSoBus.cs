@@ -23,6 +23,7 @@ namespace dekatreís_octavo.Bus
                 AddThamSo("Lương", 4000000);
                 AddThamSo("Tiền mặt bằng", 8000000);
                 AddThamSo("Sức chứa", 200);
+                AddThamSo("Phí bảo trì", 2000000);
                 db.SaveChanges();
             }
         }

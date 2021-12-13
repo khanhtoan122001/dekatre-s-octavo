@@ -49,7 +49,7 @@ namespace dekatreís_octavo.View
                     MinValue = 0
                 }
             };
-            cartesianChart1.AxisY[0].Separator.Step = 100000;
+            //cartesianChart1.AxisY[0].Separator.Step = 100000;
         }
 
         private void containedButton1_Click(object sender, EventArgs e)

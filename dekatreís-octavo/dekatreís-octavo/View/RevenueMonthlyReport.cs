@@ -31,6 +31,8 @@ namespace dekatreís_octavo.View
         {
             List<CT_BaoCaoTongThu> baoCaoTongThuList = ReportBus.Instance.GetCTBaoCaoTongThus(Thang, Nam);
             List<CT_BaoCaoTongChi> baoCaoTongChiList = ReportBus.Instance.GetCTBaoCaoTongChis(Thang, Nam);
+            tongChiChart.Series.Clear();
+            tongThuChart.Series.Clear();
             if (baoCaoTongThuList == null)
             {
                 tongThuChart.Series.Clear();
@@ -51,7 +53,7 @@ namespace dekatreís_octavo.View
             }
             if (baoCaoTongChiList == null)
             {
-                tongThuChart.Series.Clear();
+                tongChiChart.Series.Clear();
             }
             else
             {

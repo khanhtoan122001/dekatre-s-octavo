@@ -29,6 +29,7 @@ namespace dekatreís_octavo.View
         public void StartWork()
         {
             timer1.Enabled = true;
+
             DataProvider.Instance.ThoiGianLamViec = 0;
         }
 
@@ -38,6 +39,11 @@ namespace dekatreís_octavo.View
                 DataProvider.Instance.TaiKhoan.TongGioLam = DataProvider.Instance.ThoiGianLamViec;
             else
                 DataProvider.Instance.TaiKhoan.TongGioLam += DataProvider.Instance.ThoiGianLamViec;
+            //if(TaiKhoan.LoaiTaiKhoan1.TenLoai != "admin")
+            {
+                int Luong = DataProvider.Instance.ThoiGianLamViec / 60 * ThamSoBus.Instance.GetByTen("Lương").GiaTri.Value;
+                ReportBus.Instance.AddCT_BaoCaoTongChi(Luong, "Lương nhân viên");
+            }
             DataProvider.Instance.db.SaveChanges();
             timer1.Enabled = false;
         }
@@ -89,6 +95,7 @@ namespace dekatreís_octavo.View
             staffView1.LoadStaffList();
             parkingView1.LoadData();
             history1.LoadData();
+            ReportBus.Instance.AddCT_TongChiCacPhiKhac();
             //BaoCaoChamCongNhanVienBus.Instance.ChamCong();
         }
 
@@ -130,6 +137,7 @@ namespace dekatreís_octavo.View
             tb_Luong.Text = listTs.Where(p => p.TenThamSo == "Lương").FirstOrDefault().GiaTri.Value.ToString();
             tb_TienMatBang.Text = listTs.Where(p => p.TenThamSo == "Tiền mặt bằng").FirstOrDefault().GiaTri.Value.ToString();
             tb_SucChua.Text = listTs.Where(p => p.TenThamSo == "Sức chứa").FirstOrDefault().GiaTri.Value.ToString();
+            tb_baotri.Text = listTs.Where(p => p.TenThamSo == "Phí bảo trì").FirstOrDefault().GiaTri.Value.ToString();
         }
 
         private void materialDrawer1_MouseDown(object sender, MouseEventArgs e)
@@ -263,16 +271,17 @@ namespace dekatreís_octavo.View
 
         private void updateButton_Click(object sender, EventArgs e)
         {
-            int o, vethuong, vethang, luong, succhua, tienmatbang;
+            int o, vethuong, vethang, luong, succhua, tienmatbang, phibaotri;
             if(int.TryParse( tb_Vethuong.Text, out vethuong) && int.TryParse(tb_Vethang.Text, out vethang) 
                 && int.TryParse(tb_TienMatBang.Text, out tienmatbang) && int.TryParse(tb_SucChua.Text, out succhua) 
-                && int.TryParse(tb_Luong.Text, out luong))
+                && int.TryParse(tb_Luong.Text, out luong) && int.TryParse(tb_baotri.Text, out phibaotri))
             {
                 LoaiTheBus.Instance.EditLoaiThe("Thẻ thường", vethuong);
                 LoaiTheBus.Instance.EditLoaiThe("Thẻ tháng", vethang);
                 ThamSoBus.Instance.EditThamSo("Lương", luong);
                 ThamSoBus.Instance.EditThamSo("Tiền mặt bằng",tienmatbang);
                 ThamSoBus.Instance.EditThamSo("Sức chứa", succhua);
+                ThamSoBus.Instance.EditThamSo("Phí bảo trì", phibaotri);
                 DataProvider.Instance.db.SaveChanges();
                 timer2.Enabled = true;
                 //lb_success.Visible = true;
