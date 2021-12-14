@@ -81,8 +81,8 @@ namespace dekatreís_octavo.View
                 startDate.ReadOnly = false;
                 tb_BienSo.ReadOnly = false;
                 inTime.ReadOnly = false;
-                cb_LoaiThe.Enabled = false;
-                anhXe1.Enabled = false; anhXe2.Enabled = false; anhXe3.Enabled = false;  anhXe4.Enabled = false;
+                cb_LoaiThe.Enabled = true;
+                anhXe1.Enabled = true; anhXe2.Enabled = true; anhXe3.Enabled = true;  anhXe4.Enabled = true;
                 editting = true;
             }
             else
@@ -90,9 +90,9 @@ namespace dekatreís_octavo.View
                 editting = false;
                 startDate.ReadOnly = true;
                 tb_BienSo.ReadOnly = true;
-                cb_LoaiThe.Enabled = true;
-                anhXe1.Enabled = true; anhXe2.Enabled = true; anhXe3.Enabled = true; anhXe4.Enabled = true;
                 inTime.ReadOnly = true;
+                cb_LoaiThe.Enabled = false;
+                anhXe1.Enabled = false; anhXe2.Enabled = false; anhXe3.Enabled = false; anhXe4.Enabled = false;
                 editButton.Text = "Chỉnh sửa";
             }    
         }

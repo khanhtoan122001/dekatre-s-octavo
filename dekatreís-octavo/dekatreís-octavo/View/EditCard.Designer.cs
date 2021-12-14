@@ -155,7 +155,7 @@ namespace dekatreís_octavo.View
             this.editButton.Radius = 6;
             this.editButton.ShawdowDepth = 3;
             this.editButton.ShawdowOpacity = 50;
-            this.editButton.Size = new System.Drawing.Size(180, 50);
+            this.editButton.Size = new System.Drawing.Size(223, 50);
             this.editButton.TabIndex = 26;
             this.editButton.Text = "Chỉnh sửa";
             this.editButton.TextAlignment = System.Drawing.StringAlignment.Center;
