@@ -33,8 +33,8 @@
             this.materialTextBox2 = new MaterialSurface.MaterialTextfield();
             this.materialTextBox1 = new MaterialSurface.MaterialTextfield();
             this.materialCard1 = new MaterialSurface.MaterialCard();
-            this.containedButton1 = new MaterialSurface.ContainedButton();
             this.containedButton2 = new MaterialSurface.ContainedButton();
+            this.containedButton1 = new MaterialSurface.ContainedButton();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,26 +170,6 @@
             this.materialCard1.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.materialCard1.TabIndex = 7;
             // 
-            // containedButton1
-            // 
-            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
-            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.containedButton1.Icon = null;
-            this.containedButton1.Location = new System.Drawing.Point(115, 393);
-            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
-            this.containedButton1.Name = "containedButton1";
-            this.containedButton1.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.containedButton1.Radius = 6;
-            this.containedButton1.ShawdowDepth = 3;
-            this.containedButton1.ShawdowOpacity = 50;
-            this.containedButton1.Size = new System.Drawing.Size(180, 50);
-            this.containedButton1.TabIndex = 7;
-            this.containedButton1.Text = "OK";
-            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.containedButton1.UseVisualStyleBackColor = true;
-            this.containedButton1.Click += new System.EventHandler(this.materialButton1_Click);
-            // 
             // containedButton2
             // 
             this.containedButton2.EffectType = MaterialSurface.ET.Custom;
@@ -210,6 +190,26 @@
             this.containedButton2.UseVisualStyleBackColor = true;
             this.containedButton2.Click += new System.EventHandler(this.containedButton2_Click);
             // 
+            // containedButton1
+            // 
+            this.containedButton1.EffectType = MaterialSurface.ET.Custom;
+            this.containedButton1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.containedButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.containedButton1.Icon = null;
+            this.containedButton1.Location = new System.Drawing.Point(115, 393);
+            this.containedButton1.MouseState = MaterialSurface.MouseState.OUT;
+            this.containedButton1.Name = "containedButton1";
+            this.containedButton1.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.containedButton1.Radius = 6;
+            this.containedButton1.ShawdowDepth = 3;
+            this.containedButton1.ShawdowOpacity = 50;
+            this.containedButton1.Size = new System.Drawing.Size(180, 50);
+            this.containedButton1.TabIndex = 7;
+            this.containedButton1.Text = "OK";
+            this.containedButton1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.containedButton1.UseVisualStyleBackColor = true;
+            this.containedButton1.Click += new System.EventHandler(this.materialButton1_Click);
+            // 
             // AddStaffView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -219,6 +219,7 @@
             this.Controls.Add(this.materialCard1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddStaffView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddStaffView";
             this.materialCard1.ResumeLayout(false);
             this.ResumeLayout(false);

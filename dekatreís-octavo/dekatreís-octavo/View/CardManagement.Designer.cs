@@ -129,7 +129,7 @@ namespace dekatreís_octavo.View
             this.Start_date});
             this.cardList.Depth = 0;
             this.cardList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cardList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardList.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardList.FullRowSelect = true;
             this.cardList.HideSelection = false;
             listViewItem1.StateImageIndex = 0;
@@ -353,7 +353,7 @@ namespace dekatreís_octavo.View
             this.addCard.Radius = 8;
             this.addCard.ShawdowDepth = 2;
             this.addCard.ShawdowOpacity = 50;
-            this.addCard.Size = new System.Drawing.Size(252, 80);
+            this.addCard.Size = new System.Drawing.Size(298, 80);
             this.addCard.Style = MaterialSurface.MaterialCard.CardStyle.Elevated;
             this.addCard.TabIndex = 6;
             this.addCard.Visible = false;
@@ -361,7 +361,7 @@ namespace dekatreís_octavo.View
             // pictureBox5
             // 
             this.pictureBox5.Image = global::dekatreís_octavo.Properties.Resources.x_button_icon_20;
-            this.pictureBox5.Location = new System.Drawing.Point(203, 27);
+            this.pictureBox5.Location = new System.Drawing.Point(246, 27);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(24, 24);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -372,7 +372,7 @@ namespace dekatreís_octavo.View
             // pictureBox4
             // 
             this.pictureBox4.Image = global::dekatreís_octavo.Properties.Resources._62025;
-            this.pictureBox4.Location = new System.Drawing.Point(164, 27);
+            this.pictureBox4.Location = new System.Drawing.Point(204, 26);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(24, 24);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -398,8 +398,8 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.MaxDropDownItems = 4;
             this.cb_LoaiThe.MouseState = MaterialSurface.MouseState.OUT;
             this.cb_LoaiThe.Name = "cb_LoaiThe";
-            this.cb_LoaiThe.PrimaryColor = System.Drawing.Color.BlueViolet;
-            this.cb_LoaiThe.Size = new System.Drawing.Size(121, 53);
+            this.cb_LoaiThe.PrimaryColor = System.Drawing.Color.DodgerBlue;
+            this.cb_LoaiThe.Size = new System.Drawing.Size(157, 53);
             this.cb_LoaiThe.TabIndex = 0;
             // 
             // inputCard

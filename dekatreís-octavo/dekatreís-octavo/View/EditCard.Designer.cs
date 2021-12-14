@@ -38,8 +38,6 @@ namespace dekatreís_octavo.View
             this.anhXe3 = new System.Windows.Forms.PictureBox();
             this.anhXe2 = new System.Windows.Forms.PictureBox();
             this.anhXe1 = new System.Windows.Forms.PictureBox();
-            this.inTime = new MaterialSurface.MaterialTextfield();
-            this.startDate = new MaterialSurface.MaterialTextfield();
             this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.anhXe4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anhXe3)).BeginInit();
@@ -59,7 +57,7 @@ namespace dekatreís_octavo.View
             this.cb_LoaiThe.FormattingEnabled = true;
             this.cb_LoaiThe.HintText = "Loại thẻ";
             this.cb_LoaiThe.ItemHeight = 47;
-            this.cb_LoaiThe.Location = new System.Drawing.Point(40, 268);
+            this.cb_LoaiThe.Location = new System.Drawing.Point(40, 123);
             this.cb_LoaiThe.MaxDropDownItems = 4;
             this.cb_LoaiThe.MouseState = MaterialSurface.MouseState.OUT;
             this.cb_LoaiThe.Name = "cb_LoaiThe";
@@ -79,7 +77,7 @@ namespace dekatreís_octavo.View
             this.tb_BienSo.HelperText = "";
             this.tb_BienSo.HideSelection = true;
             this.tb_BienSo.HintText = "Biển số";
-            this.tb_BienSo.Location = new System.Drawing.Point(40, 98);
+            this.tb_BienSo.Location = new System.Drawing.Point(40, 46);
             this.tb_BienSo.MaxLength = 32767;
             this.tb_BienSo.MouseState = MaterialSurface.MouseState.OUT;
             this.tb_BienSo.Multiline = false;
@@ -104,8 +102,6 @@ namespace dekatreís_octavo.View
             this.materialCard1.Controls.Add(this.anhXe3);
             this.materialCard1.Controls.Add(this.anhXe2);
             this.materialCard1.Controls.Add(this.anhXe1);
-            this.materialCard1.Controls.Add(this.inTime);
-            this.materialCard1.Controls.Add(this.startDate);
             this.materialCard1.Controls.Add(this.cb_LoaiThe);
             this.materialCard1.Controls.Add(this.tb_BienSo);
             this.materialCard1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -206,60 +202,6 @@ namespace dekatreís_octavo.View
             this.anhXe1.TabStop = false;
             this.anhXe1.Click += new System.EventHandler(this.anhXe1_Click);
             // 
-            // inTime
-            // 
-            this.inTime.AutoScaleColor = true;
-            this.inTime.BackColor = System.Drawing.Color.White;
-            this.inTime.CountText = false;
-            this.inTime.FieldType = MaterialSurface.BoxType.Normal;
-            this.inTime.FloatingLabelText = "FloatingLabel";
-            this.inTime.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.inTime.HandleError = false;
-            this.inTime.HelperText = "";
-            this.inTime.HideSelection = true;
-            this.inTime.HintText = "Thời gian gửi";
-            this.inTime.Location = new System.Drawing.Point(40, 185);
-            this.inTime.MaxLength = 32767;
-            this.inTime.MouseState = MaterialSurface.MouseState.OUT;
-            this.inTime.Multiline = false;
-            this.inTime.Name = "inTime";
-            this.inTime.PasswordChar = '\0';
-            this.inTime.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.inTime.ReadOnly = true;
-            this.inTime.ShortcutsEnable = true;
-            this.inTime.ShowCaret = true;
-            this.inTime.Size = new System.Drawing.Size(224, 49);
-            this.inTime.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.inTime.TabIndex = 16;
-            this.inTime.UseSystemPasswordChar = false;
-            // 
-            // startDate
-            // 
-            this.startDate.AutoScaleColor = true;
-            this.startDate.BackColor = System.Drawing.Color.White;
-            this.startDate.CountText = false;
-            this.startDate.FieldType = MaterialSurface.BoxType.Normal;
-            this.startDate.FloatingLabelText = "FloatingLabel";
-            this.startDate.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.startDate.HandleError = false;
-            this.startDate.HelperText = "";
-            this.startDate.HideSelection = true;
-            this.startDate.HintText = "Ngày bắt đầu";
-            this.startDate.Location = new System.Drawing.Point(40, 26);
-            this.startDate.MaxLength = 32767;
-            this.startDate.MouseState = MaterialSurface.MouseState.OUT;
-            this.startDate.Multiline = false;
-            this.startDate.Name = "startDate";
-            this.startDate.PasswordChar = '\0';
-            this.startDate.PrimaryColor = System.Drawing.Color.DodgerBlue;
-            this.startDate.ReadOnly = true;
-            this.startDate.ShortcutsEnable = true;
-            this.startDate.ShowCaret = true;
-            this.startDate.Size = new System.Drawing.Size(224, 49);
-            this.startDate.Style = MaterialSurface.MaterialTextfield.TextfieldStyle.HintAsFloatingLabel;
-            this.startDate.TabIndex = 15;
-            this.startDate.UseSystemPasswordChar = false;
-            // 
             // EditCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -286,8 +228,6 @@ namespace dekatreís_octavo.View
         private MaterialSurface.MaterialTextfield tb_BienSo;
         private MaterialSurface.MaterialCard materialCard1;
         private System.Windows.Forms.PictureBox anhXe1;
-        private MaterialSurface.MaterialTextfield inTime;
-        private MaterialSurface.MaterialTextfield startDate;
         private System.Windows.Forms.PictureBox anhXe4;
         private System.Windows.Forms.PictureBox anhXe3;
         private System.Windows.Forms.PictureBox anhXe2;

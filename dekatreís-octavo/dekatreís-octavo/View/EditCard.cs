@@ -48,12 +48,13 @@ namespace dekatreís_octavo.View
 
             if (result)
             {
-                MessageBox.Show("Thành công");
+                //MessageBox.Show("Thành công");
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Thất bại");
+                //MessageBox.Show("Thất bại");
+                this.Close();
             }
         }
 
@@ -77,10 +78,10 @@ namespace dekatreís_octavo.View
         {
             if (!editting)
             {
-                editButton.Text = "Tắt chỉnh sửa";
-                startDate.ReadOnly = false;
+                editButton.Text = "Xong";
+                //startDate.ReadOnly = false;
                 tb_BienSo.ReadOnly = false;
-                inTime.ReadOnly = false;
+                //inTime.ReadOnly = false;
                 cb_LoaiThe.Enabled = true;
                 anhXe1.Enabled = true; anhXe2.Enabled = true; anhXe3.Enabled = true;  anhXe4.Enabled = true;
                 editting = true;
@@ -88,9 +89,9 @@ namespace dekatreís_octavo.View
             else
             {
                 editting = false;
-                startDate.ReadOnly = true;
+                //startDate.ReadOnly = true;
                 tb_BienSo.ReadOnly = true;
-                inTime.ReadOnly = true;
+                //inTime.ReadOnly = true;
                 cb_LoaiThe.Enabled = false;
                 anhXe1.Enabled = false; anhXe2.Enabled = false; anhXe3.Enabled = false; anhXe4.Enabled = false;
                 editButton.Text = "Chỉnh sửa";
