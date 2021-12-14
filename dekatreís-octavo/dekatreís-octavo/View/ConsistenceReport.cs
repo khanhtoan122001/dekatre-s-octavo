@@ -19,6 +19,7 @@ namespace dekatreís_octavo.View
     {
         int thang, nam;
         List<BaoCaoMatDoGuiXe> list;
+        bool flag = true;
         public ConsistenceReport()
         {
             InitializeComponent();
@@ -62,11 +63,16 @@ namespace dekatreís_octavo.View
             list = ReportBus.Instance.GetBaoCaoMatDoGuiXes(thang, nam);
             var years = (from c in DataProvider.Instance.db.BaoCaoMatDoGuiXes
                                         select c.Ngay.Value.Year).Distinct().ToList();
-            yearComboBox.Items.Clear();
-            foreach(int i in years)
+            if (flag)
             {
-                yearComboBox.Items.Add(i.ToString());
+                yearComboBox.Items.Clear();
+                foreach (int i in years)
+                {
+                    yearComboBox.Items.Add(i.ToString());
+                }
+                flag = false;
             }
+            
             if(rb_Day.Checked)
             {
                 DateTime date = dateTimePicker1.Value.Date;
@@ -175,7 +181,7 @@ namespace dekatreís_octavo.View
             {
                 min = min - 1;
             }
-            rpChart.AxisX[0].MinValue = min;
+            rpChart.AxisX[0].MinValue = min - 1;
             rpChart.AxisX[0].MaxValue = max;
             rpChart.AxisX[0].Separator.Step = 1;
         }
